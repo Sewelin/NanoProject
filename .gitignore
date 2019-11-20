@@ -61,3 +61,11 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Wwise
+/Assets/Wwise/*
+*.akd
+*.prof
+*.validationcache
+*.wem
+WwiseUnityIntegration_Windows_Src.zip
+WwiseUnityIntegration_Mac_Src.zip
