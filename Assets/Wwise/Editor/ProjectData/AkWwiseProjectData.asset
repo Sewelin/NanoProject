@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a243d52225f5584eb944016aa81bdda, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 36284b434e6b7c419e5af7c2028be3f2
+    GuidInternal: 
+    m_lastTime: -8586276137306996201
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b729a36cc416ee4c81483f9309d6ae3f
+    GuidInternal: 
+    m_lastTime: -8586276137307842737
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 6e11c2f2ba071d468039385d9832e06c
+    GuidInternal: 
+    m_lastTime: -8586276105808541834
+    List:
+    - name: NanoProjet_SFX
+      guid: 07bed00fd5f71648af791815c9243f48
+      id: 1330823757
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NanoProjet_SFX
+        ObjectType: 7
+      Path: Default Work Unit\NanoProjet_SFX
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 497c9c6a4ab3254098bcd5db6c5b9d22
+    GuidInternal: 
+    m_lastTime: -8586276105868839984
+    List: []
+  - PhysicalPath: Events\NanoProjet.wwu
+    ParentPhysicalPath: 
+    guid: d4403fea4c297f448319eac1d89128e5
+    GuidInternal: 
+    m_lastTime: -8586276105868939439
+    List:
+    - name: Music_Test2D
+      guid: 9f7e218744f0d848b611de3e25c7cc3b
+      id: 4188790071
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Music_Test2D
+        ObjectType: 3
+      Path: NanoProjet\Music_Test2D
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Sword_Test3D
+      guid: f9e85b737bedd94994c77e3d8ace7639
+      id: 665833074
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX_Sword_Test3D
+        ObjectType: 3
+      Path: NanoProjet\SFX_Sword_Test3D
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 598bdd0528705946b94308fd17c5dce2
+    GuidInternal: 
+    m_lastTime: -8586276137307653237
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 59eb1fc0eb576f43bb17dbbbedd1c46c
+    GuidInternal: 
+    m_lastTime: -8586276137307792864
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: a2b54e9e71793042a9103b4b1aebe03d
+    GuidInternal: 
+    m_lastTime: -8586276137307942464
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 6bf964d2739ecc429e89396f1aebd665
+    GuidInternal: 
+    m_lastTime: -8586276137307473720
+    List: []
+  ExpandedItems:
+  - /NanoProjet_Sound
+  - /NanoProjet_Sound/Events
+  - /NanoProjet_Sound/Events/NanoProjet
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
