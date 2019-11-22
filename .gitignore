@@ -63,10 +63,11 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Wwise
-/Assets/Wwise/*
+.cache/
 *.akd
 *.prof
 *.validationcache
-*.wem
-WwiseUnityIntegration_Windows_Src.zip
-WwiseUnityIntegration_Mac_Src.zip
+[Aa]ssets/WwiseSettings.xml
+
+# End of https://www.gitignore.io/api/unity
+Assets/WwiseSettings.xml.meta
