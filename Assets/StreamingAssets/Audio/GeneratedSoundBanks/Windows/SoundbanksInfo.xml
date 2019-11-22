@@ -3,7 +3,7 @@
 	<RootPaths>
 		<ProjectRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
 		<SourceFilesRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Work in Progress\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<SoundBanksRoot>D:\Work in Progress\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
@@ -20,13 +20,13 @@
 				<Event Id="665833074" Name="SFX_Sword_Test3D" ObjectPath="\Events\NanoProjet\SFX_Sword_Test3D" MaxAttenuation="40.000000" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="600053609" Language="SFX">
-					<ShortName>MUSIC_Koto_Lp.wav</ShortName>
-					<Path>SFX\MUSIC_Koto_Lp_D79FB2B7.wem</Path>
-				</File>
-				<File Id="831484294" Language="SFX">
+				<File Id="227091587" Language="SFX">
 					<ShortName>SFX_Sword.wav</ShortName>
 					<Path>SFX\SFX_Sword_10C4C929.wem</Path>
+				</File>
+				<File Id="448622900" Language="SFX">
+					<ShortName>MUSIC_Koto_Lp.wav</ShortName>
+					<Path>SFX\MUSIC_Koto_Lp_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
