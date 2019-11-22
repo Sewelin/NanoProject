@@ -133,7 +133,7 @@ public partial class AkBasePathGetter
 
 		try
 		{
-			if (System.IO.Path.GetPathRoot(SoundBankDest) == "")
+			if (SoundBankDest != "" && System.IO.Path.GetPathRoot(SoundBankDest) == "")
 			{
 				// Path is relative, make it full
 				SoundBankDest = AkUtilities.GetFullPath(System.IO.Path.GetDirectoryName(WwiseProjectFullPath), SoundBankDest);
@@ -173,7 +173,7 @@ public partial class AkBasePathGetter
 	}
 #endif
 
-	public static void FixSlashes(ref string path, char separatorChar, char badChar, bool addTrailingSlash)
+    public static void FixSlashes(ref string path, char separatorChar, char badChar, bool addTrailingSlash)
 	{
 		if (string.IsNullOrEmpty(path))
 			return;

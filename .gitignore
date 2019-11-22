@@ -65,6 +65,7 @@ crashlytics-build.properties
 # Wwise
 .cache/
 *.akd
+*.prof
 *.validationcache
 [Aa]ssets/WwiseSettings.xml
 
