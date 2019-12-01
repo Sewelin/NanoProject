@@ -16,17 +16,194 @@
 			<ShortName>NanoProjet_SFX</ShortName>
 			<Path>NanoProjet_SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4188790071" Name="Music_Test2D" ObjectPath="\Events\NanoProjet\Music_Test2D" DurationType="Infinite"/>
-				<Event Id="665833074" Name="SFX_Sword_Test3D" ObjectPath="\Events\NanoProjet\SFX_Sword_Test3D" MaxAttenuation="40.000000" DurationType="Infinite"/>
+				<Event Id="3686462113" Name="Backward_Jump" ObjectPath="\Events\NanoProjet\Backward_Jump" DurationType="OneShot" DurationMin="0.327900" DurationMax="0.327900"/>
+				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\NanoProjet\Dash" DurationType="OneShot" DurationMin="1.832917" DurationMax="1.832917"/>
+				<Event Id="3615040804" Name="Dash_Stop" ObjectPath="\Events\NanoProjet\Dash_Stop" DurationType="OneShot" DurationMin="0.295520" DurationMax="0.295520"/>
+				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Menu_Atmos" DurationType="Infinite"/>
+				<Event Id="3063554414" Name="MENU_BACK" ObjectPath="\Events\NanoProjet\MENU_BACK" DurationType="OneShot" DurationMin="1.398893" DurationMax="1.398893"/>
+				<Event Id="2340917041" Name="MENU_CHANGE_OPTION" ObjectPath="\Events\NanoProjet\MENU_CHANGE_OPTION" DurationType="OneShot" DurationMin="0.389194" DurationMax="0.389194"/>
+				<Event Id="1952436935" Name="MENU_ENTER" ObjectPath="\Events\NanoProjet\MENU_ENTER" DurationType="OneShot" DurationMin="1.461750" DurationMax="1.461750"/>
+				<Event Id="2170009975" Name="MENU_PAUSE" ObjectPath="\Events\NanoProjet\MENU_PAUSE" DurationType="OneShot" DurationMin="1.566928" DurationMax="1.566928"/>
+				<Event Id="105544633" Name="MENU_PLAY" ObjectPath="\Events\NanoProjet\MENU_PLAY" DurationType="OneShot" DurationMin="6.059563" DurationMax="6.059563"/>
+				<Event Id="2776193354" Name="MENU_QUIT" ObjectPath="\Events\NanoProjet\MENU_QUIT" DurationType="OneShot" DurationMin="7.335532" DurationMax="7.335532"/>
+				<Event Id="2587230380" Name="MENU_UPDOWN" ObjectPath="\Events\NanoProjet\MENU_UPDOWN" DurationType="OneShot" DurationMin="0.373558" DurationMax="0.373558"/>
+				<Event Id="1183016477" Name="Player_One_Backward" ObjectPath="\Events\NanoProjet\Player_One_Backward" DurationType="OneShot" DurationMin="0.271395" DurationMax="0.492869"/>
+				<Event Id="375910062" Name="Player_One_Bowing" ObjectPath="\Events\NanoProjet\Player_One_Bowing" DurationType="OneShot" DurationMin="0.990817" DurationMax="0.990817"/>
+				<Event Id="972262685" Name="Player_One_Forward" ObjectPath="\Events\NanoProjet\Player_One_Forward" DurationType="OneShot" DurationMin="0.460063" DurationMax="0.680240"/>
+				<Event Id="2507762279" Name="Player_Two_Backward" ObjectPath="\Events\NanoProjet\Player_Two_Backward" DurationType="OneShot" DurationMin="0.268277" DurationMax="0.487208"/>
+				<Event Id="2367140880" Name="Player_Two_Bowing" ObjectPath="\Events\NanoProjet\Player_Two_Bowing" DurationType="OneShot" DurationMin="0.990817" DurationMax="0.990817"/>
+				<Event Id="184927275" Name="Player_Two_Forward" ObjectPath="\Events\NanoProjet\Player_Two_Forward" DurationType="OneShot" DurationMin="0.540826" DurationMax="0.799654"/>
+				<Event Id="4057287994" Name="Sword_Hit" ObjectPath="\Events\NanoProjet\Sword_Hit" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
+				<Event Id="2665482738" Name="Vertical_Attack" ObjectPath="\Events\NanoProjet\Vertical_Attack" DurationType="OneShot" DurationMin="1.276928" DurationMax="1.276928"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="94642288" Language="SFX">
-					<ShortName>SFX_Sword.wav</ShortName>
-					<Path>SFX\SFX_Sword_10C4C929.wem</Path>
+				<File Id="17442322" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_1FDDA46D.wem</Path>
 				</File>
-				<File Id="448622900" Language="SFX">
-					<ShortName>MUSIC_Koto_Lp.wav</ShortName>
-					<Path>SFX\MUSIC_Koto_Lp_D79FB2B7.wem</Path>
+				<File Id="27902926" Language="SFX">
+					<ShortName>MENU_Music_Test.wav</ShortName>
+					<Path>SFX\MENU_Music_Test_4D0A0049.wem</Path>
+				</File>
+				<File Id="70708229" Language="SFX">
+					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
+					<Path>SFX\SFX_Dash_Whoosh_Test_60F3FF13.wem</Path>
+				</File>
+				<File Id="72700801" Language="SFX">
+					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
+					<Path>SFX\SFX_Dash_Whoosh_Test_10C4C929.wem</Path>
+				</File>
+				<File Id="89644619" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_17496B06.wem</Path>
+				</File>
+				<File Id="95040990" Language="SFX">
+					<ShortName>Copland_Hit.wav</ShortName>
+					<Path>SFX\Copland_Hit_AD70643E.wem</Path>
+				</File>
+				<File Id="103707120" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_258C63EC.wem</Path>
+				</File>
+				<File Id="105600322" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_158EEB91.wem</Path>
+				</File>
+				<File Id="113752996" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_21F0EE00.wem</Path>
+				</File>
+				<File Id="131504247" Language="SFX">
+					<ShortName>UI_Taiko.wav</ShortName>
+					<Path>SFX\UI_Taiko_75D1D8E4.wem</Path>
+				</File>
+				<File Id="159233756" Language="SFX">
+					<ShortName>SFX_Sword.wav</ShortName>
+					<Path>SFX\SFX_Sword_AE1F5B0D.wem</Path>
+				</File>
+				<File Id="160577390" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_08971821.wem</Path>
+				</File>
+				<File Id="221229023" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_AC60EFE4.wem</Path>
+				</File>
+				<File Id="256612659" Language="SFX">
+					<ShortName>Taiko_Hit.wav</ShortName>
+					<Path>SFX\Taiko_Hit_AD8950F7.wem</Path>
+				</File>
+				<File Id="301903005" Language="SFX">
+					<ShortName>Copland_Hit.wav</ShortName>
+					<Path>SFX\Copland_Hit_04B3BE69.wem</Path>
+				</File>
+				<File Id="336470013" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_5393FD88.wem</Path>
+				</File>
+				<File Id="341124679" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_9FCB1ED1.wem</Path>
+				</File>
+				<File Id="415217945" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_C80D6356.wem</Path>
+				</File>
+				<File Id="506380287" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_C76AA8B3.wem</Path>
+				</File>
+				<File Id="527406342" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_EE16EA51.wem</Path>
+				</File>
+				<File Id="530102772" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_F73C433F.wem</Path>
+				</File>
+				<File Id="558358970" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_EFEDE9BA.wem</Path>
+				</File>
+				<File Id="567855014" Language="SFX">
+					<ShortName>Taiko_Hit.wav</ShortName>
+					<Path>SFX\Taiko_Hit_3DD94DE6.wem</Path>
+				</File>
+				<File Id="602259266" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_38CC9E7D.wem</Path>
+				</File>
+				<File Id="606660939" Language="SFX">
+					<ShortName>MENU_Music_Test.wav</ShortName>
+					<Path>SFX\MENU_Music_Test_87B1BECE.wem</Path>
+				</File>
+				<File Id="618070644" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_4FC909A5.wem</Path>
+				</File>
+				<File Id="649082316" Language="SFX">
+					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
+					<Path>SFX\SFX_Dash_Whoosh_Test_1003589B.wem</Path>
+				</File>
+				<File Id="649273103" Language="SFX">
+					<ShortName>MENU_Music_Test.wav</ShortName>
+					<Path>SFX\MENU_Music_Test_1ED9F7FD.wem</Path>
+				</File>
+				<File Id="685541732" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_00D2BFD7.wem</Path>
+				</File>
+				<File Id="692697838" Language="SFX">
+					<ShortName>Taiko_Roll.wav</ShortName>
+					<Path>SFX\Taiko_Roll_81276D0C.wem</Path>
+				</File>
+				<File Id="732962334" Language="SFX">
+					<ShortName>Player_Bowing.wav</ShortName>
+					<Path>SFX\Player_Bowing_0AFB99A1.wem</Path>
+				</File>
+				<File Id="752283135" Language="SFX">
+					<ShortName>Footstep_Test.wav</ShortName>
+					<Path>SFX\Footstep_Test_7D3FB300.wem</Path>
+				</File>
+				<File Id="754484868" Language="SFX">
+					<ShortName>UI_Taiko.wav</ShortName>
+					<Path>SFX\UI_Taiko_EE17E073.wem</Path>
+				</File>
+				<File Id="763677696" Language="SFX">
+					<ShortName>SFX_Hit_Test.wav</ShortName>
+					<Path>SFX\SFX_Hit_Test_10C4C929.wem</Path>
+				</File>
+				<File Id="778893659" Language="SFX">
+					<ShortName>MENU_Music_Test.wav</ShortName>
+					<Path>SFX\MENU_Music_Test_E885CB0A.wem</Path>
+				</File>
+				<File Id="915816819" Language="SFX">
+					<ShortName>Taiko_Hit.wav</ShortName>
+					<Path>SFX\Taiko_Hit_518352B0.wem</Path>
+				</File>
+				<File Id="950811618" Language="SFX">
+					<ShortName>SFX_Sword_Hit_Gore.wav</ShortName>
+					<Path>SFX\SFX_Sword_Hit_Gore_94D3F055.wem</Path>
+				</File>
+				<File Id="958919636" Language="SFX">
+					<ShortName>MENU_Music_Test.wav</ShortName>
+					<Path>SFX\MENU_Music_Test_6A5FCA4A.wem</Path>
+				</File>
+				<File Id="964521431" Language="SFX">
+					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
+					<Path>SFX\SFX_Dash_Whoosh_Test_D8689DE1.wem</Path>
+				</File>
+				<File Id="987090694" Language="SFX">
+					<ShortName>MENU_Music_Test.wav</ShortName>
+					<Path>SFX\MENU_Music_Test_E36F6705.wem</Path>
+				</File>
+				<File Id="1016258128" Language="SFX">
+					<ShortName>UI_Taiko.wav</ShortName>
+					<Path>SFX\UI_Taiko_0F13B30D.wem</Path>
+				</File>
+				<File Id="1031627159" Language="SFX">
+					<ShortName>MENU_Amb_Test.wav</ShortName>
+					<Path>SFX\MENU_Amb_Test_7AB1D436.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
