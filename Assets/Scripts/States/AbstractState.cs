@@ -50,7 +50,6 @@ public abstract class AbstractState
 
     public virtual void FixedUpdate()
     {
-        movement = 0f;
     }
 
     protected void Exit()

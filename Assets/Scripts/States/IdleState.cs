@@ -9,21 +9,17 @@ public class IdleState : AbstractState
 
     public override void Update()
     {
+        base.Update();
         timer -= Time.deltaTime;
         if (timer < 0f)
         {
             timer = gameManager.walkingParameters.duration;
         }
-        base.Update();
     }
     
     public override void FixedUpdate()
     {
-        if (movement != 0f)
-        {
-            controller.characterInfo.RigidBody.velocity = new Vector3( movement * gameManager.walkingParameters.speed, 0f, 0f);
-        }
-        base.FixedUpdate();
+        controller.characterInfo.RigidBody.velocity = new Vector3( movement * gameManager.walkingParameters.speed, 0f, 0f);
     }
 
     public override StateName toS()// TODO Suppr
