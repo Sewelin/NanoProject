@@ -21,7 +21,7 @@ public class Consum : MonoBehaviour
     {
         progress += Time.deltaTime;
         if (progress > PROGRESS) progress = 0;
-        rend.material.SetFloat("Vector1_86EE5D77", progress/PROGRESS);
+        rend.material.SetFloat("_Progress", progress/PROGRESS);
         rigid.mass = 1 - (progress / PROGRESS) * 2;
         //Debug.Log(rend.material.GetFloat("Progress"));
     }
