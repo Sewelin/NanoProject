@@ -4,14 +4,15 @@ using UnityEngine;
 
 public abstract class AbstractAnimation : MonoBehaviour
 {
-    AbstractController controller;
+    public AbstractController controller;
     public float Timer { get; set; }
-    public float TIMER;
+    public float TIMER = 2;
+    public bool block = false;
     // Start is called before the first frame update
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         controller = transform.parent.GetComponent<AbstractController>();
-        controller.enabled = false;
+        if(block)controller.enabled = false;
         Timer = 0;
     }
 
@@ -21,9 +22,9 @@ public abstract class AbstractAnimation : MonoBehaviour
         Timer += Time.deltaTime;
         if (Timer > TIMER) Exit();
     }
-    protected void Exit()
+    protected virtual void Exit()
     {
-        controller.enabled = true;
+        if (block) controller.enabled = true;
         Destroy(this);
     }
 }

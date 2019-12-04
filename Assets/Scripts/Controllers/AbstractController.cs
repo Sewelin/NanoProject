@@ -31,7 +31,7 @@ public abstract class AbstractController : MonoBehaviour
 
     // Attributes
     
-    protected GameManager gameManager;
+    public GameManager gameManager;
 
     private int _playerNum;
     
@@ -61,9 +61,9 @@ public abstract class AbstractController : MonoBehaviour
             gameManager.controller2 = this;
             transform.position = gameManager.posSpawner2.position;
         }
-        
-        
+
         State = new IdleState(gameManager, this);
+
     }
 
     private void Start()
@@ -71,7 +71,9 @@ public abstract class AbstractController : MonoBehaviour
         characterInfo = CharacterInfo.Instantiate(
             _playerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
+        characterInfo.Character.AddComponent<Arrive>();
         characterSpawned = true;
+        
     }
 
     public StateName s; // TODO Suppr
