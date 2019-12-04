@@ -8,6 +8,7 @@ public abstract class AbstractController : MonoBehaviour
     
     public class CharacterInfo
     {
+        public bool characterAssigned;
         public Rigidbody RigidBody { get; private set; }
         public Animator Animator { get; private set; }
         public GameObject Character { get; private set; }
@@ -19,7 +20,7 @@ public abstract class AbstractController : MonoBehaviour
             Animator = character.GetComponent<Animator>();
             Saber = character.transform.GetChild(0).GetComponent<Saber>();
             Character = character;
-
+            characterAssigned = true;
         }
 
         public static CharacterInfo Instantiate(GameObject playerModel, Transform transform)
@@ -32,23 +33,35 @@ public abstract class AbstractController : MonoBehaviour
     
     protected GameManager gameManager;
 
-    private static int _numPlayer;
     private int _playerNum;
     
     private int _point = 0; // TODO increase
+    public int dir = 1;
     public CharacterInfo characterInfo;
     public bool characterSpawned;
     protected AbstractState State { get; private set; }
-  
+
     // Methods
 
     private void Awake()
     {
-        _playerNum = ++_numPlayer;
-        
         gameManager = GameObject.FindObjectOfType<GameManager>();
         
-        State = new IdleState(gameManager, this, _numPlayer == 1 ? 1 : -1);
+        if (!gameManager.controller1Assigned)
+        {
+            _playerNum = 1;
+            gameManager.controller1Assigned = true;
+            gameManager.controller1 = this;
+        }
+        else
+        {
+            _playerNum = 2;
+            gameManager.controller2Assigned = true;
+            gameManager.controller2 = this;
+        }
+        
+        
+        State = new IdleState(gameManager, this);
     }
 
     private void Start()
@@ -57,11 +70,6 @@ public abstract class AbstractController : MonoBehaviour
             _playerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
         characterSpawned = true;
-    }
-
-    public void SetState(AbstractState state)
-    {
-        State = state;
     }
 
     public StateName s; // TODO Suppr
@@ -74,5 +82,10 @@ public abstract class AbstractController : MonoBehaviour
     protected void FixedUpdate()
     {
         State.FixedUpdate();
+    }
+
+    public void SetState(AbstractState state)
+    {
+        State = state;
     }
 }
