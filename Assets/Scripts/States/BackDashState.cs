@@ -1,22 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Threading;
 using UnityEngine;
 
 public class BackDashState : AbstractState
 {
+    private int _dir;
+    protected float timer;
+    protected StateParameters param;
+    
     public BackDashState(GameManager gameManager, AbstractController controller, int dir) :
-        base(gameManager, controller, dir, gameManager.backDashParameters.duration)
+        base(gameManager, controller)
     {
+        _dir = dir;
+        param = gameManager.backDashParameters;
     }
     
     public override void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer > 0.00001)
+        timer += Time.deltaTime;
+        if (timer < param.Duration)
         {
-            // TODO
-            
-            base.Update();
+            float progress = timer / param.Duration;
+            controller.characterInfo.RigidBody.velocity = new Vector3( 
+                - _dir * Time.deltaTime * param.speed * param.curve.Evaluate(progress), 
+                0f, 0f);
         }
         else
         {
@@ -31,16 +37,16 @@ public class BackDashState : AbstractState
         switch (nextState)
         {
             case StateName.Idle:
-                controller.SetState(new IdleState(gameManager, controller, Dir));
+                controller.SetState(new IdleState(gameManager, controller));
                 break;
             case StateName.VerticalAttack:
-                controller.SetState(new VerticalState(gameManager, controller, Dir));
+                controller.SetState(new VerticalState(gameManager, controller, controller.dir));
                 break;
             case StateName.DashAttack:
-                controller.SetState(new DashState(gameManager, controller, Dir));
+                controller.SetState(new DashState(gameManager, controller, controller.dir));
                 break;
             case StateName.BackDash:
-                controller.SetState(new BackDashState(gameManager, controller, Dir));
+                controller.SetState(new BackDashState(gameManager, controller, controller.dir));
                 break;
         }
     }
