@@ -13,6 +13,14 @@ public class GameManager : MonoBehaviour
     public bool controller1Assigned;
     public bool controller2Assigned;
 
+    public Transform posSpawner1;
+    public Transform posSpawner2;
+
+
+    private float touchCooldown = 0.2f;
+    private AbstractController touched;
+    private bool touch = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +31,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         CheckDir();
+        if(touch && touchCooldown < 0)
+        {
+            Kill(touched);
+
+            touch = false;
+            touchCooldown = 0.2f;
+            touched = null;
+        }
     }
 
     public void Pause()
@@ -55,5 +71,28 @@ public class GameManager : MonoBehaviour
         v = controller2.characterInfo.Character.transform.localScale;
         v.x = controller2.dir;
         controller2.characterInfo.Character.transform.localScale = v;
+    }
+
+    public void Touch(GameObject character)
+    {
+        if(touch && touched.characterInfo.Character != character)
+        {
+            touch = false;
+            touchCooldown = 0.2f;
+            touched = null;
+
+            Kill(controller1);
+            Kill(controller2);
+        }
+        else
+        {
+            touch = true;
+            touchCooldown = 0.2f;
+            touched = (controller1.characterInfo.Character == character) ? controller1 : controller2;
+        }
+    }
+    private void Kill(AbstractController character)
+    {
+
     }
 }

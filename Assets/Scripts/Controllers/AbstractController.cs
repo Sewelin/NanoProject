@@ -52,12 +52,14 @@ public abstract class AbstractController : MonoBehaviour
             _playerNum = 1;
             gameManager.controller1Assigned = true;
             gameManager.controller1 = this;
+            transform.position = gameManager.posSpawner1.position;
         }
         else
         {
             _playerNum = 2;
             gameManager.controller2Assigned = true;
             gameManager.controller2 = this;
+            transform.position = gameManager.posSpawner2.position;
         }
         
         

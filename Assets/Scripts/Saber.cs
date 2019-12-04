@@ -12,9 +12,9 @@ public class Saber : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == LayerMask.NameToLayer("character"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("character") && other.gameObject != transform.parent)
         {
-            Debug.Log("ça touche");
+            gameManager.Touch(other.gameObject);
         }
     }
 }

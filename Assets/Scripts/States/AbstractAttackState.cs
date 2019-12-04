@@ -62,6 +62,8 @@ public abstract class AbstractAttackState : AbstractState
             if (!animState.Init)
             {
                 animState.Init = true;
+                //TODO Suppr visual effect
+                controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
             }
         }
         else if (timer < param.timeSteps.x + param.timeSteps.y)
@@ -70,6 +72,8 @@ public abstract class AbstractAttackState : AbstractState
             {
                 animState.Body = true;
                 controller.characterInfo.Saber.GetComponent<Collider>().enabled = true;
+                //TODO Suppr visual effect
+                controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.red;
             }
         }
         else if (timer < param.Duration)
@@ -78,10 +82,14 @@ public abstract class AbstractAttackState : AbstractState
             {
                 animState.Recovery = true;
                 controller.characterInfo.Saber.GetComponent<Collider>().enabled = false;
+                //TODO Suppr visual effect
+                controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
             }
         }
         else
         {
+            //TODO Suppr visual effect
+            controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
             SwitchState();
         }
 

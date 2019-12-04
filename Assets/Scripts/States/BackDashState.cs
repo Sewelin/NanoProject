@@ -12,6 +12,8 @@ public class BackDashState : AbstractState
     {
         _dir = dir;
         param = gameManager.backDashParameters;
+        //TODO Suppr visual effect
+        controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
     }
     
     public override void Update()
@@ -26,6 +28,7 @@ public class BackDashState : AbstractState
         }
         else
         {
+            
             SwitchState();
         }
         base.Update();
@@ -33,6 +36,8 @@ public class BackDashState : AbstractState
 
     private void SwitchState()
     {
+        //TODO Suppr visual effect
+        controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
         Exit();
         switch (nextState)
         {
