@@ -11,12 +11,15 @@ public abstract class AbstractController : MonoBehaviour
         public Rigidbody RigidBody { get; private set; }
         public Animator Animator { get; private set; }
         public GameObject Character { get; private set; }
+        public Saber Saber { get; private set; }
 
         private CharacterInfo(GameObject character)
         {
             RigidBody = character.GetComponent<Rigidbody>();
             Animator = character.GetComponent<Animator>();
+            Saber = character.transform.GetChild(0).GetComponent<Saber>();
             Character = character;
+
         }
 
         public static CharacterInfo Instantiate(GameObject playerModel, Transform transform)
