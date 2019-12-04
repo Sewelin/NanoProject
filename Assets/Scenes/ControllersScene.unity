@@ -441,7 +441,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 105.7
+    speed: 0
   dashAttackParameters:
     timeSteps: {x: 0.33, y: 0.5, z: 0.75}
     curve:
@@ -468,7 +468,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 98.24
+    speed: 1
   backDashParameters:
     timeSteps: {x: 0.2, y: 0, z: 0}
     curve:
@@ -495,8 +495,8 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 100.3
-  walkingSpeed: 15.51
+    speed: 1
+  walkingSpeed: 1
   controller1: {fileID: 0}
   controller2: {fileID: 0}
   controller1Assigned: 0

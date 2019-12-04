@@ -21,7 +21,7 @@ public class BackDashState : AbstractState
         {
             float progress = timer / param.Duration;
             controller.characterInfo.RigidBody.velocity = new Vector3( 
-                - _dir * Time.deltaTime * param.speed * param.curve.Evaluate(progress), 
+                - _dir * param.speed * param.curve.Evaluate(progress), 
                 0f, 0f);
         }
         else
