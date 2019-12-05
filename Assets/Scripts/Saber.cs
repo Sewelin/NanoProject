@@ -13,7 +13,7 @@ public class Saber : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("character") 
-            && (other.gameObject == gameManager.controller1.characterInfo.Character || other.gameObject == gameManager.controller2.characterInfo.Character))
+            && (other.gameObject == gameManager.Controller1.characterInfo.Character || other.gameObject == gameManager.Controller2.characterInfo.Character))
         {
             gameManager.Touch(other.gameObject);
         }
