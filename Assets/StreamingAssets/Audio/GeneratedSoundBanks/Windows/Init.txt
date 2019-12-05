@@ -1,3 +1,16 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3045981741	NanoProjet			\Default Work Unit\NanoProjet	
+
+State	ID	Name	State Group			Notes
+	0	None	NanoProjet			
+	1494365172	State_InGame	NanoProjet			
+	2556207027	State_InMenu	NanoProjet			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2378823330	RTPC_MusicVolume			\Default Work Unit\RTPC_MusicVolume	
+	2582501215	RTPC_MasterVolume			\Default Work Unit\RTPC_MasterVolume	
+	2644490154	RTPC_SFXVolume			\Default Work Unit\RTPC_SFXVolume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	77978275	AMBIENT			\Default Work Unit\Master Audio Bus\ATMOS\AMBIENT	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
@@ -26,6 +39,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	3548165401	REV_SCENE			\Default Work Unit\Master Audio Bus\REVERBS\REV_SCENE	
 
 Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	978948252	Tunnel1 (Custom)	Wwise Matrix Reverb			
 
 Audio Devices	ID	Name	Type				Notes

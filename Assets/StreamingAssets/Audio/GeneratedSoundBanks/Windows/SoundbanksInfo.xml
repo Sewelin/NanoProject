@@ -16,25 +16,28 @@
 			<ShortName>NanoProjet_SFX</ShortName>
 			<Path>NanoProjet_SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3686462113" Name="Backward_Jump" ObjectPath="\Events\NanoProjet\Backward_Jump" DurationType="OneShot" DurationMin="0.327900" DurationMax="0.327900"/>
-				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\NanoProjet\Dash" DurationType="OneShot" DurationMin="1.832917" DurationMax="1.832917"/>
-				<Event Id="3615040804" Name="Dash_Stop" ObjectPath="\Events\NanoProjet\Dash_Stop" DurationType="OneShot" DurationMin="0.295520" DurationMax="0.295520"/>
+				<Event Id="711535685" Name="ATM_Rounds" ObjectPath="\Events\Default Work Unit\ATM_Rounds" DurationType="Infinite"/>
 				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Menu_Atmos" DurationType="Infinite"/>
-				<Event Id="3063554414" Name="MENU_BACK" ObjectPath="\Events\NanoProjet\MENU_BACK" DurationType="OneShot" DurationMin="1.398893" DurationMax="1.398893"/>
-				<Event Id="2340917041" Name="MENU_CHANGE_OPTION" ObjectPath="\Events\NanoProjet\MENU_CHANGE_OPTION" DurationType="OneShot" DurationMin="0.389194" DurationMax="0.389194"/>
-				<Event Id="1952436935" Name="MENU_ENTER" ObjectPath="\Events\NanoProjet\MENU_ENTER" DurationType="OneShot" DurationMin="1.461750" DurationMax="1.461750"/>
-				<Event Id="2170009975" Name="MENU_PAUSE" ObjectPath="\Events\NanoProjet\MENU_PAUSE" DurationType="OneShot" DurationMin="1.566928" DurationMax="1.566928"/>
-				<Event Id="105544633" Name="MENU_PLAY" ObjectPath="\Events\NanoProjet\MENU_PLAY" DurationType="OneShot" DurationMin="6.059563" DurationMax="6.059563"/>
-				<Event Id="2776193354" Name="MENU_QUIT" ObjectPath="\Events\NanoProjet\MENU_QUIT" DurationType="OneShot" DurationMin="7.335532" DurationMax="7.335532"/>
-				<Event Id="2587230380" Name="MENU_UPDOWN" ObjectPath="\Events\NanoProjet\MENU_UPDOWN" DurationType="OneShot" DurationMin="0.373558" DurationMax="0.373558"/>
+				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu_Back" DurationType="OneShot" DurationMin="1.398893" DurationMax="1.398893"/>
+				<Event Id="557861964" Name="Menu_ChangeOption" ObjectPath="\Events\NanoProjet\Menu_ChangeOption" DurationType="OneShot" DurationMin="0.389194" DurationMax="0.389194"/>
+				<Event Id="2666848820" Name="Menu_Continue" ObjectPath="\Events\NanoProjet\Menu_Continue" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
+				<Event Id="2170009975" Name="Menu_Pause" ObjectPath="\Events\NanoProjet\Menu_Pause" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
+				<Event Id="105544633" Name="Menu_Play" ObjectPath="\Events\NanoProjet\Menu_Play" DurationType="OneShot" DurationMin="6.059563" DurationMax="6.059563"/>
+				<Event Id="2776193354" Name="Menu_Quit" ObjectPath="\Events\NanoProjet\Menu_Quit" DurationType="OneShot" DurationMin="7.335532" DurationMax="7.335532"/>
+				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\NanoProjet\Menu_Select" DurationType="OneShot" DurationMin="1.461750" DurationMax="1.461750"/>
+				<Event Id="2587230380" Name="Menu_UpDown" ObjectPath="\Events\NanoProjet\Menu_UpDown" DurationType="OneShot" DurationMin="0.373558" DurationMax="0.373558"/>
 				<Event Id="1183016477" Name="Player_One_Backward" ObjectPath="\Events\NanoProjet\Player_One_Backward" DurationType="OneShot" DurationMin="0.271395" DurationMax="0.492869"/>
 				<Event Id="375910062" Name="Player_One_Bowing" ObjectPath="\Events\NanoProjet\Player_One_Bowing" DurationType="OneShot" DurationMin="0.990817" DurationMax="0.990817"/>
 				<Event Id="972262685" Name="Player_One_Forward" ObjectPath="\Events\NanoProjet\Player_One_Forward" DurationType="OneShot" DurationMin="0.460063" DurationMax="0.680240"/>
 				<Event Id="2507762279" Name="Player_Two_Backward" ObjectPath="\Events\NanoProjet\Player_Two_Backward" DurationType="OneShot" DurationMin="0.268277" DurationMax="0.487208"/>
 				<Event Id="2367140880" Name="Player_Two_Bowing" ObjectPath="\Events\NanoProjet\Player_Two_Bowing" DurationType="OneShot" DurationMin="0.990817" DurationMax="0.990817"/>
 				<Event Id="184927275" Name="Player_Two_Forward" ObjectPath="\Events\NanoProjet\Player_Two_Forward" DurationType="OneShot" DurationMin="0.540826" DurationMax="0.799654"/>
-				<Event Id="4057287994" Name="Sword_Hit" ObjectPath="\Events\NanoProjet\Sword_Hit" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
-				<Event Id="2665482738" Name="Vertical_Attack" ObjectPath="\Events\NanoProjet\Vertical_Attack" DurationType="OneShot" DurationMin="1.276928" DurationMax="1.276928"/>
+				<Event Id="20042657" Name="SFX_Backward_Jump" ObjectPath="\Events\NanoProjet\SFX_Backward_Jump" DurationType="OneShot" DurationMin="0.327900" DurationMax="0.327900"/>
+				<Event Id="4231318760" Name="SFX_ConsumeCorps" ObjectPath="\Events\Default Work Unit\SFX_ConsumeCorps" DurationType="OneShot" DurationMin="4.929458" DurationMax="4.929458"/>
+				<Event Id="1804139809" Name="SFX_Dash" ObjectPath="\Events\NanoProjet\SFX_Dash" DurationType="OneShot" DurationMin="1.832917" DurationMax="1.832917"/>
+				<Event Id="2872475778" Name="SFX_Dash_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX_Dash_Hit_Kill" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
+				<Event Id="299103780" Name="SFX_Dash_Stop" ObjectPath="\Events\NanoProjet\SFX_Dash_Stop" DurationType="OneShot" DurationMin="0.295520" DurationMax="0.295520"/>
+				<Event Id="1708937970" Name="SFX_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX_Vertical_Attack" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="17442322" Language="SFX">
@@ -43,7 +46,11 @@
 				</File>
 				<File Id="27902926" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
-					<Path>SFX\MENU_Music_Test_4D0A0049.wem</Path>
+					<Path>SFX\MENU_Music_Test_1A09C425.wem</Path>
+				</File>
+				<File Id="34483637" Language="SFX">
+					<ShortName>ATM_Battle 1.wav</ShortName>
+					<Path>SFX\ATM_Battle 1_E837ED1D.wem</Path>
 				</File>
 				<File Id="70708229" Language="SFX">
 					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
@@ -59,7 +66,7 @@
 				</File>
 				<File Id="95040990" Language="SFX">
 					<ShortName>Copland_Hit.wav</ShortName>
-					<Path>SFX\Copland_Hit_AD70643E.wem</Path>
+					<Path>SFX\Copland_Hit_16CE4C78.wem</Path>
 				</File>
 				<File Id="103707120" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -75,7 +82,7 @@
 				</File>
 				<File Id="131504247" Language="SFX">
 					<ShortName>UI_Taiko.wav</ShortName>
-					<Path>SFX\UI_Taiko_75D1D8E4.wem</Path>
+					<Path>SFX\UI_Taiko_947E483F.wem</Path>
 				</File>
 				<File Id="159233756" Language="SFX">
 					<ShortName>SFX_Sword.wav</ShortName>
@@ -96,6 +103,14 @@
 				<File Id="301903005" Language="SFX">
 					<ShortName>Copland_Hit.wav</ShortName>
 					<Path>SFX\Copland_Hit_04B3BE69.wem</Path>
+				</File>
+				<File Id="331224992" Language="SFX">
+					<ShortName>SFX_Sword.wav</ShortName>
+					<Path>SFX\SFX_Sword_92BA91E5.wem</Path>
+				</File>
+				<File Id="331645015" Language="SFX">
+					<ShortName>SFX_ConsumeCorps.wav</ShortName>
+					<Path>SFX\SFX_ConsumeCorps_41C75693.wem</Path>
 				</File>
 				<File Id="336470013" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -125,9 +140,13 @@
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_EFEDE9BA.wem</Path>
 				</File>
+				<File Id="564268030" Language="SFX">
+					<ShortName>ATM_RoundOneTest.wav</ShortName>
+					<Path>SFX\ATM_RoundOneTest_50E784A5.wem</Path>
+				</File>
 				<File Id="567855014" Language="SFX">
 					<ShortName>Taiko_Hit.wav</ShortName>
-					<Path>SFX\Taiko_Hit_3DD94DE6.wem</Path>
+					<Path>SFX\Taiko_Hit_0A4DB067.wem</Path>
 				</File>
 				<File Id="602259266" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -135,7 +154,11 @@
 				</File>
 				<File Id="606660939" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
-					<Path>SFX\MENU_Music_Test_87B1BECE.wem</Path>
+					<Path>SFX\MENU_Music_Test_B7CED8B9.wem</Path>
+				</File>
+				<File Id="611231412" Language="SFX">
+					<ShortName>ATM_RoundThree.wav</ShortName>
+					<Path>SFX\ATM_RoundThree_026E8842.wem</Path>
 				</File>
 				<File Id="618070644" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -147,7 +170,11 @@
 				</File>
 				<File Id="649273103" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
-					<Path>SFX\MENU_Music_Test_1ED9F7FD.wem</Path>
+					<Path>SFX\MENU_Music_Test_6F136B74.wem</Path>
+				</File>
+				<File Id="673105821" Language="SFX">
+					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
+					<Path>SFX\SFX_Dash_Whoosh_Test_671EDC04.wem</Path>
 				</File>
 				<File Id="685541732" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -167,7 +194,7 @@
 				</File>
 				<File Id="754484868" Language="SFX">
 					<ShortName>UI_Taiko.wav</ShortName>
-					<Path>SFX\UI_Taiko_EE17E073.wem</Path>
+					<Path>SFX\UI_Taiko_1D1F60B4.wem</Path>
 				</File>
 				<File Id="763677696" Language="SFX">
 					<ShortName>SFX_Hit_Test.wav</ShortName>
@@ -175,11 +202,11 @@
 				</File>
 				<File Id="778893659" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
-					<Path>SFX\MENU_Music_Test_E885CB0A.wem</Path>
+					<Path>SFX\MENU_Music_Test_CF213D2F.wem</Path>
 				</File>
 				<File Id="915816819" Language="SFX">
 					<ShortName>Taiko_Hit.wav</ShortName>
-					<Path>SFX\Taiko_Hit_518352B0.wem</Path>
+					<Path>SFX\Taiko_Hit_CA630949.wem</Path>
 				</File>
 				<File Id="950811618" Language="SFX">
 					<ShortName>SFX_Sword_Hit_Gore.wav</ShortName>
@@ -187,23 +214,27 @@
 				</File>
 				<File Id="958919636" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
-					<Path>SFX\MENU_Music_Test_6A5FCA4A.wem</Path>
+					<Path>SFX\MENU_Music_Test_0D196445.wem</Path>
 				</File>
 				<File Id="964521431" Language="SFX">
 					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
-					<Path>SFX\SFX_Dash_Whoosh_Test_D8689DE1.wem</Path>
+					<Path>SFX\SFX_Dash_Whoosh_Test_C4B257A5.wem</Path>
 				</File>
 				<File Id="987090694" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
-					<Path>SFX\MENU_Music_Test_E36F6705.wem</Path>
+					<Path>SFX\MENU_Music_Test_D7B7E8EF.wem</Path>
 				</File>
 				<File Id="1016258128" Language="SFX">
 					<ShortName>UI_Taiko.wav</ShortName>
-					<Path>SFX\UI_Taiko_0F13B30D.wem</Path>
+					<Path>SFX\UI_Taiko_7AA69908.wem</Path>
 				</File>
 				<File Id="1031627159" Language="SFX">
 					<ShortName>MENU_Amb_Test.wav</ShortName>
-					<Path>SFX\MENU_Amb_Test_7AB1D436.wem</Path>
+					<Path>SFX\MENU_Amb_Test_C0545F7B.wem</Path>
+				</File>
+				<File Id="1051621958" Language="SFX">
+					<ShortName>ATM_RoundTwoTest.wav</ShortName>
+					<Path>SFX\ATM_RoundTwoTest_C848A851.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

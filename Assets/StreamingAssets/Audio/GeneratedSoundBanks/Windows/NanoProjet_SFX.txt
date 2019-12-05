@@ -1,23 +1,43 @@
 Event	ID	Name			Wwise Object Path	Notes
-	105544633	MENU_PLAY			\Default Work Unit\MENU_PLAY	
-	184927275	Player_Two_Forward			\Default Work Unit\Player_Two_Forward	
-	375910062	Player_One_Bowing			\Default Work Unit\Player_One_Bowing	
-	789497435	Menu_Atmos			\Default Work Unit\Menu_Atmos	
-	972262685	Player_One_Forward			\Default Work Unit\Player_One_Forward	
-	1183016477	Player_One_Backward			\Default Work Unit\Player_One_Backward	
-	1942692385	Dash			\Default Work Unit\Dash	
-	1952436935	MENU_ENTER			\Default Work Unit\MENU_ENTER	
-	2170009975	MENU_PAUSE			\Default Work Unit\MENU_PAUSE	
-	2340917041	MENU_CHANGE_OPTION			\Default Work Unit\MENU_CHANGE_OPTION	
-	2367140880	Player_Two_Bowing			\Default Work Unit\Player_Two_Bowing	
-	2507762279	Player_Two_Backward			\Default Work Unit\Player_Two_Backward	
-	2587230380	MENU_UPDOWN			\Default Work Unit\MENU_UPDOWN	
-	2665482738	Vertical_Attack			\Default Work Unit\Vertical_Attack	
-	2776193354	MENU_QUIT			\Default Work Unit\MENU_QUIT	
-	3063554414	MENU_BACK			\Default Work Unit\MENU_BACK	
-	3615040804	Dash_Stop			\Default Work Unit\Dash_Stop	
-	3686462113	Backward_Jump			\Default Work Unit\Backward_Jump	
-	4057287994	Sword_Hit			\Default Work Unit\Sword_Hit	
+	20042657	SFX_Backward_Jump			\NanoProjet\SFX_Backward_Jump	
+	105544633	Menu_Play			\NanoProjet\Menu_Play	
+	184927275	Player_Two_Forward			\NanoProjet\Player_Two_Forward	
+	299103780	SFX_Dash_Stop			\NanoProjet\SFX_Dash_Stop	
+	375910062	Player_One_Bowing			\NanoProjet\Player_One_Bowing	
+	557861964	Menu_ChangeOption			\NanoProjet\Menu_ChangeOption	
+	711535685	ATM_Rounds			\Default Work Unit\ATM_Rounds	
+	789497435	Menu_Atmos			\NanoProjet\Menu_Atmos	
+	972262685	Player_One_Forward			\NanoProjet\Player_One_Forward	
+	1183016477	Player_One_Backward			\NanoProjet\Player_One_Backward	
+	1708937970	SFX_Vertical_Attack			\NanoProjet\SFX_Vertical_Attack	
+	1804139809	SFX_Dash			\NanoProjet\SFX_Dash	
+	2170009975	Menu_Pause			\NanoProjet\Menu_Pause	
+	2367140880	Player_Two_Bowing			\NanoProjet\Player_Two_Bowing	
+	2507762279	Player_Two_Backward			\NanoProjet\Player_Two_Backward	
+	2587230380	Menu_UpDown			\NanoProjet\Menu_UpDown	
+	2666848820	Menu_Continue			\NanoProjet\Menu_Continue	
+	2776193354	Menu_Quit			\NanoProjet\Menu_Quit	
+	2872475778	SFX_Dash_Hit_Kill			\NanoProjet\SFX_Dash_Hit_Kill	
+	3063554414	Menu_Back			\NanoProjet\Menu_Back	
+	4203375351	Menu_Select			\NanoProjet\Menu_Select	
+	4231318760	SFX_ConsumeCorps			\Default Work Unit\SFX_ConsumeCorps	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	4065702348	Switch_Characters			\Default Work Unit\Switch_Characters	
+
+Switch	ID	Name	Switch Group			Notes
+	1812530825	Switch_Set_4	Switch_Characters			
+	1812530828	Switch_Set_1	Switch_Characters			
+	1812530830	Switch_Set_3	Switch_Characters			
+	1812530831	Switch_Set_2	Switch_Characters			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1364308078	RTPC_RoundCount			\Default Work Unit\RTPC_RoundCount	
+	2286992438	RTPC_Timer			\Default Work Unit\RTPC_Timer	
+	2378823330	RTPC_MusicVolume			\Default Work Unit\RTPC_MusicVolume	
+	2470384160	RTPC_PONE_ArmorSets			\Default Work Unit\RTPC_PONE_ArmorSets	
+	2582501215	RTPC_MasterVolume			\Default Work Unit\RTPC_MasterVolume	
+	2644490154	RTPC_SFXVolume			\Default Work Unit\RTPC_SFXVolume	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	77978275	AMBIENT			\Default Work Unit\Master Audio Bus\ATMOS\AMBIENT	
@@ -47,49 +67,57 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	3548165401	REV_SCENE			\Default Work Unit\Master Audio Bus\REVERBS\REV_SCENE	
 
 Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	978948252	Tunnel1 (Custom)	Wwise Matrix Reverb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	17442322	Footstep_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_1FDDA46D.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Footsteps\Foot_L\Player_Footsteps\Footstep_Test		6362
-	27902926	MENU_Music_Test_03	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_4D0A0049.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_03		1121436
-	70708229	SFX_Dash_Whoosh_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Dash_Whoosh_Test_60F3FF13.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Vertical_Attack\SFX_Dash_Whoosh_Test		321704
+	27902926	MENU_Music_Test_03	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_1A09C425.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_03		1121436
+	34483637	ATM_Battle 1	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\ATM_Battle 1_E837ED1D.wem		\Actor-Mixer Hierarchy\NanoProjet\ATMOS\AMBIENT\ATM_InGame\Battle\ATM_Battle 1		1114368
+	70708229	SFX_Dash_Whoosh_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Dash_Whoosh_Test_60F3FF13.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Vertical_Attack_Hit_Kill\SFX_Dash_Whoosh_Test		321704
 	72700801	SFX_Dash_Whoosh_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Dash_Whoosh_Test_10C4C929.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Dash\Whoosh\SFX_Dash_Whoosh_Test		351984
 	89644619	Footstep_Test_02	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_17496B06.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Footsteps\Foot_L\Player_Footsteps\Footstep_Test_02		5877
-	95040990	Copland_Hit	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Copland_Hit_AD70643E.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\PAUSE\Copland_Hit		2790
-	103707120	Footstep_Test_02	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_258C63EC.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward\Footsteps_Back\Foot_R\Player_Footsteps_Back_R\Footstep_Test_02		5290
-	105600322	Footstep_Test_03	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_158EEB91.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward\Footsteps_Back\Foot_R\Player_Footsteps_Back_R\Footstep_Test_03		3432
-	113752996	Footstep_Test_02	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_21F0EE00.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test_02		3152
-	131504247	UI_Taiko	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\UI_Taiko_75D1D8E4.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\ENTER\UI_Taiko		9856
-	159233756	SFX_Sword	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Sword_AE1F5B0D.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Sword_Hit\SFX_Sword		419572
+	95040990	Copland_Hit	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Copland_Hit_16CE4C78.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\PAUSE\Copland_Hit		2790
+	103707120	Footstep_Test_02	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_258C63EC.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Sets\Player_One_Backward_Set_1\Footsteps_Back\Foot_R\Player_Footsteps_Back_R\Footstep_Test_02		5290
+	105600322	Footstep_Test_03	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_158EEB91.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Sets\Player_One_Backward_Set_1\Footsteps_Back\Foot_R\Player_Footsteps_Back_R\Footstep_Test_03		3432
+	113752996	Footstep_Test_02	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_21F0EE00.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Sets\Player_One_Backward_Set_1\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test_02		3152
+	131504247	UI_Taiko	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\UI_Taiko_947E483F.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\SELECT\UI_Taiko		9856
+	159233756	SFX_Sword	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Sword_AE1F5B0D.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Dash_Hit_Kill\SFX_Sword		419572
 	160577390	Footstep_Test_03	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_08971821.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Footsteps\Foot_R\Player_Footsteps\Footstep_Test_03		6483
-	221229023	Footstep_Test_01	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_AC60EFE4.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward\Footsteps_Back\Foot_R\Player_Footsteps_Back_R\Footstep_Test_01		4383
+	221229023	Footstep_Test_01	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_AC60EFE4.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Sets\Player_One_Backward_Set_1\Footsteps_Back\Foot_R\Player_Footsteps_Back_R\Footstep_Test_01		4383
 	256612659	Taiko_Hit	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Taiko_Hit_AD8950F7.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\PLAY\Taiko_Hit		62821
 	301903005	Copland_Hit	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Copland_Hit_04B3BE69.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\PLAY\Copland_Hit		21816
+	331224992	SFX_Sword	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Sword_92BA91E5.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Dash\SFX_Sword		113592
+	331645015	SFX_ConsumeCorps	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_ConsumeCorps_41C75693.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\ConsumeCorps\SFX_ConsumeCorps		473292
 	336470013	Footstep_Test_01	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_5393FD88.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Footsteps\Foot_L\Player_Footsteps\Footstep_Test_01		6601
 	341124679	Footstep_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_9FCB1ED1.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Footsteps\Foot_R\Player_Footsteps\Footstep_Test		5840
 	415217945	Footstep_Test_03	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_C80D6356.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Bowing\Footstep_Test_03		7133
 	506380287	Footstep_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_C76AA8B3.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Dash_Stop\Step_Stop\Footstep_Test		24762
-	527406342	Footstep_Test_03	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_EE16EA51.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test_03		3842
+	527406342	Footstep_Test_03	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_EE16EA51.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Sets\Player_One_Backward_Set_1\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test_03		3842
 	530102772	Footstep_Test_02	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_F73C433F.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Footsteps\Foot_R\Player_Footsteps\Footstep_Test_02		7402
-	558358970	Footstep_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_EFEDE9BA.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test		3941
-	567855014	Taiko_Hit	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Taiko_Hit_3DD94DE6.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\PAUSE\Taiko_Hit		15157
-	602259266	Footstep_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_38CC9E7D.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward\Footsteps_Back\Foot_R\Player_Footsteps_Back_R\Footstep_Test		2985
-	606660939	MENU_Music_Test_01	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_87B1BECE.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_01		1557368
+	558358970	Footstep_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_EFEDE9BA.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Sets\Player_One_Backward_Set_1\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test		3941
+	564268030	ATM_RoundOneTest	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\ATM_RoundOneTest_50E784A5.wem		\Actor-Mixer Hierarchy\NanoProjet\ATMOS\AMBIENT\ATM_InGame\ATM_RoundOne\Forest\ATM_RoundOneTest		657321
+	567855014	Taiko_Hit	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Taiko_Hit_0A4DB067.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\PAUSE\Taiko_Hit		15157
+	602259266	Footstep_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_38CC9E7D.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Sets\Player_One_Backward_Set_1\Footsteps_Back\Foot_R\Player_Footsteps_Back_R\Footstep_Test		2985
+	606660939	MENU_Music_Test_01	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_B7CED8B9.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_01		1557368
+	611231412	ATM_RoundThreeTest	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\ATM_RoundThree_026E8842.wem		\Actor-Mixer Hierarchy\NanoProjet\ATMOS\AMBIENT\ATM_InGame\ATM_RoundThree\Forest\ATM_RoundThreeTest		914347
 	618070644	Footstep_Test_03	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_4FC909A5.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Footsteps\Foot_L\Player_Footsteps\Footstep_Test_03		5748
 	649082316	SFX_Dash_Whoosh_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Dash_Whoosh_Test_1003589B.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Backward_Jump\SFX_Dash_Whoosh_Test		42700
-	649273103	MENU_Music_Test_05	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_1ED9F7FD.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_05		1021056
-	685541732	Footstep_Test_01	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_00D2BFD7.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test_01		4467
+	649273103	MENU_Music_Test_05	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_6F136B74.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_05		1021056
+	673105821	SFX_Dash_Whoosh_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Dash_Whoosh_Test_671EDC04.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Vertical_Attack\SFX_Dash_Whoosh_Test		125040
+	685541732	Footstep_Test_01	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_00D2BFD7.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Sets\Player_One_Backward_Set_1\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test_01		4467
 	692697838	Taiko_Roll	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Taiko_Roll_81276D0C.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\PLAY\Taiko_Roll		13210
 	732962334	Player_Bowing	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Player_Bowing_0AFB99A1.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Bowing\Player_Bowing		11889
 	752283135	Footstep_Test_01	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Footstep_Test_7D3FB300.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Footsteps\Foot_R\Player_Footsteps\Footstep_Test_01		7181
-	754484868	UI_Taiko	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\UI_Taiko_EE17E073.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\UPDOWN\UI_Taiko		3198
-	763677696	SFX_Hit_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Hit_Test_10C4C929.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Sword_Hit\SFX_Hit_Test		43224
-	778893659	MENU_Music_Test_02	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_E885CB0A.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_02		780148
-	915816819	Taiko_Hit	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Taiko_Hit_518352B0.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\BACK\Taiko_Hit		15509
-	950811618	SFX_Sword_Hit_Gore	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Sword_Hit_Gore_94D3F055.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Sword_Hit\SFX_Sword_Hit_Gore		441624
-	958919636	MENU_Music_Test_04	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_6A5FCA4A.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_04		1107096
-	964521431	SFX_Dash_Whoosh_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Dash_Whoosh_Test_D8689DE1.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\CHANGE_OPTION\SFX_Dash_Whoosh_Test		14524
-	987090694	MENU_Music_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_E36F6705.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\MENU_Music_Test		966564
-	1016258128	UI_Taiko	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\UI_Taiko_0F13B30D.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\BACK\UI_Taiko		5867
-	1031627159	MENU_Amb_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Amb_Test_7AB1D436.wem		\Actor-Mixer Hierarchy\NanoProjet\ATMOS\AMBIENT\Amb_Menu\MENU_Amb_Test		989846
+	754484868	UI_Taiko	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\UI_Taiko_1D1F60B4.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\UPDOWN\UI_Taiko		3198
+	763677696	SFX_Hit_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Hit_Test_10C4C929.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Dash\SFX_Hit_Test		43224
+	778893659	MENU_Music_Test_02	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_CF213D2F.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_02		780148
+	915816819	Taiko_Hit	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Taiko_Hit_CA630949.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\BACK\Taiko_Hit		15509
+	950811618	SFX_Sword_Hit_Gore	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Sword_Hit_Gore_94D3F055.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Dash_Hit_Kill\SFX_Sword_Hit_Gore		441624
+	958919636	MENU_Music_Test_04	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_0D196445.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\Shakuashi_Impro\MENU_Music_Test_04		1107096
+	964521431	SFX_Dash_Whoosh_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Dash_Whoosh_Test_C4B257A5.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\CHANGE_OPTION\SFX_Dash_Whoosh_Test		14524
+	987090694	MENU_Music_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Music_Test_D7B7E8EF.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\MENU_Music_Test		966564
+	1016258128	UI_Taiko	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\UI_Taiko_7AA69908.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\BACK\UI_Taiko		5867
+	1031627159	MENU_Amb_Test	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\MENU_Amb_Test_C0545F7B.wem		\Actor-Mixer Hierarchy\NanoProjet\ATMOS\AMBIENT\Amb_Menu\MENU_Amb_Test		989846
+	1051621958	ATM_RoundTwoTest	D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\ATM_RoundTwoTest_C848A851.wem		\Actor-Mixer Hierarchy\NanoProjet\ATMOS\AMBIENT\ATM_InGame\ATM_RoundTwo\Forest\ATM_RoundTwoTest		1033997
 

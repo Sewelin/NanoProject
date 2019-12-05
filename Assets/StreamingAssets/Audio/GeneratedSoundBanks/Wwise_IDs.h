@@ -13,16 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID BACKWARD_JUMP = 3686462113U;
-        static const AkUniqueID DASH = 1942692385U;
-        static const AkUniqueID DASH_STOP = 3615040804U;
+        static const AkUniqueID ATM_ROUNDS = 711535685U;
         static const AkUniqueID MENU_ATMOS = 789497435U;
         static const AkUniqueID MENU_BACK = 3063554414U;
-        static const AkUniqueID MENU_CHANGE_OPTION = 2340917041U;
-        static const AkUniqueID MENU_ENTER = 1952436935U;
+        static const AkUniqueID MENU_CHANGEOPTION = 557861964U;
+        static const AkUniqueID MENU_CONTINUE = 2666848820U;
         static const AkUniqueID MENU_PAUSE = 2170009975U;
         static const AkUniqueID MENU_PLAY = 105544633U;
         static const AkUniqueID MENU_QUIT = 2776193354U;
+        static const AkUniqueID MENU_SELECT = 4203375351U;
         static const AkUniqueID MENU_UPDOWN = 2587230380U;
         static const AkUniqueID PLAYER_ONE_BACKWARD = 1183016477U;
         static const AkUniqueID PLAYER_ONE_BOWING = 375910062U;
@@ -30,9 +29,58 @@ namespace AK
         static const AkUniqueID PLAYER_TWO_BACKWARD = 2507762279U;
         static const AkUniqueID PLAYER_TWO_BOWING = 2367140880U;
         static const AkUniqueID PLAYER_TWO_FORWARD = 184927275U;
-        static const AkUniqueID SWORD_HIT = 4057287994U;
-        static const AkUniqueID VERTICAL_ATTACK = 2665482738U;
+        static const AkUniqueID SFX_BACKWARD_JUMP = 20042657U;
+        static const AkUniqueID SFX_CONSUMECORPS = 4231318760U;
+        static const AkUniqueID SFX_DASH = 1804139809U;
+        static const AkUniqueID SFX_DASH_HIT_KILL = 2872475778U;
+        static const AkUniqueID SFX_DASH_STOP = 299103780U;
+        static const AkUniqueID SFX_VERTICAL_ATTACK = 1708937970U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace NANOPROJET
+        {
+            static const AkUniqueID GROUP = 3045981741U;
+
+            namespace STATE
+            {
+                static const AkUniqueID STATE_INGAME = 1494365172U;
+                static const AkUniqueID STATE_INMENU = 2556207027U;
+            } // namespace STATE
+        } // namespace NANOPROJET
+
+    } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace SWITCH_CHARACTERS
+        {
+            static const AkUniqueID GROUP = 4065702348U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID SWITCH_SET_1 = 1812530828U;
+                static const AkUniqueID SWITCH_SET_2 = 1812530831U;
+                static const AkUniqueID SWITCH_SET_3 = 1812530830U;
+                static const AkUniqueID SWITCH_SET_4 = 1812530825U;
+            } // namespace SWITCH
+        } // namespace SWITCH_CHARACTERS
+
+    } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID RTPC_DEATHCOUNT = 264145860U;
+        static const AkUniqueID RTPC_MASTERVOLUME = 2582501215U;
+        static const AkUniqueID RTPC_MUSICVOLUME = 2378823330U;
+        static const AkUniqueID RTPC_PAUSE = 2887991807U;
+        static const AkUniqueID RTPC_PONE_ARMORSETS = 2470384160U;
+        static const AkUniqueID RTPC_PTWO_ARMORSETS = 2322506118U;
+        static const AkUniqueID RTPC_ROUNDCOUNT = 1364308078U;
+        static const AkUniqueID RTPC_SFXVOLUME = 2644490154U;
+        static const AkUniqueID RTPC_TIMER = 2286992438U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
