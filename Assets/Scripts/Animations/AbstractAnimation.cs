@@ -34,7 +34,7 @@ public abstract class AbstractAnimation : MonoBehaviour
     }
     public static void AddAnimation(GameObject gameObject, AnimationName name) {
 
-        if (!gameObject.TryGetComponent<AbstractAnimation>(out AbstractAnimation actualAnimation))
+        if (!gameObject.TryGetComponent(out AbstractAnimation _))
         {
             if(name == AnimationName.Leave) gameObject.AddComponent<Leave>();
             else if (name == AnimationName.Arrive) gameObject.AddComponent<Arrive>();

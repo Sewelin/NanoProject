@@ -8,10 +8,28 @@ public class GameManager : MonoBehaviour
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
     public float walkingSpeed;
-    public AbstractController controller1;
-    public AbstractController controller2;
-    public bool controller1Assigned;
-    public bool controller2Assigned;
+    private AbstractController _controller1;
+    private AbstractController _controller2;
+    public bool Controller1Assigned { get; private set; }
+    public bool Controller2Assigned { get; private set; }
+    public AbstractController Controller1
+    {
+        get => _controller1;
+        set
+        {
+            Controller1Assigned = true;
+            _controller1 = value;
+        }
+    }
+    public AbstractController Controller2
+    {
+        get => _controller2;
+        set
+        {
+            Controller2Assigned = true;
+            _controller2 = value;
+        }
+    }
 
     public Transform posSpawner1;
     public Transform posSpawner2;
@@ -22,17 +40,17 @@ public class GameManager : MonoBehaviour
     private float _touchCooldown;
     public float TOUCHCOOLDOWN = 0.4f;
     private AbstractController _touched;
-    private bool _touch = false;
-    private float _touchValue = 0;
+    private bool _touch;
+    private int _touchValue;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         roundTimer = ROUNDTIMER;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         CheckDir();
 
@@ -43,8 +61,7 @@ public class GameManager : MonoBehaviour
             if (roundTimer < 0)
             {
                 GameObject addAnim;
-                if (_touched == controller1) addAnim = controller2.characterInfo.Character;
-                else addAnim = controller1.characterInfo.Character;
+                addAnim = _touched == Controller1 ? Controller2.characterInfo.Character : Controller1.characterInfo.Character;
                 AbstractAnimation.AddAnimation(addAnim, AbstractAnimation.AnimationName.Leave);
             }
             _touch = false;
@@ -57,35 +74,28 @@ public class GameManager : MonoBehaviour
     }
 
     public void Pause()
-    {// TODO check and ...
-        if (Time.timeScale < 0.0001f)
-        {
-            Time.timeScale = 1f;
-        }
-        else
-        {
-            Time.timeScale = 0f;
-        }
-    }
-    
-    
-
-    public void CheckDir()
     {
-        if (!controller1Assigned || !controller2Assigned) return;
-        if (!controller1.characterInfo.characterAssigned || !controller2.characterInfo.characterAssigned) return;
+        // TODO check and ...
+        Time.timeScale = Time.timeScale < 0.0001f ? 1f : 0f;
+    }
 
-        controller1.dir = (int) Mathf.Sign(controller2.characterInfo.Character.transform.position.x -
-                                           controller1.characterInfo.Character.transform.position.x);
-        controller2.dir = -controller1.dir;
+
+    private void CheckDir()
+    {
+        if (!Controller1Assigned || !Controller2Assigned) return;
+        if (!Controller1.characterInfo.characterAssigned || !Controller2.characterInfo.characterAssigned) return;
+
+        Controller1.dir = (int) Mathf.Sign(Controller2.characterInfo.Character.transform.position.x -
+                                           Controller1.characterInfo.Character.transform.position.x);
+        Controller2.dir = -Controller1.dir;
         
-        var v = controller1.characterInfo.Character.transform.localScale;
-        v.x = controller1.dir;
-        controller1.characterInfo.Character.transform.localScale = v;
+        var v = Controller1.characterInfo.Character.transform.localScale;
+        v.x = Controller1.dir;
+        Controller1.characterInfo.Character.transform.localScale = v;
         
-        v = controller2.characterInfo.Character.transform.localScale;
-        v.x = controller2.dir;
-        controller2.characterInfo.Character.transform.localScale = v;
+        v = Controller2.characterInfo.Character.transform.localScale;
+        v.x = Controller2.dir;
+        Controller2.characterInfo.Character.transform.localScale = v;
     }
 
     public void Touch(GameObject character)
@@ -93,11 +103,11 @@ public class GameManager : MonoBehaviour
         // if one player already touch the other
         if (_touch && _touched.characterInfo.Character != character)
         {
-            float actualTouchValue = (((controller1.characterInfo.Character == character) ? controller2 : controller1).State.toS() == StateName.VerticalAttack) ? 2 : 1;
+            int actualTouchValue = (((Controller1.characterInfo.Character == character) ? Controller2 : Controller1).State.toS() == StateName.VerticalAttack) ? 2 : 1;
             // if both attack have same value
             if (actualTouchValue == _touchValue) { 
-                Kill(controller1);
-                Kill(controller2);
+                Kill(Controller1);
+                Kill(Controller2);
 
                 if (roundTimer < 0) NewRound();
                 _touch = false;
@@ -106,14 +116,14 @@ public class GameManager : MonoBehaviour
             // if new attack value is greater than the first
             else if(actualTouchValue > _touchValue)
             {
-                _touched = (_touched == controller1) ? controller2 : controller1;
+                _touched = (_touched == Controller1) ? Controller2 : Controller1;
                 Kill(_touched);
 
                 if (roundTimer < 0)
                 {
                     GameObject addAnim;
-                    if (_touched == controller1) addAnim = controller2.characterInfo.Character;
-                    else addAnim = controller1.characterInfo.Character;
+                    if (_touched == Controller1) addAnim = Controller2.characterInfo.Character;
+                    else addAnim = Controller1.characterInfo.Character;
                     AbstractAnimation.AddAnimation(addAnim, AbstractAnimation.AnimationName.Leave);
                 }
                 _touch = false;
@@ -124,8 +134,8 @@ public class GameManager : MonoBehaviour
         {
             _touch = true;
             _touchCooldown = TOUCHCOOLDOWN;
-            _touched = (controller1.characterInfo.Character == character) ? controller1 : controller2;
-            _touchValue = (((controller1.characterInfo.Character == character) ? controller2 : controller1).State.toS() == StateName.VerticalAttack) ? 2 : 1;
+            _touched = (Controller1.characterInfo.Character == character) ? Controller1 : Controller2;
+            _touchValue = (((Controller1.characterInfo.Character == character) ? Controller2 : Controller1).State.toS() == StateName.VerticalAttack) ? 2 : 1;
         }
     }
     private void Kill(AbstractController character)
@@ -145,8 +155,8 @@ public class GameManager : MonoBehaviour
     }
     public void NewRound()
     {
-        controller1.New();
-        controller2.New();
+        Controller1.New();
+        Controller2.New();
         roundTimer = ROUNDTIMER;
     }
 }
