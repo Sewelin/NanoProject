@@ -47,7 +47,6 @@ public abstract class AbstractController : MonoBehaviour
 
     public int PlayerNum { get; private set; }
 
-    private int _point = 0; // TODO increase
     public float movement = 0;
     public int dir = 1;
     public CharacterInfo characterInfo = CharacterInfo.Empty();

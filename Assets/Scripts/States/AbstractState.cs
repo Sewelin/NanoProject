@@ -36,7 +36,7 @@ public abstract class AbstractState
     {
     }
 
-    protected void Exit()
+    protected virtual void Exit()
     {
     }
     

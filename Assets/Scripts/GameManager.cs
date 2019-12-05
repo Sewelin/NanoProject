@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
     public float walkingSpeed;
+    
+    // Controllers
     private AbstractController _controller1;
     private AbstractController _controller2;
     public bool Controller1Assigned { get; private set; }
@@ -60,9 +62,10 @@ public class GameManager : MonoBehaviour
             Kill(_touched);
             if (roundTimer < 0)
             {
-                GameObject addAnim;
-                addAnim = _touched == Controller1 ? Controller2.characterInfo.Character : Controller1.characterInfo.Character;
-                AbstractAnimation.AddAnimation(addAnim, AbstractAnimation.AnimationName.Leave);
+                AbstractController killer;
+                if (_touched == _controller1) killer = _controller2;
+                else killer = _controller1;
+                ((AbstractAttackState)killer.State).kill = true;
             }
             _touch = false;
             _touched = null;
@@ -121,10 +124,10 @@ public class GameManager : MonoBehaviour
 
                 if (roundTimer < 0)
                 {
-                    GameObject addAnim;
-                    if (_touched == Controller1) addAnim = Controller2.characterInfo.Character;
-                    else addAnim = Controller1.characterInfo.Character;
-                    AbstractAnimation.AddAnimation(addAnim, AbstractAnimation.AnimationName.Leave);
+                    AbstractController killer;
+                    if (_touched == _controller1) killer = _controller2;
+                    else killer = _controller1;
+                    ((AbstractAttackState)killer.State).kill = true;
                 }
                 _touch = false;
                 _touched = null;
