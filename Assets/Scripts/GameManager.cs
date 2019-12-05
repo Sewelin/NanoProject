@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public Transform posSpawner1;
     public Transform posSpawner2;
 
+    public float ROUNDTIMER = 60;
+    private float roundTimer;
 
     private float touchCooldown = 0.2f;
     private AbstractController touched;
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        roundTimer = ROUNDTIMER;
     }
 
     // Update is called once per frame
@@ -40,6 +42,12 @@ public class GameManager : MonoBehaviour
             touched = null;
         }
         else if (touch) touchCooldown -= Time.deltaTime;
+        roundTimer -= Time.deltaTime;
+
+        if (roundTimer < 0)
+        {
+
+        }
     }
 
     public void Pause()

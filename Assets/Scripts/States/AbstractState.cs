@@ -54,11 +54,6 @@ public abstract class AbstractState
         controller.SetState(new DashState(gameManager, controller, controller.dir));
     }
 
-    public virtual void OnMovement(float movementP)
-    {
-        movement = movementP;
-    }
-
     public virtual void OnBackDash()
     {
         Exit();

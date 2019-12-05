@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : AbstractController
 {
-
     // Events
 
     public void OnPause()
@@ -24,7 +23,7 @@ public class PlayerController : AbstractController
 
     public void OnMovement(InputValue value)
     {
-        State.OnMovement(value.Get<float>());
+        movement = value.Get<float>();
     }
 
     public void OnBackDash()

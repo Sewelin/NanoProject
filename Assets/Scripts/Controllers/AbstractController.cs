@@ -36,6 +36,7 @@ public abstract class AbstractController : MonoBehaviour
     private int _playerNum;
     
     private int _point = 0; // TODO increase
+    public float movement = 0;
     public int dir = 1;
     public CharacterInfo characterInfo;
     public bool characterSpawned;

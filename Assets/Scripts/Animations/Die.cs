@@ -10,6 +10,6 @@ public class Die : AbstractAnimation
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         //TODO Suppr visual effect
         GetComponent<Renderer>().material.color = Color.black;
-
+        transform.position += new Vector3(0,0,0.1f);
     }
 }
