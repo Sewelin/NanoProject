@@ -11,5 +11,6 @@ public class Die : AbstractAnimation
         //TODO Suppr visual effect
         GetComponent<Renderer>().material.color = Color.black;
         transform.position += new Vector3(0,0,0.1f);
+        gameObject.layer = 10;
     }
 }

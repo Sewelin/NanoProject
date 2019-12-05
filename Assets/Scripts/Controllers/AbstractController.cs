@@ -34,13 +34,15 @@ public abstract class AbstractController : MonoBehaviour
     public GameManager gameManager;
 
     private int _playerNum;
-    
+    public int PlayerNum { get => _playerNum; }
+
     private int _point = 0; // TODO increase
     public float movement = 0;
     public int dir = 1;
     public CharacterInfo characterInfo;
     public bool characterSpawned;
-    protected AbstractState State { get; private set; }
+    public AbstractState State { get; private set; }
+   
 
     // Methods
 
@@ -70,7 +72,7 @@ public abstract class AbstractController : MonoBehaviour
     private void Start()
     {
         New();
-        characterSpawned = true;
+        
         
     }
     public void New()
@@ -79,6 +81,7 @@ public abstract class AbstractController : MonoBehaviour
             _playerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
         characterInfo.Character.AddComponent<Arrive>();
+        characterSpawned = true;
     }
 
     public StateName s; // TODO Suppr

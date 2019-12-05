@@ -504,6 +504,8 @@ MonoBehaviour:
   posSpawner1: {fileID: 2129657097}
   posSpawner2: {fileID: 1892923458}
   ROUNDTIMER: 60
+  roundTimer: 0
+  TOUCHCOOLDOWN: 0.3
 --- !u!4 &811444570
 Transform:
   m_ObjectHideFlags: 0
