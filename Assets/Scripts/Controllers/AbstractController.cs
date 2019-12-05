@@ -68,12 +68,16 @@ public abstract class AbstractController : MonoBehaviour
 
     private void Start()
     {
+        New();
+        characterSpawned = true;
+        
+    }
+    public void New()
+    {
         characterInfo = CharacterInfo.Instantiate(
             _playerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
         characterInfo.Character.AddComponent<Arrive>();
-        characterSpawned = true;
-        
     }
 
     public StateName s; // TODO Suppr

@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         CheckDir();
-        if(touch && touchCooldown < 0)
+        if (touch && touchCooldown < 0)
         {
             Kill(touched);
 
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
             touchCooldown = 0.2f;
             touched = null;
         }
+        else if (touch) touchCooldown -= Time.deltaTime;
     }
 
     public void Pause()
@@ -93,6 +94,8 @@ public class GameManager : MonoBehaviour
     }
     private void Kill(AbstractController character)
     {
-
+        character.characterInfo.Character.AddComponent<Die>();
+        Destroy(character.characterInfo.Saber.gameObject);
+        character.New();
     }
 }
