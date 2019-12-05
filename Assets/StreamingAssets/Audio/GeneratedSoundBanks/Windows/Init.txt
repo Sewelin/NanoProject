@@ -15,23 +15,24 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	77978275	AMBIENT			\Default Work Unit\Master Audio Bus\ATMOS\AMBIENT	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	779278001	DEATH			\Default Work Unit\Master Audio Bus\SFX\DEATH	
-	1123360410	P_ONE			\Default Work Unit\Master Audio Bus\P_ONE	
-	1242230844	P_TWO			\Default Work Unit\Master Audio Bus\P_TWO	
+	1123360410	P_ONE			\Default Work Unit\Master Audio Bus\PLAYERS\P_ONE	
+	1242230844	P_TWO			\Default Work Unit\Master Audio Bus\PLAYERS\P_TWO	
 	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
 	1695690031	OBJECTS			\Default Work Unit\Master Audio Bus\ATMOS\OBJECTS	
 	1992326939	M_PLAY			\Default Work Unit\Master Audio Bus\MUSIC\M_PLAY	
-	2126326874	P_ONE_SFX			\Default Work Unit\Master Audio Bus\P_ONE\P_ONE_SFX	
-	2275604156	P_ONE_FOL			\Default Work Unit\Master Audio Bus\P_ONE\P_ONE_FOL	
+	2126326874	P_ONE_SFX			\Default Work Unit\Master Audio Bus\PLAYERS\P_ONE\P_ONE_SFX	
+	2188949101	PLAYERS			\Default Work Unit\Master Audio Bus\PLAYERS	
+	2275604156	P_ONE_FOL			\Default Work Unit\Master Audio Bus\PLAYERS\P_ONE\P_ONE_FOL	
 	2338369940	M_MENU			\Default Work Unit\Master Audio Bus\MUSIC\M_MENU	
 	2454616260	SWORD			\Default Work Unit\Master Audio Bus\SFX\SWORD	
 	2607556080	MENU			\Default Work Unit\Master Audio Bus\UI\MENU	
 	3034623661	ATMOS			\Default Work Unit\Master Audio Bus\ATMOS	
 	3545700988	REVERBS			\Default Work Unit\Master Audio Bus\REVERBS	
-	3599308920	P_TWO_SFX			\Default Work Unit\Master Audio Bus\P_TWO\P_TWO_SFX	
+	3599308920	P_TWO_SFX			\Default Work Unit\Master Audio Bus\PLAYERS\P_TWO\P_TWO_SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	MUSIC			\Default Work Unit\Master Audio Bus\MUSIC	
 	4141130937	OPTIONS			\Default Work Unit\Master Audio Bus\UI\OPTIONS	
-	4290589570	P_TWO_FOL			\Default Work Unit\Master Audio Bus\P_TWO\P_TWO_FOL	
+	4290589570	P_TWO_FOL			\Default Work Unit\Master Audio Bus\PLAYERS\P_TWO\P_TWO_FOL	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2116471102	REV_MENU_MUSIC			\Default Work Unit\Master Audio Bus\REVERBS\REV_MENU_MUSIC	

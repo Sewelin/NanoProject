@@ -26,7 +26,7 @@
 				<Event Id="2776193354" Name="Menu_Quit" ObjectPath="\Events\NanoProjet\Menu_Quit" DurationType="OneShot" DurationMin="7.335532" DurationMax="7.335532"/>
 				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\NanoProjet\Menu_Select" DurationType="OneShot" DurationMin="1.461750" DurationMax="1.461750"/>
 				<Event Id="2587230380" Name="Menu_UpDown" ObjectPath="\Events\NanoProjet\Menu_UpDown" DurationType="OneShot" DurationMin="0.373558" DurationMax="0.373558"/>
-				<Event Id="1183016477" Name="Player_One_Backward" ObjectPath="\Events\NanoProjet\Player_One_Backward" DurationType="OneShot" DurationMin="0.271395" DurationMax="0.492869"/>
+				<Event Id="1183016477" Name="Player_One_Backward" ObjectPath="\Events\NanoProjet\Player_One_Backward" DurationType="OneShot" DurationMin="0.241785" DurationMax="0.439096"/>
 				<Event Id="375910062" Name="Player_One_Bowing" ObjectPath="\Events\NanoProjet\Player_One_Bowing" DurationType="OneShot" DurationMin="0.990817" DurationMax="0.990817"/>
 				<Event Id="972262685" Name="Player_One_Forward" ObjectPath="\Events\NanoProjet\Player_One_Forward" DurationType="OneShot" DurationMin="0.460063" DurationMax="0.680240"/>
 				<Event Id="2507762279" Name="Player_Two_Backward" ObjectPath="\Events\NanoProjet\Player_Two_Backward" DurationType="OneShot" DurationMin="0.268277" DurationMax="0.487208"/>
@@ -50,7 +50,7 @@
 				</File>
 				<File Id="34483637" Language="SFX">
 					<ShortName>ATM_Battle 1.wav</ShortName>
-					<Path>SFX\ATM_Battle 1_E837ED1D.wem</Path>
+					<Path>SFX\ATM_Battle 1_A1DAA281.wem</Path>
 				</File>
 				<File Id="70708229" Language="SFX">
 					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
@@ -106,11 +106,11 @@
 				</File>
 				<File Id="331224992" Language="SFX">
 					<ShortName>SFX_Sword.wav</ShortName>
-					<Path>SFX\SFX_Sword_92BA91E5.wem</Path>
+					<Path>SFX\SFX_Sword_A0EF7742.wem</Path>
 				</File>
 				<File Id="331645015" Language="SFX">
 					<ShortName>SFX_ConsumeCorps.wav</ShortName>
-					<Path>SFX\SFX_ConsumeCorps_41C75693.wem</Path>
+					<Path>SFX\SFX_ConsumeCorps_F850D075.wem</Path>
 				</File>
 				<File Id="336470013" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -142,7 +142,7 @@
 				</File>
 				<File Id="564268030" Language="SFX">
 					<ShortName>ATM_RoundOneTest.wav</ShortName>
-					<Path>SFX\ATM_RoundOneTest_50E784A5.wem</Path>
+					<Path>SFX\ATM_RoundOneTest_8F11CA1B.wem</Path>
 				</File>
 				<File Id="567855014" Language="SFX">
 					<ShortName>Taiko_Hit.wav</ShortName>
@@ -158,7 +158,7 @@
 				</File>
 				<File Id="611231412" Language="SFX">
 					<ShortName>ATM_RoundThree.wav</ShortName>
-					<Path>SFX\ATM_RoundThree_026E8842.wem</Path>
+					<Path>SFX\ATM_RoundThree_23EE7826.wem</Path>
 				</File>
 				<File Id="618070644" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -174,7 +174,7 @@
 				</File>
 				<File Id="673105821" Language="SFX">
 					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
-					<Path>SFX\SFX_Dash_Whoosh_Test_671EDC04.wem</Path>
+					<Path>SFX\SFX_Dash_Whoosh_Test_A6C06943.wem</Path>
 				</File>
 				<File Id="685541732" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -234,7 +234,7 @@
 				</File>
 				<File Id="1051621958" Language="SFX">
 					<ShortName>ATM_RoundTwoTest.wav</ShortName>
-					<Path>SFX\ATM_RoundTwoTest_C848A851.wem</Path>
+					<Path>SFX\ATM_RoundTwoTest_EFBD2E50.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

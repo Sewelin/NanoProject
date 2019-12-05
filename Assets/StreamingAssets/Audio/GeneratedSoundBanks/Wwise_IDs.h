@@ -106,6 +106,7 @@ namespace AK
         static const AkUniqueID P_TWO = 1242230844U;
         static const AkUniqueID P_TWO_FOL = 4290589570U;
         static const AkUniqueID P_TWO_SFX = 3599308920U;
+        static const AkUniqueID PLAYERS = 2188949101U;
         static const AkUniqueID REVERBS = 3545700988U;
         static const AkUniqueID SFX = 393239870U;
         static const AkUniqueID SWORD = 2454616260U;
