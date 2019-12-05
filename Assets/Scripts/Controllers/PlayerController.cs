@@ -40,4 +40,12 @@ public class PlayerController : AbstractController
     {
         // TODO
     }
+    public void OnDisable()
+    {
+        GetComponent<PlayerInput>().PassivateInput();
+    }
+    public void OnEnable()
+    {
+        GetComponent<PlayerInput>().ActivateInput();
+    }
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class AbstractAnimation : MonoBehaviour
 {
+    public enum AnimationName
+    {
+        Leave,Die,Arrive
+    }
+
     public AbstractController controller;
     public float Timer { get; set; }
     public float TIMER = 2;
@@ -25,6 +30,15 @@ public abstract class AbstractAnimation : MonoBehaviour
     protected virtual void Exit()
     {
         if (block) controller.enabled = true;
-        Destroy(this);
+        DestroyImmediate(this);
+    }
+    public static void AddAnimation(GameObject gameObject, AnimationName name) {
+
+        if (!gameObject.TryGetComponent<AbstractAnimation>(out AbstractAnimation actualAnimation))
+        {
+            if(name == AnimationName.Leave) gameObject.AddComponent<Leave>();
+            else if (name == AnimationName.Arrive) gameObject.AddComponent<Arrive>();
+            else gameObject.AddComponent<Die>();
+        }
     }
 }

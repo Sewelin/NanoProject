@@ -11,7 +11,8 @@ public abstract class AbstractController : MonoBehaviour
         public bool characterAssigned;
         public Rigidbody RigidBody { get; private set; }
         public Animator Animator { get; private set; }
-        public GameObject Character { get; private set; }
+        private GameObject _character;
+        public GameObject Character { get { return (characterAssigned) ? _character : null; } set => _character = value; }
         public Saber Saber { get; private set; }
 
         private CharacterInfo(GameObject character)
@@ -80,7 +81,7 @@ public abstract class AbstractController : MonoBehaviour
         characterInfo = CharacterInfo.Instantiate(
             _playerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
-        characterInfo.Character.AddComponent<Arrive>();
+        AbstractAnimation.AddAnimation(characterInfo.Character, AbstractAnimation.AnimationName.Arrive);
         characterSpawned = true;
     }
 

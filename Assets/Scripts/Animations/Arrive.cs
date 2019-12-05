@@ -19,11 +19,13 @@ public class Arrive : AbstractAnimation
 
     protected override void Update()
     {
-        base.Update();
-
         GetComponent<Rigidbody>().velocity = new Vector3(
             direction * speed,
             0f, 0f);
+
+        base.Update();
+
+
 
     }
     protected override void Exit()

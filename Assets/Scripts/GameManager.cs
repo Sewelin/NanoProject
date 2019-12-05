@@ -19,11 +19,11 @@ public class GameManager : MonoBehaviour
     public float ROUNDTIMER = 60;
     public float roundTimer;
 
-    private float touchCooldown;
+    private float _touchCooldown;
     public float TOUCHCOOLDOWN = 0.4f;
-    private AbstractController touched;
-    private bool touch = false;
-    private float touchValue = 0;
+    private AbstractController _touched;
+    private bool _touch = false;
+    private float _touchValue = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -37,19 +37,21 @@ public class GameManager : MonoBehaviour
         CheckDir();
 
         // Check if one player touch the other and if timer is over
-        if (touch && touchCooldown < 0)
+        if (_touch && _touchCooldown < 0)
         {
-            Kill(touched);
+            Kill(_touched);
             if (roundTimer < 0)
             {
-                if (touched == controller1) controller2.characterInfo.Character.AddComponent<Leave>();
-                else controller1.characterInfo.Character.AddComponent<Leave>();
+                GameObject addAnim;
+                if (_touched == controller1) addAnim = controller2.characterInfo.Character;
+                else addAnim = controller1.characterInfo.Character;
+                AbstractAnimation.AddAnimation(addAnim, AbstractAnimation.AnimationName.Leave);
             }
-            touch = false;
-            touched = null;
+            _touch = false;
+            _touched = null;
 
         }
-        else if (touch) touchCooldown -= Time.deltaTime;
+        else if (_touch) _touchCooldown -= Time.deltaTime;
         roundTimer -= Time.deltaTime;
 
     }
@@ -89,47 +91,57 @@ public class GameManager : MonoBehaviour
     public void Touch(GameObject character)
     {
         // if one player already touch the other
-        if (touch && touched.characterInfo.Character != character)
+        if (_touch && _touched.characterInfo.Character != character)
         {
             float actualTouchValue = (((controller1.characterInfo.Character == character) ? controller2 : controller1).State.toS() == StateName.VerticalAttack) ? 2 : 1;
             // if both attack have same value
-            if (actualTouchValue == touchValue) { 
+            if (actualTouchValue == _touchValue) { 
                 Kill(controller1);
                 Kill(controller2);
 
                 if (roundTimer < 0) NewRound();
-                touch = false;
-                touched = null;
+                _touch = false;
+                _touched = null;
             }
             // if new attack value is greater than the first
-            else if(actualTouchValue > touchValue)
+            else if(actualTouchValue > _touchValue)
             {
-                touched = (touched == controller1) ? controller2 : controller1;
-                Kill(touched);
+                _touched = (_touched == controller1) ? controller2 : controller1;
+                Kill(_touched);
 
                 if (roundTimer < 0)
                 {
-                    if (touched == controller1) controller2.characterInfo.Character.AddComponent<Leave>();
-                    else controller1.characterInfo.Character.AddComponent<Leave>();
+                    GameObject addAnim;
+                    if (_touched == controller1) addAnim = controller2.characterInfo.Character;
+                    else addAnim = controller1.characterInfo.Character;
+                    AbstractAnimation.AddAnimation(addAnim, AbstractAnimation.AnimationName.Leave);
                 }
-                touch = false;
-                touched = null;
+                _touch = false;
+                _touched = null;
             }
         }
         else
         {
-            touch = true;
-            touchCooldown = TOUCHCOOLDOWN;
-            touched = (controller1.characterInfo.Character == character) ? controller1 : controller2;
-            touchValue = (((controller1.characterInfo.Character == character) ? controller2 : controller1).State.toS() == StateName.VerticalAttack) ? 2 : 1;
+            _touch = true;
+            _touchCooldown = TOUCHCOOLDOWN;
+            _touched = (controller1.characterInfo.Character == character) ? controller1 : controller2;
+            _touchValue = (((controller1.characterInfo.Character == character) ? controller2 : controller1).State.toS() == StateName.VerticalAttack) ? 2 : 1;
         }
     }
     private void Kill(AbstractController character)
     {
-        character.characterInfo.characterAssigned = false;
-        character.characterInfo.Character.AddComponent<Die>();
+        GameObject dieCharacter = character.characterInfo.Character;
         Destroy(character.characterInfo.Saber.gameObject);
-        if(roundTimer > 0) character.New();
+        character.characterInfo.characterAssigned = false;
+        if (roundTimer > 0) character.New();
+        else
+        {
+            character.characterInfo.characterAssigned = false ;
+        }
+        
+        AbstractAnimation.AddAnimation(dieCharacter, AbstractAnimation.AnimationName.Die);
+        
+        
     }
     public void NewRound()
     {
