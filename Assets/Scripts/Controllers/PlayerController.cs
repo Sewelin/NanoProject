@@ -33,12 +33,12 @@ public class PlayerController : AbstractController
 
     public void OnDeviceLostEvent()
     {
-        // TODO
+        // TODO Pollish
     }
     
     public void OnDeviceRegainedEvent()
     {
-        // TODO
+        // TODO Pollish
     }
     public void OnDisable()
     {

@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using UnityEngine;
 
-public class BackDashState : AbstractState
+public class BackDashState : AbstractControllerState
 {
     private int _dir;
     protected float timer;
@@ -37,38 +37,38 @@ public class BackDashState : AbstractState
         Exit();
         switch (nextState)
         {
-            case StateName.Idle:
+            case ControllerStateName.Idle:
                 controller.SetState(new IdleState(gameManager, controller));
                 break;
-            case StateName.VerticalAttack:
+            case ControllerStateName.VerticalAttack:
                 controller.SetState(new VerticalState(gameManager, controller, controller.dir));
                 break;
-            case StateName.DashAttack:
+            case ControllerStateName.DashAttack:
                 controller.SetState(new DashState(gameManager, controller, controller.dir));
                 break;
-            case StateName.BackDash:
+            case ControllerStateName.BackDash:
                 controller.SetState(new BackDashState(gameManager, controller, controller.dir));
                 break;
         }
     }
 
-    public override StateName toS()// TODO Suppr
+    public override ControllerStateName Name()
     {
-        return StateName.BackDash;
+        return ControllerStateName.BackDash;
     }
     
     public override void OnVerticalAttack()
     {
-        nextState = StateName.VerticalAttack;
+        nextState = ControllerStateName.VerticalAttack;
     }
 
     public override void OnDashAttack()
     {
-        nextState = StateName.DashAttack;
+        nextState = ControllerStateName.DashAttack;
     }
 
     public override void OnBackDash()
     {
-        nextState = StateName.BackDash;
+        nextState = ControllerStateName.BackDash;
     }
 }
