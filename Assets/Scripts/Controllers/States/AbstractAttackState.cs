@@ -47,7 +47,6 @@ public abstract class AbstractAttackState : AbstractControllerState
     protected float timer = 0f;
     protected StateParameters param;
     protected AnimState animState;
-    public bool kill;
     
     public AbstractAttackState(GameManager gameManager, AbstractController controller, StateParameters param, int dir) :
         base(gameManager, controller)
@@ -119,16 +118,6 @@ public abstract class AbstractAttackState : AbstractControllerState
             case ControllerStateName.BackDash:
                 controller.SetState(new BackDashState(gameManager, controller, controller.dir));
                 break;
-        }
-    }
-
-    protected override void Exit()
-    {
-        base.Exit();
-        Debug.Log(kill +" " + controller.gameManager.roundTimer);
-        if (kill && controller.gameManager.roundTimer < 0)
-        {
-            AbstractAnimation.AddAnimation(controller.characterInfo.Character,AbstractAnimation.AnimationName.Leave);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,45 +36,40 @@ public class GameManager : MonoBehaviour
 
     public Transform posSpawner1;
     public Transform posSpawner2;
+    public Transform posStartFight1;
+    public Transform posStartFight2;
 
+    public float TOUCHCOOLDOWN = 0.4f;
+    [NonSerialized] public float touchCooldown;
+    [NonSerialized] public AbstractController touched;
+    [NonSerialized] public int touchValue;
+    
     public float ROUNDTIMER = 60;
     public float roundTimer;
+    
+    private AbstractGameState State { get; set; }
+    public GameStateName StateName => State.Name();
 
-    private float _touchCooldown;
-    public float TOUCHCOOLDOWN = 0.4f;
-    private AbstractController _touched;
-    private bool _touch;
-    private int _touchValue;
+    private void Awake()
+    {
+        SetState(new SetUp(this));
+    }
 
-    // Start is called before the first frame update
     private void Start()
     {
         roundTimer = ROUNDTIMER;
     }
 
-    // Update is called once per frame
+    [SerializeField] private GameStateName GSN; // TODO Suppr
     private void Update()
     {
-        CheckDir();
+        GSN = StateName; // TODO Suppr
+        State.Update();
+    }
 
-        // Check if one player touch the other and if timer is over
-        if (_touch && _touchCooldown < 0)
-        {
-            Kill(_touched);
-            if (roundTimer < 0)
-            {
-                AbstractController killer;
-                if (_touched == _controller1) killer = _controller2;
-                else killer = _controller1;
-                ((AbstractAttackState)killer.State).kill = true;
-            }
-            _touch = false;
-            _touched = null;
-
-        }
-        else if (_touch) _touchCooldown -= Time.deltaTime;
-        roundTimer -= Time.deltaTime;
-
+    public void SetState(AbstractGameState state)
+    {
+        State = state;
     }
 
     public void Pause()
@@ -82,7 +78,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    private void CheckDir()
+    public void CheckDir()
     {
         if (!Controller1Assigned || !Controller2Assigned) return;
         if (!Controller1.characterInfo.characterAssigned || !Controller2.characterInfo.characterAssigned) return;
@@ -102,63 +98,11 @@ public class GameManager : MonoBehaviour
 
     public void Touch(GameObject character)
     {
-        // if one player already touch the other
-        if (_touch && _touched.characterInfo.Character != character)
-        {
-            int actualTouchValue = (((Controller1.characterInfo.Character == character) ? Controller2 : Controller1).State.Name() == ControllerStateName.VerticalAttack) ? 2 : 1;
-            // if both attack have same value
-            if (actualTouchValue == _touchValue) { 
-                Kill(Controller1);
-                Kill(Controller2);
-
-                if (roundTimer < 0) NewRound();
-                _touch = false;
-                _touched = null;
-            }
-            // if new attack value is greater than the first
-            else if(actualTouchValue > _touchValue)
-            {
-                _touched = (_touched == Controller1) ? Controller2 : Controller1;
-                Kill(_touched);
-
-                if (roundTimer < 0)
-                {
-                    AbstractController killer;
-                    if (_touched == _controller1) killer = _controller2;
-                    else killer = _controller1;
-                    ((AbstractAttackState)killer.State).kill = true;
-                }
-                _touch = false;
-                _touched = null;
-            }
-        }
-        else
-        {
-            _touch = true;
-            _touchCooldown = TOUCHCOOLDOWN;
-            _touched = (Controller1.characterInfo.Character == character) ? Controller1 : Controller2;
-            _touchValue = (((Controller1.characterInfo.Character == character) ? Controller2 : Controller1).State.Name() == ControllerStateName.VerticalAttack) ? 2 : 1;
-        }
+        State.Touch(character);
     }
-    private void Kill(AbstractController character)
+
+    public void ChararcterInPosition(int numCharacter)
     {
-        GameObject dieCharacter = character.characterInfo.Character;
-        Destroy(character.characterInfo.Saber.gameObject);
-        character.characterInfo.characterAssigned = false;
-        if (roundTimer > 0) character.New();
-        else
-        {
-            character.characterInfo.characterAssigned = false ;
-        }
-        
-        AbstractAnimation.AddAnimation(dieCharacter, AbstractAnimation.AnimationName.Die);
-        
-        
-    }
-    public void NewRound()
-    {
-        Controller1.New();
-        Controller2.New();
-        roundTimer = ROUNDTIMER;
+        State.characterInPosition[numCharacter-1] = true;
     }
 }

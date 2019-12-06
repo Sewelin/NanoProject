@@ -4,27 +4,35 @@ using UnityEngine;
 
 public class Leave : AbstractAnimation
 {
-    private Vector3 goTo;
-    private float speed = 1;
+    private float _direction;
+    private float _speed;
+    private Transform _destination;
+    
     protected override void Awake()
     {
-        controller = transform.parent.GetComponent<AbstractController>();
-        goTo = (controller.PlayerNum == 1) ? controller.gameManager.posSpawner1.transform.position : controller.gameManager.posSpawner2.transform.position;
+        base.Awake();
         controller.enabled = false;
-        GetComponent<Rigidbody>().velocity = new Vector3(Mathf.Sign(goTo.x - transform.position.x) * speed, 0, 0);
+        _direction = -1 * Mathf.Sign(Camera.main.transform.position.x - transform.position.x);
+        _speed = gameManager.walkingSpeed;
+        _destination = controller.PlayerNum == 1 ? gameManager.posSpawner1 : gameManager.posSpawner2;
         gameObject.layer = 10;
-        Debug.Log(goTo);
+        
+        // TODO Suppr color
         GetComponent<Renderer>().material.color = Color.green;
     }
+    
     protected override void Update()
     {
-        if ((controller.PlayerNum == 1 && transform.position.x < goTo.x) || (controller.PlayerNum == 2 && transform.position.x > goTo.x)) Exit();
-        GetComponent<Rigidbody>().velocity = new Vector3(Mathf.Sign(goTo.x - transform.position.x) * speed, 0, 0);
-    }
-    protected override void Exit()
-    {
-        Destroy(this.gameObject);
-        controller.gameManager.NewRound();
-        base.Exit();
+        if (inPosition) return;
+        base.Update();
+        
+        GetComponent<Rigidbody>().velocity = new Vector3(
+            _direction * _speed,
+            0f, 0f);
+        if ( _direction * (transform.position.x - _destination.position.x) > 0f)
+        {
+            gameManager.ChararcterInPosition(controller.PlayerNum);
+            inPosition = true;
+        }
     }
 }

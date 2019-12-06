@@ -43,16 +43,18 @@ public abstract class AbstractController : MonoBehaviour
 
     // Attributes
     
-    public GameManager gameManager;
+    [NonSerialized] public GameManager gameManager;
 
     public int PlayerNum { get; private set; }
+    
+    public int points;
+    public int roundWon;
 
     public float movement = 0;
     public int dir = 1;
     public CharacterInfo characterInfo = CharacterInfo.Empty();
-    public AbstractControllerState State { get; private set; }
-    public ControllerStateName stateName;
-   
+    public AbstractControllerState State { get; private set; } // TODO protected
+    public ControllerStateName StateName => State.Name();
 
     // Methods
 
@@ -77,24 +79,17 @@ public abstract class AbstractController : MonoBehaviour
 
     }
 
-    private void Start()
-    {
-        New();
-        
-        
-    }
-    public void New()
+    public void NewCharacter()
     {
         characterInfo = CharacterInfo.Instantiate(
             PlayerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
-        AbstractAnimation.AddAnimation(characterInfo.Character, AbstractAnimation.AnimationName.Arrive);
+        characterInfo.Character.AddComponent<GoToStart>();
     }
     
     protected void Update()
     {
         State.Update();
-        stateName = State.Name();
     }
 
     protected void FixedUpdate()

@@ -6,7 +6,6 @@ public abstract class AbstractControllerState
     protected readonly GameManager gameManager;
     protected readonly AbstractController controller;
     protected ControllerStateName nextState = ControllerStateName.Idle;
-    protected float movement;
 
     // Methods
     protected AbstractControllerState(GameManager gameManager, AbstractController controller)

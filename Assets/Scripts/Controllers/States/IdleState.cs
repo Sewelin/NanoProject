@@ -6,12 +6,6 @@ public class IdleState : AbstractControllerState
         base(gameManager, controller)
     {
     }
-
-    public override void Update()
-    {
-        base.Update();
-
-    }
     
     public override void FixedUpdate()
     {
