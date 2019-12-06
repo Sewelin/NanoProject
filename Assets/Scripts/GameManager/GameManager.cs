@@ -2,9 +2,9 @@
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject character1Model; // TODO see in editor?
+    public GameObject character1Model;
     public GameObject character2Model;
-    public StateParameters verticalAttackParameters; // TODO see in editor?
+    public StateParameters verticalAttackParameters;
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
     public float walkingSpeed;
@@ -78,7 +78,6 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        // TODO check and ...
         Time.timeScale = Time.timeScale < 0.0001f ? 1f : 0f;
     }
 
@@ -106,7 +105,7 @@ public class GameManager : MonoBehaviour
         // if one player already touch the other
         if (_touch && _touched.characterInfo.Character != character)
         {
-            int actualTouchValue = (((Controller1.characterInfo.Character == character) ? Controller2 : Controller1).State.toS() == StateName.VerticalAttack) ? 2 : 1;
+            int actualTouchValue = (((Controller1.characterInfo.Character == character) ? Controller2 : Controller1).State.Name() == ControllerStateName.VerticalAttack) ? 2 : 1;
             // if both attack have same value
             if (actualTouchValue == _touchValue) { 
                 Kill(Controller1);
@@ -138,7 +137,7 @@ public class GameManager : MonoBehaviour
             _touch = true;
             _touchCooldown = TOUCHCOOLDOWN;
             _touched = (Controller1.characterInfo.Character == character) ? Controller1 : Controller2;
-            _touchValue = (((Controller1.characterInfo.Character == character) ? Controller2 : Controller1).State.toS() == StateName.VerticalAttack) ? 2 : 1;
+            _touchValue = (((Controller1.characterInfo.Character == character) ? Controller2 : Controller1).State.Name() == ControllerStateName.VerticalAttack) ? 2 : 1;
         }
     }
     private void Kill(AbstractController character)

@@ -50,7 +50,8 @@ public abstract class AbstractController : MonoBehaviour
     public float movement = 0;
     public int dir = 1;
     public CharacterInfo characterInfo = CharacterInfo.Empty();
-    public AbstractState State { get; private set; }
+    public AbstractControllerState State { get; private set; }
+    public ControllerStateName stateName;
    
 
     // Methods
@@ -89,12 +90,11 @@ public abstract class AbstractController : MonoBehaviour
             transform);
         AbstractAnimation.AddAnimation(characterInfo.Character, AbstractAnimation.AnimationName.Arrive);
     }
-
-    public StateName s; // TODO Suppr
+    
     protected void Update()
     {
-        s = State.toS();// TODO Suppr
         State.Update();
+        stateName = State.Name();
     }
 
     protected void FixedUpdate()
@@ -102,7 +102,7 @@ public abstract class AbstractController : MonoBehaviour
         State.FixedUpdate();
     }
 
-    public void SetState(AbstractState state)
+    public void SetState(AbstractControllerState state)
     {
         State = state;
     }

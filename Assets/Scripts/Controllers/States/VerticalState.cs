@@ -8,23 +8,23 @@ public class VerticalState : AbstractAttackState
     }
     
 
-    public override StateName toS()// TODO Suppr
+    public override ControllerStateName Name()
     {
-        return StateName.VerticalAttack;
+        return ControllerStateName.VerticalAttack;
     }
     
     public override void OnVerticalAttack()
     {
-        nextState = StateName.VerticalAttack;
+        nextState = ControllerStateName.VerticalAttack;
     }
 
     public override void OnDashAttack()
     {
-        nextState = StateName.DashAttack;
+        nextState = ControllerStateName.DashAttack;
     }
 
     public override void OnBackDash()
     {
-        nextState = StateName.BackDash;
+        nextState = ControllerStateName.BackDash;
     }
 }

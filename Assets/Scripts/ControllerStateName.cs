@@ -1,7 +1,7 @@
- public enum StateName
+ public enum ControllerStateName
 {
     Idle,
     VerticalAttack,
     DashAttack,
     BackDash
-}// TODO Suppr
+}
