@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID ATM_ROUNDS = 711535685U;
+        static const AkUniqueID INGAME_MUSIC = 2613926250U;
         static const AkUniqueID MENU_ATMOS = 789497435U;
         static const AkUniqueID MENU_BACK = 3063554414U;
         static const AkUniqueID MENU_CHANGEOPTION = 557861964U;
@@ -35,6 +36,7 @@ namespace AK
         static const AkUniqueID SFX_DASH_HIT_KILL = 2872475778U;
         static const AkUniqueID SFX_DASH_STOP = 299103780U;
         static const AkUniqueID SFX_VERTICAL_ATTACK = 1708937970U;
+        static const AkUniqueID SFX_VERTICAL_ATTACK_HIT_KILL = 1553621999U;
     } // namespace EVENTS
 
     namespace STATES
@@ -66,6 +68,18 @@ namespace AK
                 static const AkUniqueID SWITCH_SET_4 = 1812530825U;
             } // namespace SWITCH
         } // namespace SWITCH_CHARACTERS
+
+        namespace SWITCH_SEGMENTS
+        {
+            static const AkUniqueID GROUP = 2524134066U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID FIRSTSEGMENT = 2815714396U;
+                static const AkUniqueID INTRO = 1125500713U;
+                static const AkUniqueID LASTSEGMENT = 2516701536U;
+            } // namespace SWITCH
+        } // namespace SWITCH_SEGMENTS
 
     } // namespace SWITCHES
 

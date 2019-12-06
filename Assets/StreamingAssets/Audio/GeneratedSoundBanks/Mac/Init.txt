@@ -1,3 +1,11 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2524134066	Switch_Segments			\Default Work Unit\Switch_Segments	
+
+Switch	ID	Name	Switch Group			Notes
+	1125500713	Intro	Switch_Segments			
+	2516701536	LastSegment	Switch_Segments			
+	2815714396	FirstSegment	Switch_Segments			
+
 State Group	ID	Name			Wwise Object Path	Notes
 	3045981741	NanoProjet			\Default Work Unit\NanoProjet	
 
