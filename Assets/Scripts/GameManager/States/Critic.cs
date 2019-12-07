@@ -17,7 +17,7 @@ public class Critic : AbstractGameState
         return GameStateName.Critic;
     }
 
-    protected override void Exit()
+    public override void Exit()
     {
         base.Exit();
         gameManager.touched = null;

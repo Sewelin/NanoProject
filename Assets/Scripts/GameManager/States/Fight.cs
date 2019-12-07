@@ -18,6 +18,11 @@ public class Fight : AbstractGameState
         
         gameManager.roundTimer -= Time.deltaTime;
         gameManager.CheckDir();
+
+        if (gameManager.roundTimer < 0f && gameManager.Controller1.points != gameManager.Controller2.points)
+        {
+            gameManager.SetState(new EndRound(gameManager));
+        }
     }
 
     public override void Touch(GameObject character)

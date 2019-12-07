@@ -74,7 +74,14 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        Time.timeScale = Time.timeScale < 0.0001f ? 1f : 0f;
+        if (StateName == GameStateName.Pause)
+        {
+            State.Exit();
+        }
+        else
+        {
+            SetState(new Pause(this, State));
+        }
     }
 
 

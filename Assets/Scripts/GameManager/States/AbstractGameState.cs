@@ -17,7 +17,7 @@ public abstract class AbstractGameState
     {
     }
 
-    protected virtual void Exit()
+    public virtual void Exit()
     {
     }
 
