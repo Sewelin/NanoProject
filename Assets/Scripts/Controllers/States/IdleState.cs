@@ -1,25 +1,20 @@
 ﻿using UnityEngine;
 
-public class IdleState : AbstractState
-{// TODO player collide between them (layer?)
+public class IdleState : AbstractControllerState
+{
     public IdleState(GameManager gameManager, AbstractController controller) :
         base(gameManager, controller)
     {
     }
-
-    public override void Update()
-    {
-        base.Update();
-
-    }
     
     public override void FixedUpdate()
     {
+        if (controller.PassivateCombatInputs) return;
         controller.characterInfo.RigidBody.velocity = new Vector3( controller.movement * gameManager.walkingSpeed, 0f, 0f);
     }
 
-    public override StateName toS()// TODO Suppr
+    public override ControllerStateName Name()
     {
-        return StateName.Idle;
+        return ControllerStateName.Idle;
     }
 }

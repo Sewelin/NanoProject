@@ -9,11 +9,17 @@ public abstract class AbstractController : MonoBehaviour
     public class CharacterInfo
     {
         public bool characterAssigned;
-        public Rigidbody RigidBody { get; private set; }
-        public Animator Animator { get; private set; }
+        public Rigidbody RigidBody { get; }
+        public Animator Animator { get; }
         private GameObject _character;
-        public GameObject Character { get { return (characterAssigned) ? _character : null; } set => _character = value; }
+        public GameObject Character
+        {
+            get => (characterAssigned) ? _character : null;
+            set => _character = value;
+        }
         public Saber Saber { get; private set; }
+        
+        private CharacterInfo() {}
 
         private CharacterInfo(GameObject character)
         {
@@ -24,6 +30,11 @@ public abstract class AbstractController : MonoBehaviour
             characterAssigned = true;
         }
 
+        public static CharacterInfo Empty()
+        {
+            return new CharacterInfo();
+        }
+
         public static CharacterInfo Instantiate(GameObject playerModel, Transform transform)
         {
             return new CharacterInfo(Object.Instantiate(playerModel, transform));
@@ -32,63 +43,56 @@ public abstract class AbstractController : MonoBehaviour
 
     // Attributes
     
-    public GameManager gameManager;
+    [NonSerialized] public GameManager gameManager;
 
-    private int _playerNum;
-    public int PlayerNum { get => _playerNum; }
+    public int PlayerNum { get; private set; }
+    
+    public int points;
+    public int roundWon;
 
-    private int _point = 0; // TODO increase
     public float movement = 0;
     public int dir = 1;
-    public CharacterInfo characterInfo;
-    public bool characterSpawned;
-    public AbstractState State { get; private set; }
-   
+    public CharacterInfo characterInfo = CharacterInfo.Empty();
+    protected AbstractControllerState State { get; private set; }
+    public ControllerStateName StateName => State.Name();
+
+    public bool PassivateCombatInputs { get; private set; }
 
     // Methods
 
-    private void Awake()
+    protected virtual void Awake()
     {
-        gameManager = GameObject.FindObjectOfType<GameManager>();
+        gameManager = FindObjectOfType<GameManager>();
         
-        if (!gameManager.controller1Assigned)
+        if (!gameManager.Controller1Assigned)
         {
-            _playerNum = 1;
-            gameManager.controller1Assigned = true;
-            gameManager.controller1 = this;
+            PlayerNum = 1;
+            gameManager.Controller1 = this;
             transform.position = gameManager.posSpawner1.position;
         }
         else
         {
-            _playerNum = 2;
-            gameManager.controller2Assigned = true;
-            gameManager.controller2 = this;
+            PlayerNum = 2;
+            gameManager.Controller2 = this;
             transform.position = gameManager.posSpawner2.position;
         }
 
+        PassivateCombatInputs = true;
         State = new IdleState(gameManager, this);
 
     }
 
-    private void Start()
-    {
-        New();
-        
-        
-    }
-    public void New()
+    public void NewCharacter()
     {
         characterInfo = CharacterInfo.Instantiate(
-            _playerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
+            PlayerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
-        AbstractAnimation.AddAnimation(characterInfo.Character, AbstractAnimation.AnimationName.Arrive);
-        characterSpawned = true;
+        characterInfo.Character.AddComponent<GoToStart>();
+        SetState(new IdleState(gameManager, this));
     }
-
-    public StateName s; // TODO Suppr
+    
     protected void Update()
     {
-        s = State.toS();// TODO Suppr
         State.Update();
     }
 
@@ -97,8 +101,20 @@ public abstract class AbstractController : MonoBehaviour
         State.FixedUpdate();
     }
 
-    public void SetState(AbstractState state)
+    // Should only be used by the controller states
+    public void SetState(AbstractControllerState state)
     {
         State = state;
+    }
+
+    public void EndDuel()
+    {
+        PassivateCombatInputs = true;
+        State.ResetNextState();
+    }
+
+    public void NewDuel()
+    {
+        PassivateCombatInputs = false;
     }
 }
