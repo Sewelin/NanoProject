@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoToStart : AbstractAnimation
 {
-    private float _direction;
+    private int _direction;
     private float _speed;
     private Transform _destination;
     
@@ -14,7 +14,7 @@ public class GoToStart : AbstractAnimation
         controller.enabled = false;
         _speed = gameManager.walkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posStartFight1 : gameManager.posStartFight2;
-        _direction = Mathf.Sign(_destination.position.x - transform.position.x);
+        _direction = Direction();
     }
 
     protected override void Update()
@@ -25,10 +25,11 @@ public class GoToStart : AbstractAnimation
         GetComponent<Rigidbody>().velocity = new Vector3(
             _direction * _speed,
             0f, 0f);
-        if ( Mathf.Abs(transform.position.x - _destination.position.x) < 0.01)
+        if ( Direction() != _direction)
         {
-            gameManager.ChararcterInPosition(controller.PlayerNum);
+            gameManager.CharacterInPosition(controller.PlayerNum);
             inPosition = true;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 
@@ -36,5 +37,10 @@ public class GoToStart : AbstractAnimation
     {
         base.OnDestroy();
         controller.enabled = true;
+    }
+
+    private int Direction()
+    {
+        return (int) Mathf.Sign(_destination.position.x - transform.position.x);
     }
 }

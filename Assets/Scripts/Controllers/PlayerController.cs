@@ -4,6 +4,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : AbstractController
 {
+    protected override void Awake()
+    {
+        enabled = false;
+        base.Awake();
+    }
+
     // Events
 
     public void OnPause()

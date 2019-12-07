@@ -58,7 +58,7 @@ public abstract class AbstractController : MonoBehaviour
 
     // Methods
 
-    private void Awake()
+    protected virtual void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
         

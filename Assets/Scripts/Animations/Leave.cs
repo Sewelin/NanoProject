@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Leave : AbstractAnimation
 {
-    private float _direction;
+    private int _direction;
     private float _speed;
     private Transform _destination;
     
@@ -12,7 +12,7 @@ public class Leave : AbstractAnimation
     {
         base.Awake();
         controller.enabled = false;
-        _direction = -1 * Mathf.Sign(Camera.main.transform.position.x - transform.position.x);
+        _direction = Direction();
         _speed = gameManager.walkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posSpawner1 : gameManager.posSpawner2;
         gameObject.layer = 10;
@@ -29,10 +29,15 @@ public class Leave : AbstractAnimation
         GetComponent<Rigidbody>().velocity = new Vector3(
             _direction * _speed,
             0f, 0f);
-        if ( _direction * (transform.position.x - _destination.position.x) > 0f)
+        if ( Direction() != _direction)
         {
-            gameManager.ChararcterInPosition(controller.PlayerNum);
+            gameManager.CharacterInPosition(controller.PlayerNum);
             inPosition = true;
         }
+    }
+
+    private int Direction()
+    {
+        return (int) Mathf.Sign(_destination.position.x - transform.position.x);
     }
 }

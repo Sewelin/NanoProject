@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
         State.Touch(character);
     }
 
-    public void ChararcterInPosition(int numCharacter)
+    public void CharacterInPosition(int numCharacter)
     {
         State.characterInPosition[numCharacter-1] = true;
     }

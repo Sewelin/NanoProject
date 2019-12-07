@@ -6,7 +6,7 @@ public class Wait : AbstractAnimation
     {
         controller.enabled = false;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
-        gameManager.ChararcterInPosition(controller.PlayerNum);
+        gameManager.CharacterInPosition(controller.PlayerNum);
     }
 
     protected override void OnDestroy()

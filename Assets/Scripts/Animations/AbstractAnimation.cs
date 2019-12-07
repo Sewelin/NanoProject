@@ -4,14 +4,9 @@ using UnityEngine;
 
 public abstract class AbstractAnimation : MonoBehaviour
 {
-    public enum AnimationName
-    {
-        Leave,Die,Arrive
-    }
-
     protected GameManager gameManager;
     public AbstractController controller;
-    protected bool inPosition = false;
+    protected bool inPosition;
     
     protected virtual void Awake()
     {
