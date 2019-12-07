@@ -12,9 +12,9 @@ public class Leave : AbstractAnimation
     {
         base.Awake();
         controller.EndDuel();
-        _direction = Direction();
         _speed = gameManager.walkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posSpawner1 : gameManager.posSpawner2;
+        _direction = Direction();
         gameObject.layer = 10;
         
         // TODO Suppr color
@@ -33,6 +33,7 @@ public class Leave : AbstractAnimation
         {
             gameManager.CharacterInPosition(controller.PlayerNum);
             inPosition = true;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 

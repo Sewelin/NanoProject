@@ -60,10 +60,8 @@ public class GameManager : MonoBehaviour
         roundTimer = ROUNDTIMER;
     }
 
-    [SerializeField] private GameStateName GSN; // TODO Suppr
     private void Update()
     {
-        GSN = StateName; // TODO Suppr
         State.Update();
     }
 
