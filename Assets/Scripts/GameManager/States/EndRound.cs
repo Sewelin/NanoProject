@@ -17,6 +17,7 @@ public class EndRound : AbstractGameState
         
         if (winner.characterInfo.characterAssigned) winner.characterInfo.Character.AddComponent<Leave>();
         ++winner.roundWon;
+        winner.SetState(new IdleState(gameManager, winner));
         
         if (looser.characterInfo.characterAssigned) looser.characterInfo.Character.AddComponent<Die>();
     }

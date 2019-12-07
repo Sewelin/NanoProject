@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class Fight : AbstractGameState
-{
+{// TODO mur invisible Fight et Critic
     public Fight(GameManager gameManager) :
         base(gameManager)
     {

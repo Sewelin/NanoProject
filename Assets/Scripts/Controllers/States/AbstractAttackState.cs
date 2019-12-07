@@ -53,6 +53,8 @@ public abstract class AbstractAttackState : AbstractControllerState
     {
         this.param = param;
         Dir = dir;
+        //TODO Suppr visual effect
+        controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
     }
     public override void Update()
     {

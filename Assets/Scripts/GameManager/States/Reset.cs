@@ -7,6 +7,7 @@ public class Reset : AbstractGameState
     {
         if (gameManager.Controller1.characterInfo.characterAssigned)
         {
+            gameManager.Controller1.SetState(new IdleState(gameManager, gameManager.Controller1));
             if (gameManager.Controller1.characterInfo.Character.transform.position.x >
                 gameManager.posStartFight1.position.x)
             {
@@ -24,8 +25,9 @@ public class Reset : AbstractGameState
         
         if (gameManager.Controller2.characterInfo.characterAssigned)
         {
-            if (gameManager.Controller2.characterInfo.Character.transform.position.x >
-                gameManager.posStartFight2.position.x)
+            gameManager.Controller2.SetState(new IdleState(gameManager, gameManager.Controller2));
+            if (gameManager.Controller2.characterInfo.Character.transform.position.x <
+                gameManager.posStartFight2.position.x)// TODO change point comparaison
             {
                 gameManager.Controller2.characterInfo.Character.AddComponent<GoToStart>();
             }
@@ -49,11 +51,11 @@ public class Reset : AbstractGameState
     {
         base.Update();
         gameManager.roundTimer -= Time.deltaTime;
-        
+
         if (characterInPosition[0] && characterInPosition[1])
         {
-            Object.Destroy(gameManager.Controller1.characterInfo.Character.GetComponent<GoToStart>());
-            Object.Destroy(gameManager.Controller2.characterInfo.Character.GetComponent<GoToStart>());
+            Object.Destroy(gameManager.Controller1.characterInfo.Character.GetComponent<AbstractAnimation>());
+            Object.Destroy(gameManager.Controller2.characterInfo.Character.GetComponent<AbstractAnimation>());
             gameManager.SetState(new Fight(gameManager));
         }
     }
