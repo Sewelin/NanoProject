@@ -7,7 +7,6 @@ public class Reset : AbstractGameState
     {
         if (gameManager.Controller1.characterInfo.characterAssigned)
         {
-            gameManager.Controller1.SetState(new IdleState(gameManager, gameManager.Controller1));
             if (gameManager.Controller1.characterInfo.Character.transform.position.x >
                 gameManager.posStartFight1.position.x)
             {
@@ -25,7 +24,6 @@ public class Reset : AbstractGameState
         
         if (gameManager.Controller2.characterInfo.characterAssigned)
         {
-            gameManager.Controller2.SetState(new IdleState(gameManager, gameManager.Controller2));
             if (gameManager.Controller2.characterInfo.Character.transform.position.x <
                 gameManager.posStartFight2.position.x)// TODO change point comparaison
             {

@@ -2,24 +2,23 @@ using UnityEngine;
 
 public class EndRound : AbstractGameState
 {
-    private AbstractController winner;
-    private AbstractController looser;
+    private readonly AbstractController _winner;
+    private readonly AbstractController _looser;
     
     public EndRound(GameManager gameManager) :
         base(gameManager)
     {
-        winner = gameManager.Controller1.points > gameManager.Controller2.points
+        _winner = gameManager.Controller1.points > gameManager.Controller2.points
             ? gameManager.Controller1
             : gameManager.Controller2;
-        looser = gameManager.Controller1.points > gameManager.Controller2.points
+        _looser = gameManager.Controller1.points > gameManager.Controller2.points
             ? gameManager.Controller2
             : gameManager.Controller1;
         
-        if (winner.characterInfo.characterAssigned) winner.characterInfo.Character.AddComponent<Leave>();
-        ++winner.roundWon;
-        winner.SetState(new IdleState(gameManager, winner));
+        if (_winner.characterInfo.characterAssigned) _winner.characterInfo.Character.AddComponent<Leave>();
+        ++_winner.roundWon;
         
-        if (looser.characterInfo.characterAssigned) looser.characterInfo.Character.AddComponent<Die>();
+        if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<Die>();
     }
 
     public override GameStateName Name()
@@ -32,14 +31,14 @@ public class EndRound : AbstractGameState
         base.Update();
         if (characterInPosition[0] && characterInPosition[1])
         {
-            if (winner.roundWon == 3 || looser.roundWon == 3)
+            if (_winner.roundWon == 3 || _looser.roundWon == 3)
             {
                 EndGame();
             }
             else
             {
-                Object.Destroy(winner.characterInfo.Character);
-                winner.characterInfo.characterAssigned = false;
+                Object.Destroy(_winner.characterInfo.Character);
+                _winner.characterInfo.characterAssigned = false;
                 
                 gameManager.SetState(new NewRound(gameManager));
             }

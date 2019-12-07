@@ -53,8 +53,10 @@ public abstract class AbstractController : MonoBehaviour
     public float movement = 0;
     public int dir = 1;
     public CharacterInfo characterInfo = CharacterInfo.Empty();
-    public AbstractControllerState State { get; private set; } // TODO protected
+    protected AbstractControllerState State { get; private set; }
     public ControllerStateName StateName => State.Name();
+
+    public bool PassivateCombatInputs { get; private set; }
 
     // Methods
 
@@ -75,6 +77,7 @@ public abstract class AbstractController : MonoBehaviour
             transform.position = gameManager.posSpawner2.position;
         }
 
+        PassivateCombatInputs = true;
         State = new IdleState(gameManager, this);
 
     }
@@ -85,6 +88,7 @@ public abstract class AbstractController : MonoBehaviour
             PlayerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
         characterInfo.Character.AddComponent<GoToStart>();
+        SetState(new IdleState(gameManager, this));
     }
     
     protected void Update()
@@ -97,8 +101,20 @@ public abstract class AbstractController : MonoBehaviour
         State.FixedUpdate();
     }
 
+    // Should only be used by the controller states
     public void SetState(AbstractControllerState state)
     {
         State = state;
+    }
+
+    public void EndDuel()
+    {
+        PassivateCombatInputs = true;
+        State.ResetNextState();
+    }
+
+    public void NewDuel()
+    {
+        PassivateCombatInputs = false;
     }
 }

@@ -25,6 +25,8 @@ public abstract class AbstractControllerState
     protected virtual void Exit()
     {
     }
+
+    public abstract ControllerStateName Name();
     
     // Events
     
@@ -46,5 +48,8 @@ public abstract class AbstractControllerState
         controller.SetState(new BackDashState(gameManager, controller, controller.dir));
     }
 
-    public abstract ControllerStateName Name();
+    public void ResetNextState()
+    {
+        nextState = ControllerStateName.Idle;
+    }
 }

@@ -11,7 +11,7 @@ public class Leave : AbstractAnimation
     protected override void Awake()
     {
         base.Awake();
-        controller.enabled = false;
+        controller.EndDuel();
         _direction = Direction();
         _speed = gameManager.walkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posSpawner1 : gameManager.posSpawner2;
@@ -23,7 +23,7 @@ public class Leave : AbstractAnimation
     
     protected override void Update()
     {
-        if (inPosition) return;
+        if (inPosition || controller.StateName != ControllerStateName.Idle) return;
         base.Update();
         
         GetComponent<Rigidbody>().velocity = new Vector3(

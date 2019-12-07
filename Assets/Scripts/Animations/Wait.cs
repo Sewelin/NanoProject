@@ -7,14 +7,13 @@ public class Wait : AbstractAnimation
     protected override void Awake()
     {
         base.Awake();
-        controller.enabled = false;
-        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        controller.EndDuel();
     }
 
     protected override void Update()
     {
         base.Update();
-        if (!_inPosition)
+        if (!_inPosition && controller.StateName == ControllerStateName.Idle)
         {
             gameManager.CharacterInPosition(controller.PlayerNum);
         }
@@ -23,6 +22,6 @@ public class Wait : AbstractAnimation
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        controller.enabled = true;
+        controller.NewDuel();
     }
 }

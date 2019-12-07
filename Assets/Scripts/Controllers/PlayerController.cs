@@ -4,11 +4,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : AbstractController
 {
-    protected override void Awake()
-    {
-        enabled = false;
-        base.Awake();
-    }
 
     // Events
 
@@ -19,21 +14,25 @@ public class PlayerController : AbstractController
 
     public void OnVerticalAttack()
     {
+        if (PassivateCombatInputs) return;
         State.OnVerticalAttack();
     }
 
     public void OnDashAttack()
     {
+        if (PassivateCombatInputs) return;
         State.OnDashAttack();
     }
 
     public void OnMovement(InputValue value)
     {
+        if (PassivateCombatInputs) return;
         movement = value.Get<float>();
     }
 
     public void OnBackDash()
     {
+        if (PassivateCombatInputs) return;
         State.OnBackDash();
     }
 
@@ -45,13 +44,5 @@ public class PlayerController : AbstractController
     public void OnDeviceRegainedEvent()
     {
         // TODO Pollish
-    }
-    public void OnDisable()
-    {
-        GetComponent<PlayerInput>().PassivateInput();
-    }
-    public void OnEnable()
-    {
-        GetComponent<PlayerInput>().ActivateInput();
     }
 }

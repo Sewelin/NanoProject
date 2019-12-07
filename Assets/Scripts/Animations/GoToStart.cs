@@ -11,7 +11,7 @@ public class GoToStart : AbstractAnimation
     protected override void Awake()
     {
         base.Awake();
-        controller.enabled = false;
+        controller.EndDuel();
         _speed = gameManager.walkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posStartFight1 : gameManager.posStartFight2;
         _direction = Direction();
@@ -19,7 +19,7 @@ public class GoToStart : AbstractAnimation
 
     protected override void Update()
     {
-        if (inPosition) return;
+        if (inPosition || controller.StateName != ControllerStateName.Idle) return;
         base.Update();
         
         GetComponent<Rigidbody>().velocity = new Vector3(
@@ -36,7 +36,7 @@ public class GoToStart : AbstractAnimation
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        controller.enabled = true;
+        controller.NewDuel();
     }
 
     private int Direction()
