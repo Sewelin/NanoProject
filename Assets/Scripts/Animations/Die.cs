@@ -13,7 +13,15 @@ public class Die : AbstractAnimation
         
         //TODO Suppr visual effect
         GetComponent<Renderer>().material.color = Color.black;
-        
-        gameManager.CharacterInPosition(controller.PlayerNum);
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+
+        if (!inPosition)
+        {
+            gameManager.CharacterInPosition(controller.PlayerNum);
+        }
     }
 }

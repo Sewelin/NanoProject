@@ -71,8 +71,9 @@ public class GameManager : MonoBehaviour
         RoundTimer = ROUNDTIMER;
     }
 
+    public GameStateName sss;
     private void Update()
-    {
+    {sss = StateName;
         State.Update();
     }
 
