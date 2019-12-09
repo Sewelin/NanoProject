@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
-		<SourceFilesRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Work in Progress\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
+		<SourceFilesRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Boulot\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -18,16 +18,16 @@
 			<IncludedEvents>
 				<Event Id="711535685" Name="ATM_Rounds" ObjectPath="\Events\NanoProjet\ATM_Rounds" DurationType="Infinite"/>
 				<Event Id="2338023994" Name="FB_Horns_Time" ObjectPath="\Events\NanoProjet\FB_Horns_Time" DurationType="Infinite"/>
-				<Event Id="2613926250" Name="InGame_Music" ObjectPath="\Events\NanoProjet\InGame_Music" DurationType="Infinite"/>
+				<Event Id="2121424417" Name="Launch_Round" ObjectPath="\Events\NanoProjet\Launch_Round" DurationType="Infinite"/>
 				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Menu_Atmos" DurationType="Infinite"/>
 				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu_Back" DurationType="OneShot" DurationMin="1.398893" DurationMax="1.398893"/>
 				<Event Id="557861964" Name="Menu_ChangeOption" ObjectPath="\Events\NanoProjet\Menu_ChangeOption" DurationType="OneShot" DurationMin="0.389194" DurationMax="0.389194"/>
 				<Event Id="2666848820" Name="Menu_Continue" ObjectPath="\Events\NanoProjet\Menu_Continue" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
 				<Event Id="2170009975" Name="Menu_Pause" ObjectPath="\Events\NanoProjet\Menu_Pause" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
-				<Event Id="105544633" Name="Menu_Play" ObjectPath="\Events\NanoProjet\Menu_Play" DurationType="OneShot" DurationMin="6.059563" DurationMax="6.059563"/>
+				<Event Id="105544633" Name="Menu_Play" ObjectPath="\Events\NanoProjet\Menu_Play" DurationType="Infinite"/>
 				<Event Id="2776193354" Name="Menu_Quit" ObjectPath="\Events\NanoProjet\Menu_Quit" DurationType="OneShot" DurationMin="7.335532" DurationMax="7.335532"/>
 				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\NanoProjet\Menu_Select" DurationType="OneShot" DurationMin="1.461750" DurationMax="1.461750"/>
-				<Event Id="2587230380" Name="Menu_UpDown" ObjectPath="\Events\NanoProjet\Menu_UpDown" DurationType="OneShot" DurationMin="0.373558" DurationMax="0.373558"/>
+				<Event Id="2587230380" Name="Menu_UpDown" ObjectPath="\Events\NanoProjet\Menu_UpDown" DurationType="OneShot" DurationMin="0.400592" DurationMax="0.400592"/>
 				<Event Id="1183016477" Name="Player_One_Backward" ObjectPath="\Events\NanoProjet\Player_One_Backward" DurationType="OneShot" DurationMin="0.169983" DurationMax="0.569438"/>
 				<Event Id="375910062" Name="Player_One_Bowing" ObjectPath="\Events\NanoProjet\Player_One_Bowing" DurationType="OneShot" DurationMin="0.696578" DurationMax="1.284931"/>
 				<Event Id="972262685" Name="Player_One_Forward" ObjectPath="\Events\NanoProjet\Player_One_Forward" DurationType="OneShot" DurationMin="0.323440" DurationMax="0.882162"/>
@@ -274,7 +274,7 @@
 				</File>
 				<File Id="754484868" Language="SFX">
 					<ShortName>UI_Taiko.wav</ShortName>
-					<Path>SFX\UI_Taiko_1D1F60B4.wem</Path>
+					<Path>SFX\UI_Taiko_57BC5AAC.wem</Path>
 				</File>
 				<File Id="763677696" Language="SFX">
 					<ShortName>SFX_Hit_Test.wav</ShortName>
@@ -286,7 +286,7 @@
 				</File>
 				<File Id="784747432" Language="SFX">
 					<ShortName>SFX_PlayerDeath.wav</ShortName>
-					<Path>SFX\SFX_PlayerDeath_F2CC597D.wem</Path>
+					<Path>SFX\SFX_PlayerDeath_64BF8C13.wem</Path>
 				</File>
 				<File Id="845691043" Language="SFX">
 					<ShortName>NanoProjet_InGame_LastSegment_Cords_Test.wav</ShortName>
