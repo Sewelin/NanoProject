@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID ATM_ROUNDS = 711535685U;
+        static const AkUniqueID FB_HORNS_TIME = 2338023994U;
         static const AkUniqueID INGAME_MUSIC = 2613926250U;
         static const AkUniqueID MENU_ATMOS = 789497435U;
         static const AkUniqueID MENU_BACK = 3063554414U;
@@ -27,38 +28,51 @@ namespace AK
         static const AkUniqueID PLAYER_ONE_BACKWARD = 1183016477U;
         static const AkUniqueID PLAYER_ONE_BOWING = 375910062U;
         static const AkUniqueID PLAYER_ONE_FORWARD = 972262685U;
+        static const AkUniqueID PLAYER_ONE_IDLE = 2862113300U;
         static const AkUniqueID PLAYER_TWO_BACKWARD = 2507762279U;
         static const AkUniqueID PLAYER_TWO_BOWING = 2367140880U;
         static const AkUniqueID PLAYER_TWO_FORWARD = 184927275U;
+        static const AkUniqueID PLAYER_TWO_IDLE = 1430148754U;
         static const AkUniqueID SFX_BACKWARD_JUMP = 20042657U;
         static const AkUniqueID SFX_CONSUMECORPS = 4231318760U;
         static const AkUniqueID SFX_DASH = 1804139809U;
+        static const AkUniqueID SFX_DASH_HIT_DRAW = 1407212788U;
         static const AkUniqueID SFX_DASH_HIT_KILL = 2872475778U;
         static const AkUniqueID SFX_DASH_STOP = 299103780U;
+        static const AkUniqueID SFX_DEATH = 777164721U;
         static const AkUniqueID SFX_VERTICAL_ATTACK = 1708937970U;
+        static const AkUniqueID SFX_VERTICAL_ATTACK_HIT_DRAW = 402918157U;
         static const AkUniqueID SFX_VERTICAL_ATTACK_HIT_KILL = 1553621999U;
     } // namespace EVENTS
 
-    namespace STATES
-    {
-        namespace NANOPROJET
-        {
-            static const AkUniqueID GROUP = 3045981741U;
-
-            namespace STATE
-            {
-                static const AkUniqueID STATE_INGAME = 1494365172U;
-                static const AkUniqueID STATE_INMENU = 2556207027U;
-            } // namespace STATE
-        } // namespace NANOPROJET
-
-    } // namespace STATES
-
     namespace SWITCHES
     {
-        namespace SWITCH_CHARACTERS
+        namespace SWITCH_HORNS
         {
-            static const AkUniqueID GROUP = 4065702348U;
+            static const AkUniqueID GROUP = 921384610U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HORN_END = 875908656U;
+                static const AkUniqueID HORN_HALF = 2297366162U;
+                static const AkUniqueID HORN_START = 1612279755U;
+            } // namespace SWITCH
+        } // namespace SWITCH_HORNS
+
+        namespace SWITCH_LASTTOEND
+        {
+            static const AkUniqueID GROUP = 3766357930U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID END = 529726532U;
+                static const AkUniqueID LAST = 489968869U;
+            } // namespace SWITCH
+        } // namespace SWITCH_LASTTOEND
+
+        namespace SWITCH_PONE_CHARACTERS
+        {
+            static const AkUniqueID GROUP = 3355780215U;
 
             namespace SWITCH
             {
@@ -67,7 +81,20 @@ namespace AK
                 static const AkUniqueID SWITCH_SET_3 = 1812530830U;
                 static const AkUniqueID SWITCH_SET_4 = 1812530825U;
             } // namespace SWITCH
-        } // namespace SWITCH_CHARACTERS
+        } // namespace SWITCH_PONE_CHARACTERS
+
+        namespace SWITCH_PTWO_CHARACTERS
+        {
+            static const AkUniqueID GROUP = 2014493957U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID SWITCH_SET_1 = 1812530828U;
+                static const AkUniqueID SWITCH_SET_2 = 1812530831U;
+                static const AkUniqueID SWITCH_SET_3 = 1812530830U;
+                static const AkUniqueID SWITCH_SET_4 = 1812530825U;
+            } // namespace SWITCH
+        } // namespace SWITCH_PTWO_CHARACTERS
 
         namespace SWITCH_SEGMENTS
         {
@@ -80,6 +107,18 @@ namespace AK
                 static const AkUniqueID LASTSEGMENT = 2516701536U;
             } // namespace SWITCH
         } // namespace SWITCH_SEGMENTS
+
+        namespace SWITCH_TRANSITIONS
+        {
+            static const AkUniqueID GROUP = 1625512016U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID TRANSITION_01 = 2728638438U;
+                static const AkUniqueID TRANSITION_02 = 2728638437U;
+                static const AkUniqueID TRANSITION_03 = 2728638436U;
+            } // namespace SWITCH
+        } // namespace SWITCH_TRANSITIONS
 
     } // namespace SWITCHES
 
@@ -95,6 +134,13 @@ namespace AK
         static const AkUniqueID RTPC_SFXVOLUME = 2644490154U;
         static const AkUniqueID RTPC_TIMER = 2286992438U;
     } // namespace GAME_PARAMETERS
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID TRANSITION_01 = 2728638438U;
+        static const AkUniqueID TRANSITION_02 = 2728638437U;
+        static const AkUniqueID TRANSITION_03 = 2728638436U;
+    } // namespace TRIGGERS
 
     namespace BANKS
     {
