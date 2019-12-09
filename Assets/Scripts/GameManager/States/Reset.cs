@@ -48,7 +48,7 @@ public class Reset : AbstractGameState
     public override void Update()
     {
         base.Update();
-        gameManager.roundTimer -= Time.deltaTime;
+        gameManager.RoundTimer -= Time.deltaTime;
 
         if (characterInPosition[0] && characterInPosition[1])
         {

@@ -7,9 +7,9 @@ public class NewRound : AbstractGameState
     {
         gameManager.Controller1.NewCharacter();
         gameManager.Controller2.NewCharacter();
-        gameManager.roundTimer = gameManager.ROUNDTIMER;
-        gameManager.Controller1.points = 0;
-        gameManager.Controller2.points = 0;
+        gameManager.RoundTimer = gameManager.ROUNDTIMER;
+        gameManager.Controller1.Points = 0;
+        gameManager.Controller2.Points = 0;
     }
 
     public override GameStateName Name()

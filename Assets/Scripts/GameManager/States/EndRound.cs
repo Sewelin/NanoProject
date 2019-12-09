@@ -8,10 +8,10 @@ public class EndRound : AbstractGameState
     public EndRound(GameManager gameManager) :
         base(gameManager)
     {
-        _winner = gameManager.Controller1.points > gameManager.Controller2.points
+        _winner = gameManager.Controller1.Points > gameManager.Controller2.Points
             ? gameManager.Controller1
             : gameManager.Controller2;
-        _looser = gameManager.Controller1.points > gameManager.Controller2.points
+        _looser = gameManager.Controller1.Points > gameManager.Controller2.Points
             ? gameManager.Controller2
             : gameManager.Controller1;
         
