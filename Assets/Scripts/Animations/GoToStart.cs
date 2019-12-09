@@ -36,6 +36,7 @@ public class GoToStart : AbstractAnimation
     protected override void OnDestroy()
     {
         base.OnDestroy();
+        controller.movement = 0f;
         controller.NewDuel();
     }
 

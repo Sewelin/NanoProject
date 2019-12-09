@@ -7,21 +7,13 @@ public class Die : AbstractAnimation
     protected override void Awake()
     {
         base.Awake();
+        gameObject.layer = 10;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         transform.position += new Vector3(0,0,0.5f);
-        gameObject.layer = 10;
-        controller.characterInfo.characterAssigned = false;
         
         //TODO Suppr visual effect
         GetComponent<Renderer>().material.color = Color.black;
-    }
-    
-    protected override void Update()
-    {
-        base.Update();
-        if (!_inPosition && controller.StateName == ControllerStateName.Idle)
-        {
-            gameManager.CharacterInPosition(controller.PlayerNum);
-        }
+        
+        gameManager.CharacterInPosition(controller.PlayerNum);
     }
 }
