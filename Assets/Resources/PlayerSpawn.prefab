@@ -169,5 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86df3c59829cfda4e807b023217fd80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterSpawned: 0
-  s: 0
+  points: 0
+  roundWon: 0
+  movement: 0
+  dir: 1

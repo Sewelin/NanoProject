@@ -6,15 +6,10 @@ public class IdleState : AbstractControllerState
         base(gameManager, controller)
     {
     }
-
-    public override void Update()
-    {
-        base.Update();
-
-    }
     
     public override void FixedUpdate()
     {
+        if (controller.PassivateCombatInputs) return;
         controller.characterInfo.RigidBody.velocity = new Vector3( controller.movement * gameManager.walkingSpeed, 0f, 0f);
     }
 

@@ -43,20 +43,24 @@ public abstract class AbstractController : MonoBehaviour
 
     // Attributes
     
-    public GameManager gameManager;
+    [NonSerialized] public GameManager gameManager;
 
     public int PlayerNum { get; private set; }
+    
+    public int points;
+    public int roundWon;
 
     public float movement = 0;
     public int dir = 1;
     public CharacterInfo characterInfo = CharacterInfo.Empty();
-    public AbstractControllerState State { get; private set; }
-    public ControllerStateName stateName;
-   
+    protected AbstractControllerState State { get; private set; }
+    public ControllerStateName StateName => State.Name();
+
+    public bool PassivateCombatInputs { get; private set; }
 
     // Methods
 
-    private void Awake()
+    protected virtual void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
         
@@ -73,28 +77,23 @@ public abstract class AbstractController : MonoBehaviour
             transform.position = gameManager.posSpawner2.position;
         }
 
+        PassivateCombatInputs = true;
         State = new IdleState(gameManager, this);
 
     }
 
-    private void Start()
-    {
-        New();
-        
-        
-    }
-    public void New()
+    public void NewCharacter()
     {
         characterInfo = CharacterInfo.Instantiate(
             PlayerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
-        AbstractAnimation.AddAnimation(characterInfo.Character, AbstractAnimation.AnimationName.Arrive);
+        characterInfo.Character.AddComponent<GoToStart>();
+        SetState(new IdleState(gameManager, this));
     }
     
     protected void Update()
     {
         State.Update();
-        stateName = State.Name();
     }
 
     protected void FixedUpdate()
@@ -102,8 +101,20 @@ public abstract class AbstractController : MonoBehaviour
         State.FixedUpdate();
     }
 
+    // Should only be used by the controller states
     public void SetState(AbstractControllerState state)
     {
         State = state;
+    }
+
+    public void EndDuel()
+    {
+        PassivateCombatInputs = true;
+        State.ResetNextState();
+    }
+
+    public void NewDuel()
+    {
+        PassivateCombatInputs = false;
     }
 }
