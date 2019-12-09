@@ -45,10 +45,20 @@ public class GameManager : MonoBehaviour
     [NonSerialized] public int touchValue;
     
     public float ROUNDTIMER = 60;
-    public float roundTimer;
-    
+    [SerializeField] private float roundTimer;
+    public float RoundTimer {
+        get => roundTimer;
+        set {
+            AkSoundEngine.SetRTPCValue("RTPC_Timer", value);
+            roundTimer = value;
+        }
+    }
+
     private AbstractGameState State { get; set; }
     public GameStateName StateName => State.Name();
+
+    // Sounds
+    public GameObject soundManager;
 
     private void Awake()
     {
@@ -57,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        roundTimer = ROUNDTIMER;
+        RoundTimer = ROUNDTIMER;
     }
 
     private void Update()

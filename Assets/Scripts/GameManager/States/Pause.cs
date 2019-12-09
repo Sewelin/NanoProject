@@ -9,6 +9,8 @@ public class Pause : AbstractGameState
     {
         Time.timeScale = 0f;
         _previousState = previousState;
+
+        AkSoundEngine.PostEvent("Menu_Pause", gameManager.soundManager);
     }
 
     public override GameStateName Name()
@@ -22,5 +24,7 @@ public class Pause : AbstractGameState
         
         gameManager.SetState(_previousState);
         Time.timeScale = 1f;
+
+        AkSoundEngine.PostEvent("Menu_Continue", gameManager.soundManager);
     }
 }

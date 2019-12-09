@@ -46,8 +46,15 @@ public abstract class AbstractController : MonoBehaviour
     [NonSerialized] public GameManager gameManager;
 
     public int PlayerNum { get; private set; }
-    
-    public int points;
+
+    private int _points;
+    public int Points {
+        get => _points;
+        set {
+            _points = value;
+            AkSoundEngine.SetRTPCValue("RTPC_DeathCount", gameManager.Controller1.Points + gameManager.Controller2.Points);
+        }
+    }
     public int roundWon;
 
     public float movement = 0;
