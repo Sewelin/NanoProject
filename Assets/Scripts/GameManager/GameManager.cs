@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     public Transform posSpawner2;
     public Transform posStartFight1;
     public Transform posStartFight2;
+    public Transform posReposition1;
+    public Transform posReposition2;
 
     public float TOUCHCOOLDOWN = 0.4f;
     [NonSerialized] public float touchCooldown;
