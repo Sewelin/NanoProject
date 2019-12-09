@@ -4,24 +4,41 @@ using UnityEngine;
 
 public class Leave : AbstractAnimation
 {
-    private Vector3 goTo;
-    private float speed = 1;
+    private int _direction;
+    private float _speed;
+    private Transform _destination;
+    
     protected override void Awake()
     {
-        controller = transform.parent.GetComponent<AbstractController>();
-        goTo = (controller.PlayerNum == 1) ? controller.gameManager.posSpawner1.transform.position : controller.gameManager.posSpawner2.transform.position;
-        controller.enabled = false;
-        GetComponent<Rigidbody>().velocity = new Vector3(Mathf.Sign(goTo.x-transform.position.x) * speed, 0, 0);
+        base.Awake();
+        controller.EndDuel();
+        _speed = gameManager.walkingSpeed;
+        _destination = controller.PlayerNum == 1 ? gameManager.posSpawner1 : gameManager.posSpawner2;
+        _direction = Direction();
         gameObject.layer = 10;
+        
+        // TODO Suppr color
+        GetComponent<Renderer>().material.color = Color.green;
     }
+    
     protected override void Update()
     {
-        if ((controller.PlayerNum == 1 && transform.position.x < goTo.x) || (controller.PlayerNum == 2 && transform.position.x < goTo.x)) Exit();
+        if (inPosition || controller.StateName != ControllerStateName.Idle) return;
+        base.Update();
+        
+        GetComponent<Rigidbody>().velocity = new Vector3(
+            _direction * _speed,
+            0f, 0f);
+        if ( Direction() != _direction)
+        {
+            gameManager.CharacterInPosition(controller.PlayerNum);
+            inPosition = true;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
     }
-    protected override void Exit()
+
+    private int Direction()
     {
-        Destroy(this.gameObject);
-        controller.gameManager.NewRound();
-        base.Exit();
+        return (int) Mathf.Sign(_destination.position.x - transform.position.x);
     }
 }

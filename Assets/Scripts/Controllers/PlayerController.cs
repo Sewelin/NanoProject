@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : AbstractController
 {
+
     // Events
 
     public void OnPause()
@@ -13,39 +14,35 @@ public class PlayerController : AbstractController
 
     public void OnVerticalAttack()
     {
+        if (PassivateCombatInputs) return;
         State.OnVerticalAttack();
     }
 
     public void OnDashAttack()
     {
+        if (PassivateCombatInputs) return;
         State.OnDashAttack();
     }
 
     public void OnMovement(InputValue value)
     {
+        if (PassivateCombatInputs) return;
         movement = value.Get<float>();
     }
 
     public void OnBackDash()
     {
+        if (PassivateCombatInputs) return;
         State.OnBackDash();
     }
 
     public void OnDeviceLostEvent()
     {
-        // TODO
+        // TODO Pollish
     }
     
     public void OnDeviceRegainedEvent()
     {
-        // TODO
-    }
-    public void OnDisable()
-    {
-        GetComponent<PlayerInput>().PassivateInput();
-    }
-    public void OnEnable()
-    {
-        GetComponent<PlayerInput>().ActivateInput();
+        // TODO Pollish
     }
 }
