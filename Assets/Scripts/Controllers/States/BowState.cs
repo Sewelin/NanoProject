@@ -1,32 +1,28 @@
-﻿using UnityEngine;
-
-public class BackDashState : AbstractControllerState
+using UnityEngine;
+public class BowState : AbstractControllerState
 {
-    private int _dir;
-    protected float timer;
-    protected StateParameters param;
-    
-    public BackDashState(GameManager gameManager, AbstractController controller, int dir) :
+    private float _timer;
+    private float _Duration;
+
+    public BowState(GameManager gameManager, AbstractController controller) :
         base(gameManager, controller)
     {
-        _dir = dir;
-        param = gameManager.backDashParameters;
+        _Duration = gameManager.bowDuration;
+        
+        //TODO Suppr visual effect
+        controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.magenta;
     }
-    
+
     public override void Update()
     {
         base.Update();
-        timer += Time.deltaTime;
+        _timer += Time.deltaTime;
         
-        if (timer < param.Duration)
+        if (_timer > _Duration)
         {
-            float progress = timer / param.Duration;
-            controller.characterInfo.RigidBody.velocity = new Vector3( 
-                - _dir * param.speed * param.curve.Evaluate(progress), 
-                0f, 0f);
-        }
-        else
-        {
+            //TODO Suppr visual effect
+            controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
+            
             SwitchState();
         }
     }
@@ -56,9 +52,11 @@ public class BackDashState : AbstractControllerState
 
     public override ControllerStateName Name()
     {
-        return ControllerStateName.BackDash;
+        return ControllerStateName.Bow;
     }
     
+    // Events
+
     public override void OnVerticalAttack()
     {
         nextState = ControllerStateName.VerticalAttack;
@@ -76,6 +74,7 @@ public class BackDashState : AbstractControllerState
 
     public override void OnBow()
     {
+        Exit();
         nextState = ControllerStateName.Bow;
     }
 }

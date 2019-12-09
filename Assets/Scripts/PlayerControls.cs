@@ -57,6 +57,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Bow"",
+                    ""type"": ""Button"",
+                    ""id"": ""ad664fc9-a4ab-4387-b10a-75254d6afca7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -136,6 +144,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""BackDash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5812e171-40ff-4f8e-9d64-253697217c1b"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -149,6 +168,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_DashAttack = m_Gameplay.FindAction("DashAttack", throwIfNotFound: true);
         m_Gameplay_Movement = m_Gameplay.FindAction("Movement", throwIfNotFound: true);
         m_Gameplay_BackDash = m_Gameplay.FindAction("BackDash", throwIfNotFound: true);
+        m_Gameplay_Bow = m_Gameplay.FindAction("Bow", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -203,6 +223,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_DashAttack;
     private readonly InputAction m_Gameplay_Movement;
     private readonly InputAction m_Gameplay_BackDash;
+    private readonly InputAction m_Gameplay_Bow;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -212,6 +233,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @DashAttack => m_Wrapper.m_Gameplay_DashAttack;
         public InputAction @Movement => m_Wrapper.m_Gameplay_Movement;
         public InputAction @BackDash => m_Wrapper.m_Gameplay_BackDash;
+        public InputAction @Bow => m_Wrapper.m_Gameplay_Bow;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -236,6 +258,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @BackDash.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBackDash;
                 @BackDash.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBackDash;
                 @BackDash.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBackDash;
+                @Bow.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBow;
+                @Bow.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBow;
+                @Bow.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBow;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -255,6 +280,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @BackDash.started += instance.OnBackDash;
                 @BackDash.performed += instance.OnBackDash;
                 @BackDash.canceled += instance.OnBackDash;
+                @Bow.started += instance.OnBow;
+                @Bow.performed += instance.OnBow;
+                @Bow.canceled += instance.OnBow;
             }
         }
     }
@@ -266,5 +294,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnDashAttack(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnBackDash(InputAction.CallbackContext context);
+        void OnBow(InputAction.CallbackContext context);
     }
 }

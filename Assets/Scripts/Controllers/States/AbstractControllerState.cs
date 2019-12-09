@@ -48,6 +48,12 @@ public abstract class AbstractControllerState
         controller.SetState(new BackDashState(gameManager, controller, controller.dir));
     }
 
+    public virtual void OnBow()
+    {
+        Exit();
+        controller.SetState(new BowState(gameManager, controller));
+    }
+
     public void ResetNextState()
     {
         nextState = ControllerStateName.Idle;

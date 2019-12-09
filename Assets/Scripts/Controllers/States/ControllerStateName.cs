@@ -3,5 +3,6 @@
     Idle,
     VerticalAttack,
     DashAttack,
-    BackDash
+    BackDash,
+    Bow
 }

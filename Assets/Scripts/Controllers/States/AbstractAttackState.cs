@@ -56,6 +56,12 @@ public abstract class AbstractAttackState : AbstractControllerState
         //TODO Suppr visual effect
         controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
     }
+    
+    ~AbstractAttackState()
+    {
+        controller.characterInfo.Saber.GetComponent<Collider>().enabled = false;
+    }
+    
     public override void Update()
     {
         timer += Time.deltaTime;
@@ -120,6 +126,32 @@ public abstract class AbstractAttackState : AbstractControllerState
             case ControllerStateName.BackDash:
                 controller.SetState(new BackDashState(gameManager, controller, controller.dir));
                 break;
+            case ControllerStateName.Bow:
+                controller.SetState(new BowState(gameManager, controller));
+                break;
         }
+    }
+    
+    // Event
+
+    public override void OnVerticalAttack()
+    {
+        nextState = ControllerStateName.VerticalAttack;
+    }
+
+    public override void OnDashAttack()
+    {
+        nextState = ControllerStateName.DashAttack;
+    }
+
+    public override void OnBackDash()
+    {
+        nextState = ControllerStateName.BackDash;
+    }
+
+    public override void OnBow()
+    {
+        Exit();
+        nextState = ControllerStateName.Bow;
     }
 }

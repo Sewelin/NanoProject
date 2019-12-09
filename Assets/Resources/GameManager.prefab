@@ -133,6 +133,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     speed: 1
+  bowDuration: 2
   walkingSpeed: 1
   posSpawner1: {fileID: 4732815846257128836}
   posSpawner2: {fileID: 4732815846286733519}
@@ -141,7 +142,7 @@ MonoBehaviour:
   TOUCHCOOLDOWN: 0.4
   ROUNDTIMER: 60
   roundTimer: 0
-  GSN: 0
+  soundManager: {fileID: 0}
 --- !u!114 &4732815845222031830
 MonoBehaviour:
   m_ObjectHideFlags: 0
