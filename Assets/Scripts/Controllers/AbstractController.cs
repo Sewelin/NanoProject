@@ -59,6 +59,8 @@ public abstract class AbstractController : MonoBehaviour
 
     public float movement = 0;
     public int dir = 1;
+    public float backDashCoolDown;
+    
     public CharacterInfo characterInfo = CharacterInfo.Empty();
     protected AbstractControllerState State { get; private set; }
     public ControllerStateName StateName => State.Name();

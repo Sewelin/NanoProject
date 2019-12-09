@@ -5,7 +5,16 @@ public abstract class AbstractControllerState
 {
     protected readonly GameManager gameManager;
     protected readonly AbstractController controller;
-    protected ControllerStateName nextState = ControllerStateName.Idle;
+    private ControllerStateName _nextState = ControllerStateName.Idle;
+    protected ControllerStateName NextState
+    {
+        get => _nextState;
+        set
+        {
+            if (value == ControllerStateName.BackDash && controller.backDashCoolDown > 0f) return;
+            _nextState = value;
+        }
+    }
 
     // Methods
     protected AbstractControllerState(GameManager gameManager, AbstractController controller)
@@ -13,9 +22,10 @@ public abstract class AbstractControllerState
         this.gameManager = gameManager;
         this.controller = controller;
     }
-    
+
     public virtual void Update()
     {
+        if (controller.backDashCoolDown > 0f) controller.backDashCoolDown -= Time.deltaTime;
     }
 
     public virtual void FixedUpdate()
@@ -44,6 +54,7 @@ public abstract class AbstractControllerState
 
     public virtual void OnBackDash()
     {
+        if (controller.backDashCoolDown > 0f) return;
         Exit();
         controller.SetState(new BackDashState(gameManager, controller, controller.dir));
     }
@@ -56,6 +67,6 @@ public abstract class AbstractControllerState
 
     public void ResetNextState()
     {
-        nextState = ControllerStateName.Idle;
+        NextState = ControllerStateName.Idle;
     }
 }

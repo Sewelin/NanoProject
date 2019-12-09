@@ -64,7 +64,9 @@ public abstract class AbstractAttackState : AbstractControllerState
     
     public override void Update()
     {
+        base.Update();
         timer += Time.deltaTime;
+        
         if (timer < param.timeSteps.x)
         {
             if (!animState.Init)
@@ -105,14 +107,12 @@ public abstract class AbstractAttackState : AbstractControllerState
         controller.characterInfo.RigidBody.velocity = new Vector3(
             Dir* param.speed * param.curve.Evaluate(progress),
             0f, 0f);
-
-
-        base.Update();
     }
+    
     private void SwitchState()
     {
         Exit();
-        switch (nextState)
+        switch (NextState)
         {
             case ControllerStateName.Idle:
                 controller.SetState(new IdleState(gameManager, controller));
@@ -136,22 +136,22 @@ public abstract class AbstractAttackState : AbstractControllerState
 
     public override void OnVerticalAttack()
     {
-        nextState = ControllerStateName.VerticalAttack;
+        NextState = ControllerStateName.VerticalAttack;
     }
 
     public override void OnDashAttack()
     {
-        nextState = ControllerStateName.DashAttack;
+        NextState = ControllerStateName.DashAttack;
     }
 
     public override void OnBackDash()
     {
-        nextState = ControllerStateName.BackDash;
+        NextState = ControllerStateName.BackDash;
     }
 
     public override void OnBow()
     {
         Exit();
-        nextState = ControllerStateName.Bow;
+        NextState = ControllerStateName.Bow;
     }
 }

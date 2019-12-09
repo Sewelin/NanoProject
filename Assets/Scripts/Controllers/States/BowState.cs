@@ -30,7 +30,7 @@ public class BowState : AbstractControllerState
     private void SwitchState()
     {
         Exit();
-        switch (nextState)
+        switch (NextState)
         {
             case ControllerStateName.Idle:
                 controller.SetState(new IdleState(gameManager, controller));
@@ -59,22 +59,22 @@ public class BowState : AbstractControllerState
 
     public override void OnVerticalAttack()
     {
-        nextState = ControllerStateName.VerticalAttack;
+        NextState = ControllerStateName.VerticalAttack;
     }
 
     public override void OnDashAttack()
     {
-        nextState = ControllerStateName.DashAttack;
+        NextState = ControllerStateName.DashAttack;
     }
 
     public override void OnBackDash()
     {
-        nextState = ControllerStateName.BackDash;
+        NextState = ControllerStateName.BackDash;
     }
 
     public override void OnBow()
     {
         Exit();
-        nextState = ControllerStateName.Bow;
+        NextState = ControllerStateName.Bow;
     }
 }

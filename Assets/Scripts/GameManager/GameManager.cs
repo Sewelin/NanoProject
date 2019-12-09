@@ -42,10 +42,14 @@ public class GameManager : MonoBehaviour
     public Transform posReposition1;
     public Transform posReposition2;
 
+    // Timers and cooldowns
+    
     public float TOUCHCOOLDOWN = 0.4f;
     [NonSerialized] public float touchCooldown;
     [NonSerialized] public AbstractController touched;
     [NonSerialized] public int touchValue;
+
+    public float BACKDASHCOOLDOWN = 0.5f;
     
     public float ROUNDTIMER = 60;
     [SerializeField] private float roundTimer;
@@ -57,6 +61,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // States
     private AbstractGameState State { get; set; }
     public GameStateName StateName => State.Name();
 
