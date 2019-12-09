@@ -67,7 +67,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2470384160	RTPC_PONE_ArmorSets			\Default Work Unit\RTPC_PONE_ArmorSets	
 	2582501215	RTPC_MasterVolume			\Default Work Unit\RTPC_MasterVolume	
 	2644490154	RTPC_SFXVolume			\Default Work Unit\RTPC_SFXVolume	
-	2887991807	RTPC_Pause			\Default Work Unit\RTPC_Pause	
 
 Trigger	ID	Name			Wwise Object Path	Notes
 	2728638436	Transition_03			\Default Work Unit\Transition_03	
@@ -75,32 +74,33 @@ Trigger	ID	Name			Wwise Object Path	Notes
 	2728638438	Transition_01			\Default Work Unit\Transition_01	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	77978275	AMBIENT			\Default Work Unit\Master Audio Bus\ATMOS\AMBIENT	
-	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
-	779278001	DEATH			\Default Work Unit\Master Audio Bus\SFX\DEATH	
-	1123360410	P_ONE			\Default Work Unit\Master Audio Bus\PLAYERS\P_ONE	
-	1242230844	P_TWO			\Default Work Unit\Master Audio Bus\PLAYERS\P_TWO	
+	77978275	AMBIENT			\Default Work Unit\Master Audio Bus\InGame\ATMOS\AMBIENT	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\InGame\SFX	
+	779278001	DEATH			\Default Work Unit\Master Audio Bus\InGame\SFX\DEATH	
+	984691642	InGame			\Default Work Unit\Master Audio Bus\InGame	
+	1123360410	P_ONE			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_ONE	
+	1242230844	P_TWO			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_TWO	
 	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
-	1695690031	OBJECTS			\Default Work Unit\Master Audio Bus\ATMOS\OBJECTS	
-	1992326939	M_PLAY			\Default Work Unit\Master Audio Bus\MUSIC\M_PLAY	
-	2126326874	P_ONE_SFX			\Default Work Unit\Master Audio Bus\PLAYERS\P_ONE\P_ONE_SFX	
-	2188949101	PLAYERS			\Default Work Unit\Master Audio Bus\PLAYERS	
-	2275604156	P_ONE_FOL			\Default Work Unit\Master Audio Bus\PLAYERS\P_ONE\P_ONE_FOL	
-	2338369940	M_MENU			\Default Work Unit\Master Audio Bus\MUSIC\M_MENU	
-	2454616260	SWORD			\Default Work Unit\Master Audio Bus\SFX\SWORD	
+	1695690031	OBJECTS			\Default Work Unit\Master Audio Bus\InGame\ATMOS\OBJECTS	
+	1992326939	M_PLAY			\Default Work Unit\Master Audio Bus\InGame\MUSIC\M_PLAY	
+	2126326874	P_ONE_SFX			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_ONE\P_ONE_SFX	
+	2188949101	PLAYERS			\Default Work Unit\Master Audio Bus\InGame\PLAYERS	
+	2275604156	P_ONE_FOL			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_ONE\P_ONE_FOL	
+	2338369940	M_MENU			\Default Work Unit\Master Audio Bus\InGame\MUSIC\M_MENU	
+	2454616260	SWORD			\Default Work Unit\Master Audio Bus\InGame\SFX\SWORD	
 	2607556080	MENU			\Default Work Unit\Master Audio Bus\UI\MENU	
-	3034623661	ATMOS			\Default Work Unit\Master Audio Bus\ATMOS	
-	3545700988	REVERBS			\Default Work Unit\Master Audio Bus\REVERBS	
-	3599308920	P_TWO_SFX			\Default Work Unit\Master Audio Bus\PLAYERS\P_TWO\P_TWO_SFX	
+	3034623661	ATMOS			\Default Work Unit\Master Audio Bus\InGame\ATMOS	
+	3545700988	REVERBS			\Default Work Unit\Master Audio Bus\InGame\REVERBS	
+	3599308920	P_TWO_SFX			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_TWO\P_TWO_SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
-	3991942870	MUSIC			\Default Work Unit\Master Audio Bus\MUSIC	
+	3991942870	MUSIC			\Default Work Unit\Master Audio Bus\InGame\MUSIC	
 	4141130937	OPTIONS			\Default Work Unit\Master Audio Bus\UI\OPTIONS	
-	4290589570	P_TWO_FOL			\Default Work Unit\Master Audio Bus\PLAYERS\P_TWO\P_TWO_FOL	
+	4290589570	P_TWO_FOL			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_TWO\P_TWO_FOL	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	2116471102	REV_MENU_MUSIC			\Default Work Unit\Master Audio Bus\REVERBS\REV_MENU_MUSIC	
-	2766901782	REV_MENU			\Default Work Unit\Master Audio Bus\REVERBS\REV_MENU	
-	3548165401	REV_SCENE			\Default Work Unit\Master Audio Bus\REVERBS\REV_SCENE	
+	2116471102	REV_MENU_MUSIC			\Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_MENU_MUSIC	
+	2766901782	REV_MENU			\Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_MENU	
+	3548165401	REV_SCENE			\Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_SCENE	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			

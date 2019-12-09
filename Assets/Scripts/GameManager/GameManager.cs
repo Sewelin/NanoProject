@@ -50,6 +50,9 @@ public class GameManager : MonoBehaviour
     private AbstractGameState State { get; set; }
     public GameStateName StateName => State.Name();
 
+    // Sounds
+    public GameObject soundManager;
+
     private void Awake()
     {
         SetState(new SetUp(this));

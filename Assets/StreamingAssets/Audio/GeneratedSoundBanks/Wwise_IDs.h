@@ -70,6 +70,17 @@ namespace AK
             } // namespace SWITCH
         } // namespace SWITCH_LASTTOEND
 
+        namespace SWITCH_PAUSE
+        {
+            static const AkUniqueID GROUP = 2902274630U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID INGAME = 984691642U;
+                static const AkUniqueID INPAUSE = 3327551418U;
+            } // namespace SWITCH
+        } // namespace SWITCH_PAUSE
+
         namespace SWITCH_PONE_CHARACTERS
         {
             static const AkUniqueID GROUP = 3355780215U;
@@ -153,6 +164,7 @@ namespace AK
         static const AkUniqueID AMBIENT = 77978275U;
         static const AkUniqueID ATMOS = 3034623661U;
         static const AkUniqueID DEATH = 779278001U;
+        static const AkUniqueID INGAME = 984691642U;
         static const AkUniqueID M_MENU = 2338369940U;
         static const AkUniqueID M_PLAY = 1992326939U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;

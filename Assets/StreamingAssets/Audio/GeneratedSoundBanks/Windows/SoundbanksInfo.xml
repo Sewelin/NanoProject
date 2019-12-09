@@ -22,7 +22,7 @@
 				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Menu_Atmos" DurationType="Infinite"/>
 				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu_Back" DurationType="OneShot" DurationMin="1.398893" DurationMax="1.398893"/>
 				<Event Id="557861964" Name="Menu_ChangeOption" ObjectPath="\Events\NanoProjet\Menu_ChangeOption" DurationType="OneShot" DurationMin="0.389194" DurationMax="0.389194"/>
-				<Event Id="2666848820" Name="Menu_Continue" ObjectPath="\Events\NanoProjet\Menu_Continue" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
+				<Event Id="2666848820" Name="Menu_Continue" ObjectPath="\Events\NanoProjet\Menu_Continue" DurationType="OneShot" DurationMin="1.674189" DurationMax="1.674189"/>
 				<Event Id="2170009975" Name="Menu_Pause" ObjectPath="\Events\NanoProjet\Menu_Pause" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
 				<Event Id="105544633" Name="Menu_Play" ObjectPath="\Events\NanoProjet\Menu_Play" DurationType="Infinite"/>
 				<Event Id="2776193354" Name="Menu_Quit" ObjectPath="\Events\NanoProjet\Menu_Quit" DurationType="OneShot" DurationMin="7.335532" DurationMax="7.335532"/>
