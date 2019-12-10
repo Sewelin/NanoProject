@@ -112,11 +112,11 @@ public class GameManager : MonoBehaviour
         Controller2.dir = -Controller1.dir;
         
         var v = Controller1.characterInfo.Character.transform.localScale;
-        v.x = Controller1.dir;
+        v.z = Controller1.dir;
         Controller1.characterInfo.Character.transform.localScale = v;
         
         v = Controller2.characterInfo.Character.transform.localScale;
-        v.x = Controller2.dir;
+        v.z = Controller2.dir;
         Controller2.characterInfo.Character.transform.localScale = v;
     }
 

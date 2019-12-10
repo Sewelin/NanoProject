@@ -80,9 +80,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79aeb89422220d4d9bacc0fa95ecd60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character1Model: {fileID: 2273437493480239498, guid: c0dc5fb90a11b154287c977f64ef68fb,
+  character1Model: {fileID: 4117969624093787012, guid: 8b4285315ddbef1429c1f4af05869c0a,
     type: 3}
-  character2Model: {fileID: 5116514218425571882, guid: 771544c2e2620a140bb12259f0a1074e,
+  character2Model: {fileID: 4117969624093787012, guid: 8b4285315ddbef1429c1f4af05869c0a,
     type: 3}
   verticalAttackParameters:
     timeSteps: {x: 0.25, y: 0.17, z: 0.75}
