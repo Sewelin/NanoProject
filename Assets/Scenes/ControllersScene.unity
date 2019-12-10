@@ -335,6 +335,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WwiseGlobal
       objectReference: {fileID: 0}
+    - target: {fileID: 1272845790505032142, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1272845790505032140, guid: d8316b947f87a9d4eb230db9eb10c538,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -389,6 +394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272845790505032141, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8316b947f87a9d4eb230db9eb10c538, type: 3}
@@ -475,6 +485,18 @@ PrefabInstance:
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 907789849}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: character1Model
+      value: 
+      objectReference: {fileID: 2085744421454920886, guid: 9b77f1456ceb6c1499af0bd0221f3750,
+        type: 3}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: character2Model
+      value: 
+      objectReference: {fileID: 6131131072245046151, guid: b3285ace6de84fc4abd9acf2b80f9072,
+        type: 3}
     - target: {fileID: 4732815846588699636, guid: 7dc475b56d7c7d6458667b8bed708463,
         type: 3}
       propertyPath: m_LocalPosition.x

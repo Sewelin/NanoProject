@@ -12,7 +12,7 @@ public class Die : AbstractAnimation
         transform.position += new Vector3(0,0,0.5f);
         
         //TODO Suppr visual effect
-        GetComponent<Renderer>().material.color = Color.black;
+        //GetComponent<Renderer>().material.color = Color.black;
     }
 
     protected override void Update()

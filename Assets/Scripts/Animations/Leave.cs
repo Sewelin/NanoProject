@@ -18,7 +18,7 @@ public class Leave : AbstractAnimation
         gameObject.layer = 10;
         
         // TODO Suppr color
-        GetComponent<Renderer>().material.color = Color.green;
+        //GetComponent<Renderer>().material.color = Color.green;
     }
     
     protected override void Update()
