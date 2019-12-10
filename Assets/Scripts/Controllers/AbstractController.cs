@@ -46,12 +46,21 @@ public abstract class AbstractController : MonoBehaviour
     [NonSerialized] public GameManager gameManager;
 
     public int PlayerNum { get; private set; }
-    
-    public int points;
+
+    private int _points;
+    public int Points {
+        get => _points;
+        set {
+            _points = value;
+            AkSoundEngine.SetRTPCValue("RTPC_DeathCount", gameManager.Controller1.Points + gameManager.Controller2.Points);
+        }
+    }
     public int roundWon;
 
     public float movement = 0;
     public int dir = 1;
+    public float backDashCoolDown;
+    
     public CharacterInfo characterInfo = CharacterInfo.Empty();
     protected AbstractControllerState State { get; private set; }
     public ControllerStateName StateName => State.Name();
@@ -90,9 +99,10 @@ public abstract class AbstractController : MonoBehaviour
         characterInfo.Character.AddComponent<GoToStart>();
         SetState(new IdleState(gameManager, this));
     }
-    
+
+    public ControllerStateName sss; // TODO suppr
     protected void Update()
-    {
+    {sss = StateName;
         State.Update();
     }
 

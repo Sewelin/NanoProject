@@ -56,9 +56,17 @@ public abstract class AbstractAttackState : AbstractControllerState
         //TODO Suppr visual effect
         controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
     }
+    
+    ~AbstractAttackState()
+    {
+        controller.characterInfo.Saber.GetComponent<Collider>().enabled = false;
+    }
+    
     public override void Update()
     {
+        base.Update();
         timer += Time.deltaTime;
+        
         if (timer < param.timeSteps.x)
         {
             if (!animState.Init)
@@ -99,14 +107,12 @@ public abstract class AbstractAttackState : AbstractControllerState
         controller.characterInfo.RigidBody.velocity = new Vector3(
             Dir* param.speed * param.curve.Evaluate(progress),
             0f, 0f);
-
-
-        base.Update();
     }
+    
     private void SwitchState()
     {
         Exit();
-        switch (nextState)
+        switch (NextState)
         {
             case ControllerStateName.Idle:
                 controller.SetState(new IdleState(gameManager, controller));
@@ -120,6 +126,32 @@ public abstract class AbstractAttackState : AbstractControllerState
             case ControllerStateName.BackDash:
                 controller.SetState(new BackDashState(gameManager, controller, controller.dir));
                 break;
+            case ControllerStateName.Bow:
+                controller.SetState(new BowState(gameManager, controller));
+                break;
         }
+    }
+    
+    // Event
+
+    public override void OnVerticalAttack()
+    {
+        NextState = ControllerStateName.VerticalAttack;
+    }
+
+    public override void OnDashAttack()
+    {
+        NextState = ControllerStateName.DashAttack;
+    }
+
+    public override void OnBackDash()
+    {
+        NextState = ControllerStateName.BackDash;
+    }
+
+    public override void OnBow()
+    {
+        Exit();
+        NextState = ControllerStateName.Bow;
     }
 }

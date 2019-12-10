@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BackDashState : AbstractControllerState
 {
@@ -12,11 +11,14 @@ public class BackDashState : AbstractControllerState
     {
         _dir = dir;
         param = gameManager.backDashParameters;
+        controller.backDashCoolDown = param.Duration + 1f;
     }
     
     public override void Update()
     {
+        base.Update();
         timer += Time.deltaTime;
+        
         if (timer < param.Duration)
         {
             float progress = timer / param.Duration;
@@ -26,16 +28,14 @@ public class BackDashState : AbstractControllerState
         }
         else
         {
-            
             SwitchState();
         }
-        base.Update();
     }
 
     private void SwitchState()
     {
         Exit();
-        switch (nextState)
+        switch (NextState)
         {
             case ControllerStateName.Idle:
                 controller.SetState(new IdleState(gameManager, controller));
@@ -49,7 +49,16 @@ public class BackDashState : AbstractControllerState
             case ControllerStateName.BackDash:
                 controller.SetState(new BackDashState(gameManager, controller, controller.dir));
                 break;
+            case ControllerStateName.Bow:
+                controller.SetState(new BowState(gameManager, controller));
+                break;
         }
+    }
+
+    protected override void Exit()
+    {
+        base.Exit();
+        controller.backDashCoolDown = gameManager.BACKDASHCOOLDOWN;
     }
 
     public override ControllerStateName Name()
@@ -59,16 +68,21 @@ public class BackDashState : AbstractControllerState
     
     public override void OnVerticalAttack()
     {
-        nextState = ControllerStateName.VerticalAttack;
+        NextState = ControllerStateName.VerticalAttack;
     }
 
     public override void OnDashAttack()
     {
-        nextState = ControllerStateName.DashAttack;
+        NextState = ControllerStateName.DashAttack;
     }
 
     public override void OnBackDash()
     {
-        nextState = ControllerStateName.BackDash;
+        NextState = ControllerStateName.BackDash;
+    }
+
+    public override void OnBow()
+    {
+        NextState = ControllerStateName.Bow;
     }
 }
