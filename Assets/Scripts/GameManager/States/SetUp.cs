@@ -15,6 +15,7 @@ public class SetUp : AbstractGameState
         base.Update();
         if (gameManager.Controller1Assigned && gameManager.Controller2Assigned)
         {
+            AkSoundEngine.PostEvent("Launch_Round", gameManager.soundManager);
             gameManager.SetState(new NewRound(gameManager));
         }
     }

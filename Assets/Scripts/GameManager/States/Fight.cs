@@ -16,10 +16,10 @@ public class Fight : AbstractGameState
     {
         base.Update();
         
-        gameManager.roundTimer -= Time.deltaTime;
+        gameManager.RoundTimer -= Time.deltaTime;
         gameManager.CheckDir();
 
-        if (gameManager.roundTimer < 0f && gameManager.Controller1.points != gameManager.Controller2.points)
+        if (gameManager.RoundTimer < 0f && gameManager.Controller1.Points != gameManager.Controller2.Points)
         {
             gameManager.SetState(new EndRound(gameManager));
         }
