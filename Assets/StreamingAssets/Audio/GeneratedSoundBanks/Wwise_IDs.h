@@ -138,7 +138,6 @@ namespace AK
         static const AkUniqueID RTPC_DEATHCOUNT = 264145860U;
         static const AkUniqueID RTPC_MASTERVOLUME = 2582501215U;
         static const AkUniqueID RTPC_MUSICVOLUME = 2378823330U;
-        static const AkUniqueID RTPC_PAUSE = 2887991807U;
         static const AkUniqueID RTPC_PONE_ARMORSETS = 2470384160U;
         static const AkUniqueID RTPC_PTWO_ARMORSETS = 2322506118U;
         static const AkUniqueID RTPC_ROUNDCOUNT = 1364308078U;

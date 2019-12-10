@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
-		<SourceFilesRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Boulot\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
+		<SourceFilesRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Work in Progress\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -42,7 +42,7 @@
 				<Event Id="1407212788" Name="SFX_Dash_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX_Dash_Hit_Draw" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
 				<Event Id="2872475778" Name="SFX_Dash_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX_Dash_Hit_Kill" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
 				<Event Id="299103780" Name="SFX_Dash_Stop" ObjectPath="\Events\NanoProjet\SFX_Dash_Stop" DurationType="OneShot" DurationMin="0.295520" DurationMax="0.295520"/>
-				<Event Id="777164721" Name="SFX_Death" ObjectPath="\Events\NanoProjet\SFX_Death" DurationType="OneShot" DurationMin="2.687226" DurationMax="2.687226"/>
+				<Event Id="777164721" Name="SFX_Death" ObjectPath="\Events\NanoProjet\SFX_Death" DurationType="OneShot" DurationMin="2.687226" DurationMax="2.916667"/>
 				<Event Id="1708937970" Name="SFX_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX_Vertical_Attack" DurationType="OneShot" DurationMin="1.276928" DurationMax="1.276928"/>
 				<Event Id="402918157" Name="SFX_Vertical_Attack_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX_Vertical_Attack_Hit_Draw" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
 				<Event Id="1553621999" Name="SFX_Vertical_Attack_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX_Vertical_Attack_Hit_Kill" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
@@ -59,10 +59,6 @@
 				<File Id="27902926" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
 					<Path>SFX\MENU_Music_Test_1A09C425.wem</Path>
-				</File>
-				<File Id="34483637" Language="SFX">
-					<ShortName>ATM_Battle 1.wav</ShortName>
-					<Path>SFX\ATM_Battle 1_A1DAA281.wem</Path>
 				</File>
 				<File Id="70708229" Language="SFX">
 					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
@@ -172,6 +168,10 @@
 					<ShortName>NanoProjet_InGame_EndSegment_Drums_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_EndSegment_Drums_Test_9B96ECC7.wem</Path>
 				</File>
+				<File Id="413445957" Language="SFX">
+					<ShortName>Atmos_BattleFull.wav</ShortName>
+					<Path>SFX\Atmos_BattleFull_88BCA80D.wem</Path>
+				</File>
 				<File Id="415217945" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_C80D6356.wem</Path>
@@ -183,6 +183,10 @@
 				<File Id="459789300" Language="SFX">
 					<ShortName>NanoProjet_InGame_FirstSegment_Flute_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_FirstSegment_Flute_Test_9B96ECC7.wem</Path>
+				</File>
+				<File Id="464562068" Language="SFX">
+					<ShortName>Atmos_BattleEnd.wav</ShortName>
+					<Path>SFX\Atmos_BattleEnd_DEB27B1A.wem</Path>
 				</File>
 				<File Id="506380287" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -288,6 +292,10 @@
 					<ShortName>SFX_PlayerDeath.wav</ShortName>
 					<Path>SFX\SFX_PlayerDeath_64BF8C13.wem</Path>
 				</File>
+				<File Id="829485704" Language="SFX">
+					<ShortName>Atmos_BattleMiddle.wav</ShortName>
+					<Path>SFX\Atmos_BattleMiddle_2D0C8E95.wem</Path>
+				</File>
 				<File Id="845691043" Language="SFX">
 					<ShortName>NanoProjet_InGame_LastSegment_Cords_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_LastSegment_Cords_Test_9B96ECC7.wem</Path>
@@ -308,10 +316,6 @@
 					<ShortName>Taiko_Hit.wav</ShortName>
 					<Path>SFX\Taiko_Hit_CA630949.wem</Path>
 				</File>
-				<File Id="927801673" Language="SFX">
-					<ShortName>NanoProjet_InGame_EndSegment_Flute_Test.wav</ShortName>
-					<Path>SFX\NanoProjet_InGame_EndSegment_Flute_Test_9B96ECC7.wem</Path>
-				</File>
 				<File Id="950811618" Language="SFX">
 					<ShortName>SFX_Sword_Hit_Gore.wav</ShortName>
 					<Path>SFX\SFX_Sword_Hit_Gore_94D3F055.wem</Path>
@@ -323,6 +327,10 @@
 				<File Id="964521431" Language="SFX">
 					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
 					<Path>SFX\SFX_Dash_Whoosh_Test_C4B257A5.wem</Path>
+				</File>
+				<File Id="971046605" Language="SFX">
+					<ShortName>SFX_PlayerDeath_02.wav</ShortName>
+					<Path>SFX\SFX_PlayerDeath_02_10C4C929.wem</Path>
 				</File>
 				<File Id="987090694" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>

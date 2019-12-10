@@ -3,7 +3,6 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 	1625512016	Switch_Transitions			\Default Work Unit\Switch_Transitions	
 	2014493957	Switch_PTWO_Characters			\Default Work Unit\Switch_PTWO_Characters	
 	2524134066	Switch_Segments			\Default Work Unit\Switch_Segments	
-	2902274630	Switch_Pause			\Default Work Unit\Switch_Pause	
 	3355780215	Switch_PONE_Characters			\Default Work Unit\Switch_PONE_Characters	
 	3766357930	Switch_LastToEnd			\Default Work Unit\Switch_LastToEnd	
 
@@ -21,8 +20,6 @@ Switch	ID	Name	Switch Group			Notes
 	1125500713	Intro	Switch_Segments			
 	2516701536	LastSegment	Switch_Segments			
 	2815714396	FirstSegment	Switch_Segments			
-	984691642	InGame	Switch_Pause			
-	3327551418	InPause	Switch_Pause			
 	1812530825	Switch_Set_4	Switch_PONE_Characters			
 	1812530828	Switch_Set_1	Switch_PONE_Characters			
 	1812530830	Switch_Set_3	Switch_PONE_Characters			
