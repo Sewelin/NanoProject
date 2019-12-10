@@ -2,7 +2,6 @@
 
 public class Die : AbstractAnimation
 {
-    private bool _inPosition;
     private static readonly int DieAnim = Animator.StringToHash("Die");
 
     protected override void Awake()
@@ -24,6 +23,7 @@ public class Die : AbstractAnimation
         if (!inPosition)
         {
             gameManager.CharacterInPosition(controller.PlayerNum);
+            inPosition = true;
         }
     }
 }
