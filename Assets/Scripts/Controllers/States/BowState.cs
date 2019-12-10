@@ -10,7 +10,7 @@ public class BowState : AbstractControllerState
         _Duration = gameManager.bowDuration;
         
         //TODO Suppr visual effect
-        controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.magenta;
+        //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.magenta;
     }
 
     public override void Update()
@@ -21,7 +21,7 @@ public class BowState : AbstractControllerState
         if (_timer > _Duration)
         {
             //TODO Suppr visual effect
-            controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
+            //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
             
             SwitchState();
         }

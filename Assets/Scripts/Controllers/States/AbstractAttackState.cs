@@ -54,7 +54,7 @@ public abstract class AbstractAttackState : AbstractControllerState
         this.param = param;
         Dir = dir;
         //TODO Suppr visual effect
-        controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
+        //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
     }
     
     ~AbstractAttackState()
@@ -73,7 +73,7 @@ public abstract class AbstractAttackState : AbstractControllerState
             {
                 animState.Init = true;
                 //TODO Suppr visual effect
-                controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
+                //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
             }
         }
         else if (timer < param.timeSteps.x + param.timeSteps.y)
@@ -83,7 +83,7 @@ public abstract class AbstractAttackState : AbstractControllerState
                 animState.Body = true;
                 controller.characterInfo.Saber.GetComponent<Collider>().enabled = true;
                 //TODO Suppr visual effect
-                controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.red;
+                //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.red;
             }
         }
         else if (timer < param.Duration)
@@ -93,13 +93,13 @@ public abstract class AbstractAttackState : AbstractControllerState
                 animState.Recovery = true;
                 controller.characterInfo.Saber.GetComponent<Collider>().enabled = false;
                 //TODO Suppr visual effect
-                controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
+                //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
             }
         }
         else
         {
             //TODO Suppr visual effect
-            controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
+            //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
             SwitchState();
         }
 

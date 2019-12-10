@@ -24,8 +24,8 @@ public abstract class AbstractController : MonoBehaviour
         private CharacterInfo(GameObject character)
         {
             RigidBody = character.GetComponent<Rigidbody>();
-            Animator = character.GetComponent<Animator>();
-            Saber = character.transform.GetChild(0).GetComponent<Saber>();
+            Animator = character.GetComponentInChildren<Animator>();
+            Saber = character.transform.GetComponentInChildren<Saber>();
             Character = character;
             characterAssigned = true;
         }
@@ -98,6 +98,7 @@ public abstract class AbstractController : MonoBehaviour
             transform);
         characterInfo.Character.AddComponent<GoToStart>();
         SetState(new IdleState(gameManager, this));
+        gameManager.CheckDir();
     }
 
     public ControllerStateName sss; // TODO suppr
