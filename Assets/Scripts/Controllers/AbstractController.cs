@@ -24,7 +24,7 @@ public abstract class AbstractController : MonoBehaviour
         private CharacterInfo(GameObject character)
         {
             RigidBody = character.GetComponent<Rigidbody>();
-            Animator = character.GetComponent<Animator>();
+            Animator = character.GetComponentInChildren<Animator>();
             Saber = character.transform.GetComponentInChildren<Saber>();
             Character = character;
             characterAssigned = true;
