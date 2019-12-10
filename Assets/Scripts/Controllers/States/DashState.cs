@@ -7,24 +7,8 @@ public class DashState : AbstractAttackState
     {
     }
     
-
     public override ControllerStateName Name()
     {
         return ControllerStateName.DashAttack;
-    }
-    
-    public override void OnVerticalAttack()
-    {
-        nextState = ControllerStateName.VerticalAttack;
-    }
-
-    public override void OnDashAttack()
-    {
-        nextState = ControllerStateName.DashAttack;
-    }
-
-    public override void OnBackDash()
-    {
-        nextState = ControllerStateName.BackDash;
     }
 }

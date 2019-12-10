@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public StateParameters verticalAttackParameters;
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
+    public float bowDuration;
     public float walkingSpeed;
     
     // Controllers
@@ -38,11 +39,17 @@ public class GameManager : MonoBehaviour
     public Transform posSpawner2;
     public Transform posStartFight1;
     public Transform posStartFight2;
+    public Transform posReposition1;
+    public Transform posReposition2;
 
+    // Timers and cooldowns
+    
     public float TOUCHCOOLDOWN = 0.4f;
     [NonSerialized] public float touchCooldown;
     [NonSerialized] public AbstractController touched;
     [NonSerialized] public int touchValue;
+
+    public float BACKDASHCOOLDOWN = 0.5f;
     
     public float ROUNDTIMER = 60;
     [SerializeField] private float roundTimer;
@@ -54,6 +61,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // States
     private AbstractGameState State { get; set; }
     public GameStateName StateName => State.Name();
 
@@ -70,8 +78,9 @@ public class GameManager : MonoBehaviour
         RoundTimer = ROUNDTIMER;
     }
 
+    public GameStateName sss;
     private void Update()
-    {
+    {sss = StateName;
         State.Update();
     }
 

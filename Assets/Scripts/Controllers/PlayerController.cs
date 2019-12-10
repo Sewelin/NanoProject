@@ -36,6 +36,12 @@ public class PlayerController : AbstractController
         State.OnBackDash();
     }
 
+    public void OnBow()
+    {
+        if (PassivateCombatInputs) return;
+        State.OnBow();
+    }
+
     public void OnDeviceLostEvent()
     {
         // TODO Pollish
