@@ -2,13 +2,15 @@ using UnityEngine;
 public class BowState : AbstractControllerState
 {
     private float _timer;
-    private float _Duration;
+    private readonly float _duration;
+    private static readonly int Bow = Animator.StringToHash("Bow");
 
     public BowState(GameManager gameManager, AbstractController controller) :
         base(gameManager, controller)
     {
-        _Duration = gameManager.bowDuration;
+        _duration = gameManager.bowDuration;
         
+        controller.characterInfo.Animator.SetTrigger(Bow);
         //TODO Suppr visual effect
         //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.magenta;
     }
@@ -18,7 +20,7 @@ public class BowState : AbstractControllerState
         base.Update();
         _timer += Time.deltaTime;
         
-        if (_timer > _Duration)
+        if (_timer > _duration)
         {
             //TODO Suppr visual effect
             //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
