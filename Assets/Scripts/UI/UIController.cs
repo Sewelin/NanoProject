@@ -4,65 +4,69 @@ using UnityEngine;
 using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
-    RectTransform _rect;
     [SerializeField] RectTransform _globalPanel;
+    UIPosition _uiPosition;
 
-    int _goto;
-    int _lastpos;
-    float _progress;
-    bool _move;
+    [SerializeField] CanvasGroup main;
+    [SerializeField] CanvasGroup start;
+    [SerializeField] AnimationCurve curve;
+    [SerializeField] float speed;
 
-    public float Goto { get { return (_goto + 0.5f) * Screen.width; } set => _goto = (int)Mathf.Floor(value); }
-    public float Lastpos { get { return (_lastpos + 0.5f) * Screen.width; } set => _lastpos = (int)Mathf.Floor(value); }
+    bool _isMain = true;
+    float progress = 1;
 
-    [SerializeField] AnimationCurve _curve;
-
-
+    public UIPosition UiPosition { get => _uiPosition; set => _uiPosition = value; }
+    public RectTransform GlobalPanel { get => _globalPanel; set => _globalPanel = value; }
 
     private void Update()
     {
-        if(_progress < 1 && _move)
+        if(_isMain && progress < 1)
         {
-            _progress += Time.deltaTime;
-            MoveUI();
+            progress += Time.deltaTime * speed;
+            if (progress >= 1) progress = 1;
+            main.alpha = curve.Evaluate(progress);
+            start.alpha = 1 - main.alpha;
         }
-        else if(_move){
-            _move = false;
-            _lastpos = _goto;
-
+        if (!_isMain && progress > 0)
+        {
+            progress -= Time.deltaTime * speed;
+            if (progress <= 0) progress = 0;
+            main.alpha = curve.Evaluate(progress);
+            start.alpha = 1 - main.alpha;
         }
-        
     }
+    
 
     private void Awake()
     {
-        _rect = GetComponent<RectTransform>();
+        _uiPosition = GetComponent<UIPosition>();
     }
-    public void Option()
+
+    public void StartButton(bool isMain)
     {
-        Next(1);
+        _isMain = isMain;
+        main.interactable = _isMain;
+        start.interactable = !_isMain;
     }
-    public void Main()
+    public void OptionButton()
     {
-        Next(0);
+        _uiPosition.Next(1);
     }
-    public void Credit()
+    public void MainButton()
     {
-        Next(-1);
+        _uiPosition.Next(0);
     }
-    private void Next(int next)
+    public void CreditButton()
     {
-        if(next != _goto)
-        {
-            _lastpos = _goto;
-            _goto = next;
-            Debug.Log("move");
-            _move = true;
-            _progress = 0;
-        }
+        _uiPosition.Next(-1);
     }
-    private void MoveUI()
+    public void ExitButton()
     {
-        _globalPanel.position = new Vector3(Mathf.Lerp(Lastpos, Goto, _curve.Evaluate(_progress)), _globalPanel.position.y, _globalPanel.position.z);
+        Debug.Log("Exit");
+        Application.Quit();
     }
+    
+
+
+
 }
