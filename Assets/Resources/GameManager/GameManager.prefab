@@ -80,12 +80,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79aeb89422220d4d9bacc0fa95ecd60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character1Model: {fileID: 4117969624093787012, guid: 8b4285315ddbef1429c1f4af05869c0a,
+  character1Model: {fileID: 2085744421454920886, guid: 9b77f1456ceb6c1499af0bd0221f3750,
     type: 3}
-  character2Model: {fileID: 4117969624093787012, guid: 8b4285315ddbef1429c1f4af05869c0a,
+  character2Model: {fileID: 6131131072245046151, guid: b3285ace6de84fc4abd9acf2b80f9072,
     type: 3}
   verticalAttackParameters:
-    timeSteps: {x: 0.25, y: 0.17, z: 0.75}
+    timeSteps: {x: 0.5, y: 0.5, z: 1.833}
     curve:
       serializedVersion: 2
       m_Curve:
@@ -112,22 +112,58 @@ MonoBehaviour:
       m_RotationOrder: 4
     speed: 0
   dashAttackParameters:
-    timeSteps: {x: 0.33, y: 0.5, z: 0.75}
+    timeSteps: {x: 0.667, y: 1, z: 1.833}
     curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 0
+        inSlope: 0.07767506
+        outSlope: 0.07767506
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.24483196
+      - serializedVersion: 3
+        time: 0.07018789
+        value: 0.2978724
+        inSlope: -0.060530517
+        outSlope: -0
+        tangentMode: 1
+        weightedMode: 0
+        inWeight: 0.4294558
+        outWeight: 0.2746705
+      - serializedVersion: 3
+        time: 0.23133542
+        value: 1
+        inSlope: 0.10938918
+        outSlope: Infinity
+        tangentMode: 1
+        weightedMode: 0
+        inWeight: 0.527105
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.425049
         value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 34
+        tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.476
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 1
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 34
@@ -137,9 +173,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 1
+    speed: 5
   backDashParameters:
-    timeSteps: {x: 0.2, y: 0, z: 0}
+    timeSteps: {x: 0.667, y: 0, z: 0}
     curve:
       serializedVersion: 2
       m_Curve:
@@ -164,9 +200,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 1
-  bowDuration: 2
-  walkingSpeed: 1
+    speed: 5
+  bowDuration: 2.5
+  walkingSpeed: 3
   posSpawner1: {fileID: 4732815846257128836}
   posSpawner2: {fileID: 4732815846286733519}
   posStartFight1: {fileID: 4732815846588699636}

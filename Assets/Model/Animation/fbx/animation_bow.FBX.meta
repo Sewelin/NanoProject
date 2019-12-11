@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 38f44af7965d5224ab93f842cd91caf6
+guid: a7627751348f8f149a391da20b2b34ea
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
-      74: -7862026938418689159
-    second: footstep_forward_noepau
+      74: -4402506399332515519
+    second: bow
   externalObjects: {}
   materials:
     importMaterials: 1
