@@ -8,7 +8,56 @@
 		<ExternalSourcesOutputRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
+	<StreamedFiles>
+		<File Id="103228339" Language="SFX">
+			<ShortName>NanoProjet_InGame_FirstSegment_Kotos_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_FirstSegment_Kotos_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="116898945" Language="SFX">
+			<ShortName>NanoProjet_InGame_FirstSegment_Drums_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_FirstSegment_Drums_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="146121998" Language="SFX">
+			<ShortName>NanoProjet_InGame_LastSegment_Drums_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_LastSegment_Drums_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="169333166" Language="SFX">
+			<ShortName>NanoProjet_InGame_Intro_Koto_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_Intro_Koto_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="194947854" Language="SFX">
+			<ShortName>NanoProjet_InGame_LastSegment_Koto_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_LastSegment_Koto_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="276999256" Language="SFX">
+			<ShortName>NanoProjet_InGame_LastSegment_Flute_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_LastSegment_Flute_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="379783674" Language="SFX">
+			<ShortName>NanoProjet_InGame_EndSegment_Drums_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_EndSegment_Drums_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="459789300" Language="SFX">
+			<ShortName>NanoProjet_InGame_FirstSegment_Flute_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_FirstSegment_Flute_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="464562068" Language="SFX">
+			<ShortName>Atmos_BattleEnd.wav</ShortName>
+			<Path>SFX\Atmos_BattleEnd_B96A56BD.wem</Path>
+		</File>
+		<File Id="559860867" Language="SFX">
+			<ShortName>NanoProjet_InGame_EndSegment_Cords_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_EndSegment_Cords_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="562946084" Language="SFX">
+			<ShortName>NanoProjet_InGame_EndSegment_Kotos_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_EndSegment_Kotos_Test_9B96ECC7.wem</Path>
+		</File>
+		<File Id="845691043" Language="SFX">
+			<ShortName>NanoProjet_InGame_LastSegment_Cords_Test.wav</ShortName>
+			<Path>SFX\NanoProjet_InGame_LastSegment_Cords_Test_9B96ECC7.wem</Path>
+		</File>
+	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
 		<SoundBank Id="1330823757" Language="SFX">
@@ -16,37 +65,54 @@
 			<ShortName>NanoProjet_SFX</ShortName>
 			<Path>NanoProjet_SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="711535685" Name="ATM_Rounds" ObjectPath="\Events\NanoProjet\ATM_Rounds" DurationType="Infinite"/>
-				<Event Id="2338023994" Name="FB_Horns_Time" ObjectPath="\Events\NanoProjet\FB_Horns_Time" DurationType="Infinite"/>
-				<Event Id="2121424417" Name="Launch_Round" ObjectPath="\Events\NanoProjet\Launch_Round" DurationType="Infinite"/>
-				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Menu_Atmos" DurationType="Infinite"/>
-				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu_Back" DurationType="OneShot" DurationMin="1.398893" DurationMax="1.398893"/>
-				<Event Id="557861964" Name="Menu_ChangeOption" ObjectPath="\Events\NanoProjet\Menu_ChangeOption" DurationType="OneShot" DurationMin="0.389194" DurationMax="0.389194"/>
-				<Event Id="2666848820" Name="Menu_Continue" ObjectPath="\Events\NanoProjet\Menu_Continue" DurationType="OneShot" DurationMin="1.674189" DurationMax="1.674189"/>
-				<Event Id="2170009975" Name="Menu_Pause" ObjectPath="\Events\NanoProjet\Menu_Pause" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
-				<Event Id="105544633" Name="Menu_Play" ObjectPath="\Events\NanoProjet\Menu_Play" DurationType="Infinite"/>
-				<Event Id="2776193354" Name="Menu_Quit" ObjectPath="\Events\NanoProjet\Menu_Quit" DurationType="OneShot" DurationMin="7.335532" DurationMax="7.335532"/>
-				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\NanoProjet\Menu_Select" DurationType="OneShot" DurationMin="1.461750" DurationMax="1.461750"/>
-				<Event Id="2587230380" Name="Menu_UpDown" ObjectPath="\Events\NanoProjet\Menu_UpDown" DurationType="OneShot" DurationMin="0.400592" DurationMax="0.400592"/>
-				<Event Id="1183016477" Name="Player_One_Backward" ObjectPath="\Events\NanoProjet\Player_One_Backward" DurationType="OneShot" DurationMin="0.169983" DurationMax="0.569438"/>
-				<Event Id="375910062" Name="Player_One_Bowing" ObjectPath="\Events\NanoProjet\Player_One_Bowing" DurationType="OneShot" DurationMin="0.696578" DurationMax="1.284931"/>
-				<Event Id="972262685" Name="Player_One_Forward" ObjectPath="\Events\NanoProjet\Player_One_Forward" DurationType="OneShot" DurationMin="0.323440" DurationMax="0.882162"/>
-				<Event Id="2862113300" Name="Player_One_Idle" ObjectPath="\Events\NanoProjet\Player_One_Idle" DurationType="OneShot" DurationMin="0.644301" DurationMax="1.209274"/>
-				<Event Id="2507762279" Name="Player_Two_Backward" ObjectPath="\Events\NanoProjet\Player_Two_Backward" DurationType="OneShot" DurationMin="0.268277" DurationMax="0.689016"/>
-				<Event Id="2367140880" Name="Player_Two_Bowing" ObjectPath="\Events\NanoProjet\Player_Two_Bowing" DurationType="OneShot" DurationMin="1.099380" DurationMax="1.554759"/>
-				<Event Id="184927275" Name="Player_Two_Forward" ObjectPath="\Events\NanoProjet\Player_Two_Forward" DurationType="OneShot" DurationMin="0.540826" DurationMax="1.067410"/>
-				<Event Id="1430148754" Name="Player_Two_Idle" ObjectPath="\Events\NanoProjet\Player_Two_Idle" DurationType="OneShot" DurationMin="1.016874" DurationMax="1.446408"/>
-				<Event Id="20042657" Name="SFX_Backward_Jump" ObjectPath="\Events\NanoProjet\SFX_Backward_Jump" DurationType="OneShot" DurationMin="0.327900" DurationMax="0.327900"/>
-				<Event Id="4231318760" Name="SFX_ConsumeCorps" ObjectPath="\Events\NanoProjet\SFX_ConsumeCorps" DurationType="OneShot" DurationMin="4.929458" DurationMax="4.929458"/>
-				<Event Id="1804139809" Name="SFX_Dash" ObjectPath="\Events\NanoProjet\SFX_Dash" DurationType="OneShot" DurationMin="1.832917" DurationMax="1.832917"/>
-				<Event Id="1407212788" Name="SFX_Dash_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX_Dash_Hit_Draw" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
-				<Event Id="2872475778" Name="SFX_Dash_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX_Dash_Hit_Kill" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
-				<Event Id="299103780" Name="SFX_Dash_Stop" ObjectPath="\Events\NanoProjet\SFX_Dash_Stop" DurationType="OneShot" DurationMin="0.295520" DurationMax="0.295520"/>
-				<Event Id="777164721" Name="SFX_Death" ObjectPath="\Events\NanoProjet\SFX_Death" DurationType="OneShot" DurationMin="2.687226" DurationMax="2.916667"/>
-				<Event Id="1708937970" Name="SFX_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX_Vertical_Attack" DurationType="OneShot" DurationMin="1.276928" DurationMax="1.276928"/>
-				<Event Id="402918157" Name="SFX_Vertical_Attack_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX_Vertical_Attack_Hit_Draw" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
-				<Event Id="1553621999" Name="SFX_Vertical_Attack_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX_Vertical_Attack_Hit_Kill" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
+				<Event Id="711535685" Name="ATM_Rounds" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\ATM_Rounds" DurationType="Infinite"/>
+				<Event Id="2338023994" Name="FB_Horns_Time" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\FB_Horns_Time" DurationType="Infinite"/>
+				<Event Id="2613926250" Name="InGame_Music" ObjectPath="\Events\Default Work Unit\InGame_Music" DurationType="Infinite"/>
+				<Event Id="2121424417" Name="Launch_Round" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Launch_Round" DurationType="Infinite"/>
+				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Menu_Atmos" DurationType="Infinite"/>
+				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu\Menu_Back" DurationType="OneShot" DurationMin="1.398893" DurationMax="1.398893"/>
+				<Event Id="557861964" Name="Menu_ChangeOption" ObjectPath="\Events\NanoProjet\Menu\Menu_ChangeOption" DurationType="OneShot" DurationMin="0.579773" DurationMax="0.579773"/>
+				<Event Id="2666848820" Name="Menu_Continue" ObjectPath="\Events\NanoProjet\Menu\Menu_Continue" DurationType="OneShot" DurationMin="1.674189" DurationMax="1.674189"/>
+				<Event Id="2170009975" Name="Menu_Pause" ObjectPath="\Events\NanoProjet\Menu\Menu_Pause" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
+				<Event Id="105544633" Name="Menu_Play" ObjectPath="\Events\NanoProjet\Menu\Menu_Play" DurationType="Infinite"/>
+				<Event Id="2776193354" Name="Menu_Quit" ObjectPath="\Events\NanoProjet\Menu\Menu_Quit" DurationType="OneShot" DurationMin="4.423519" DurationMax="4.423519"/>
+				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\NanoProjet\Menu\Menu_Select" DurationType="OneShot" DurationMin="1.461750" DurationMax="1.461750"/>
+				<Event Id="2587230380" Name="Menu_UpDown" ObjectPath="\Events\NanoProjet\Menu\Menu_UpDown" DurationType="OneShot" DurationMin="0.388614" DurationMax="0.388614"/>
+				<Event Id="1183016477" Name="Player_One_Backward" ObjectPath="\Events\NanoProjet\PlayerOne\Player_One_Backward" DurationType="OneShot" DurationMin="0.169983" DurationMax="0.569438"/>
+				<Event Id="375910062" Name="Player_One_Bowing" ObjectPath="\Events\NanoProjet\PlayerOne\Player_One_Bowing" DurationType="OneShot" DurationMin="2.400000" DurationMax="2.400000"/>
+				<Event Id="972262685" Name="Player_One_Forward" ObjectPath="\Events\NanoProjet\PlayerOne\Player_One_Forward" DurationType="OneShot" DurationMin="0.452724" DurationMax="0.895048"/>
+				<Event Id="727157835" Name="Player_One_Forward_Prez" ObjectPath="\Events\NanoProjet\PlayerOne\Player_One_Forward_Prez" DurationType="OneShot" DurationMin="0.627859" DurationMax="0.690177"/>
+				<Event Id="2862113300" Name="Player_One_Idle" ObjectPath="\Events\NanoProjet\PlayerOne\Player_One_Idle" DurationType="OneShot" DurationMin="0.644301" DurationMax="1.209274"/>
+				<Event Id="2507762279" Name="Player_Two_Backward" ObjectPath="\Events\NanoProjet\PlayerTwo\Player_Two_Backward" DurationType="OneShot" DurationMin="0.268277" DurationMax="0.689016"/>
+				<Event Id="2367140880" Name="Player_Two_Bowing" ObjectPath="\Events\NanoProjet\PlayerTwo\Player_Two_Bowing" DurationType="OneShot" DurationMin="2.400000" DurationMax="2.400000"/>
+				<Event Id="184927275" Name="Player_Two_Forward" ObjectPath="\Events\NanoProjet\PlayerTwo\Player_Two_Forward" DurationType="OneShot" DurationMin="0.540826" DurationMax="1.067410"/>
+				<Event Id="1343735513" Name="Player_Two_Forward_Prez" ObjectPath="\Events\NanoProjet\PlayerTwo\Player_Two_Forward_Prez" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1430148754" Name="Player_Two_Idle" ObjectPath="\Events\NanoProjet\PlayerTwo\Player_Two_Idle" DurationType="OneShot" DurationMin="1.016874" DurationMax="1.446408"/>
+				<Event Id="20042657" Name="SFX_Backward_Jump" ObjectPath="\Events\NanoProjet\SFX\SFX_Backward_Jump" DurationType="OneShot" DurationMin="0.327900" DurationMax="0.327900"/>
+				<Event Id="4231318760" Name="SFX_ConsumeCorps" ObjectPath="\Events\NanoProjet\SFX\SFX_ConsumeCorps" DurationType="OneShot" DurationMin="4.929458" DurationMax="4.929458"/>
+				<Event Id="1804139809" Name="SFX_Dash" ObjectPath="\Events\NanoProjet\SFX\SFX_Dash" DurationType="OneShot" DurationMin="3.000000" DurationMax="3.000000"/>
+				<Event Id="1407212788" Name="SFX_Dash_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX\SFX_Dash_Hit_Draw" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
+				<Event Id="2872475778" Name="SFX_Dash_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX\SFX_Dash_Hit_Kill" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
+				<Event Id="299103780" Name="SFX_Dash_Stop" ObjectPath="\Events\NanoProjet\SFX\SFX_Dash_Stop" DurationType="OneShot" DurationMin="0.295520" DurationMax="0.295520"/>
+				<Event Id="777164721" Name="SFX_Death" ObjectPath="\Events\NanoProjet\SFX\SFX_Death" DurationType="OneShot" DurationMin="2.687226" DurationMax="2.916667"/>
+				<Event Id="1708937970" Name="SFX_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX\SFX_Vertical_Attack" DurationType="OneShot" DurationMin="2.066667" DurationMax="2.066667"/>
+				<Event Id="402918157" Name="SFX_Vertical_Attack_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX\SFX_Vertical_Attack_Hit_Draw" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
+				<Event Id="1553621999" Name="SFX_Vertical_Attack_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX\SFX_Vertical_Attack_Hit_Kill" DurationType="OneShot" DurationMin="2.753515" DurationMax="2.753515"/>
 			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="103228339"/>
+				<File Id="116898945"/>
+				<File Id="146121998"/>
+				<File Id="169333166"/>
+				<File Id="194947854"/>
+				<File Id="276999256"/>
+				<File Id="379783674"/>
+				<File Id="459789300"/>
+				<File Id="464562068"/>
+				<File Id="559860867"/>
+				<File Id="562946084"/>
+				<File Id="845691043"/>
+			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="14408938" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition5_Test.wav</ShortName>
@@ -60,13 +126,9 @@
 					<ShortName>MENU_Music_Test.wav</ShortName>
 					<Path>SFX\MENU_Music_Test_1A09C425.wem</Path>
 				</File>
-				<File Id="70708229" Language="SFX">
-					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
-					<Path>SFX\SFX_Dash_Whoosh_Test_60F3FF13.wem</Path>
-				</File>
-				<File Id="72700801" Language="SFX">
-					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
-					<Path>SFX\SFX_Dash_Whoosh_Test_10C4C929.wem</Path>
+				<File Id="56063615" Language="SFX">
+					<ShortName>SFX_Footsteps_Set02_Step_08.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set02_Step_08_49718417.wem</Path>
 				</File>
 				<File Id="89644619" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -79,6 +141,7 @@
 				<File Id="103228339" Language="SFX">
 					<ShortName>NanoProjet_InGame_FirstSegment_Kotos_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_FirstSegment_Kotos_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>3277</PrefetchSize>
 				</File>
 				<File Id="103707120" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -88,13 +151,34 @@
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_158EEB91.wem</Path>
 				</File>
+				<File Id="108635280" Language="SFX">
+					<ShortName>SFX_Footsteps_Set02_Step_03.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set02_Step_03_49718417.wem</Path>
+				</File>
 				<File Id="113752996" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_21F0EE00.wem</Path>
 				</File>
+				<File Id="116211995" Language="SFX">
+					<ShortName>SFX_Footsteps_Set02_Step_04.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set02_Step_04_49718417.wem</Path>
+				</File>
 				<File Id="116898945" Language="SFX">
 					<ShortName>NanoProjet_InGame_FirstSegment_Drums_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_FirstSegment_Drums_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>3424</PrefetchSize>
+				</File>
+				<File Id="118218371" Language="SFX">
+					<ShortName>SFX_Footsteps_Set04_Step_04.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set04_Step_04_49718417.wem</Path>
+				</File>
+				<File Id="123236170" Language="SFX">
+					<ShortName>SFX_Footsteps_Set04_Step_06.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set04_Step_06_49718417.wem</Path>
+				</File>
+				<File Id="127377298" Language="SFX">
+					<ShortName>SFX_Footsteps_Set04_Step_07.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set04_Step_07_49718417.wem</Path>
 				</File>
 				<File Id="131504247" Language="SFX">
 					<ShortName>UI_Taiko.wav</ShortName>
@@ -104,9 +188,22 @@
 					<ShortName>SFX_Sword_Draw.wav</ShortName>
 					<Path>SFX\SFX_Sword_Draw_10C4C929.wem</Path>
 				</File>
+				<File Id="140170011" Language="SFX">
+					<ShortName>Armor\SFX_Footsteps_Armor_05.wav</ShortName>
+					<Path>SFX\Armor\SFX_Footsteps_Armor_05_49718417.wem</Path>
+				</File>
+				<File Id="142362830" Language="SFX">
+					<ShortName>SFX_Footsteps_Set01_Step_07.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set01_Step_07_49718417.wem</Path>
+				</File>
 				<File Id="146121998" Language="SFX">
 					<ShortName>NanoProjet_InGame_LastSegment_Drums_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_LastSegment_Drums_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>2701</PrefetchSize>
+				</File>
+				<File Id="154602429" Language="SFX">
+					<ShortName>SFX_Footsteps_Set04_Step_03.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set04_Step_03_49718417.wem</Path>
 				</File>
 				<File Id="159233756" Language="SFX">
 					<ShortName>SFX_Sword.wav</ShortName>
@@ -119,14 +216,44 @@
 				<File Id="169333166" Language="SFX">
 					<ShortName>NanoProjet_InGame_Intro_Koto_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_Intro_Koto_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>2900</PrefetchSize>
+				</File>
+				<File Id="173665298" Language="SFX">
+					<ShortName>Armor\SFX_Footsteps_Armor_08.wav</ShortName>
+					<Path>SFX\Armor\SFX_Footsteps_Armor_08_49718417.wem</Path>
+				</File>
+				<File Id="176578376" Language="SFX">
+					<ShortName>Armor\SFX_Footsteps_Armor_02.wav</ShortName>
+					<Path>SFX\Armor\SFX_Footsteps_Armor_02_49718417.wem</Path>
+				</File>
+				<File Id="184886100" Language="SFX">
+					<ShortName>SFX_Footsteps_Set01_Step_05.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set01_Step_05_49718417.wem</Path>
 				</File>
 				<File Id="194947854" Language="SFX">
 					<ShortName>NanoProjet_InGame_LastSegment_Koto_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_LastSegment_Koto_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>3056</PrefetchSize>
+				</File>
+				<File Id="206857872" Language="SFX">
+					<ShortName>Armor\SFX_Footsteps_Armor_06.wav</ShortName>
+					<Path>SFX\Armor\SFX_Footsteps_Armor_06_49718417.wem</Path>
+				</File>
+				<File Id="212430323" Language="SFX">
+					<ShortName>SFX_Footsteps_Set01_Step_04.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set01_Step_04_49718417.wem</Path>
+				</File>
+				<File Id="216057891" Language="SFX">
+					<ShortName>SFX_Footsteps_Set03_Step_07.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set03_Step_07_49718417.wem</Path>
 				</File>
 				<File Id="221229023" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_AC60EFE4.wem</Path>
+				</File>
+				<File Id="223948464" Language="SFX">
+					<ShortName>SFX_Footsteps_Set01_Step_08.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set01_Step_08_49718417.wem</Path>
 				</File>
 				<File Id="244771642" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition1_Test.wav</ShortName>
@@ -136,9 +263,14 @@
 					<ShortName>Taiko_Hit.wav</ShortName>
 					<Path>SFX\Taiko_Hit_AD8950F7.wem</Path>
 				</File>
+				<File Id="273336139" Language="SFX">
+					<ShortName>SFX_Dash_01.wav</ShortName>
+					<Path>SFX\SFX_Dash_01_10C4C929.wem</Path>
+				</File>
 				<File Id="276999256" Language="SFX">
 					<ShortName>NanoProjet_InGame_LastSegment_Flute_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_LastSegment_Flute_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>973</PrefetchSize>
 				</File>
 				<File Id="301903005" Language="SFX">
 					<ShortName>Copland_Hit.wav</ShortName>
@@ -148,13 +280,9 @@
 					<ShortName>NanoProjet_InGame_DrumTransition4_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_DrumTransition4_Test_6296B0F9.wem</Path>
 				</File>
-				<File Id="331224992" Language="SFX">
-					<ShortName>SFX_Sword.wav</ShortName>
-					<Path>SFX\SFX_Sword_A0EF7742.wem</Path>
-				</File>
 				<File Id="331645015" Language="SFX">
 					<ShortName>SFX_ConsumeCorps.wav</ShortName>
-					<Path>SFX\SFX_ConsumeCorps_F850D075.wem</Path>
+					<Path>SFX\SFX_ConsumeCorps_5D2C18A2.wem</Path>
 				</File>
 				<File Id="336470013" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -164,29 +292,43 @@
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_9FCB1ED1.wem</Path>
 				</File>
+				<File Id="342978335" Language="SFX">
+					<ShortName>Taiko_Roll.wav</ShortName>
+					<Path>SFX\Taiko_Roll_25AFD4CB.wem</Path>
+				</File>
 				<File Id="379783674" Language="SFX">
 					<ShortName>NanoProjet_InGame_EndSegment_Drums_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_EndSegment_Drums_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>2704</PrefetchSize>
+				</File>
+				<File Id="395585459" Language="SFX">
+					<ShortName>SFX_Footsteps_Set02_Step_05.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set02_Step_05_49718417.wem</Path>
 				</File>
 				<File Id="413445957" Language="SFX">
 					<ShortName>Atmos_BattleFull.wav</ShortName>
-					<Path>SFX\Atmos_BattleFull_88BCA80D.wem</Path>
-				</File>
-				<File Id="415217945" Language="SFX">
-					<ShortName>Footstep_Test.wav</ShortName>
-					<Path>SFX\Footstep_Test_C80D6356.wem</Path>
+					<Path>SFX\Atmos_BattleFull_C7B1F7F0.wem</Path>
 				</File>
 				<File Id="443629866" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition2_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_DrumTransition2_Test_9B96ECC7.wem</Path>
 				</File>
+				<File Id="449425460" Language="SFX">
+					<ShortName>Armor\SFX_Footsteps_Armor_01.wav</ShortName>
+					<Path>SFX\Armor\SFX_Footsteps_Armor_01_49718417.wem</Path>
+				</File>
 				<File Id="459789300" Language="SFX">
 					<ShortName>NanoProjet_InGame_FirstSegment_Flute_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_FirstSegment_Flute_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>1007</PrefetchSize>
 				</File>
-				<File Id="464562068" Language="SFX">
-					<ShortName>Atmos_BattleEnd.wav</ShortName>
-					<Path>SFX\Atmos_BattleEnd_DEB27B1A.wem</Path>
+				<File Id="483183590" Language="SFX">
+					<ShortName>Taiko_Hit.wav</ShortName>
+					<Path>SFX\Taiko_Hit_0620F9F9.wem</Path>
+				</File>
+				<File Id="485810736" Language="SFX">
+					<ShortName>SFX_Footsteps_Set04_Step_08.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set04_Step_08_49718417.wem</Path>
 				</File>
 				<File Id="506380287" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -204,6 +346,14 @@
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_F73C433F.wem</Path>
 				</File>
+				<File Id="536540309" Language="SFX">
+					<ShortName>SFX_Footsteps_Set03_Step_06.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set03_Step_06_49718417.wem</Path>
+				</File>
+				<File Id="556700512" Language="SFX">
+					<ShortName>SFX_Footsteps_Set02_Step_01.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set02_Step_01_49718417.wem</Path>
+				</File>
 				<File Id="558358970" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_EFEDE9BA.wem</Path>
@@ -211,10 +361,12 @@
 				<File Id="559860867" Language="SFX">
 					<ShortName>NanoProjet_InGame_EndSegment_Cords_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_EndSegment_Cords_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>2754</PrefetchSize>
 				</File>
 				<File Id="562946084" Language="SFX">
 					<ShortName>NanoProjet_InGame_EndSegment_Kotos_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_EndSegment_Kotos_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>3068</PrefetchSize>
 				</File>
 				<File Id="564268030" Language="SFX">
 					<ShortName>ATM_RoundOneTest.wav</ShortName>
@@ -223,6 +375,14 @@
 				<File Id="567855014" Language="SFX">
 					<ShortName>Taiko_Hit.wav</ShortName>
 					<Path>SFX\Taiko_Hit_0A4DB067.wem</Path>
+				</File>
+				<File Id="574218594" Language="SFX">
+					<ShortName>SFX_Footsteps_Set01_Step_01.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set01_Step_01_49718417.wem</Path>
+				</File>
+				<File Id="600059934" Language="SFX">
+					<ShortName>SFX_Footsteps_Set03_Step_04.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set03_Step_04_49718417.wem</Path>
 				</File>
 				<File Id="601913131" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition3_Test.wav</ShortName>
@@ -244,6 +404,10 @@
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_4FC909A5.wem</Path>
 				</File>
+				<File Id="630163353" Language="SFX">
+					<ShortName>SFX_Footsteps_Set02_Step_06.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set02_Step_06_49718417.wem</Path>
+				</File>
 				<File Id="649082316" Language="SFX">
 					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
 					<Path>SFX\SFX_Dash_Whoosh_Test_1003589B.wem</Path>
@@ -251,6 +415,14 @@
 				<File Id="649273103" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
 					<Path>SFX\MENU_Music_Test_6F136B74.wem</Path>
+				</File>
+				<File Id="662119270" Language="SFX">
+					<ShortName>SFX_Footsteps_Set03_Step_05.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set03_Step_05_49718417.wem</Path>
+				</File>
+				<File Id="673013954" Language="SFX">
+					<ShortName>SFX_Footsteps_Set01_Step_06.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set01_Step_06_49718417.wem</Path>
 				</File>
 				<File Id="673105821" Language="SFX">
 					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
@@ -260,9 +432,21 @@
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_00D2BFD7.wem</Path>
 				</File>
+				<File Id="686461233" Language="SFX">
+					<ShortName>Armor\SFX_Footsteps_Armor_03.wav</ShortName>
+					<Path>SFX\Armor\SFX_Footsteps_Armor_03_49718417.wem</Path>
+				</File>
 				<File Id="692697838" Language="SFX">
 					<ShortName>Taiko_Roll.wav</ShortName>
 					<Path>SFX\Taiko_Roll_81276D0C.wem</Path>
+				</File>
+				<File Id="699683188" Language="SFX">
+					<ShortName>Copland_Hit.wav</ShortName>
+					<Path>SFX\Copland_Hit_4E7F9997.wem</Path>
+				</File>
+				<File Id="731373187" Language="SFX">
+					<ShortName>SFX_Footsteps_Set03_Step_08.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set03_Step_08_49718417.wem</Path>
 				</File>
 				<File Id="732962334" Language="SFX">
 					<ShortName>Player_Bowing.wav</ShortName>
@@ -272,17 +456,41 @@
 					<ShortName>NanoProjet_InGame_DrumTransition3_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_DrumTransition3_Test_6296B0F9.wem</Path>
 				</File>
+				<File Id="746389463" Language="SFX">
+					<ShortName>Armor\SFX_Footsteps_Armor_07.wav</ShortName>
+					<Path>SFX\Armor\SFX_Footsteps_Armor_07_49718417.wem</Path>
+				</File>
+				<File Id="748791196" Language="SFX">
+					<ShortName>SFX_Footsteps_Set03_Step_03.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set03_Step_03_49718417.wem</Path>
+				</File>
 				<File Id="752283135" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_7D3FB300.wem</Path>
 				</File>
+				<File Id="753280348" Language="SFX">
+					<ShortName>SFX_Footsteps_Set02_Step_02.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set02_Step_02_49718417.wem</Path>
+				</File>
 				<File Id="754484868" Language="SFX">
 					<ShortName>UI_Taiko.wav</ShortName>
-					<Path>SFX\UI_Taiko_57BC5AAC.wem</Path>
+					<Path>SFX\UI_Taiko_38ACE72E.wem</Path>
+				</File>
+				<File Id="754632596" Language="SFX">
+					<ShortName>SFX_Bowing.wav</ShortName>
+					<Path>SFX\SFX_Bowing_49718417.wem</Path>
+				</File>
+				<File Id="755098992" Language="SFX">
+					<ShortName>SFX_Footsteps_Set02_Step_07.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set02_Step_07_49718417.wem</Path>
 				</File>
 				<File Id="763677696" Language="SFX">
 					<ShortName>SFX_Hit_Test.wav</ShortName>
 					<Path>SFX\SFX_Hit_Test_10C4C929.wem</Path>
+				</File>
+				<File Id="768785373" Language="SFX">
+					<ShortName>SFX_Footsteps_Set03_Step_02.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set03_Step_02_49718417.wem</Path>
 				</File>
 				<File Id="778893659" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
@@ -294,15 +502,24 @@
 				</File>
 				<File Id="829485704" Language="SFX">
 					<ShortName>Atmos_BattleMiddle.wav</ShortName>
-					<Path>SFX\Atmos_BattleMiddle_2D0C8E95.wem</Path>
+					<Path>SFX\Atmos_BattleMiddle_40417705.wem</Path>
 				</File>
 				<File Id="845691043" Language="SFX">
 					<ShortName>NanoProjet_InGame_LastSegment_Cords_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_LastSegment_Cords_Test_9B96ECC7.wem</Path>
+					<PrefetchSize>2746</PrefetchSize>
+				</File>
+				<File Id="870772297" Language="SFX">
+					<ShortName>Armor\SFX_Footsteps_Armor_04.wav</ShortName>
+					<Path>SFX\Armor\SFX_Footsteps_Armor_04_49718417.wem</Path>
 				</File>
 				<File Id="872307905" Language="SFX">
 					<ShortName>SFX_Horn_End.wav</ShortName>
 					<Path>SFX\SFX_Horn_End_6296B0F9.wem</Path>
+				</File>
+				<File Id="875774278" Language="SFX">
+					<ShortName>SFX_Footsteps_Set01_Step_02.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set01_Step_02_49718417.wem</Path>
 				</File>
 				<File Id="886422881" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition4_Test.wav</ShortName>
@@ -311,6 +528,10 @@
 				<File Id="897420397" Language="SFX">
 					<ShortName>SFX_Horn_Half.wav</ShortName>
 					<Path>SFX\SFX_Horn_Half_6296B0F9.wem</Path>
+				</File>
+				<File Id="915748602" Language="SFX">
+					<ShortName>SFX_Footsteps_Set03_Step_01.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set03_Step_01_49718417.wem</Path>
 				</File>
 				<File Id="915816819" Language="SFX">
 					<ShortName>Taiko_Hit.wav</ShortName>
@@ -332,9 +553,17 @@
 					<ShortName>SFX_PlayerDeath_02.wav</ShortName>
 					<Path>SFX\SFX_PlayerDeath_02_10C4C929.wem</Path>
 				</File>
+				<File Id="980246837" Language="SFX">
+					<ShortName>SFX_Footsteps_Set04_Step_05.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set04_Step_05_49718417.wem</Path>
+				</File>
 				<File Id="987090694" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
 					<Path>SFX\MENU_Music_Test_D7B7E8EF.wem</Path>
+				</File>
+				<File Id="991535670" Language="SFX">
+					<ShortName>SFX_Footsteps_Set01_Step_03.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set01_Step_03_49718417.wem</Path>
 				</File>
 				<File Id="998095802" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition5_Test.wav</ShortName>
@@ -343,6 +572,18 @@
 				<File Id="1016258128" Language="SFX">
 					<ShortName>UI_Taiko.wav</ShortName>
 					<Path>SFX\UI_Taiko_7AA69908.wem</Path>
+				</File>
+				<File Id="1021154077" Language="SFX">
+					<ShortName>SFX_Footsteps_Set04_Step_02.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set04_Step_02_49718417.wem</Path>
+				</File>
+				<File Id="1025408723" Language="SFX">
+					<ShortName>SFX_Footsteps_Set04_Step_01.wav</ShortName>
+					<Path>SFX\SFX_Footsteps_Set04_Step_01_49718417.wem</Path>
+				</File>
+				<File Id="1029353744" Language="SFX">
+					<ShortName>SFX_Vertical_Attack_01.wav</ShortName>
+					<Path>SFX\SFX_Vertical_Attack_01_10C4C929.wem</Path>
 				</File>
 				<File Id="1031627159" Language="SFX">
 					<ShortName>MENU_Amb_Test.wav</ShortName>

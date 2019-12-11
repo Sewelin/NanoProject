@@ -57,12 +57,14 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	4290589570	P_TWO_FOL			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_TWO\P_TWO_FOL	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	997000339	REV_IG_MUSIC			\Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_IG_MUSIC	
 	2116471102	REV_MENU_MUSIC			\Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_MENU_MUSIC	
 	2766901782	REV_MENU			\Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_MENU	
 	3548165401	REV_SCENE			\Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_SCENE	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	774352804	Have_U_Ever_Been_Outside_(Custom)	Wwise RoomVerb			
 	978948252	Tunnel1 (Custom)	Wwise Matrix Reverb			
 
 Audio Devices	ID	Name	Type				Notes
