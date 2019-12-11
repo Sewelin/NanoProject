@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class GoToStart : AbstractAnimation
+public class Arrive : AbstractAnimation
 {
     private int _direction;
     private float _speed;

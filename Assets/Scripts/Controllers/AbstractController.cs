@@ -96,7 +96,7 @@ public abstract class AbstractController : MonoBehaviour
         characterInfo = CharacterInfo.Instantiate(
             PlayerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
-        characterInfo.Character.AddComponent<GoToStart>();
+        characterInfo.Character.AddComponent<Arrive>();
         SetState(new IdleState(gameManager, this));
         gameManager.CheckDir();
     }
