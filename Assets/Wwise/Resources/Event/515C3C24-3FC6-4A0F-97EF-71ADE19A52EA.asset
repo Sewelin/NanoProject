@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ca65de6b3103f64fbc4e6c6bf1a4771, type: 3}
-  m_Name: 735BE8F9-ED7B-49D9-94C7-7E3D8ACE7639
+  m_Name: 515C3C24-3FC6-4A0F-97EF-71ADE19A52EA
   m_EditorClassIdentifier: 
-  objectName: SFX_Sword_Test3D
-  id: 665833074
-  guid: 735BE8F9-ED7B-49D9-94C7-7E3D8ACE7639
+  objectName: Menu_Play
+  id: 105544633
+  guid: 515C3C24-3FC6-4A0F-97EF-71ADE19A52EA

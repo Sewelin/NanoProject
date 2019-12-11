@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public StateParameters verticalAttackParameters;
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
+    public float bowDuration;
     public float walkingSpeed;
     
     // Controllers
@@ -38,17 +39,34 @@ public class GameManager : MonoBehaviour
     public Transform posSpawner2;
     public Transform posStartFight1;
     public Transform posStartFight2;
+    public Transform posReposition1;
+    public Transform posReposition2;
 
+    // Timers and cooldowns
+    
     public float TOUCHCOOLDOWN = 0.4f;
     [NonSerialized] public float touchCooldown;
     [NonSerialized] public AbstractController touched;
     [NonSerialized] public int touchValue;
+
+    public float BACKDASHCOOLDOWN = 0.5f;
     
     public float ROUNDTIMER = 60;
-    public float roundTimer;
-    
+    [SerializeField] private float roundTimer;
+    public float RoundTimer {
+        get => roundTimer;
+        set {
+            AkSoundEngine.SetRTPCValue("RTPC_Timer", value);
+            roundTimer = value;
+        }
+    }
+
+    // States
     private AbstractGameState State { get; set; }
     public GameStateName StateName => State.Name();
+
+    // Sounds
+    public GameObject soundManager;
 
     private void Awake()
     {
@@ -57,11 +75,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        roundTimer = ROUNDTIMER;
+        RoundTimer = ROUNDTIMER;
     }
 
+    public GameStateName sss;
     private void Update()
-    {
+    {sss = StateName;
         State.Update();
     }
 
@@ -93,11 +112,11 @@ public class GameManager : MonoBehaviour
         Controller2.dir = -Controller1.dir;
         
         var v = Controller1.characterInfo.Character.transform.localScale;
-        v.x = Controller1.dir;
+        v.z = Controller1.dir;
         Controller1.characterInfo.Character.transform.localScale = v;
         
         v = Controller2.characterInfo.Character.transform.localScale;
-        v.x = Controller2.dir;
+        v.z = Controller2.dir;
         Controller2.characterInfo.Character.transform.localScale = v;
     }
 

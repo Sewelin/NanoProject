@@ -22,7 +22,7 @@ public class Critic : AbstractGameState
         base.Exit();
         gameManager.touched = null;
         
-        if (gameManager.roundTimer > 5 || gameManager.Controller1.points == gameManager.Controller2.points)
+        if (gameManager.RoundTimer > 5 || gameManager.Controller1.Points == gameManager.Controller2.Points)
         {
             gameManager.SetState(new Reset(gameManager));
         }
@@ -36,7 +36,7 @@ public class Critic : AbstractGameState
     {
         base.Update();
         
-        gameManager.roundTimer -= Time.deltaTime;
+        gameManager.RoundTimer -= Time.deltaTime;
         gameManager.CheckDir();
         gameManager.touchCooldown -= Time.deltaTime;
         
@@ -79,7 +79,7 @@ public class Critic : AbstractGameState
         character.characterInfo.characterAssigned = false;
         
         AbstractController killer = character == gameManager.Controller1 ? gameManager.Controller2 : gameManager.Controller1;
-        ++killer.points;
+        ++killer.Points;
         
         dieCharacter.AddComponent<Die>();
     }

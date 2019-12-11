@@ -54,18 +54,26 @@ public abstract class AbstractAttackState : AbstractControllerState
         this.param = param;
         Dir = dir;
         //TODO Suppr visual effect
-        controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
+        //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
     }
+    
+    ~AbstractAttackState()
+    {
+        controller.characterInfo.Saber.GetComponent<Collider>().enabled = false;
+    }
+    
     public override void Update()
     {
+        base.Update();
         timer += Time.deltaTime;
+        
         if (timer < param.timeSteps.x)
         {
             if (!animState.Init)
             {
                 animState.Init = true;
                 //TODO Suppr visual effect
-                controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
+                //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
             }
         }
         else if (timer < param.timeSteps.x + param.timeSteps.y)
@@ -75,7 +83,7 @@ public abstract class AbstractAttackState : AbstractControllerState
                 animState.Body = true;
                 controller.characterInfo.Saber.GetComponent<Collider>().enabled = true;
                 //TODO Suppr visual effect
-                controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.red;
+                //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.red;
             }
         }
         else if (timer < param.Duration)
@@ -85,13 +93,13 @@ public abstract class AbstractAttackState : AbstractControllerState
                 animState.Recovery = true;
                 controller.characterInfo.Saber.GetComponent<Collider>().enabled = false;
                 //TODO Suppr visual effect
-                controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
+                //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
             }
         }
         else
         {
             //TODO Suppr visual effect
-            controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
+            //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
             SwitchState();
         }
 
@@ -99,14 +107,12 @@ public abstract class AbstractAttackState : AbstractControllerState
         controller.characterInfo.RigidBody.velocity = new Vector3(
             Dir* param.speed * param.curve.Evaluate(progress),
             0f, 0f);
-
-
-        base.Update();
     }
+    
     private void SwitchState()
     {
         Exit();
-        switch (nextState)
+        switch (NextState)
         {
             case ControllerStateName.Idle:
                 controller.SetState(new IdleState(gameManager, controller));
@@ -120,6 +126,32 @@ public abstract class AbstractAttackState : AbstractControllerState
             case ControllerStateName.BackDash:
                 controller.SetState(new BackDashState(gameManager, controller, controller.dir));
                 break;
+            case ControllerStateName.Bow:
+                controller.SetState(new BowState(gameManager, controller));
+                break;
         }
+    }
+    
+    // Event
+
+    public override void OnVerticalAttack()
+    {
+        NextState = ControllerStateName.VerticalAttack;
+    }
+
+    public override void OnDashAttack()
+    {
+        NextState = ControllerStateName.DashAttack;
+    }
+
+    public override void OnBackDash()
+    {
+        NextState = ControllerStateName.BackDash;
+    }
+
+    public override void OnBow()
+    {
+        Exit();
+        NextState = ControllerStateName.Bow;
     }
 }
