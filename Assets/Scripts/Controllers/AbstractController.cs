@@ -24,8 +24,8 @@ public abstract class AbstractController : MonoBehaviour
         private CharacterInfo(GameObject character)
         {
             RigidBody = character.GetComponent<Rigidbody>();
-            Animator = character.GetComponent<Animator>();
-            Saber = character.transform.GetChild(0).GetComponent<Saber>();
+            Animator = character.GetComponentInChildren<Animator>();
+            Saber = character.transform.GetComponentInChildren<Saber>();
             Character = character;
             characterAssigned = true;
         }
@@ -46,12 +46,21 @@ public abstract class AbstractController : MonoBehaviour
     [NonSerialized] public GameManager gameManager;
 
     public int PlayerNum { get; private set; }
-    
-    public int points;
+
+    private int _points;
+    public int Points {
+        get => _points;
+        set {
+            _points = value;
+            AkSoundEngine.SetRTPCValue("RTPC_DeathCount", gameManager.Controller1.Points + gameManager.Controller2.Points);
+        }
+    }
     public int roundWon;
 
     public float movement = 0;
     public int dir = 1;
+    public float backDashCoolDown;
+    
     public CharacterInfo characterInfo = CharacterInfo.Empty();
     protected AbstractControllerState State { get; private set; }
     public ControllerStateName StateName => State.Name();
@@ -87,12 +96,14 @@ public abstract class AbstractController : MonoBehaviour
         characterInfo = CharacterInfo.Instantiate(
             PlayerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
-        characterInfo.Character.AddComponent<GoToStart>();
+        characterInfo.Character.AddComponent<Arrive>();
         SetState(new IdleState(gameManager, this));
+        gameManager.CheckDir();
     }
-    
+
+    public ControllerStateName sss; // TODO suppr
     protected void Update()
-    {
+    {sss = StateName;
         State.Update();
     }
 

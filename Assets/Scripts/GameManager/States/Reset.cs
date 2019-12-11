@@ -8,9 +8,9 @@ public class Reset : AbstractGameState
         if (gameManager.Controller1.characterInfo.characterAssigned)
         {
             if (gameManager.Controller1.characterInfo.Character.transform.position.x >
-                gameManager.posStartFight1.position.x)
+                gameManager.posReposition1.position.x)
             {
-                gameManager.Controller1.characterInfo.Character.AddComponent<GoToStart>();
+                gameManager.Controller1.characterInfo.Character.AddComponent<Replace>();
             }
             else
             {
@@ -25,9 +25,9 @@ public class Reset : AbstractGameState
         if (gameManager.Controller2.characterInfo.characterAssigned)
         {
             if (gameManager.Controller2.characterInfo.Character.transform.position.x <
-                gameManager.posStartFight2.position.x)// TODO change point comparaison
+                gameManager.posReposition2.position.x)
             {
-                gameManager.Controller2.characterInfo.Character.AddComponent<GoToStart>();
+                gameManager.Controller2.characterInfo.Character.AddComponent<Replace>();
             }
             else
             {
@@ -48,7 +48,7 @@ public class Reset : AbstractGameState
     public override void Update()
     {
         base.Update();
-        gameManager.roundTimer -= Time.deltaTime;
+        gameManager.RoundTimer -= Time.deltaTime;
 
         if (characterInPosition[0] && characterInPosition[1])
         {

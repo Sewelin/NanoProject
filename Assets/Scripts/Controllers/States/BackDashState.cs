@@ -1,41 +1,43 @@
-﻿using System.Threading;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BackDashState : AbstractControllerState
 {
-    private int _dir;
-    protected float timer;
-    protected StateParameters param;
-    
+    private readonly int _dir;
+    private float _timer;
+    private StateParameters _param;
+    private static readonly int BackDash = Animator.StringToHash("BackDash");
+
     public BackDashState(GameManager gameManager, AbstractController controller, int dir) :
         base(gameManager, controller)
     {
         _dir = dir;
-        param = gameManager.backDashParameters;
+        _param = gameManager.backDashParameters;
+        controller.backDashCoolDown = _param.Duration + 1f;
+        controller.characterInfo.Animator.SetTrigger(BackDash);
     }
     
     public override void Update()
     {
-        timer += Time.deltaTime;
-        if (timer < param.Duration)
+        base.Update();
+        _timer += Time.deltaTime;
+        
+        if (_timer < _param.Duration)
         {
-            float progress = timer / param.Duration;
+            float progress = _timer / _param.Duration;
             controller.characterInfo.RigidBody.velocity = new Vector3( 
-                - _dir * param.speed * param.curve.Evaluate(progress), 
+                - _dir * _param.speed * _param.curve.Evaluate(progress), 
                 0f, 0f);
         }
         else
         {
-            
             SwitchState();
         }
-        base.Update();
     }
 
     private void SwitchState()
     {
         Exit();
-        switch (nextState)
+        switch (NextState)
         {
             case ControllerStateName.Idle:
                 controller.SetState(new IdleState(gameManager, controller));
@@ -49,7 +51,16 @@ public class BackDashState : AbstractControllerState
             case ControllerStateName.BackDash:
                 controller.SetState(new BackDashState(gameManager, controller, controller.dir));
                 break;
+            case ControllerStateName.Bow:
+                controller.SetState(new BowState(gameManager, controller));
+                break;
         }
+    }
+
+    protected override void Exit()
+    {
+        base.Exit();
+        controller.backDashCoolDown = gameManager.BACKDASHCOOLDOWN;
     }
 
     public override ControllerStateName Name()
@@ -59,16 +70,21 @@ public class BackDashState : AbstractControllerState
     
     public override void OnVerticalAttack()
     {
-        nextState = ControllerStateName.VerticalAttack;
+        NextState = ControllerStateName.VerticalAttack;
     }
 
     public override void OnDashAttack()
     {
-        nextState = ControllerStateName.DashAttack;
+        NextState = ControllerStateName.DashAttack;
     }
 
     public override void OnBackDash()
     {
-        nextState = ControllerStateName.BackDash;
+        NextState = ControllerStateName.BackDash;
+    }
+
+    public override void OnBow()
+    {
+        NextState = ControllerStateName.Bow;
     }
 }

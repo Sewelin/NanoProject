@@ -2,29 +2,16 @@
 
 public class VerticalState : AbstractAttackState
 {
+    private static readonly int AttVertical = Animator.StringToHash("AttVertical");
+
     public VerticalState(GameManager gameManager, AbstractController controller, int dir) :
         base(gameManager, controller, gameManager.verticalAttackParameters, dir)
     {
+        controller.characterInfo.Animator.SetTrigger(AttVertical);
     }
-    
 
     public override ControllerStateName Name()
     {
         return ControllerStateName.VerticalAttack;
-    }
-    
-    public override void OnVerticalAttack()
-    {
-        nextState = ControllerStateName.VerticalAttack;
-    }
-
-    public override void OnDashAttack()
-    {
-        nextState = ControllerStateName.DashAttack;
-    }
-
-    public override void OnBackDash()
-    {
-        nextState = ControllerStateName.BackDash;
     }
 }
