@@ -67,5 +67,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9175198230199898230, guid: 8b4285315ddbef1429c1f4af05869c0a,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7891fb3e74ef0d04391aab7bdfd4d77f,
+        type: 2}
+    - target: {fileID: 6310373255699881043, guid: 8b4285315ddbef1429c1f4af05869c0a,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f13590e8b5cb80408fee4202f9bce56,
+        type: 2}
+    - target: {fileID: 1210004297029440712, guid: 8b4285315ddbef1429c1f4af05869c0a,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 899f0ee565ef99a48ba67fbcc0d7d0b4,
+        type: 2}
+    - target: {fileID: 3751452305673741063, guid: 8b4285315ddbef1429c1f4af05869c0a,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 2488f3bfc35d88341a2c7ab5a38c4e0a,
+        type: 2}
+    - target: {fileID: 9146977697925038442, guid: 8b4285315ddbef1429c1f4af05869c0a,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5f9f75cfd276d79479b6ad86e9ec15c5,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b4285315ddbef1429c1f4af05869c0a, type: 3}
