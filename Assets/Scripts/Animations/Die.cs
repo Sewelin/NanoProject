@@ -12,6 +12,7 @@ public class Die : AbstractAnimation
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         transform.position += new Vector3(0,0,0.5f);
         transform.GetComponentInChildren<Animator>().SetTrigger(DieAnim);
+        controller.characterInfo.characterAssigned = false;
 
         //TODO Suppr visual effect
         //GetComponent<Renderer>().material.color = Color.black;

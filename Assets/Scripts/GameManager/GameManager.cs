@@ -122,6 +122,14 @@ public class GameManager : MonoBehaviour
         Controller2.characterInfo.Character.transform.localScale = v;
     }
 
+    public void TurnOver(Transform character)
+    {
+        var v = character.localScale;
+        v.x = - v.x;
+        v.z = - v.z;
+        character.localScale = v;
+    }
+
     public void Touch(GameObject character)
     {
         State.Touch(character);
