@@ -6,6 +6,7 @@ public class BackDashState : AbstractControllerState
     private float _timer;
     private StateParameters _param;
     private static readonly int BackDash = Animator.StringToHash("BackDash");
+    private static readonly int AttVerticalCut = Animator.StringToHash("AttVerticalCut");
 
     public BackDashState(GameManager gameManager, AbstractController controller, int dir) :
         base(gameManager, controller)
@@ -43,7 +44,7 @@ public class BackDashState : AbstractControllerState
                 controller.SetState(new IdleState(gameManager, controller));
                 break;
             case ControllerStateName.VerticalAttack:
-                controller.SetState(new VerticalState(gameManager, controller, controller.dir));
+                controller.SetState(new VerticalState(gameManager, controller, controller.dir, 0.33333f));
                 break;
             case ControllerStateName.DashAttack:
                 controller.SetState(new DashState(gameManager, controller, controller.dir));
@@ -70,21 +71,26 @@ public class BackDashState : AbstractControllerState
     
     public override void OnVerticalAttack()
     {
+        controller.characterInfo.Animator.SetBool(AttVerticalCut, true);
         NextState = ControllerStateName.VerticalAttack;
     }
 
     public override void OnDashAttack()
     {
+        controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
         NextState = ControllerStateName.DashAttack;
     }
 
     public override void OnBackDash()
     {
+        if (_timer < gameManager.BACKDASHCOOLDOWN) return;
+        controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
         NextState = ControllerStateName.BackDash;
     }
 
     public override void OnBow()
     {
+        controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
         NextState = ControllerStateName.Bow;
     }
 }
