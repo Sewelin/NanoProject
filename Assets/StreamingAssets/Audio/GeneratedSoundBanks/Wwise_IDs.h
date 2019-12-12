@@ -39,13 +39,14 @@ namespace AK
         static const AkUniqueID SFX_BACKWARD_JUMP = 20042657U;
         static const AkUniqueID SFX_CONSUMECORPS = 4231318760U;
         static const AkUniqueID SFX_DASH = 1804139809U;
-        static const AkUniqueID SFX_DASH_HIT_DRAW = 1407212788U;
-        static const AkUniqueID SFX_DASH_HIT_KILL = 2872475778U;
-        static const AkUniqueID SFX_DASH_STOP = 299103780U;
         static const AkUniqueID SFX_DEATH = 777164721U;
+        static const AkUniqueID SFX_HIT_DRAW = 2410652377U;
+        static const AkUniqueID SFX_HIT_KILL = 590114267U;
+        static const AkUniqueID SFX_SHEATHE = 3849990799U;
         static const AkUniqueID SFX_VERTICAL_ATTACK = 1708937970U;
-        static const AkUniqueID SFX_VERTICAL_ATTACK_HIT_DRAW = 402918157U;
-        static const AkUniqueID SFX_VERTICAL_ATTACK_HIT_KILL = 1553621999U;
+        static const AkUniqueID STOP_BACKWARD_JUMP = 1784816102U;
+        static const AkUniqueID STOP_DASH = 3296606572U;
+        static const AkUniqueID STOP_VERTICAL_ATTACK = 2607937253U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -59,6 +60,7 @@ namespace AK
                 static const AkUniqueID HORN_END = 875908656U;
                 static const AkUniqueID HORN_HALF = 2297366162U;
                 static const AkUniqueID HORN_START = 1612279755U;
+                static const AkUniqueID STOP = 788884573U;
             } // namespace SWITCH
         } // namespace SWITCH_HORNS
 

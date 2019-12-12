@@ -7,6 +7,7 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 	3766357930	Switch_LastToEnd			\Default Work Unit\Switch_LastToEnd	
 
 Switch	ID	Name	Switch Group			Notes
+	788884573	Stop	Switch_Horns			
 	875908656	Horn_End	Switch_Horns			
 	1612279755	Horn_Start	Switch_Horns			
 	2297366162	Horn_Half	Switch_Horns			
