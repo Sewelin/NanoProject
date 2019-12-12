@@ -7,7 +7,8 @@ public class Replace : AbstractAnimation
     private int _direction;
     private float _speed;
     private Transform _destination;
-    
+    private static readonly int WalkingSpeed = Animator.StringToHash("WalkingSpeed");
+
     protected override void Awake()
     {
         base.Awake();
@@ -15,6 +16,8 @@ public class Replace : AbstractAnimation
         _speed = gameManager.walkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posReposition1 : gameManager.posReposition2;
         _direction = Direction();
+        controller.replacing = true;
+        controller.characterInfo.Animator.SetFloat(WalkingSpeed, -_speed);
     }
 
     protected override void Update()
@@ -27,6 +30,8 @@ public class Replace : AbstractAnimation
             0f, 0f);
         if ( Direction() != _direction)
         {
+            controller.characterInfo.Animator.SetFloat(WalkingSpeed, 0f);
+            controller.replacing = false;
             gameManager.CharacterInPosition(controller.PlayerNum);
             inPosition = true;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
@@ -38,6 +43,8 @@ public class Replace : AbstractAnimation
         base.OnDestroy();
         controller.movement = 0f;
         controller.NewDuel();
+        controller.characterInfo.Animator.SetFloat(WalkingSpeed, 0f);
+        controller.replacing = false;
     }
 
     private int Direction()
