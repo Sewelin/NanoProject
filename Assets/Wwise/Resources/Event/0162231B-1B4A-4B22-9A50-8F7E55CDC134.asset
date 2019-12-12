@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca65de6b3103f64fbc4e6c6bf1a4771, type: 3}
+  m_Name: 0162231B-1B4A-4B22-9A50-8F7E55CDC134
+  m_EditorClassIdentifier: 
+  objectName: Player_Two_Forward_Prez
+  id: 1343735513
+  guid: 0162231B-1B4A-4B22-9A50-8F7E55CDC134
