@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Character models")]
     public GameObject character1Model;
     public GameObject character2Model;
+    
+    [Header("Animation Parameters")]
     public StateParameters verticalAttackParameters;
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [Header("Cinematic positions in scene")]
     public Transform posSpawner1;
     public Transform posSpawner2;
     public Transform posStartFight1;
@@ -42,16 +46,21 @@ public class GameManager : MonoBehaviour
     public Transform posReposition1;
     public Transform posReposition2;
 
+    // Sounds
+    [Header("Sounds")]
+    public GameObject soundManager;
+
     // Timers and cooldowns
-    
+    [Header("Max timers")]
     public float TOUCHCOOLDOWN = 0.4f;
-    [NonSerialized] public float touchCooldown;
-    [NonSerialized] public AbstractController touched;
-    [NonSerialized] public int touchValue;
+    [HideInInspector] public float touchCooldown;
+    [HideInInspector] public AbstractController touched;
+    [HideInInspector] public int touchValue;
 
     public float BACKDASHCOOLDOWN = 0.5f;
     
     public float ROUNDTIMER = 60;
+    [Header("Do Not Touch")]
     [SerializeField] private float roundTimer;
     public float RoundTimer {
         get => roundTimer;
@@ -64,9 +73,6 @@ public class GameManager : MonoBehaviour
     // States
     private AbstractGameState State { get; set; }
     public GameStateName StateName => State.Name();
-
-    // Sounds
-    public GameObject soundManager;
 
     private void Awake()
     {
