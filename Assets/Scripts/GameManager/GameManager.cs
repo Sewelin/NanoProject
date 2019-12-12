@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
     public Transform posStartFight2;
     public Transform posReposition1;
     public Transform posReposition2;
+    
+    [Header("Invisible Walls")]
+    public Collider leftWall;
+    public Collider rightWall;
 
     // Sounds
     [Header("Sounds")]
@@ -60,6 +64,13 @@ public class GameManager : MonoBehaviour
     public float BACKDASHCOOLDOWN = 0.5f;
     
     public float ROUNDTIMER = 60;
+    [Header("User Interfaces")]
+    [SerializeField] public CanvasGroup start;
+    [SerializeField] public CanvasGroup pause;
+    [SerializeField] public CanvasGroup join;
+    public float SPEEDFADE = 5;
+
+
     [Header("Do Not Touch")]
     [SerializeField] private float roundTimer;
     public float RoundTimer {
@@ -84,7 +95,7 @@ public class GameManager : MonoBehaviour
         RoundTimer = ROUNDTIMER;
     }
 
-    public GameStateName sss;
+    public GameStateName sss; // TODO suppr
     private void Update()
     {sss = StateName;
         State.Update();
