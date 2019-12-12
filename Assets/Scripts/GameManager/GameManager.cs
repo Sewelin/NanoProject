@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
     [Header("User Interfaces")]
     [SerializeField] public CanvasGroup start;
     [SerializeField] public CanvasGroup pause;
+    [SerializeField] public CanvasGroup join;
     public float SPEEDFADE = 5;
 
 
