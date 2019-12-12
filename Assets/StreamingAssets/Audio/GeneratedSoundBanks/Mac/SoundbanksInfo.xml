@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
-		<SourceFilesRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Work in Progress\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
+		<SourceFilesRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Boulot\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -92,8 +92,8 @@
 				<Event Id="4231318760" Name="SFX_ConsumeCorps" ObjectPath="\Events\NanoProjet\SFX\SFX_ConsumeCorps" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="4.929458" DurationMax="4.929458"/>
 				<Event Id="1804139809" Name="SFX_Dash" ObjectPath="\Events\NanoProjet\SFX\SFX_Dash" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.050000" DurationMax="2.133333"/>
 				<Event Id="777164721" Name="SFX_Death" ObjectPath="\Events\NanoProjet\SFX\SFX_Death" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.687226" DurationMax="2.916667"/>
-				<Event Id="2410652377" Name="SFX_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX\SFX_Hit_Draw" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="590114267" Name="SFX_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX\SFX_Hit_Kill" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2410652377" Name="SFX_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX\SFX_Hit_Draw" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="590114267" Name="SFX_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX\SFX_Hit_Kill" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
 				<Event Id="3849990799" Name="SFX_Sheathe" ObjectPath="\Events\NanoProjet\SFX\SFX_Sheathe" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="1.666667" DurationMax="1.666667"/>
 				<Event Id="1708937970" Name="SFX_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX\SFX_Vertical_Attack" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.066667" DurationMax="2.066667"/>
 				<Event Id="1784816102" Name="Stop_Backward_Jump" ObjectPath="\Events\NanoProjet\SFX\Stop_Backward_Jump" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -133,7 +133,7 @@
 				</File>
 				<File Id="97372640" Language="SFX">
 					<ShortName>SFX_PlayerDeath.wav</ShortName>
-					<Path>SFX\SFX_PlayerDeath_BFE8E171.wem</Path>
+					<Path>SFX\SFX_PlayerDeath_24316696.wem</Path>
 				</File>
 				<File Id="103228339" Language="SFX">
 					<ShortName>NanoProjet_InGame_FirstSegment_Kotos_Test.wav</ShortName>
@@ -246,7 +246,7 @@
 				</File>
 				<File Id="227477405" Language="SFX">
 					<ShortName>SFX_PlayerDeath_02.wav</ShortName>
-					<Path>SFX\SFX_PlayerDeath_02_DE74F516.wem</Path>
+					<Path>SFX\SFX_PlayerDeath_02_667220AA.wem</Path>
 				</File>
 				<File Id="244771642" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition1_Test.wav</ShortName>
@@ -317,7 +317,7 @@
 				</File>
 				<File Id="483183590" Language="SFX">
 					<ShortName>Taiko_Hit.wav</ShortName>
-					<Path>SFX\Taiko_Hit_0620F9F9.wem</Path>
+					<Path>SFX\Taiko_Hit_EAFDB78D.wem</Path>
 				</File>
 				<File Id="485810736" Language="SFX">
 					<ShortName>SFX_Footsteps_Set04_Step_08.wav</ShortName>
@@ -423,7 +423,7 @@
 				</File>
 				<File Id="693635816" Language="SFX">
 					<ShortName>ATM_RoundTwo.wav</ShortName>
-					<Path>SFX\ATM_RoundTwo_7375EBC2.wem</Path>
+					<Path>SFX\ATM_RoundTwo_B7B42FCD.wem</Path>
 				</File>
 				<File Id="695580408" Language="SFX">
 					<ShortName>SFX_Backward_Jump_02.wav</ShortName>

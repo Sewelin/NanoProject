@@ -12,6 +12,7 @@ public class AnimSoundManager : MonoBehaviour
     //public AkEvent backward;
     public AkEvent idle;
     public AkEvent consume;
+    public AkEvent sheathe;
 
 
     public void SFX_Dash()
@@ -57,6 +58,11 @@ public class AnimSoundManager : MonoBehaviour
     public void SFX_Consume()
     {
         consume.HandleEvent(gameObject);
+    }
+
+    public void SFX_Sheathe()
+    {
+        sheathe.HandleEvent(gameObject);
     }
 
 }
