@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
     public Transform posStartFight2;
     public Transform posReposition1;
     public Transform posReposition2;
+    
+    [Header("Invisible Walls")]
+    public Collider leftWall;
+    public Collider rightWall;
 
     // Sounds
     [Header("Sounds")]
