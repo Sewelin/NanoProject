@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
     public Transform posStartFight2;
     public Transform posReposition1;
     public Transform posReposition2;
+    
+    [Header("Invisible Walls")]
+    public Collider leftWall;
+    public Collider rightWall;
 
     // Sounds
     [Header("Sounds")]
@@ -84,7 +88,7 @@ public class GameManager : MonoBehaviour
         RoundTimer = ROUNDTIMER;
     }
 
-    public GameStateName sss;
+    public GameStateName sss; // TODO suppr
     private void Update()
     {sss = StateName;
         State.Update();

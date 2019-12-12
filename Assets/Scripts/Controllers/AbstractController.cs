@@ -77,6 +77,7 @@ public abstract class AbstractController : MonoBehaviour
     public ControllerStateName StateName => State.Name();
 
     public bool PassivateCombatInputs { get; private set; }
+    public bool replacing;
 
     // Methods
 
@@ -113,6 +114,7 @@ public abstract class AbstractController : MonoBehaviour
     }
 
     public ControllerStateName sss; // TODO suppr
+
     protected void Update()
     {sss = StateName;
         State.Update();
