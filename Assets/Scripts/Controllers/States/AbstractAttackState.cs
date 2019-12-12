@@ -59,7 +59,8 @@ public abstract class AbstractAttackState : AbstractControllerState
     
     ~AbstractAttackState()
     {
-        controller.characterInfo.Saber.GetComponent<Collider>().enabled = false;
+        controller.characterInfo.Saber1.GetComponent<Collider>().enabled = false;
+        controller.characterInfo.Saber2.GetComponent<Collider>().enabled = false;
     }
     
     public override void Update()
@@ -81,7 +82,6 @@ public abstract class AbstractAttackState : AbstractControllerState
             if (!animState.Body)
             {
                 animState.Body = true;
-                controller.characterInfo.Saber.GetComponent<Collider>().enabled = true;
                 //TODO Suppr visual effect
                 //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.red;
             }
@@ -91,7 +91,6 @@ public abstract class AbstractAttackState : AbstractControllerState
             if (!animState.Recovery)
             {
                 animState.Recovery = true;
-                controller.characterInfo.Saber.GetComponent<Collider>().enabled = false;
                 //TODO Suppr visual effect
                 //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
             }

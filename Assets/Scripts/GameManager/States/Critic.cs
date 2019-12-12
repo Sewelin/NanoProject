@@ -74,7 +74,8 @@ public class Critic : AbstractGameState
     private void Kill(AbstractController character)
     {
         GameObject dieCharacter = character.characterInfo.Character;
-        Object.Destroy(character.characterInfo.Saber.gameObject);
+        Object.Destroy(character.characterInfo.Saber1.gameObject);
+        Object.Destroy(character.characterInfo.Saber2.gameObject);
         
         character.characterInfo.characterAssigned = false;
         
