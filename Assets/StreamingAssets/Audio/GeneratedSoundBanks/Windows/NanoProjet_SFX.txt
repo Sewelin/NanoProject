@@ -113,6 +113,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	762847416	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
 	774352804	Have_U_Ever_Been_Outside_(Custom)	Wwise RoomVerb			
 	978948252	Tunnel1 (Custom)	Wwise Matrix Reverb			
+	3043085106	High_Impact	Wwise Compressor			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	507735414	Wwise Sine	Wwise Sine		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\Hit_Kill\PH\Wwise Sine	
@@ -168,7 +169,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	443629866	NanoProjet_InGame_DrumTransition2_Test	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\NanoProjet_InGame_DrumTransition2_Test_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\InGame_Music\Transitions\NanoProjet_InGame_DrumTransition2_Test\NanoProjet_InGame_DrumTransition2_Test		41774
 	449425460	SFX_Footsteps_Armor_01	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Armor\SFX_Footsteps_Armor_01_49718417.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Player_One_Forward_Prez\Player_One_Forward_Prez\SFX_Footsteps_Armor_01		9324
 	459789300	NanoProjet_InGame_FirstSegment_Flute_Test	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\NanoProjet_InGame_FirstSegment_Flute_Test_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\InGame_Music\FirstSegment\FirstSegment\NanoProjet_InGame_FirstSegment_Flute_Test		1007
-	483183590	Taiko_Hit	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Taiko_Hit_EAFDB78D.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\QUIT\Taiko_Hit		33521
+	483183590	Taiko_Hit	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Taiko_Hit_54744162.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\QUIT\Taiko_Hit		33521
 	485810736	SFX_Footsteps_Set04_Step_08	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\SFX_Footsteps_Set04_Step_08_49718417.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\P_ONE\Player_One_Forward\Player_One_Footsteps_Sets\Player_One_Forward_Set_4\Footsteps\Foot_L\Player_Footsteps\SFX_Footsteps_Set04_Step_08		9431
 	517641963	NanoProjet_InGame_DrumTransition_Test_02	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\NanoProjet_InGame_DrumTransition1_Test_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\FEEDBACK\FB_Music_Transition\FB_Music_Transition_Sets_01\NanoProjet_InGame_DrumTransition_Test_02		41207
 	521747012	Music_Transition_FirstToLast_01	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\SFX\Music_Transition_FirstToLast_01_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\InGame_Music\LastToEndSegment\LastSegment\LastSegment\Music_Transition_FirstToLast_01		76386
