@@ -17,21 +17,81 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 36284b434e6b7c419e5af7c2028be3f2
     GuidInternal: 
-    m_lastTime: -8586276137306996201
+    m_lastTime: -8586262310915046626
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b729a36cc416ee4c81483f9309d6ae3f
     GuidInternal: 
-    m_lastTime: -8586276137307842737
-    List: []
+    m_lastTime: -8586254479603629298
+    List:
+    - name: REV_IG_MUSIC
+      guid: 10dbf9cac6bde8479dd8573bb717e285
+      id: 997000339
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: InGame
+        ObjectType: 2
+      - ElementName: REVERBS
+        ObjectType: 2
+      - ElementName: REV_IG_MUSIC
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_IG_MUSIC
+    - name: REV_MENU
+      guid: 183d80dd398a0d49aff97f07637993c6
+      id: 2766901782
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: InGame
+        ObjectType: 2
+      - ElementName: REVERBS
+        ObjectType: 2
+      - ElementName: REV_MENU
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_MENU
+    - name: REV_MENU_MUSIC
+      guid: 240e092a235e034c8ede9b68935d9ed3
+      id: 2116471102
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: InGame
+        ObjectType: 2
+      - ElementName: REVERBS
+        ObjectType: 2
+      - ElementName: REV_MENU_MUSIC
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_MENU_MUSIC
+    - name: REV_SCENE
+      guid: 9b66782c7a3a4345bf8d4e95e9b868e5
+      id: 3548165401
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: InGame
+        ObjectType: 2
+      - ElementName: REVERBS
+        ObjectType: 2
+      - ElementName: REV_SCENE
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\InGame\REVERBS\REV_SCENE
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6e11c2f2ba071d468039385d9832e06c
     GuidInternal: 
-    m_lastTime: -8586276105808541834
+    m_lastTime: -8586259675436438459
     List:
     - name: NanoProjet_SFX
       guid: 07bed00fd5f71648af791815c9243f48
@@ -47,35 +107,497 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 497c9c6a4ab3254098bcd5db6c5b9d22
     GuidInternal: 
-    m_lastTime: -8586276105868839984
-    List: []
+    m_lastTime: -8586255779516738825
+    List:
+    - name: InGame_Music
+      guid: df17eca7faa8c84a97ebdfdbaa450d64
+      id: 2613926250
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: InGame_Music
+        ObjectType: 3
+      Path: Default Work Unit\InGame_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Trigger_Transition_01
+      guid: e82b74d78cf3fa40957ef077d5a47ada
+      id: 1114173975
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Trigger_Transition_01
+        ObjectType: 3
+      Path: Default Work Unit\Trigger_Transition_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\NanoProjet.wwu
     ParentPhysicalPath: 
     guid: d4403fea4c297f448319eac1d89128e5
     GuidInternal: 
-    m_lastTime: -8586276105868939439
+    m_lastTime: -8586254479601709939
     List:
-    - name: Music_Test2D
-      guid: 9f7e218744f0d848b611de3e25c7cc3b
-      id: 4188790071
+    - name: ATM_Rounds
+      guid: 0b3f16d1d0e3414e95101ca241811998
+      id: 711535685
       PathAndIcons:
       - ElementName: NanoProjet
         ObjectType: 12
-      - ElementName: Music_Test2D
+      - ElementName: Atmos & Music
+        ObjectType: 4
+      - ElementName: ATM_Rounds
         ObjectType: 3
-      Path: NanoProjet\Music_Test2D
+      Path: NanoProjet\Atmos & Music\ATM_Rounds
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: SFX_Sword_Test3D
-      guid: f9e85b737bedd94994c77e3d8ace7639
-      id: 665833074
+    - name: FB_Horns_Time
+      guid: c3db148553bd5f4b9f61d601cb7353a3
+      id: 2338023994
       PathAndIcons:
       - ElementName: NanoProjet
         ObjectType: 12
-      - ElementName: SFX_Sword_Test3D
+      - ElementName: Atmos & Music
+        ObjectType: 4
+      - ElementName: FB_Horns_Time
         ObjectType: 3
-      Path: NanoProjet\SFX_Sword_Test3D
+      Path: NanoProjet\Atmos & Music\FB_Horns_Time
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Launch_Round
+      guid: 2ffc8a0c55062a4fa95c54e83827b202
+      id: 2121424417
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Atmos & Music
+        ObjectType: 4
+      - ElementName: Launch_Round
+        ObjectType: 3
+      Path: NanoProjet\Atmos & Music\Launch_Round
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Atmos
+      guid: 4cbb4d1e713711459090554cb0a452ba
+      id: 789497435
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Atmos & Music
+        ObjectType: 4
+      - ElementName: Menu_Atmos
+        ObjectType: 3
+      Path: NanoProjet\Atmos & Music\Menu_Atmos
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Back
+      guid: 7d1723b620533540a815fa274de3c56b
+      id: 3063554414
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_Back
+        ObjectType: 3
+      Path: NanoProjet\Menu\Menu_Back
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_ChangeOption
+      guid: 00f5aa78b6da1b458f9c8606b34a935b
+      id: 557861964
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_ChangeOption
+        ObjectType: 3
+      Path: NanoProjet\Menu\Menu_ChangeOption
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Continue
+      guid: f8bb4d7dbe0b2e4fa85a6c4acc8862da
+      id: 2666848820
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_Continue
+        ObjectType: 3
+      Path: NanoProjet\Menu\Menu_Continue
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Pause
+      guid: 4468f9dd51938a4d96f12a598b5dbab5
+      id: 2170009975
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_Pause
+        ObjectType: 3
+      Path: NanoProjet\Menu\Menu_Pause
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Play
+      guid: 243c5c51c63f0f4a97ef71ade19a52ea
+      id: 105544633
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_Play
+        ObjectType: 3
+      Path: NanoProjet\Menu\Menu_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Quit
+      guid: d6653a5dfcd1014784eb213866a03a9c
+      id: 2776193354
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_Quit
+        ObjectType: 3
+      Path: NanoProjet\Menu\Menu_Quit
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_Select
+      guid: ba768cc4ab497a44bf77af06d9e8fac0
+      id: 4203375351
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_Select
+        ObjectType: 3
+      Path: NanoProjet\Menu\Menu_Select
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu_UpDown
+      guid: cc3c14a22823c440924aefb81aaaf3e3
+      id: 2587230380
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_UpDown
+        ObjectType: 3
+      Path: NanoProjet\Menu\Menu_UpDown
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_One_Backward
+      guid: cad29e5f4b1bd8408fb289d58d6eeeb1
+      id: 1183016477
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerOne
+        ObjectType: 4
+      - ElementName: Player_One_Backward
+        ObjectType: 3
+      Path: NanoProjet\PlayerOne\Player_One_Backward
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_One_Bowing
+      guid: da17d896e9b96942924aff1f36ac4aae
+      id: 375910062
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerOne
+        ObjectType: 4
+      - ElementName: Player_One_Bowing
+        ObjectType: 3
+      Path: NanoProjet\PlayerOne\Player_One_Bowing
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_One_Forward
+      guid: a3fb7cf6104809469678a9fc0c47fea2
+      id: 972262685
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerOne
+        ObjectType: 4
+      - ElementName: Player_One_Forward
+        ObjectType: 3
+      Path: NanoProjet\PlayerOne\Player_One_Forward
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_One_Forward_Prez
+      guid: 92467e7f66eeb74e9101f8125331aaeb
+      id: 727157835
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerOne
+        ObjectType: 4
+      - ElementName: Player_One_Forward_Prez
+        ObjectType: 3
+      Path: NanoProjet\PlayerOne\Player_One_Forward_Prez
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_One_Idle
+      guid: 0449f4f206c5444599284ffaee2260d7
+      id: 2862113300
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerOne
+        ObjectType: 4
+      - ElementName: Player_One_Idle
+        ObjectType: 3
+      Path: NanoProjet\PlayerOne\Player_One_Idle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Two_Backward
+      guid: 7e86d3188a6e1a48887edd5ebe270559
+      id: 2507762279
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerTwo
+        ObjectType: 4
+      - ElementName: Player_Two_Backward
+        ObjectType: 3
+      Path: NanoProjet\PlayerTwo\Player_Two_Backward
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Two_Bowing
+      guid: a509c95508729449a7154e2a84442483
+      id: 2367140880
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerTwo
+        ObjectType: 4
+      - ElementName: Player_Two_Bowing
+        ObjectType: 3
+      Path: NanoProjet\PlayerTwo\Player_Two_Bowing
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Two_Forward
+      guid: ee3742df0829194b86f7cac426a521ec
+      id: 184927275
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerTwo
+        ObjectType: 4
+      - ElementName: Player_Two_Forward
+        ObjectType: 3
+      Path: NanoProjet\PlayerTwo\Player_Two_Forward
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Two_Forward_Prez
+      guid: 1b2362014a1b224b9a508f7e55cdc134
+      id: 1343735513
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerTwo
+        ObjectType: 4
+      - ElementName: Player_Two_Forward_Prez
+        ObjectType: 3
+      Path: NanoProjet\PlayerTwo\Player_Two_Forward_Prez
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Two_Idle
+      guid: 41b5dd7f41d5cb4bb2e4e07d0b58665d
+      id: 1430148754
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: PlayerTwo
+        ObjectType: 4
+      - ElementName: Player_Two_Idle
+        ObjectType: 3
+      Path: NanoProjet\PlayerTwo\Player_Two_Idle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Backward_Jump
+      guid: 311eb175c88f574590bea2c9b59fc27b
+      id: 20042657
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Backward_Jump
+        ObjectType: 3
+      Path: NanoProjet\SFX\SFX_Backward_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_ConsumeCorps
+      guid: 9842247d7722a04f98d5f41403fc7d44
+      id: 4231318760
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_ConsumeCorps
+        ObjectType: 3
+      Path: NanoProjet\SFX\SFX_ConsumeCorps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Dash
+      guid: baa2f43e0c7ac645b34fdd14244cdc0e
+      id: 1804139809
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Dash
+        ObjectType: 3
+      Path: NanoProjet\SFX\SFX_Dash
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Death
+      guid: fb02c526e9fb0244978cd80b4198060a
+      id: 777164721
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Death
+        ObjectType: 3
+      Path: NanoProjet\SFX\SFX_Death
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Hit_Draw
+      guid: 8eccd42381ffd2488bb3590bad83504c
+      id: 2410652377
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Hit_Draw
+        ObjectType: 3
+      Path: NanoProjet\SFX\SFX_Hit_Draw
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Hit_Kill
+      guid: ce39989a333cb346bc090c81489ffdde
+      id: 590114267
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Hit_Kill
+        ObjectType: 3
+      Path: NanoProjet\SFX\SFX_Hit_Kill
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Sheathe
+      guid: 5d84d7995b94cb47983ff67f43f40afb
+      id: 3849990799
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Sheathe
+        ObjectType: 3
+      Path: NanoProjet\SFX\SFX_Sheathe
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Vertical_Attack
+      guid: ce958a29f169f94185edc2828b2ea129
+      id: 1708937970
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Vertical_Attack
+        ObjectType: 3
+      Path: NanoProjet\SFX\SFX_Vertical_Attack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Backward_Jump
+      guid: bfdd17fb12654047a4dd817edaff94dc
+      id: 1784816102
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Stop_Backward_Jump
+        ObjectType: 3
+      Path: NanoProjet\SFX\Stop_Backward_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Dash
+      guid: ce08a67efdeffb4bbc18679b250985c6
+      id: 3296606572
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Stop_Dash
+        ObjectType: 3
+      Path: NanoProjet\SFX\Stop_Dash
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Vertical_Attack
+      guid: c9cf5fb351f2884facf263994ecdf129
+      id: 2607937253
+      PathAndIcons:
+      - ElementName: NanoProjet
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Stop_Vertical_Attack
+        ObjectType: 3
+      Path: NanoProjet\SFX\Stop_Vertical_Attack
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -84,29 +606,351 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 598bdd0528705946b94308fd17c5dce2
     GuidInternal: 
-    m_lastTime: -8586276137307653237
-    List: []
+    m_lastTime: -8586255779516393140
+    List:
+    - name: RTPC_DeathCount
+      guid: 2b34aa856a392e41bc1800af97d1e8cc
+      id: 264145860
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RTPC_DeathCount
+        ObjectType: 13
+      Path: Default Work Unit\RTPC_DeathCount
+    - name: RTPC_MasterVolume
+      guid: 694a78114e1edd448f279bbbad81e6da
+      id: 2582501215
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RTPC_MasterVolume
+        ObjectType: 13
+      Path: Default Work Unit\RTPC_MasterVolume
+    - name: RTPC_MusicVolume
+      guid: b55e370a2afe5748a4ca3fce1fae1985
+      id: 2378823330
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RTPC_MusicVolume
+        ObjectType: 13
+      Path: Default Work Unit\RTPC_MusicVolume
+    - name: RTPC_PONE_ArmorSets
+      guid: 876b107b3370a4439fe363a24160c348
+      id: 2470384160
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RTPC_PONE_ArmorSets
+        ObjectType: 13
+      Path: Default Work Unit\RTPC_PONE_ArmorSets
+    - name: RTPC_PTWO_ArmorSets
+      guid: 6f41f747f088e54393a98190489f1827
+      id: 2322506118
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RTPC_PTWO_ArmorSets
+        ObjectType: 13
+      Path: Default Work Unit\RTPC_PTWO_ArmorSets
+    - name: RTPC_RoundCount
+      guid: 2c6e70bb4db0d3409ea5a74f6683e2cd
+      id: 1364308078
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RTPC_RoundCount
+        ObjectType: 13
+      Path: Default Work Unit\RTPC_RoundCount
+    - name: RTPC_SFXVolume
+      guid: 6e7ec742ee2a7a468a666e3a5ff6de23
+      id: 2644490154
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RTPC_SFXVolume
+        ObjectType: 13
+      Path: Default Work Unit\RTPC_SFXVolume
+    - name: RTPC_Timer
+      guid: 4743190acdda154db0358eba25e666c0
+      id: 2286992438
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RTPC_Timer
+        ObjectType: 13
+      Path: Default Work Unit\RTPC_Timer
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 59eb1fc0eb576f43bb17dbbbedd1c46c
     GuidInternal: 
-    m_lastTime: -8586276137307792864
+    m_lastTime: -8586257212026881529
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a2b54e9e71793042a9103b4b1aebe03d
     GuidInternal: 
-    m_lastTime: -8586276137307942464
-    List: []
+    m_lastTime: -8586254951388491585
+    List:
+    - name: Switch_Horns
+      guid: ff6bac12730ba54682eabe8d926d04f2
+      id: 921384610
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Switch_Horns
+        ObjectType: 11
+      Path: Default Work Unit\Switch_Horns
+      values:
+      - name: Horn_End
+        guid: 86483b7a3d30f7429410e48e8816c2cc
+        id: 875908656
+        PathAndIcons:
+        - ElementName: Horn_End
+          ObjectType: 10
+      - name: Horn_Half
+        guid: a89b0bdcdcd7124f9c507ed7dc66d440
+        id: 2297366162
+        PathAndIcons:
+        - ElementName: Horn_Half
+          ObjectType: 10
+      - name: Horn_Start
+        guid: 619fd33124d01542a98f33c14f53ccc4
+        id: 1612279755
+        PathAndIcons:
+        - ElementName: Horn_Start
+          ObjectType: 10
+      - name: Stop
+        guid: cdbd0493bb492c4b8f5004394d383d70
+        id: 788884573
+        PathAndIcons:
+        - ElementName: Stop
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Switch_LastToEnd
+      guid: 3f7c8ecd401e66469054949d735acb39
+      id: 3766357930
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Switch_LastToEnd
+        ObjectType: 11
+      Path: Default Work Unit\Switch_LastToEnd
+      values:
+      - name: End
+        guid: 4e8c1f897ecf194d89bd9dabb44296ae
+        id: 529726532
+        PathAndIcons:
+        - ElementName: End
+          ObjectType: 10
+      - name: Last
+        guid: 0a931f1f6fd0b34c8d29ccc0051942df
+        id: 489968869
+        PathAndIcons:
+        - ElementName: Last
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Switch_Pause
+      guid: d2cf037c853f1742b51d54d1995d1fb7
+      id: 2902274630
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Switch_Pause
+        ObjectType: 11
+      Path: Default Work Unit\Switch_Pause
+      values:
+      - name: InGame
+        guid: 4ae75de25a18e94fba5fffa4ca907d88
+        id: 984691642
+        PathAndIcons:
+        - ElementName: InGame
+          ObjectType: 10
+      - name: InPause
+        guid: bf6e209f99257e45a841154ce28e9dbb
+        id: 3327551418
+        PathAndIcons:
+        - ElementName: InPause
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Switch_PONE_Characters
+      guid: 77f1bc4efe86d848a602f9f7dd91bad9
+      id: 3355780215
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Switch_PONE_Characters
+        ObjectType: 11
+      Path: Default Work Unit\Switch_PONE_Characters
+      values:
+      - name: Switch_Set_1
+        guid: 57a9b6ac8dcee0498926be05b6d7b470
+        id: 1812530828
+        PathAndIcons:
+        - ElementName: Switch_Set_1
+          ObjectType: 10
+      - name: Switch_Set_2
+        guid: 5fbfe5db4657e940ae15364f70e867ed
+        id: 1812530831
+        PathAndIcons:
+        - ElementName: Switch_Set_2
+          ObjectType: 10
+      - name: Switch_Set_3
+        guid: 84560684f02c4747bd7fa3d1ae7789fe
+        id: 1812530830
+        PathAndIcons:
+        - ElementName: Switch_Set_3
+          ObjectType: 10
+      - name: Switch_Set_4
+        guid: de761d6035af5543883d450190e82731
+        id: 1812530825
+        PathAndIcons:
+        - ElementName: Switch_Set_4
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Switch_PTWO_Characters
+      guid: 0157c7999ecd5f4eb0c162ff8e15824e
+      id: 2014493957
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Switch_PTWO_Characters
+        ObjectType: 11
+      Path: Default Work Unit\Switch_PTWO_Characters
+      values:
+      - name: Switch_Set_1
+        guid: 0a83f77c96aedd45b942076125881743
+        id: 1812530828
+        PathAndIcons:
+        - ElementName: Switch_Set_1
+          ObjectType: 10
+      - name: Switch_Set_2
+        guid: 53ef7ffb359a6847b4194558df30ea02
+        id: 1812530831
+        PathAndIcons:
+        - ElementName: Switch_Set_2
+          ObjectType: 10
+      - name: Switch_Set_3
+        guid: 4051bbee1b1daa4798913137adf10401
+        id: 1812530830
+        PathAndIcons:
+        - ElementName: Switch_Set_3
+          ObjectType: 10
+      - name: Switch_Set_4
+        guid: a585d46f7cce7042973f98be172b2b24
+        id: 1812530825
+        PathAndIcons:
+        - ElementName: Switch_Set_4
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Switch_Segments
+      guid: 022846e2d65971408b41d63c4bb4a238
+      id: 2524134066
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Switch_Segments
+        ObjectType: 11
+      Path: Default Work Unit\Switch_Segments
+      values:
+      - name: FirstSegment
+        guid: 5e39c4889a7aaa41b0071a83b2a8f3a3
+        id: 2815714396
+        PathAndIcons:
+        - ElementName: FirstSegment
+          ObjectType: 10
+      - name: Intro
+        guid: 2cf8c97f07bdc1419030734ebe4ff047
+        id: 1125500713
+        PathAndIcons:
+        - ElementName: Intro
+          ObjectType: 10
+      - name: LastSegment
+        guid: 8757be873aa4ac46b5a374d05fc1274d
+        id: 2516701536
+        PathAndIcons:
+        - ElementName: LastSegment
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Switch_Transitions
+      guid: 412d4feb24da954990411a60f87f6c33
+      id: 1625512016
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Switch_Transitions
+        ObjectType: 11
+      Path: Default Work Unit\Switch_Transitions
+      values:
+      - name: Transition_01
+        guid: f24f0c62df530d4187cda1cc34833735
+        id: 2728638438
+        PathAndIcons:
+        - ElementName: Transition_01
+          ObjectType: 10
+      - name: Transition_02
+        guid: 5023557a70120a4fb55e43008a42dc14
+        id: 2728638437
+        PathAndIcons:
+        - ElementName: Transition_02
+          ObjectType: 10
+      - name: Transition_03
+        guid: 37204a71ed34e24a885f6328f1553e7b
+        id: 2728638436
+        PathAndIcons:
+        - ElementName: Transition_03
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6bf964d2739ecc429e89396f1aebd665
     GuidInternal: 
-    m_lastTime: -8586276137307473720
-    List: []
+    m_lastTime: -8586257212025884185
+    List:
+    - name: Transition_01
+      guid: 2b5a4193463569428742be2eff68a9a2
+      id: 2728638438
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Transition_01
+        ObjectType: 14
+      Path: Default Work Unit\Transition_01
+    - name: Transition_02
+      guid: 0df48337f9496a47b2c14a7b438c057b
+      id: 2728638437
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Transition_02
+        ObjectType: 14
+      Path: Default Work Unit\Transition_02
+    - name: Transition_03
+      guid: 28937f514d33fb4d93ad9745637b5563
+      id: 2728638436
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Transition_03
+        ObjectType: 14
+      Path: Default Work Unit\Transition_03
   ExpandedItems:
   - /NanoProjet_Sound
   - /NanoProjet_Sound/Events
