@@ -9,7 +9,7 @@ public class BowState : AbstractControllerState
         base(gameManager, controller)
     {
         _duration = gameManager.bowDuration;
-        
+        controller.characterInfo.RigidBody.velocity = Vector3.zero;
         controller.characterInfo.Animator.SetTrigger(Bow);
         //TODO Suppr visual effect
         //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.magenta;
