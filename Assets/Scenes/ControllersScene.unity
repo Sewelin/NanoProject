@@ -335,6 +335,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WwiseGlobal
       objectReference: {fileID: 0}
+    - target: {fileID: 1272845790505032142, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1272845790505032140, guid: d8316b947f87a9d4eb230db9eb10c538,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -389,6 +394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272845790505032141, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8316b947f87a9d4eb230db9eb10c538, type: 3}
@@ -464,11 +474,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
-        type: 3}
-      propertyPath: walkingSpeed
-      value: 5.23
       objectReference: {fileID: 0}
     - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
         type: 3}

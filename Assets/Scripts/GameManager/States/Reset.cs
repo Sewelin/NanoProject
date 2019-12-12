@@ -10,7 +10,7 @@ public class Reset : AbstractGameState
             if (gameManager.Controller1.characterInfo.Character.transform.position.x >
                 gameManager.posReposition1.position.x)
             {
-                gameManager.Controller1.characterInfo.Character.AddComponent<GoToStart>();
+                gameManager.Controller1.characterInfo.Character.AddComponent<Replace>();
             }
             else
             {
@@ -27,7 +27,7 @@ public class Reset : AbstractGameState
             if (gameManager.Controller2.characterInfo.Character.transform.position.x <
                 gameManager.posReposition2.position.x)
             {
-                gameManager.Controller2.characterInfo.Character.AddComponent<GoToStart>();
+                gameManager.Controller2.characterInfo.Character.AddComponent<Replace>();
             }
             else
             {

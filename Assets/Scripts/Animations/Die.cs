@@ -3,6 +3,7 @@
 public class Die : AbstractAnimation
 {
     private bool _inPosition;
+    private static readonly int DieAnim = Animator.StringToHash("Die");
 
     protected override void Awake()
     {
@@ -10,9 +11,11 @@ public class Die : AbstractAnimation
         gameObject.layer = 10;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         transform.position += new Vector3(0,0,0.5f);
-        
+        transform.GetComponentInChildren<Animator>().SetTrigger(DieAnim);
+        controller.characterInfo.characterAssigned = false;
+
         //TODO Suppr visual effect
-        GetComponent<Renderer>().material.color = Color.black;
+        //GetComponent<Renderer>().material.color = Color.black;
     }
 
     protected override void Update()

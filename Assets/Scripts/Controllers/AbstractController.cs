@@ -17,15 +17,26 @@ public abstract class AbstractController : MonoBehaviour
             get => (characterAssigned) ? _character : null;
             set => _character = value;
         }
-        public Saber Saber { get; private set; }
+        public Saber Saber1 { get; private set; }
+        public Saber Saber2 { get; private set; }
         
         private CharacterInfo() {}
 
         private CharacterInfo(GameObject character)
         {
             RigidBody = character.GetComponent<Rigidbody>();
-            Animator = character.GetComponent<Animator>();
-            Saber = character.transform.GetChild(0).GetComponent<Saber>();
+            Animator = character.GetComponentInChildren<Animator>();
+            var sabers = character.transform.GetComponentsInChildren<Saber>();
+            if (sabers[0].gameObject.name == "Saber1")
+            {
+                Saber1 = sabers[0];
+                Saber2 = sabers[1];
+            }
+            else
+            {
+                Saber1 = sabers[1];
+                Saber2 = sabers[0];
+            }
             Character = character;
             characterAssigned = true;
         }
@@ -96,8 +107,9 @@ public abstract class AbstractController : MonoBehaviour
         characterInfo = CharacterInfo.Instantiate(
             PlayerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
             transform);
-        characterInfo.Character.AddComponent<GoToStart>();
+        characterInfo.Character.AddComponent<Arrive>();
         SetState(new IdleState(gameManager, this));
+        gameManager.CheckDir();
     }
 
     public ControllerStateName sss; // TODO suppr

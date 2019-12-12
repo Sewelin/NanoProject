@@ -16,9 +16,10 @@ public class Leave : AbstractAnimation
         _destination = controller.PlayerNum == 1 ? gameManager.posSpawner1 : gameManager.posSpawner2;
         _direction = Direction();
         gameObject.layer = 10;
+        gameManager.TurnOver(transform);
         
         // TODO Suppr color
-        GetComponent<Renderer>().material.color = Color.green;
+        //GetComponent<Renderer>().material.color = Color.green;
     }
     
     protected override void Update()
