@@ -60,12 +60,14 @@ public class Critic : AbstractGameState
         if (actualTouchValue == gameManager.touchValue) { 
             Kill(gameManager.Controller1);
             Kill(gameManager.Controller2);
+            AkSoundEngine.PostEvent("SFX_Hit_Draw", gameManager.soundManager);
         }
         // if new attack value is greater than the first
         else
         {
             gameManager.touched = (gameManager.touched == gameManager.Controller1) ? gameManager.Controller2 : gameManager.Controller1;
             Kill(gameManager.touched);
+            AkSoundEngine.PostEvent("SFX_Hit_Kill", gameManager.soundManager);
         }
 
         Exit();

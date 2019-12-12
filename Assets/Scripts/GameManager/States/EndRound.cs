@@ -16,7 +16,7 @@ public class EndRound : AbstractGameState
             : gameManager.Controller1;
         
         if (_winner.characterInfo.characterAssigned) _winner.characterInfo.Character.AddComponent<Leave>();
-        ++_winner.roundWon;
+        ++_winner.RoundWon;
         
         if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<Die>();
     }
@@ -31,7 +31,7 @@ public class EndRound : AbstractGameState
         base.Update();
         if (characterInPosition[0] && characterInPosition[1])
         {
-            if (_winner.roundWon == 3 || _looser.roundWon == 3)
+            if (_winner.RoundWon == 3 || _looser.RoundWon == 3)
             {
                 EndGame();
             }
