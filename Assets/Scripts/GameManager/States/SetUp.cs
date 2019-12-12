@@ -3,6 +3,7 @@ public class SetUp : AbstractGameState
     public SetUp(GameManager gameManager) :
         base(gameManager)
     {
+
     }
 
     public override GameStateName Name()

@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UIPosition : MonoBehaviour
 {
+    DateTime time;
+
     [SerializeField] AnimationCurve _curve;
     [SerializeField] float speed = 5;
     UIController _uiController;
@@ -20,7 +23,7 @@ public class UIPosition : MonoBehaviour
     {
         if (_progress < 1 && _move)
         {
-            _progress += Time.deltaTime * speed;
+            _progress +=  (float)(DateTime.Now - time).TotalSeconds * speed;
             MoveUI();
         }
         else if (_move)
@@ -29,10 +32,12 @@ public class UIPosition : MonoBehaviour
             _lastpos = _goto;
 
         }
+        time = DateTime.Now;
     }
     private void Awake()
     {
         _uiController = GetComponent<UIController>();
+        time = DateTime.Now;
     }
 
     private void MoveUI()

@@ -60,6 +60,12 @@ public class GameManager : MonoBehaviour
     public float BACKDASHCOOLDOWN = 0.5f;
     
     public float ROUNDTIMER = 60;
+    [Header("User Interfaces")]
+    [SerializeField] public CanvasGroup start;
+    [SerializeField] public CanvasGroup pause;
+    public float SPEEDFADE = 5;
+
+
     [Header("Do Not Touch")]
     [SerializeField] private float roundTimer;
     public float RoundTimer {
