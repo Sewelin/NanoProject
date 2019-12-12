@@ -2,7 +2,6 @@
 
 public class Die : AbstractAnimation
 {
-    private bool _inPosition;
     private static readonly int DieAnim = Animator.StringToHash("Die");
     private Rigidbody rigidbody;
     protected override void Awake()
@@ -13,9 +12,6 @@ public class Die : AbstractAnimation
         transform.position += new Vector3(0,0,0.5f);
         transform.GetComponentInChildren<Animator>().SetTrigger(DieAnim);
         controller.characterInfo.characterAssigned = false;
-
-        //TODO Suppr visual effect
-        //GetComponent<Renderer>().material.color = Color.black;
     }
     private void Start()
     {
@@ -27,6 +23,7 @@ public class Die : AbstractAnimation
         if (!inPosition)
         {
             gameManager.CharacterInPosition(controller.PlayerNum);
+            inPosition = true;
         }
     }
 }

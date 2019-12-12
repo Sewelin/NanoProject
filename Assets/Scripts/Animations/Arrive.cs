@@ -5,7 +5,9 @@ public class Arrive : AbstractAnimation
     private int _direction;
     private float _speed;
     private Transform _destination;
-    
+    private static readonly int WalkCineIn = Animator.StringToHash("WalkCineIn");
+    private static readonly int WalkCineOut = Animator.StringToHash("WalkCineOut");
+
     protected override void Awake()
     {
         base.Awake();
@@ -13,6 +15,7 @@ public class Arrive : AbstractAnimation
         _speed = gameManager.walkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posStartFight1 : gameManager.posStartFight2;
         _direction = Direction();
+        controller.characterInfo.Animator.SetTrigger(WalkCineIn);
     }
 
     protected override void Update()
@@ -25,6 +28,7 @@ public class Arrive : AbstractAnimation
             0f, 0f);
         if ( Direction() != _direction)
         {
+            controller.characterInfo.Animator.SetTrigger(WalkCineOut);
             gameManager.CharacterInPosition(controller.PlayerNum);
             inPosition = true;
             GetComponent<Rigidbody>().velocity = Vector3.zero;

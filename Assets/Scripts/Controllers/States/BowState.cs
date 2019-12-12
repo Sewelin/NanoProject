@@ -11,8 +11,6 @@ public class BowState : AbstractControllerState
         _duration = gameManager.bowDuration;
         controller.characterInfo.RigidBody.velocity = Vector3.zero;
         controller.characterInfo.Animator.SetTrigger(Bow);
-        //TODO Suppr visual effect
-        //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.magenta;
     }
 
     public override void Update()
@@ -22,9 +20,6 @@ public class BowState : AbstractControllerState
         
         if (_timer > _duration)
         {
-            //TODO Suppr visual effect
-            //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
-            
             controller.SetState(new IdleState(gameManager, controller));
         }
     }
