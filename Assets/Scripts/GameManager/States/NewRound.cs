@@ -22,8 +22,8 @@ public class NewRound : AbstractGameState
         base.Update();
         if (characterInPosition[0] && characterInPosition[1])
         {
-            Object.Destroy(gameManager.Controller1.characterInfo.Character.GetComponent<GoToStart>());
-            Object.Destroy(gameManager.Controller2.characterInfo.Character.GetComponent<GoToStart>());
+            Object.Destroy(gameManager.Controller1.characterInfo.Character.GetComponent<Arrive>());
+            Object.Destroy(gameManager.Controller2.characterInfo.Character.GetComponent<Arrive>());
             gameManager.SetState(new Fight(gameManager));
         }
     }
