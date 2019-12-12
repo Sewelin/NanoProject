@@ -25,11 +25,11 @@ public class BowState : AbstractControllerState
             //TODO Suppr visual effect
             //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
             
-            SwitchState();
+            controller.SetState(new IdleState(gameManager, controller));
         }
     }
 
-    private void SwitchState()
+    /*private void SwitchState()
     {
         Exit();
         switch (NextState)
@@ -50,7 +50,7 @@ public class BowState : AbstractControllerState
                 controller.SetState(new BowState(gameManager, controller));
                 break;
         }
-    }
+    }*/
 
     public override ControllerStateName Name()
     {
@@ -61,22 +61,17 @@ public class BowState : AbstractControllerState
 
     public override void OnVerticalAttack()
     {
-        NextState = ControllerStateName.VerticalAttack;
     }
 
     public override void OnDashAttack()
     {
-        NextState = ControllerStateName.DashAttack;
     }
 
     public override void OnBackDash()
     {
-        NextState = ControllerStateName.BackDash;
     }
 
     public override void OnBow()
     {
-        Exit();
-        NextState = ControllerStateName.Bow;
     }
 }
