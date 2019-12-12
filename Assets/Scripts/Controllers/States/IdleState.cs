@@ -8,6 +8,12 @@ public class IdleState : AbstractControllerState
         base(gameManager, controller)
     {
     }
+
+    ~IdleState()
+    {
+        controller.movement = 0f;
+        controller.characterInfo.RigidBody.velocity = Vector3.zero;
+    }
     
     public override void FixedUpdate()
     {
