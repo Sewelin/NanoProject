@@ -19,7 +19,7 @@ public class EndRound : AbstractGameState
         if (_winner.characterInfo.characterAssigned) _winner.characterInfo.Character.AddComponent<Leave>();
         ++_winner.RoundWon;
         
-        if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<Die>();
+        if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<FallDown>();
     }
 
     public override GameStateName Name()
@@ -32,7 +32,7 @@ public class EndRound : AbstractGameState
         base.Update();
         if (characterInPosition[0] && characterInPosition[1])
         {
-            if (_winner.RoundWon == 3 || _looser.RoundWon == 3)
+            if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
             {
                 EndGame();
             }
