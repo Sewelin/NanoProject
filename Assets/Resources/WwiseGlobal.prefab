@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1272845790505032140}
   - component: {fileID: 1272845790505032141}
+  - component: {fileID: 3467880879665832555}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -58,6 +59,33 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &3467880879665832555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272845790505032142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f3bd787d8c8344b93af959ea5fcf5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: 01b4e250e23fcdd45bbc673187dc0091,
+    type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  diffractionFlags: 11
+  engineLogging: 0
 --- !u!1 &1272845791451787493
 GameObject:
   m_ObjectHideFlags: 0
