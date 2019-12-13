@@ -28,7 +28,7 @@ public class SetUp : AbstractGameState
         }
         if (gameManager.Controller1Assigned)
         {
-            gameManager.join.transform.GetChild(0).GetComponent<Text>().text = "Player 2, press A to join the battlefield";
+            gameManager.join.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Player 2, press A to join the battlefield";
         }
 
         if (gameManager.Controller1Assigned && gameManager.Controller2Assigned)
