@@ -22,7 +22,7 @@ public class SetUp : AbstractGameState
         base.Update();
         if(joinProgress < 1 && inputManager.enabled)
         {
-            gameManager.cinematic.Activate();
+            //gameManager.cinematic.Activate();
             joinProgress += Time.deltaTime * 5;
             if (joinProgress > 1) joinProgress = 1;
             gameManager.join.alpha = joinProgress;
