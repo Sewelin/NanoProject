@@ -239,41 +239,23 @@ MonoBehaviour:
         value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 34
+        tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
-        inSlope: Infinity
-        outSlope: 9.999998
-        tangentMode: 71
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6
-        value: 1
-        inSlope: 9.999998
-        outSlope: Infinity
-        tangentMode: 101
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0
       - serializedVersion: 3
         time: 1
         value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 34
+        tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 5
+    speed: 8
   bowDuration: 2.5
   walkingSpeed: 1.7
   posSpawner1: {fileID: 4732815846257128836}
@@ -290,7 +272,7 @@ MonoBehaviour:
   touched: {fileID: 0}
   touchValue: 0
   BACKDASHCOOLDOWN: 0.7
-  ROUNDTIMER: 60
+  ROUNDTIMER: 90
   BUFFURINGTIMEPERCENT: 80
   start: {fileID: 0}
   pause: {fileID: 0}
