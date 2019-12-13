@@ -16,6 +16,7 @@ public class UIController : MonoBehaviour
     [Header("Sounds")]
     public GameObject menuSoundManager;
     public Slider sliderMusic;
+    public Slider sliderSFX;
 
     [SerializeField] CanvasGroup main;
     [SerializeField] AnimationCurve curve;
@@ -108,6 +109,11 @@ public class UIController : MonoBehaviour
     public void OnValueChangeMusic()
     {
         AkSoundEngine.SetRTPCValue("RTPC_MusicVolume", sliderMusic.value*100f);
+    }
+
+    public void OnValueChangeSFX()
+    {
+        AkSoundEngine.SetRTPCValue("RTPC_SFXVolume", sliderSFX.value * 100f);
     }
 
 }
