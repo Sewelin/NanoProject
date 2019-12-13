@@ -232,7 +232,7 @@
 				</File>
 				<File Id="207776838" Language="SFX">
 					<ShortName>SFX_Verticall_Attack_02.wav</ShortName>
-					<Path>SFX\SFX_Verticall_Attack_02_64103772.wem</Path>
+					<Path>SFX\SFX_Verticall_Attack_02_2EFDBC0C.wem</Path>
 				</File>
 				<File Id="208480302" Language="SFX">
 					<ShortName>Wind_Howl.wav</ShortName>
@@ -347,7 +347,7 @@
 				</File>
 				<File Id="499191104" Language="SFX">
 					<ShortName>Wind_Howl.wav</ShortName>
-					<Path>SFX\Wind_Howl_C2568E5A.wem</Path>
+					<Path>SFX\Wind_Howl_31518570.wem</Path>
 				</File>
 				<File Id="517641963" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition1_Test.wav</ShortName>
@@ -363,7 +363,7 @@
 				</File>
 				<File Id="527546804" Language="SFX">
 					<ShortName>SFX_Verticall_Attack_03.wav</ShortName>
-					<Path>SFX\SFX_Verticall_Attack_03_4A20520A.wem</Path>
+					<Path>SFX\SFX_Verticall_Attack_03_6CB7CE19.wem</Path>
 				</File>
 				<File Id="536540309" Language="SFX">
 					<ShortName>SFX_Footsteps_Set03_Step_06.wav</ShortName>
@@ -461,7 +461,7 @@
 				</File>
 				<File Id="678203083" Language="SFX">
 					<ShortName>SFX_Verticall_Attack_01.wav</ShortName>
-					<Path>SFX\SFX_Verticall_Attack_01_35F5B3F9.wem</Path>
+					<Path>SFX\SFX_Verticall_Attack_01_4BBDE5F4.wem</Path>
 				</File>
 				<File Id="685541732" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -525,7 +525,7 @@
 				</File>
 				<File Id="757821227" Language="SFX">
 					<ShortName>Wind_Howl.wav</ShortName>
-					<Path>SFX\Wind_Howl_4E3438BE.wem</Path>
+					<Path>SFX\Wind_Howl_46B042B1.wem</Path>
 				</File>
 				<File Id="768785373" Language="SFX">
 					<ShortName>SFX_Footsteps_Set03_Step_02.wav</ShortName>
