@@ -66,7 +66,7 @@ public class Critic : AbstractGameState
         else
         {
             gameManager.touched = (gameManager.touched == gameManager.Controller1) ? gameManager.Controller2 : gameManager.Controller1;
-            Kill(gameManager.touched);
+            Kill(gameManager.touched);Debug.Log("oui");
             AkSoundEngine.PostEvent("SFX_Hit_Kill", gameManager.soundManager);
         }
 

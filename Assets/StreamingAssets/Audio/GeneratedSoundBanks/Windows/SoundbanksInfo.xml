@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
-		<SourceFilesRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Work in Progress\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
+		<SourceFilesRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Boulot\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -66,13 +66,13 @@
 				<Event Id="2613926250" Name="InGame_Music" ObjectPath="\Events\NanoProjet\Music\InGame_Music" DurationType="Infinite"/>
 				<Event Id="2121424417" Name="Launch_Round" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Launch_Round" DurationType="Infinite"/>
 				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Menu_Atmos" DurationType="Infinite"/>
-				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu\Menu_Back" DurationType="OneShot" DurationMin="1.398893" DurationMax="1.398893"/>
+				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu\Menu_Back" DurationType="OneShot" DurationMin="2.275053" DurationMax="2.545815"/>
 				<Event Id="557861964" Name="Menu_ChangeOption" ObjectPath="\Events\NanoProjet\Menu\Menu_ChangeOption" DurationType="OneShot" DurationMin="0.487800" DurationMax="0.487800"/>
 				<Event Id="2666848820" Name="Menu_Continue" ObjectPath="\Events\NanoProjet\Menu\Menu_Continue" DurationType="OneShot" DurationMin="1.674189" DurationMax="1.674189"/>
 				<Event Id="2170009975" Name="Menu_Pause" ObjectPath="\Events\NanoProjet\Menu\Menu_Pause" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
 				<Event Id="105544633" Name="Menu_Play" ObjectPath="\Events\NanoProjet\Menu\Menu_Play" DurationType="Infinite"/>
 				<Event Id="2776193354" Name="Menu_Quit" ObjectPath="\Events\NanoProjet\Menu\Menu_Quit" DurationType="OneShot" DurationMin="4.423519" DurationMax="4.423519"/>
-				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\NanoProjet\Menu\Menu_Select" DurationType="OneShot" DurationMin="1.461750" DurationMax="1.461750"/>
+				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\NanoProjet\Menu\Menu_Select" DurationType="OneShot" DurationMin="2.275053" DurationMax="2.545815"/>
 				<Event Id="2587230380" Name="Menu_UpDown" ObjectPath="\Events\NanoProjet\Menu\Menu_UpDown" DurationType="OneShot" DurationMin="0.388614" DurationMax="0.388614"/>
 				<Event Id="1183016477" Name="Player_One_Backward" ObjectPath="\Events\NanoProjet\PlayerOne\Player_One_Backward" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="0.169983" DurationMax="0.569438"/>
 				<Event Id="375910062" Name="Player_One_Bowing" ObjectPath="\Events\NanoProjet\PlayerOne\Player_One_Bowing" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.400000" DurationMax="2.400000"/>
@@ -212,6 +212,10 @@
 					<ShortName>SFX_Footsteps_Set01_Step_05.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set01_Step_05_49718417.wem</Path>
 				</File>
+				<File Id="192050279" Language="SFX">
+					<ShortName>Wind_Howl.wav</ShortName>
+					<Path>SFX\Wind_Howl_D155E7B3.wem</Path>
+				</File>
 				<File Id="194947854" Language="SFX">
 					<ShortName>NanoProjet_InGame_LastSegment_Koto_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_LastSegment_Koto_Test_9B96ECC7.wem</Path>
@@ -265,6 +269,10 @@
 				<File Id="301903005" Language="SFX">
 					<ShortName>Copland_Hit.wav</ShortName>
 					<Path>SFX\Copland_Hit_04B3BE69.wem</Path>
+				</File>
+				<File Id="306391079" Language="SFX">
+					<ShortName>Wind_Howl.wav</ShortName>
+					<Path>SFX\Wind_Howl_B5096536.wem</Path>
 				</File>
 				<File Id="315535023" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition4_Test.wav</ShortName>
@@ -554,6 +562,14 @@
 				<File Id="915816819" Language="SFX">
 					<ShortName>Taiko_Hit.wav</ShortName>
 					<Path>SFX\Taiko_Hit_CA630949.wem</Path>
+				</File>
+				<File Id="918723948" Language="SFX">
+					<ShortName>Wind_Howl.wav</ShortName>
+					<Path>SFX\Wind_Howl_2590D2A0.wem</Path>
+				</File>
+				<File Id="928154635" Language="SFX">
+					<ShortName>Wind_Howl.wav</ShortName>
+					<Path>SFX\Wind_Howl_5D24C065.wem</Path>
 				</File>
 				<File Id="949087257" Language="SFX">
 					<ShortName>Sheathe\SFX_Sheathe_03.wav</ShortName>

@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 7695025772843553741}
   - component: {fileID: 3843433407492766172}
   m_Layer: 8
-  m_Name: Player_Forward_Idle
+  m_Name: Player_Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1802,6 +1802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3699503066611480019}
+  - component: {fileID: 6004317600756560077}
   m_Layer: 8
   m_Name: Sounds
   m_TagString: Untagged
@@ -1832,6 +1833,28 @@ Transform:
   m_Father: {fileID: 5399548719953902586}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6004317600756560077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6759798131982211439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2386b663867b92479ad7fce8800b00c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dash: {fileID: 4814780388524956320}
+  vertical: {fileID: 8551897309184092017}
+  backward_jump: {fileID: 7522988341158304604}
+  bow: {fileID: 8882100099407847657}
+  death: {fileID: 6599330348240939519}
+  forward_prez: {fileID: 2412260369427962307}
+  forward_step: {fileID: 4333545112195526616}
+  idle: {fileID: 7695025772843553741}
+  consume: {fileID: 0}
+  sheathe: {fileID: 1402345621317613004}
 --- !u!114 &313422084726436796
 MonoBehaviour:
   m_ObjectHideFlags: 0
