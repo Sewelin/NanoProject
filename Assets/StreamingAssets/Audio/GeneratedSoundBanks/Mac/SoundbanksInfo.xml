@@ -17,10 +17,6 @@
 			<ShortName>NanoProjet_InGame_FirstSegment_Drums_Test.wav</ShortName>
 			<Path>SFX\NanoProjet_InGame_FirstSegment_Drums_Test_9B96ECC7.wem</Path>
 		</File>
-		<File Id="146121998" Language="SFX">
-			<ShortName>NanoProjet_InGame_LastSegment_Drums_Test.wav</ShortName>
-			<Path>SFX\NanoProjet_InGame_LastSegment_Drums_Test_9B96ECC7.wem</Path>
-		</File>
 		<File Id="169333166" Language="SFX">
 			<ShortName>NanoProjet_InGame_Intro_Koto_Test.wav</ShortName>
 			<Path>SFX\NanoProjet_InGame_Intro_Koto_Test_9B96ECC7.wem</Path>
@@ -67,16 +63,16 @@
 			<IncludedEvents>
 				<Event Id="711535685" Name="ATM_Rounds" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\ATM_Rounds" DurationType="Infinite"/>
 				<Event Id="2338023994" Name="FB_Horns_Time" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\FB_Horns_Time" DurationType="Infinite"/>
-				<Event Id="2613926250" Name="InGame_Music" ObjectPath="\Events\Default Work Unit\InGame_Music" DurationType="Infinite"/>
+				<Event Id="2613926250" Name="InGame_Music" ObjectPath="\Events\NanoProjet\Music\InGame_Music" DurationType="Infinite"/>
 				<Event Id="2121424417" Name="Launch_Round" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Launch_Round" DurationType="Infinite"/>
 				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Menu_Atmos" DurationType="Infinite"/>
-				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu\Menu_Back" DurationType="OneShot" DurationMin="1.398893" DurationMax="1.398893"/>
+				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu\Menu_Back" DurationType="OneShot" DurationMin="2.275053" DurationMax="2.545815"/>
 				<Event Id="557861964" Name="Menu_ChangeOption" ObjectPath="\Events\NanoProjet\Menu\Menu_ChangeOption" DurationType="OneShot" DurationMin="0.487800" DurationMax="0.487800"/>
 				<Event Id="2666848820" Name="Menu_Continue" ObjectPath="\Events\NanoProjet\Menu\Menu_Continue" DurationType="OneShot" DurationMin="1.674189" DurationMax="1.674189"/>
 				<Event Id="2170009975" Name="Menu_Pause" ObjectPath="\Events\NanoProjet\Menu\Menu_Pause" DurationType="OneShot" DurationMin="1.066928" DurationMax="1.066928"/>
 				<Event Id="105544633" Name="Menu_Play" ObjectPath="\Events\NanoProjet\Menu\Menu_Play" DurationType="Infinite"/>
 				<Event Id="2776193354" Name="Menu_Quit" ObjectPath="\Events\NanoProjet\Menu\Menu_Quit" DurationType="OneShot" DurationMin="4.423519" DurationMax="4.423519"/>
-				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\NanoProjet\Menu\Menu_Select" DurationType="OneShot" DurationMin="1.461750" DurationMax="1.461750"/>
+				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\NanoProjet\Menu\Menu_Select" DurationType="OneShot" DurationMin="2.275053" DurationMax="2.545815"/>
 				<Event Id="2587230380" Name="Menu_UpDown" ObjectPath="\Events\NanoProjet\Menu\Menu_UpDown" DurationType="OneShot" DurationMin="0.388614" DurationMax="0.388614"/>
 				<Event Id="1183016477" Name="Player_One_Backward" ObjectPath="\Events\NanoProjet\PlayerOne\Player_One_Backward" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="0.169983" DurationMax="0.569438"/>
 				<Event Id="375910062" Name="Player_One_Bowing" ObjectPath="\Events\NanoProjet\PlayerOne\Player_One_Bowing" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.400000" DurationMax="2.400000"/>
@@ -88,14 +84,18 @@
 				<Event Id="184927275" Name="Player_Two_Forward" ObjectPath="\Events\NanoProjet\PlayerTwo\Player_Two_Forward" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="0.731217" DurationMax="1.121195"/>
 				<Event Id="1343735513" Name="Player_Two_Forward_Prez" ObjectPath="\Events\NanoProjet\PlayerTwo\Player_Two_Forward_Prez" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="0.731217" DurationMax="1.121195"/>
 				<Event Id="1430148754" Name="Player_Two_Idle" ObjectPath="\Events\NanoProjet\PlayerTwo\Player_Two_Idle" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1421009485" Name="PONE_Kill_Taiko" ObjectPath="\Events\NanoProjet\PlayerOne\PONE_Kill_Taiko" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.966667" DurationMax="2.966667"/>
+				<Event Id="869366883" Name="PTWO_Kill_Taiko" ObjectPath="\Events\NanoProjet\PlayerTwo\PTWO_Kill_Taiko" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.966667" DurationMax="2.966667"/>
 				<Event Id="20042657" Name="SFX_Backward_Jump" ObjectPath="\Events\NanoProjet\SFX\SFX_Backward_Jump" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="1.066667" DurationMax="1.066667"/>
 				<Event Id="4231318760" Name="SFX_ConsumeCorps" ObjectPath="\Events\NanoProjet\SFX\SFX_ConsumeCorps" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="4.929458" DurationMax="4.929458"/>
 				<Event Id="1804139809" Name="SFX_Dash" ObjectPath="\Events\NanoProjet\SFX\SFX_Dash" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.050000" DurationMax="2.133333"/>
-				<Event Id="777164721" Name="SFX_Death" ObjectPath="\Events\NanoProjet\SFX\SFX_Death" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.687226" DurationMax="2.916667"/>
-				<Event Id="2410652377" Name="SFX_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX\SFX_Hit_Draw" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
-				<Event Id="590114267" Name="SFX_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX\SFX_Hit_Kill" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
-				<Event Id="3849990799" Name="SFX_Sheathe" ObjectPath="\Events\NanoProjet\SFX\SFX_Sheathe" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="1.666667" DurationMax="1.666667"/>
-				<Event Id="1708937970" Name="SFX_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX\SFX_Vertical_Attack" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.066667" DurationMax="2.066667"/>
+				<Event Id="777164721" Name="SFX_Death" ObjectPath="\Events\NanoProjet\SFX\SFX_Death" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.507270" DurationMax="3.126006"/>
+				<Event Id="2410652377" Name="SFX_Hit_Draw" ObjectPath="\Events\NanoProjet\SFX\SFX_Hit_Draw" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.783333" DurationMax="2.783333"/>
+				<Event Id="3272787864" Name="SFX_Hit_Draw_Taiko" ObjectPath="\Events\NanoProjet\SFX\SFX_Hit_Draw_Taiko" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="3.166667" DurationMax="3.166667"/>
+				<Event Id="590114267" Name="SFX_Hit_Kill" ObjectPath="\Events\NanoProjet\SFX\SFX_Hit_Kill" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.966667" DurationMax="2.966667"/>
+				<Event Id="3849990799" Name="SFX_Sheathe" ObjectPath="\Events\NanoProjet\SFX\SFX_Sheathe" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="1.628600" DurationMax="1.705623"/>
+				<Event Id="1708937970" Name="SFX_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX\SFX_Vertical_Attack" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.387104" DurationMax="2.558434"/>
+				<Event Id="3592797123" Name="SFX_Vertical_Attack_Cut" ObjectPath="\Events\NanoProjet\SFX\SFX_Vertical_Attack_Cut" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="2.086269" DurationMax="2.246803"/>
 				<Event Id="1784816102" Name="Stop_Backward_Jump" ObjectPath="\Events\NanoProjet\SFX\Stop_Backward_Jump" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3296606572" Name="Stop_Dash" ObjectPath="\Events\NanoProjet\SFX\Stop_Dash" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2607937253" Name="Stop_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX\Stop_Vertical_Attack" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -103,7 +103,6 @@
 			<ReferencedStreamedFiles>
 				<File Id="103228339"/>
 				<File Id="116898945"/>
-				<File Id="146121998"/>
 				<File Id="169333166"/>
 				<File Id="194947854"/>
 				<File Id="276999256"/>
@@ -189,14 +188,13 @@
 					<ShortName>SFX_Footsteps_Set01_Step_07.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set01_Step_07_49718417.wem</Path>
 				</File>
-				<File Id="146121998" Language="SFX">
-					<ShortName>NanoProjet_InGame_LastSegment_Drums_Test.wav</ShortName>
-					<Path>SFX\NanoProjet_InGame_LastSegment_Drums_Test_9B96ECC7.wem</Path>
-					<PrefetchSize>2701</PrefetchSize>
-				</File>
 				<File Id="154602429" Language="SFX">
 					<ShortName>SFX_Footsteps_Set04_Step_03.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set04_Step_03_49718417.wem</Path>
+				</File>
+				<File Id="155383905" Language="SFX">
+					<ShortName>SFX_Verticall_Attack_01.wav</ShortName>
+					<Path>SFX\SFX_Verticall_Attack_01_10C4C929.wem</Path>
 				</File>
 				<File Id="169333166" Language="SFX">
 					<ShortName>NanoProjet_InGame_Intro_Koto_Test.wav</ShortName>
@@ -215,6 +213,10 @@
 					<ShortName>SFX_Footsteps_Set01_Step_05.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set01_Step_05_49718417.wem</Path>
 				</File>
+				<File Id="192050279" Language="SFX">
+					<ShortName>Wind_Howl.wav</ShortName>
+					<Path>SFX\Wind_Howl_80C5828D.wem</Path>
+				</File>
 				<File Id="194947854" Language="SFX">
 					<ShortName>NanoProjet_InGame_LastSegment_Koto_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_LastSegment_Koto_Test_9B96ECC7.wem</Path>
@@ -227,6 +229,14 @@
 				<File Id="206857872" Language="SFX">
 					<ShortName>Armor\SFX_Footsteps_Armor_06.wav</ShortName>
 					<Path>SFX\Armor\SFX_Footsteps_Armor_06_49718417.wem</Path>
+				</File>
+				<File Id="207776838" Language="SFX">
+					<ShortName>SFX_Verticall_Attack_02.wav</ShortName>
+					<Path>SFX\SFX_Verticall_Attack_02_64103772.wem</Path>
+				</File>
+				<File Id="208480302" Language="SFX">
+					<ShortName>Wind_Howl.wav</ShortName>
+					<Path>SFX\Wind_Howl_AB4DD761.wem</Path>
 				</File>
 				<File Id="212430323" Language="SFX">
 					<ShortName>SFX_Footsteps_Set01_Step_04.wav</ShortName>
@@ -302,6 +312,14 @@
 					<ShortName>Atmos_BattleFull.wav</ShortName>
 					<Path>SFX\Atmos_BattleFull_C7B1F7F0.wem</Path>
 				</File>
+				<File Id="420719788" Language="SFX">
+					<ShortName>SFX_Verticall_Attack_02.wav</ShortName>
+					<Path>SFX\SFX_Verticall_Attack_02_10C4C929.wem</Path>
+				</File>
+				<File Id="439682349" Language="SFX">
+					<ShortName>Copland_Hit.wav</ShortName>
+					<Path>SFX\Copland_Hit_9B96ECC7.wem</Path>
+				</File>
 				<File Id="443629866" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition2_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_DrumTransition2_Test_9B96ECC7.wem</Path>
@@ -310,6 +328,10 @@
 					<ShortName>Armor\SFX_Footsteps_Armor_01.wav</ShortName>
 					<Path>SFX\Armor\SFX_Footsteps_Armor_01_49718417.wem</Path>
 				</File>
+				<File Id="455740118" Language="SFX">
+					<ShortName>Taiko_Hit.wav</ShortName>
+					<Path>SFX\Taiko_Hit_9B96ECC7.wem</Path>
+				</File>
 				<File Id="459789300" Language="SFX">
 					<ShortName>NanoProjet_InGame_FirstSegment_Flute_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_FirstSegment_Flute_Test_9B96ECC7.wem</Path>
@@ -317,11 +339,15 @@
 				</File>
 				<File Id="483183590" Language="SFX">
 					<ShortName>Taiko_Hit.wav</ShortName>
-					<Path>SFX\Taiko_Hit_EAFDB78D.wem</Path>
+					<Path>SFX\Taiko_Hit_54744162.wem</Path>
 				</File>
 				<File Id="485810736" Language="SFX">
 					<ShortName>SFX_Footsteps_Set04_Step_08.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set04_Step_08_49718417.wem</Path>
+				</File>
+				<File Id="499191104" Language="SFX">
+					<ShortName>Wind_Howl.wav</ShortName>
+					<Path>SFX\Wind_Howl_C2568E5A.wem</Path>
 				</File>
 				<File Id="517641963" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition1_Test.wav</ShortName>
@@ -335,6 +361,10 @@
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_EE16EA51.wem</Path>
 				</File>
+				<File Id="527546804" Language="SFX">
+					<ShortName>SFX_Verticall_Attack_03.wav</ShortName>
+					<Path>SFX\SFX_Verticall_Attack_03_4A20520A.wem</Path>
+				</File>
 				<File Id="536540309" Language="SFX">
 					<ShortName>SFX_Footsteps_Set03_Step_06.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set03_Step_06_49718417.wem</Path>
@@ -342,6 +372,10 @@
 				<File Id="556700512" Language="SFX">
 					<ShortName>SFX_Footsteps_Set02_Step_01.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set02_Step_01_49718417.wem</Path>
+				</File>
+				<File Id="557382835" Language="SFX">
+					<ShortName>SFX_Hit_Draw_01.wav</ShortName>
+					<Path>SFX\SFX_Hit_Draw_01_10C4C929.wem</Path>
 				</File>
 				<File Id="558358970" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -365,9 +399,17 @@
 					<ShortName>Taiko_Hit.wav</ShortName>
 					<Path>SFX\Taiko_Hit_0A4DB067.wem</Path>
 				</File>
+				<File Id="569725874" Language="SFX">
+					<ShortName>NanoProjet_InGame_EndSegment_Drums_v2.wav</ShortName>
+					<Path>SFX\NanoProjet_InGame_EndSegment_Drums_v2_9B96ECC7.wem</Path>
+				</File>
 				<File Id="574218594" Language="SFX">
 					<ShortName>SFX_Footsteps_Set01_Step_01.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set01_Step_01_49718417.wem</Path>
+				</File>
+				<File Id="582092337" Language="SFX">
+					<ShortName>SFX_Hit_Kill_Taiko_01.wav</ShortName>
+					<Path>SFX\SFX_Hit_Kill_Taiko_01_49718417.wem</Path>
 				</File>
 				<File Id="600059934" Language="SFX">
 					<ShortName>SFX_Footsteps_Set03_Step_04.wav</ShortName>
@@ -401,6 +443,10 @@
 					<ShortName>SFX_Footsteps_Set03_Step_05.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set03_Step_05_49718417.wem</Path>
 				</File>
+				<File Id="664880484" Language="SFX">
+					<ShortName>SFX_Hit_Kill_01.wav</ShortName>
+					<Path>SFX\SFX_Hit_Kill_01_10C4C929.wem</Path>
+				</File>
 				<File Id="669907935" Language="SFX">
 					<ShortName>SFX_Backward_Jump_03.wav</ShortName>
 					<Path>SFX\SFX_Backward_Jump_03_10C4C929.wem</Path>
@@ -408,6 +454,14 @@
 				<File Id="673013954" Language="SFX">
 					<ShortName>SFX_Footsteps_Set01_Step_06.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set01_Step_06_49718417.wem</Path>
+				</File>
+				<File Id="674661318" Language="SFX">
+					<ShortName>Cymbal_Reverse.wav</ShortName>
+					<Path>SFX\Cymbal_Reverse_9B96ECC7.wem</Path>
+				</File>
+				<File Id="678203083" Language="SFX">
+					<ShortName>SFX_Verticall_Attack_01.wav</ShortName>
+					<Path>SFX\SFX_Verticall_Attack_01_35F5B3F9.wem</Path>
 				</File>
 				<File Id="685541732" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
@@ -469,6 +523,10 @@
 					<ShortName>SFX_Footsteps_Set02_Step_07.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set02_Step_07_49718417.wem</Path>
 				</File>
+				<File Id="757821227" Language="SFX">
+					<ShortName>Wind_Howl.wav</ShortName>
+					<Path>SFX\Wind_Howl_4E3438BE.wem</Path>
+				</File>
 				<File Id="768785373" Language="SFX">
 					<ShortName>SFX_Footsteps_Set03_Step_02.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set03_Step_02_49718417.wem</Path>
@@ -526,6 +584,10 @@
 					<ShortName>Taiko_Hit.wav</ShortName>
 					<Path>SFX\Taiko_Hit_CA630949.wem</Path>
 				</File>
+				<File Id="928154635" Language="SFX">
+					<ShortName>Wind_Howl.wav</ShortName>
+					<Path>SFX\Wind_Howl_51E926AA.wem</Path>
+				</File>
 				<File Id="949087257" Language="SFX">
 					<ShortName>Sheathe\SFX_Sheathe_03.wav</ShortName>
 					<Path>SFX\Sheathe\SFX_Sheathe_03_10C4C929.wem</Path>
@@ -537,6 +599,10 @@
 				<File Id="964521431" Language="SFX">
 					<ShortName>SFX_Dash_Whoosh_Test.wav</ShortName>
 					<Path>SFX\SFX_Dash_Whoosh_Test_141C8E3C.wem</Path>
+				</File>
+				<File Id="965107769" Language="SFX">
+					<ShortName>SFX_Verticall_Attack_03.wav</ShortName>
+					<Path>SFX\SFX_Verticall_Attack_03_10C4C929.wem</Path>
 				</File>
 				<File Id="971046605" Language="SFX">
 					<ShortName>SFX_PlayerDeath_02.wav</ShortName>
@@ -557,6 +623,10 @@
 				<File Id="998095802" Language="SFX">
 					<ShortName>NanoProjet_InGame_DrumTransition5_Test.wav</ShortName>
 					<Path>SFX\NanoProjet_InGame_DrumTransition5_Test_9B96ECC7.wem</Path>
+				</File>
+				<File Id="1001710586" Language="SFX">
+					<ShortName>SFX_Hit_Draw_Taiko_01.wav</ShortName>
+					<Path>SFX\SFX_Hit_Draw_Taiko_01_10C4C929.wem</Path>
 				</File>
 				<File Id="1016258128" Language="SFX">
 					<ShortName>UI_Taiko.wav</ShortName>

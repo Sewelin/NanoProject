@@ -3,8 +3,6 @@
 public class BackDashState : AbstractControllerState
 {
     private readonly int _dir;
-    private float _timer;
-    private StateParameters _param;
     private static readonly int BackDash = Animator.StringToHash("BackDash");
     private static readonly int AttVerticalCut = Animator.StringToHash("AttVerticalCut");
 
@@ -12,21 +10,29 @@ public class BackDashState : AbstractControllerState
         base(gameManager, controller)
     {
         _dir = dir;
-        _param = gameManager.backDashParameters;
-        controller.backDashCoolDown = _param.Duration + 1f;
+        param = gameManager.backDashParameters;
+        controller.backDashCoolDown = param.Duration + 1f;
         controller.characterInfo.Animator.SetTrigger(BackDash);
     }
-    
+
+    ~BackDashState()
+    {
+        if (timer < param.Duration)
+        {
+            AkSoundEngine.PostEvent("Stop_Backward_Jump", gameManager.soundManager);
+        }
+    }
+
     public override void Update()
     {
         base.Update();
-        _timer += Time.deltaTime;
+        timer += Time.deltaTime;
         
-        if (_timer < _param.Duration)
+        if (timer < param.Duration)
         {
-            float progress = _timer / _param.Duration;
+            float progress = timer / param.Duration;
             controller.characterInfo.RigidBody.velocity = new Vector3( 
-                - _dir * _param.speed * _param.curve.Evaluate(progress), 
+                - _dir * param.speed * param.curve.Evaluate(progress), 
                 0f, 0f);
         }
         else
@@ -71,26 +77,38 @@ public class BackDashState : AbstractControllerState
     
     public override void OnVerticalAttack()
     {
-        controller.characterInfo.Animator.SetBool(AttVerticalCut, true);
         NextState = ControllerStateName.VerticalAttack;
+        if (NextState == ControllerStateName.VerticalAttack)
+        {
+            controller.characterInfo.Animator.SetBool(AttVerticalCut, true);
+        }
     }
 
     public override void OnDashAttack()
     {
-        controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
         NextState = ControllerStateName.DashAttack;
+        if (NextState == ControllerStateName.DashAttack)
+        {
+            controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
+        }
     }
 
     public override void OnBackDash()
     {
-        if (_timer < gameManager.BACKDASHCOOLDOWN) return;
-        controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
+        if (controller.backDashCoolDown > 0f) return;
         NextState = ControllerStateName.BackDash;
+        if (NextState == ControllerStateName.BackDash)
+        {
+            controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
+        }
     }
 
     public override void OnBow()
     {
-        controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
         NextState = ControllerStateName.Bow;
+        if (NextState == ControllerStateName.Bow)
+        {
+            controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
+        }
     }
 }

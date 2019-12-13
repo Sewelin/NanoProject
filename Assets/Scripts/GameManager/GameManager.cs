@@ -47,8 +47,8 @@ public class GameManager : MonoBehaviour
     public Transform posReposition2;
     
     [Header("Invisible Walls")]
-    public Collider leftWall;
-    public Collider rightWall;
+    public GameObject leftWall;
+    public GameObject rightWall;
 
     // Sounds
     [Header("Sounds")]
@@ -64,6 +64,15 @@ public class GameManager : MonoBehaviour
     public float BACKDASHCOOLDOWN = 0.5f;
     
     public float ROUNDTIMER = 60;
+
+    public float BUFFURINGTIMEPERCENT = 80f;
+    
+    [Header("User Interfaces")]
+    [SerializeField] public CanvasGroup start;
+    [SerializeField] public CanvasGroup pause;
+    [SerializeField] public CanvasGroup join;
+    public float SPEEDFADE = 5;
+
     [Header("Do Not Touch")]
     [SerializeField] private float roundTimer;
     public float RoundTimer {

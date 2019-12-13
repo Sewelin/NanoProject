@@ -67,6 +67,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	774352804	Have_U_Ever_Been_Outside_(Custom)	Wwise RoomVerb			
 	978948252	Tunnel1 (Custom)	Wwise Matrix Reverb			
+	3043085106	High_Impact	Wwise Compressor			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

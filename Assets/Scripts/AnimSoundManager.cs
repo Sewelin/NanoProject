@@ -4,6 +4,7 @@ public class AnimSoundManager : MonoBehaviour
 {
     public AkEvent dash;
     public AkEvent vertical;
+    public AkEvent vertical_cut;
     public AkEvent backward_jump;
     public AkEvent bow;
     public AkEvent death;
@@ -23,6 +24,11 @@ public class AnimSoundManager : MonoBehaviour
     public void SFX_VerticalAttack()
     {
         vertical.HandleEvent(gameObject);
+    }
+
+    public void SFX_VerticalAttackCut()
+    {
+        vertical_cut.HandleEvent(gameObject);
     }
 
     public void SFX_Backward_Jump()
