@@ -138,11 +138,29 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 11.332
+        outSlope: 11.332
         tangentMode: 34
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.088245675
+        value: 1
+        inSlope: 1.1919003
+        outSlope: Infinity
+        tangentMode: 97
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28
+        value: 0
+        inSlope: -1.2932497
+        outSlope: 0
+        tangentMode: 65
+        weightedMode: 0
+        inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
@@ -156,7 +174,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 0
+    speed: 1
   dashAttackParameters:
     timeSteps: {x: 0.667, y: 1, z: 1.833}
     curve:
@@ -226,20 +244,20 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.033167362
+        time: 0.5
         value: 0
         inSlope: Infinity
-        outSlope: 13.297496
-        tangentMode: 7
+        outSlope: 9.999998
+        tangentMode: 71
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.15
+        time: 0.6
         value: 1
-        inSlope: 5.714286
+        inSlope: 9.999998
         outSlope: Infinity
-        tangentMode: 97
+        tangentMode: 101
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
@@ -267,12 +285,12 @@ MonoBehaviour:
   leftWall: {fileID: 6648408730550777447}
   rightWall: {fileID: 6687561428847018269}
   soundManager: {fileID: 0}
-  TOUCHCOOLDOWN: 0.4
+  TOUCHCOOLDOWN: 0.05
   touchCooldown: 0
   touched: {fileID: 0}
   touchValue: 0
-  BACKDASHCOOLDOWN: 0.5
-  ROUNDTIMER: 90
+  BACKDASHCOOLDOWN: 0.7
+  ROUNDTIMER: 60
   BUFFURINGTIMEPERCENT: 80
   start: {fileID: 0}
   pause: {fileID: 0}
