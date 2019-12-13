@@ -138,11 +138,29 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 11.332
+        outSlope: 11.332
         tangentMode: 34
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.088245675
+        value: 1
+        inSlope: 1.1919003
+        outSlope: Infinity
+        tangentMode: 97
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28
+        value: 0
+        inSlope: -1.2932497
+        outSlope: 0
+        tangentMode: 65
+        weightedMode: 0
+        inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
@@ -264,13 +282,20 @@ MonoBehaviour:
   posStartFight2: {fileID: 4732815846304200239}
   posReposition1: {fileID: 3491932076642926222}
   posReposition2: {fileID: 2962324495730460011}
+  leftWall: {fileID: 6648408730550777447}
+  rightWall: {fileID: 6687561428847018269}
   soundManager: {fileID: 0}
-  TOUCHCOOLDOWN: 0.1
+  TOUCHCOOLDOWN: 0.05
   touchCooldown: 0
   touched: {fileID: 0}
   touchValue: 0
   BACKDASHCOOLDOWN: 0.7
   ROUNDTIMER: 60
+  BUFFURINGTIMEPERCENT: 80
+  start: {fileID: 0}
+  pause: {fileID: 0}
+  join: {fileID: 0}
+  SPEEDFADE: 5
   roundTimer: 0
   sss: 0
 --- !u!114 &4732815845222031830
