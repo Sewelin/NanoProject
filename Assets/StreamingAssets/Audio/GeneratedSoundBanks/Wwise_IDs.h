@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID ATM_ROUNDS = 711535685U;
         static const AkUniqueID FB_HORNS_TIME = 2338023994U;
+        static const AkUniqueID INGAME_MUSIC = 2613926250U;
         static const AkUniqueID LAUNCH_ROUND = 2121424417U;
         static const AkUniqueID MENU_ATMOS = 789497435U;
         static const AkUniqueID MENU_BACK = 3063554414U;
@@ -28,21 +29,27 @@ namespace AK
         static const AkUniqueID PLAYER_ONE_BACKWARD = 1183016477U;
         static const AkUniqueID PLAYER_ONE_BOWING = 375910062U;
         static const AkUniqueID PLAYER_ONE_FORWARD = 972262685U;
+        static const AkUniqueID PLAYER_ONE_FORWARD_PREZ = 727157835U;
         static const AkUniqueID PLAYER_ONE_IDLE = 2862113300U;
         static const AkUniqueID PLAYER_TWO_BACKWARD = 2507762279U;
         static const AkUniqueID PLAYER_TWO_BOWING = 2367140880U;
         static const AkUniqueID PLAYER_TWO_FORWARD = 184927275U;
+        static const AkUniqueID PLAYER_TWO_FORWARD_PREZ = 1343735513U;
         static const AkUniqueID PLAYER_TWO_IDLE = 1430148754U;
+        static const AkUniqueID PONE_KILL_TAIKO = 1421009485U;
+        static const AkUniqueID PTWO_KILL_TAIKO = 869366883U;
         static const AkUniqueID SFX_BACKWARD_JUMP = 20042657U;
         static const AkUniqueID SFX_CONSUMECORPS = 4231318760U;
         static const AkUniqueID SFX_DASH = 1804139809U;
-        static const AkUniqueID SFX_DASH_HIT_DRAW = 1407212788U;
-        static const AkUniqueID SFX_DASH_HIT_KILL = 2872475778U;
-        static const AkUniqueID SFX_DASH_STOP = 299103780U;
         static const AkUniqueID SFX_DEATH = 777164721U;
+        static const AkUniqueID SFX_HIT_DRAW = 2410652377U;
+        static const AkUniqueID SFX_HIT_DRAW_TAIKO = 3272787864U;
+        static const AkUniqueID SFX_HIT_KILL = 590114267U;
+        static const AkUniqueID SFX_SHEATHE = 3849990799U;
         static const AkUniqueID SFX_VERTICAL_ATTACK = 1708937970U;
-        static const AkUniqueID SFX_VERTICAL_ATTACK_HIT_DRAW = 402918157U;
-        static const AkUniqueID SFX_VERTICAL_ATTACK_HIT_KILL = 1553621999U;
+        static const AkUniqueID STOP_BACKWARD_JUMP = 1784816102U;
+        static const AkUniqueID STOP_DASH = 3296606572U;
+        static const AkUniqueID STOP_VERTICAL_ATTACK = 2607937253U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -56,6 +63,7 @@ namespace AK
                 static const AkUniqueID HORN_END = 875908656U;
                 static const AkUniqueID HORN_HALF = 2297366162U;
                 static const AkUniqueID HORN_START = 1612279755U;
+                static const AkUniqueID STOP = 788884573U;
             } // namespace SWITCH
         } // namespace SWITCH_HORNS
 
@@ -138,7 +146,6 @@ namespace AK
         static const AkUniqueID RTPC_DEATHCOUNT = 264145860U;
         static const AkUniqueID RTPC_MASTERVOLUME = 2582501215U;
         static const AkUniqueID RTPC_MUSICVOLUME = 2378823330U;
-        static const AkUniqueID RTPC_PAUSE = 2887991807U;
         static const AkUniqueID RTPC_PONE_ARMORSETS = 2470384160U;
         static const AkUniqueID RTPC_PTWO_ARMORSETS = 2322506118U;
         static const AkUniqueID RTPC_ROUNDCOUNT = 1364308078U;
@@ -187,6 +194,7 @@ namespace AK
 
     namespace AUX_BUSSES
     {
+        static const AkUniqueID REV_IG_MUSIC = 997000339U;
         static const AkUniqueID REV_MENU = 2766901782U;
         static const AkUniqueID REV_MENU_MUSIC = 2116471102U;
         static const AkUniqueID REV_SCENE = 3548165401U;

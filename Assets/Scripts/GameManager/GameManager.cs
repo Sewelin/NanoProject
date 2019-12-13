@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Character models")]
     public GameObject character1Model;
     public GameObject character2Model;
+    
+    [Header("Animation Parameters")]
     public StateParameters verticalAttackParameters;
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
@@ -35,23 +38,42 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [Header("Cinematic positions in scene")]
     public Transform posSpawner1;
     public Transform posSpawner2;
     public Transform posStartFight1;
     public Transform posStartFight2;
     public Transform posReposition1;
     public Transform posReposition2;
+    
+    [Header("Invisible Walls")]
+    public Collider leftWall;
+    public Collider rightWall;
+
+    // Sounds
+    [Header("Sounds")]
+    public GameObject soundManager;
 
     // Timers and cooldowns
-    
+    [Header("Max timers")]
     public float TOUCHCOOLDOWN = 0.4f;
-    [NonSerialized] public float touchCooldown;
-    [NonSerialized] public AbstractController touched;
-    [NonSerialized] public int touchValue;
+    [HideInInspector] public float touchCooldown;
+    [HideInInspector] public AbstractController touched;
+    [HideInInspector] public int touchValue;
 
     public float BACKDASHCOOLDOWN = 0.5f;
     
     public float ROUNDTIMER = 60;
+
+    public float BUFFURINGTIMEPERCENT = 80f;
+    
+    [Header("User Interfaces")]
+    [SerializeField] public CanvasGroup start;
+    [SerializeField] public CanvasGroup pause;
+    [SerializeField] public CanvasGroup join;
+    public float SPEEDFADE = 5;
+
+    [Header("Do Not Touch")]
     [SerializeField] private float roundTimer;
     public float RoundTimer {
         get => roundTimer;
@@ -65,9 +87,6 @@ public class GameManager : MonoBehaviour
     private AbstractGameState State { get; set; }
     public GameStateName StateName => State.Name();
 
-    // Sounds
-    public GameObject soundManager;
-
     private void Awake()
     {
         SetState(new SetUp(this));
@@ -78,7 +97,7 @@ public class GameManager : MonoBehaviour
         RoundTimer = ROUNDTIMER;
     }
 
-    public GameStateName sss;
+    public GameStateName sss; // TODO suppr
     private void Update()
     {sss = StateName;
         State.Update();
@@ -112,12 +131,22 @@ public class GameManager : MonoBehaviour
         Controller2.dir = -Controller1.dir;
         
         var v = Controller1.characterInfo.Character.transform.localScale;
-        v.x = Controller1.dir;
+        v.x = - Controller1.dir;
+        v.z = Controller1.dir;
         Controller1.characterInfo.Character.transform.localScale = v;
         
         v = Controller2.characterInfo.Character.transform.localScale;
         v.x = Controller2.dir;
+        v.z = Controller2.dir;
         Controller2.characterInfo.Character.transform.localScale = v;
+    }
+
+    public void TurnOver(Transform character)
+    {
+        var v = character.localScale;
+        v.x = - v.x;
+        v.z = - v.z;
+        character.localScale = v;
     }
 
     public void Touch(GameObject character)

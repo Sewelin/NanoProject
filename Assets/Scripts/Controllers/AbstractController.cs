@@ -17,15 +17,27 @@ public abstract class AbstractController : MonoBehaviour
             get => (characterAssigned) ? _character : null;
             set => _character = value;
         }
-        public Saber Saber { get; private set; }
-        
+        public Saber Saber1 { get; private set; }
+        public Saber Saber2 { get; private set; }
+        private static System.Random _rnd = new System.Random();
+
         private CharacterInfo() {}
 
         private CharacterInfo(GameObject character)
         {
             RigidBody = character.GetComponent<Rigidbody>();
-            Animator = character.GetComponent<Animator>();
-            Saber = character.transform.GetChild(0).GetComponent<Saber>();
+            Animator = character.GetComponentInChildren<Animator>();
+            var sabers = character.transform.GetComponentsInChildren<Saber>();
+            if (sabers[0].gameObject.name == "Saber1")
+            {
+                Saber1 = sabers[0];
+                Saber2 = sabers[1];
+            }
+            else
+            {
+                Saber1 = sabers[1];
+                Saber2 = sabers[0];
+            }
             Character = character;
             characterAssigned = true;
         }
@@ -35,8 +47,15 @@ public abstract class AbstractController : MonoBehaviour
             return new CharacterInfo();
         }
 
-        public static CharacterInfo Instantiate(GameObject playerModel, Transform transform)
+        public static CharacterInfo Instantiate(GameObject playerModel, Transform transform, int playerNum)
         {
+            if (playerNum == 1) {
+                AkSoundEngine.SetRTPCValue("RTPC_PONE_ArmorSets", _rnd.Next(1, 4));
+            }
+            else
+            {
+                AkSoundEngine.SetRTPCValue("RTPC_PTWO_ArmorSets", _rnd.Next(1, 4));
+            }
             return new CharacterInfo(Object.Instantiate(playerModel, transform));
         }
     }
@@ -55,7 +74,15 @@ public abstract class AbstractController : MonoBehaviour
             AkSoundEngine.SetRTPCValue("RTPC_DeathCount", gameManager.Controller1.Points + gameManager.Controller2.Points);
         }
     }
-    public int roundWon;
+    private int _roundWon;
+    public int RoundWon {
+        get => _roundWon;
+        set
+        {
+            _roundWon = value;
+            AkSoundEngine.SetRTPCValue("RTPC_RoundCount", gameManager.Controller1.RoundWon + gameManager.Controller2.RoundWon);
+        }
+    }
 
     public float movement = 0;
     public int dir = 1;
@@ -66,6 +93,7 @@ public abstract class AbstractController : MonoBehaviour
     public ControllerStateName StateName => State.Name();
 
     public bool PassivateCombatInputs { get; private set; }
+    public bool replacing;
 
     // Methods
 
@@ -95,12 +123,14 @@ public abstract class AbstractController : MonoBehaviour
     {
         characterInfo = CharacterInfo.Instantiate(
             PlayerNum == 1 ? gameManager.character1Model : gameManager.character2Model,
-            transform);
-        characterInfo.Character.AddComponent<GoToStart>();
+            transform, PlayerNum);
+        characterInfo.Character.AddComponent<Arrive>();
         SetState(new IdleState(gameManager, this));
+        gameManager.CheckDir();
     }
 
     public ControllerStateName sss; // TODO suppr
+
     protected void Update()
     {sss = StateName;
         State.Update();
