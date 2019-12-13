@@ -272,7 +272,11 @@ MonoBehaviour:
   touched: {fileID: 0}
   touchValue: 0
   BACKDASHCOOLDOWN: 0.5
-  ROUNDTIMER: 60
+  ROUNDTIMER: 90
+  start: {fileID: 0}
+  pause: {fileID: 0}
+  join: {fileID: 0}
+  SPEEDFADE: 5
   roundTimer: 0
   sss: 0
 --- !u!114 &4732815845222031830
