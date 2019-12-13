@@ -14,11 +14,15 @@ public class EndRound : AbstractGameState
         _looser = gameManager.Controller1.Points > gameManager.Controller2.Points
             ? gameManager.Controller2
             : gameManager.Controller1;
-        
+
+
         if (_winner.characterInfo.characterAssigned) _winner.characterInfo.Character.AddComponent<Leave>();
         ++_winner.roundWon;
         
         if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<Die>();
+
+        gameManager.leftWall.enabled = false;
+        gameManager.rightWall.enabled = false;
     }
 
     public override GameStateName Name()
@@ -48,6 +52,7 @@ public class EndRound : AbstractGameState
     private void EndGame()
     {
         Debug.Log("End Game");
-        Application.Quit();
+
+        //Application.Quit();
     }
 }

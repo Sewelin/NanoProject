@@ -44,8 +44,6 @@ public abstract class AbstractAttackState : AbstractControllerState
     }
 
     protected int Dir { get; private set; }
-    protected float timer = 0f;
-    protected StateParameters param;
     protected AnimState animState;
     
     public AbstractAttackState(GameManager gameManager, AbstractController controller, StateParameters param, int dir) :
@@ -53,8 +51,6 @@ public abstract class AbstractAttackState : AbstractControllerState
     {
         this.param = param;
         Dir = dir;
-        //TODO Suppr visual effect
-        //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
     }
     
     ~AbstractAttackState()
@@ -73,8 +69,6 @@ public abstract class AbstractAttackState : AbstractControllerState
             if (!animState.Init)
             {
                 animState.Init = true;
-                //TODO Suppr visual effect
-                //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
             }
         }
         else if (timer < param.timeSteps.x + param.timeSteps.y)
@@ -82,8 +76,6 @@ public abstract class AbstractAttackState : AbstractControllerState
             if (!animState.Body)
             {
                 animState.Body = true;
-                //TODO Suppr visual effect
-                //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.red;
             }
         }
         else if (timer < param.Duration)
@@ -91,14 +83,10 @@ public abstract class AbstractAttackState : AbstractControllerState
             if (!animState.Recovery)
             {
                 animState.Recovery = true;
-                //TODO Suppr visual effect
-                //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.blue;
             }
         }
         else
         {
-            //TODO Suppr visual effect
-            //controller.characterInfo.Character.GetComponent<Renderer>().material.color = Color.white;
             SwitchState();
         }
 

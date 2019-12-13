@@ -4294,6 +4294,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saber1
       objectReference: {fileID: 0}
+    - target: {fileID: 8204974097209998508, guid: 46cc9c317fe27174e8a10ce7be17ac47,
+        type: 3}
+      propertyPath: m_Name
+      value: Saber1
+      objectReference: {fileID: 0}
     - target: {fileID: 8310568747720345398, guid: 46cc9c317fe27174e8a10ce7be17ac47,
         type: 3}
       propertyPath: m_RootOrder
@@ -4318,11 +4323,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204974097209998508, guid: 46cc9c317fe27174e8a10ce7be17ac47,
-        type: 3}
-      propertyPath: m_Name
-      value: Saber
       objectReference: {fileID: 0}
     - target: {fileID: 3781959046500975034, guid: 46cc9c317fe27174e8a10ce7be17ac47,
         type: 3}
