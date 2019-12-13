@@ -47,6 +47,7 @@ namespace AK
         static const AkUniqueID SFX_HIT_KILL = 590114267U;
         static const AkUniqueID SFX_SHEATHE = 3849990799U;
         static const AkUniqueID SFX_VERTICAL_ATTACK = 1708937970U;
+        static const AkUniqueID SFX_VERTICAL_ATTACK_CUT = 3592797123U;
         static const AkUniqueID STOP_BACKWARD_JUMP = 1784816102U;
         static const AkUniqueID STOP_DASH = 3296606572U;
         static const AkUniqueID STOP_VERTICAL_ATTACK = 2607937253U;

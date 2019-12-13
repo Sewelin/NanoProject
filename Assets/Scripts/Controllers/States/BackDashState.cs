@@ -14,7 +14,15 @@ public class BackDashState : AbstractControllerState
         controller.backDashCoolDown = param.Duration + 1f;
         controller.characterInfo.Animator.SetTrigger(BackDash);
     }
-    
+
+    ~BackDashState()
+    {
+        if (timer < param.Duration)
+        {
+            AkSoundEngine.PostEvent("Stop_Backward_Jump", gameManager.soundManager);
+        }
+    }
+
     public override void Update()
     {
         base.Update();
