@@ -10,6 +10,9 @@ public class ShaderCharacterEffect : MonoBehaviour
     float SPEED = 0.05f;
     bool beginConsum;
     public ParticleSystem particle;
+
+    GameManager _gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,8 @@ public class ShaderCharacterEffect : MonoBehaviour
         {
             mat.SetColor("_Color", color);
         }
+
+        _gameManager = FindObjectOfType<GameManager>();
     }
     void RecursiveMaterial(GameObject go)
     {
@@ -53,5 +58,6 @@ public class ShaderCharacterEffect : MonoBehaviour
     public void BeginConsum()
     {
         beginConsum = true;
+        AkSoundEngine.PostEvent("SFX_ConsumeCorps", _gameManager.soundManager);
     }
 }
