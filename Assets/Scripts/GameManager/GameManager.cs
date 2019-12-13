@@ -111,13 +111,16 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        if (StateName == GameStateName.Pause)
+        if (StateName != GameStateName.SetUp)
         {
-            State.Exit();
-        }
-        else
-        {
-            SetState(new Pause(this, State));
+            if (StateName == GameStateName.Pause)
+            {
+                State.Exit();
+            }
+            else
+            {
+                SetState(new Pause(this, State));
+            }
         }
     }
 
