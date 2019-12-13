@@ -11,6 +11,7 @@ public class ZoomScene : MonoBehaviour
     bool _zoom;
     float _progress = 0;
     [SerializeField] private float SPEED = 0.5f;
+    [SerializeField] private float TIMESPEED = 0.4f;
     [SerializeField] private AnimationCurve curve;
     private void Awake()
     {
@@ -41,7 +42,7 @@ public class ZoomScene : MonoBehaviour
             _progress = 0;
         }
         
-        Time.timeScale = (1 - curve.Evaluate(_progress)) * 0.7f + 0.3f;
+        Time.timeScale = (1 - curve.Evaluate(_progress)) * TIMESPEED+ 1-TIMESPEED;
         transform.position = Vector3.Lerp(_originalPos, _zoomTo, curve.Evaluate(_progress));
     }
     public void Activate()
