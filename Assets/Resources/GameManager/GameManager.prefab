@@ -131,7 +131,7 @@ MonoBehaviour:
   character2Model: {fileID: 6131131072245046151, guid: b3285ace6de84fc4abd9acf2b80f9072,
     type: 3}
   verticalAttackParameters:
-    timeSteps: {x: 0.4, y: 0.5, z: 1.833}
+    timeSteps: {x: 0.5, y: 0.5, z: 1.833}
     curve:
       serializedVersion: 2
       m_Curve:
@@ -272,7 +272,12 @@ MonoBehaviour:
   touched: {fileID: 0}
   touchValue: 0
   BACKDASHCOOLDOWN: 0.5
-  ROUNDTIMER: 60
+  ROUNDTIMER: 90
+  BUFFURINGTIMEPERCENT: 80
+  start: {fileID: 0}
+  pause: {fileID: 0}
+  join: {fileID: 0}
+  SPEEDFADE: 5
   roundTimer: 0
   sss: 0
 --- !u!114 &4732815845222031830

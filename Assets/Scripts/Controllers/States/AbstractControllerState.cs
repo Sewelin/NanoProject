@@ -6,13 +6,22 @@ public abstract class AbstractControllerState
     protected readonly GameManager gameManager;
     protected readonly AbstractController controller;
     private ControllerStateName _nextState = ControllerStateName.Idle;
+    protected float timer;
+    protected StateParameters param;
     protected ControllerStateName NextState
     {
         get => _nextState;
         set
         {
-            if (value == ControllerStateName.BackDash && controller.backDashCoolDown > 0f) return;
-            _nextState = value;
+            if (Name() == ControllerStateName.Idle
+                || (Name() == ControllerStateName.Bow &&
+                    timer > gameManager.bowDuration * gameManager.BUFFURINGTIMEPERCENT / 100f)
+                || (Name() != ControllerStateName.Idle && Name() != ControllerStateName.Bow &&
+                    timer > param.Duration * gameManager.BUFFURINGTIMEPERCENT / 100f)
+            )
+            {
+                _nextState = value;
+            }
         }
     }
 

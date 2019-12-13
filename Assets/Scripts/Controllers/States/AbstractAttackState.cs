@@ -44,8 +44,6 @@ public abstract class AbstractAttackState : AbstractControllerState
     }
 
     protected int Dir { get; private set; }
-    protected float timer = 0f;
-    protected StateParameters param;
     protected AnimState animState;
     
     public AbstractAttackState(GameManager gameManager, AbstractController controller, StateParameters param, int dir) :
