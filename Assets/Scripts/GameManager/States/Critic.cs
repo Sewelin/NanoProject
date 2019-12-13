@@ -5,6 +5,7 @@ public class Critic : AbstractGameState
     public Critic(GameManager gameManager, GameObject character) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate(false);
         gameManager.touchCooldown = gameManager.TOUCHCOOLDOWN;
         gameManager.touched = (gameManager.Controller1.characterInfo.Character == character) ? gameManager.Controller1 : gameManager.Controller2;
         gameManager.touchValue = ((gameManager.Controller1.characterInfo.Character == character ?

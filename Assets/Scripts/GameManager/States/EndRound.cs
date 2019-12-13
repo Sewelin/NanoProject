@@ -8,6 +8,7 @@ public class EndRound : AbstractGameState
     public EndRound(GameManager gameManager) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate();
         _winner = gameManager.Controller1.Points > gameManager.Controller2.Points
             ? gameManager.Controller1
             : gameManager.Controller2;
