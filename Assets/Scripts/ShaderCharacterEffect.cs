@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShaderCharacterEffect : MonoBehaviour
 {
-    [SerializeField] Color color;
+    [SerializeField] public Color color;
     List<Material> materials;
     float timerConsum = 1;
     float SPEED = 0.05f;

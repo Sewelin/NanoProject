@@ -6,10 +6,15 @@ public class Die : AbstractAnimation
     private float timer = 0.2f;
     private ShaderCharacterEffect shader;
     private new Rigidbody rigidbody;
+    
     protected override void Awake()
     {
         base.Awake();
-
+        GameObject blood = Instantiate(Resources.Load("Characters/Blood"),transform.position + new Vector3(0,2,1f),Quaternion.Euler(new Vector3(-5,90,0))) as GameObject;
+        Color c = GetComponent<ShaderCharacterEffect>().color;
+        c.a = 1;
+        blood.GetComponent<ParticleSystem>().startColor = c;
+        blood.GetComponent<ParticleSystem>().Play();
         controller.EndDuel();
         gameObject.layer = 10;
         rigidbody = GetComponent<Rigidbody>();  
@@ -39,7 +44,7 @@ public class Die : AbstractAnimation
         rigidbody.velocity = Vector3.zero;
         if (!inPosition)
         {
-            gameManager.CharacterInPosition(controller.PlayerNum);
+            if (gameManager.StateName == GameStateName.EndRound) gameManager.CharacterInPosition(controller.PlayerNum);
             inPosition = true;
         }
     }

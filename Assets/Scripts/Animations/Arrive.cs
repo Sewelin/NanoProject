@@ -40,6 +40,7 @@ public class Arrive : AbstractAnimation
         base.OnDestroy();
         controller.movement = 0f;
         controller.NewDuel();
+        gameObject.layer = 8;
     }
 
     private int Direction()
