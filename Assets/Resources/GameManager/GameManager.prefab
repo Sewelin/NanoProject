@@ -263,7 +263,7 @@ MonoBehaviour:
   touched: {fileID: 0}
   touchValue: 0
   BACKDASHCOOLDOWN: 0.5
-  ROUNDTIMER: 60
+  ROUNDTIMER: 90
   roundTimer: 0
   sss: 0
 --- !u!114 &4732815845222031830
