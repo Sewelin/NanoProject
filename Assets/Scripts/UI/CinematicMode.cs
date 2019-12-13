@@ -4,42 +4,47 @@ using UnityEngine;
 
 public class CinematicMode : MonoBehaviour
 {
-    public bool active = false;
-    Vector2 origin;
+    private bool _active = false;
+    Vector2 _origin;
     float _progress = 0;
-    [SerializeField] float speed;
-    [SerializeField] RectTransform top;
-    [SerializeField] RectTransform bottom;
-    [SerializeField] AnimationCurve curve;
-
+    [SerializeField] float _speed;
+    [SerializeField] RectTransform _top;
+    [SerializeField] RectTransform _bottom;
+    [SerializeField] AnimationCurve _curve;
+    CanvasGroup canvas;
 
     // Start is called before the first frame update
     void Start()
     {
-        top.sizeDelta = new Vector2(0, (Screen.height - (Screen.width * 9 / 21)) / 2);
-        bottom.sizeDelta = top.sizeDelta;
+        canvas = GetComponent<CanvasGroup>();
+        _top.sizeDelta = new Vector2(0, (Screen.height - (Screen.width * 9 / 21)) / 2);
+        _bottom.sizeDelta = _top.sizeDelta;
 
-        top.transform.position = new Vector2(top.transform.position.x, top.transform.position.y + top.sizeDelta.y);
-        bottom.transform.position = new Vector2(bottom.transform.position.x, bottom.transform.position.y - bottom.sizeDelta.y);
-        origin = new Vector2(top.transform.position.y, bottom.transform.position.y);
+        _top.transform.position = new Vector2(_top.transform.position.x, _top.transform.position.y + _top.sizeDelta.y);
+        _bottom.transform.position = new Vector2(_bottom.transform.position.x, _bottom.transform.position.y - _bottom.sizeDelta.y);
+        _origin = new Vector2(_top.transform.position.y, _bottom.transform.position.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (active && _progress < 1)
+        if (_active && _progress < 1)
         {
-            _progress += Time.deltaTime * speed;
+            _progress += Time.deltaTime * _speed;
             if (_progress > 1) _progress = 1;
-            top.transform.position = new Vector2(top.transform.position.x, origin.x - top.sizeDelta.y * curve.Evaluate(_progress));
-            bottom.transform.position = new Vector2(bottom.transform.position.x, origin.y + bottom.sizeDelta.y * curve.Evaluate(_progress));
+            
         }
-        else if(!active && _progress > 0)
+        else if(!_active && _progress > 0)
         {
-            _progress -= Time.deltaTime * speed;
+            _progress -= Time.deltaTime * _speed;
             if (_progress < 0) _progress = 0;
-            top.transform.position = new Vector2(top.transform.position.x, origin.x - top.sizeDelta.y * curve.Evaluate(_progress));
-            bottom.transform.position = new Vector2(bottom.transform.position.x, origin.y + bottom.sizeDelta.y * curve.Evaluate(_progress));
         }
+        canvas.alpha = _progress;
+        _top.transform.position = new Vector2(_top.transform.position.x, _origin.x - _top.sizeDelta.y * _curve.Evaluate(_progress));
+        _bottom.transform.position = new Vector2(_bottom.transform.position.x, _origin.y + _bottom.sizeDelta.y * _curve.Evaluate(_progress));
+    }
+    public void Activate(bool active = true)
+    {
+        _active = active;
     }
 }

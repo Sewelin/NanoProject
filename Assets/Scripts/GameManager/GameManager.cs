@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public CanvasGroup start;
     [SerializeField] public CanvasGroup pause;
     [SerializeField] public CanvasGroup join;
+    [SerializeField] public CinematicMode cinematic;
     public float SPEEDFADE = 5;
 
     [Header("Do Not Touch")]
