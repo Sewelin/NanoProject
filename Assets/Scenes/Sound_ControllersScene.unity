@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999d628ba0c44214abf0da6aac92130c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
+  triggerList: 
   useOtherObject: 0
   actionOnEventType: 0
   curveInterpolation: 4
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999d628ba0c44214abf0da6aac92130c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
+  triggerList: 
   useOtherObject: 0
   actionOnEventType: 0
   curveInterpolation: 4
@@ -1368,7 +1368,7 @@ PrefabInstance:
     - target: {fileID: 5850002812809324578, guid: d8316b947f87a9d4eb230db9eb10c538,
         type: 3}
       propertyPath: triggerList.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5850002812809324578, guid: d8316b947f87a9d4eb230db9eb10c538,
         type: 3}
@@ -1391,6 +1391,71 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5185653654517580171, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272845791451787490, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272845791451787489, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272845791451787503, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457962341766285096, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5691746998701262794, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864505552288648579, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695332488000678686, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 271261084021225985, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924738234924286724, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311349949063289196, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651828673031687823, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927393344375039571, guid: d8316b947f87a9d4eb230db9eb10c538,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728374625176101258, guid: d8316b947f87a9d4eb230db9eb10c538,
         type: 3}
       propertyPath: triggerList.Array.size
       value: 0
