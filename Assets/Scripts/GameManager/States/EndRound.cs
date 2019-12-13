@@ -20,9 +20,6 @@ public class EndRound : AbstractGameState
         ++_winner.RoundWon;
         
         if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<Die>();
-
-        gameManager.leftWall.enabled = false;
-        gameManager.rightWall.enabled = false;
     }
 
     public override GameStateName Name()
