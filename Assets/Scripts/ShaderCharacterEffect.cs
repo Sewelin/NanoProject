@@ -7,8 +7,9 @@ public class ShaderCharacterEffect : MonoBehaviour
     [SerializeField] Color color;
     List<Material> materials;
     float timerConsum = 1;
-    [SerializeField] float SPEED = 0.2f;
+    float SPEED = 0.05f;
     bool beginConsum;
+    public ParticleSystem particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,10 @@ public class ShaderCharacterEffect : MonoBehaviour
             {
 
                 mat.SetFloat("_Progress", 1-timerConsum);
+                if(timerConsum < 0.5f)
+                {
+                    particle.Stop();
+                }
             }
             if (timerConsum < 0) Destroy(gameObject);
 
