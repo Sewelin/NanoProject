@@ -36,11 +36,14 @@ namespace AK
         static const AkUniqueID PLAYER_TWO_FORWARD = 184927275U;
         static const AkUniqueID PLAYER_TWO_FORWARD_PREZ = 1343735513U;
         static const AkUniqueID PLAYER_TWO_IDLE = 1430148754U;
+        static const AkUniqueID PONE_KILL_TAIKO = 1421009485U;
+        static const AkUniqueID PTWO_KILL_TAIKO = 869366883U;
         static const AkUniqueID SFX_BACKWARD_JUMP = 20042657U;
         static const AkUniqueID SFX_CONSUMECORPS = 4231318760U;
         static const AkUniqueID SFX_DASH = 1804139809U;
         static const AkUniqueID SFX_DEATH = 777164721U;
         static const AkUniqueID SFX_HIT_DRAW = 2410652377U;
+        static const AkUniqueID SFX_HIT_DRAW_TAIKO = 3272787864U;
         static const AkUniqueID SFX_HIT_KILL = 590114267U;
         static const AkUniqueID SFX_SHEATHE = 3849990799U;
         static const AkUniqueID SFX_VERTICAL_ATTACK = 1708937970U;
