@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca65de6b3103f64fbc4e6c6bf1a4771, type: 3}
+  m_Name: A2143CCC-2328-40C4-924A-EFB81AAAF3E3
+  m_EditorClassIdentifier: 
+  objectName: Menu_UpDown
+  id: 2587230380
+  guid: A2143CCC-2328-40C4-924A-EFB81AAAF3E3

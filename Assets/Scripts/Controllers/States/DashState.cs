@@ -2,6 +2,7 @@
 
 public class DashState : AbstractAttackState
 {
+    public GameObject soundManager;
     private static readonly int AttDash = Animator.StringToHash("AttDash");
 
     public DashState(GameManager gameManager, AbstractController controller, int dir) :
