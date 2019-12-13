@@ -10,7 +10,11 @@ public class Die : AbstractAnimation
     protected override void Awake()
     {
         base.Awake();
-        Instantiate(Resources.Load("Characters/Blood"),transform);
+        GameObject blood = Instantiate(Resources.Load("Characters/Blood"),transform.position + new Vector3(0,2,1f),Quaternion.Euler(new Vector3(-5,90,0))) as GameObject;
+        Color c = GetComponent<ShaderCharacterEffect>().color;
+        c.a = 1;
+        blood.GetComponent<ParticleSystem>().startColor = c;
+        blood.GetComponent<ParticleSystem>().Play();
         controller.EndDuel();
         gameObject.layer = 10;
         rigidbody = GetComponent<Rigidbody>();  
