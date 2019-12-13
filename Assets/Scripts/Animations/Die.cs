@@ -7,6 +7,7 @@ public class Die : AbstractAnimation
     protected override void Awake()
     {
         base.Awake();
+        controller.EndDuel();
         gameObject.layer = 10;
         rigidbody = GetComponent<Rigidbody>();
         transform.position += new Vector3(0,0,0.5f);
