@@ -69,26 +69,38 @@ public class BackDashState : AbstractControllerState
     
     public override void OnVerticalAttack()
     {
-        controller.characterInfo.Animator.SetBool(AttVerticalCut, true);
         NextState = ControllerStateName.VerticalAttack;
+        if (NextState == ControllerStateName.VerticalAttack)
+        {
+            controller.characterInfo.Animator.SetBool(AttVerticalCut, true);
+        }
     }
 
     public override void OnDashAttack()
     {
-        controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
         NextState = ControllerStateName.DashAttack;
+        if (NextState == ControllerStateName.DashAttack)
+        {
+            controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
+        }
     }
 
     public override void OnBackDash()
     {
         if (controller.backDashCoolDown > 0f) return;
-        controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
         NextState = ControllerStateName.BackDash;
+        if (NextState == ControllerStateName.BackDash)
+        {
+            controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
+        }
     }
 
     public override void OnBow()
     {
-        controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
         NextState = ControllerStateName.Bow;
+        if (NextState == ControllerStateName.Bow)
+        {
+            controller.characterInfo.Animator.SetBool(AttVerticalCut, false);
+        }
     }
 }
