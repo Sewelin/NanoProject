@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0.5330188, g: 0.67371583, b: 1, a: 0}
+  particle: {fileID: 0}
 --- !u!1001 &7796804868591785987
 PrefabInstance:
   m_ObjectHideFlags: 0
