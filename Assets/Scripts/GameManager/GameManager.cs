@@ -47,8 +47,8 @@ public class GameManager : MonoBehaviour
     public Transform posReposition2;
     
     [Header("Invisible Walls")]
-    public Collider leftWall;
-    public Collider rightWall;
+    public GameObject leftWall;
+    public GameObject rightWall;
 
     // Sounds
     [Header("Sounds")]
