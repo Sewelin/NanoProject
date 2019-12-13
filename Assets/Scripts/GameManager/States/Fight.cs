@@ -5,6 +5,7 @@ public class Fight : AbstractGameState
     public Fight(GameManager gameManager) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate(false);
     }
 
     public override GameStateName Name()

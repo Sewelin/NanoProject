@@ -10,7 +10,7 @@ public class Die : AbstractAnimation
     protected override void Awake()
     {
         base.Awake();
-        Instantiate(Resources.Load("Characters/Blood"),transform);
+        
         controller.EndDuel();
         gameObject.layer = 10;
         rigidbody = GetComponent<Rigidbody>();  

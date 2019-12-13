@@ -5,6 +5,7 @@ public class NewRound : AbstractGameState
     public NewRound(GameManager gameManager) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate();
         gameManager.Controller1.NewCharacter();
         gameManager.Controller2.NewCharacter();
         gameManager.RoundTimer = gameManager.ROUNDTIMER;

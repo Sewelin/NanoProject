@@ -5,6 +5,7 @@ public class Critic : AbstractGameState
     public Critic(GameManager gameManager, GameObject character) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate(false);
         gameManager.touchCooldown = gameManager.TOUCHCOOLDOWN;
         gameManager.touched = (gameManager.Controller1.characterInfo.Character == character) ? gameManager.Controller1 : gameManager.Controller2;
         gameManager.touchValue = ((gameManager.Controller1.characterInfo.Character == character ?
@@ -78,7 +79,7 @@ public class Critic : AbstractGameState
             AkSoundEngine.PostEvent("SFX_Hit_Draw_Taiko", gameManager.soundManager);
         }
         // if new attack value is greater than the first
-        else
+        else if (actualTouchValue > gameManager.touchValue)
         {
             gameManager.touched = (gameManager.touched == gameManager.Controller1) ? gameManager.Controller2 : gameManager.Controller1;
             Kill(gameManager.touched);
