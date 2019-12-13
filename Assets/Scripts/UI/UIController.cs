@@ -37,8 +37,7 @@ public class UIController : MonoBehaviour
 
     private void Update()
     {
-        
-        if (_isMain) Debug.Log(progress);
+       
         if(_isMain && progress < 1)
         {
             progress += (float)(DateTime.Now - time).TotalSeconds * speed;
