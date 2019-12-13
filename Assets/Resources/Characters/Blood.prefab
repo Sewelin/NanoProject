@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477188666561396239}
-  m_LocalRotation: {x: -0.030843573, y: 0.70643383, z: 0.030843576, w: 0.7064338}
+  m_LocalRotation: {x: -0.055478908, y: 0.704927, z: 0.055478916, w: 0.70492697}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -5, y: 90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: -9, y: 90.00001, z: 0}
 --- !u!198 &1562096084844889376
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -41,14 +41,14 @@ ParticleSystem:
   m_GameObject: {fileID: 1477188666561396239}
   serializedVersion: 6
   lengthInSec: 20
-  simulationSpeed: 0.2
+  simulationSpeed: 0.3
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -168,7 +168,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -600,13 +600,13 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 20
+    maxNumParticles: 30
     size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.0001
+      value: 0.21
       mode: 0
       spread: 0
       speed:
@@ -3799,7 +3799,7 @@ ParticleSystem:
     radiusScale: 0.0001
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 55
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
