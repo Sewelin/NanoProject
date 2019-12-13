@@ -156,6 +156,8 @@ public class GameManager : MonoBehaviour
     public void Touch(GameObject character)
     {
         State.Touch(character);
+        Camera.main.GetComponent<ZoomScene>().Activate();
+        cinematic.Activate();
     }
 
     public void CharacterInPosition(int numCharacter)
