@@ -5,6 +5,7 @@ public class Reset : AbstractGameState
     public Reset(GameManager gameManager) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate();
         if (gameManager.Controller1.characterInfo.characterAssigned)
         {
             if (gameManager.Controller1.characterInfo.Character.transform.position.x >

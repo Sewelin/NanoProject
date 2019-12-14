@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public CanvasGroup start;
     [SerializeField] public CanvasGroup pause;
     [SerializeField] public CanvasGroup join;
+    [SerializeField] public CinematicMode cinematic;
     public float SPEEDFADE = 5;
 
     [Header("Do Not Touch")]
@@ -110,13 +111,16 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        if (StateName == GameStateName.Pause)
+        if (StateName != GameStateName.SetUp)
         {
-            State.Exit();
-        }
-        else
-        {
-            SetState(new Pause(this, State));
+            if (StateName == GameStateName.Pause)
+            {
+                State.Exit();
+            }
+            else
+            {
+                SetState(new Pause(this, State));
+            }
         }
     }
 
@@ -152,6 +156,8 @@ public class GameManager : MonoBehaviour
     public void Touch(GameObject character)
     {
         State.Touch(character);
+        Camera.main.GetComponent<ZoomScene>().Activate();
+        cinematic.Activate();
     }
 
     public void CharacterInPosition(int numCharacter)
