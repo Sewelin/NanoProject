@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
-		<SourceFilesRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Boulot\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
+		<SourceFilesRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Work in Progress\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -62,6 +62,8 @@
 			<Path>NanoProjet_SFX.bnk</Path>
 			<IncludedEvents>
 				<Event Id="711535685" Name="ATM_Rounds" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\ATM_Rounds" DurationType="Infinite"/>
+				<Event Id="72471561" Name="FB_EndGame" ObjectPath="\Events\NanoProjet\Music\FB_EndGame" DurationType="OneShot" DurationMin="11.666667" DurationMax="11.666667"/>
+				<Event Id="2439457397" Name="FB_EndRound" ObjectPath="\Events\NanoProjet\Music\FB_EndRound" DurationType="OneShot" DurationMin="6.000000" DurationMax="6.000000"/>
 				<Event Id="2338023994" Name="FB_Horns_Time" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\FB_Horns_Time" DurationType="Infinite"/>
 				<Event Id="2121424417" Name="Launch_Round" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Launch_Round" DurationType="Infinite"/>
 				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Menu_Atmos" DurationType="Infinite"/>
@@ -279,6 +281,10 @@
 					<Path>SFX\NanoProjet_InGame_EndSegment_Drums_Test_9B96ECC7.wem</Path>
 					<PrefetchSize>2704</PrefetchSize>
 				</File>
+				<File Id="383230011" Language="SFX">
+					<ShortName>SFX_EndingRounds_Flute_v2.wav</ShortName>
+					<Path>SFX\SFX_EndingRounds_Flute_v2_D84A43B6.wem</Path>
+				</File>
 				<File Id="402947422" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
 					<Path>SFX\Footstep_Test_644374B5.wem</Path>
@@ -339,6 +345,10 @@
 				<File Id="527546804" Language="SFX">
 					<ShortName>SFX_Verticall_Attack_03.wav</ShortName>
 					<Path>SFX\SFX_Verticall_Attack_03_7E67EFE9.wem</Path>
+				</File>
+				<File Id="537376062" Language="SFX">
+					<ShortName>SFX_EndingGame_Flute.wav</ShortName>
+					<Path>SFX\SFX_EndingGame_Flute_6296B0F9.wem</Path>
 				</File>
 				<File Id="557382835" Language="SFX">
 					<ShortName>SFX_Hit_Draw_01.wav</ShortName>
@@ -555,6 +565,10 @@
 					<ShortName>Taiko_Hit.wav</ShortName>
 					<Path>SFX\Taiko_Hit_CA630949.wem</Path>
 				</File>
+				<File Id="918848933" Language="SFX">
+					<ShortName>SFX_EndingRounds.wav</ShortName>
+					<Path>SFX\SFX_EndingRounds_6296B0F9.wem</Path>
+				</File>
 				<File Id="920326690" Language="SFX">
 					<ShortName>SFX_Bowing.wav</ShortName>
 					<Path>SFX\SFX_Bowing_6296B0F9.wem</Path>
@@ -586,6 +600,10 @@
 				<File Id="971046605" Language="SFX">
 					<ShortName>SFX_PlayerDeath_02.wav</ShortName>
 					<Path>SFX\SFX_PlayerDeath_02_6296B0F9.wem</Path>
+				</File>
+				<File Id="973438383" Language="SFX">
+					<ShortName>SFX_EndingGame_Drums.wav</ShortName>
+					<Path>SFX\SFX_EndingGame_Drums_6296B0F9.wem</Path>
 				</File>
 				<File Id="987090694" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>

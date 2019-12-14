@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID ATM_ROUNDS = 711535685U;
+        static const AkUniqueID FB_ENDGAME = 72471561U;
+        static const AkUniqueID FB_ENDROUND = 2439457397U;
         static const AkUniqueID FB_HORNS_TIME = 2338023994U;
         static const AkUniqueID LAUNCH_ROUND = 2121424417U;
         static const AkUniqueID MENU_ATMOS = 789497435U;
