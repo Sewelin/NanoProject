@@ -151,6 +151,7 @@ namespace AK
         static const AkUniqueID RTPC_PTWO_ARMORSETS = 2322506118U;
         static const AkUniqueID RTPC_ROUNDCOUNT = 1364308078U;
         static const AkUniqueID RTPC_SFXVOLUME = 2644490154U;
+        static const AkUniqueID RTPC_SLOWMOTION = 2455146350U;
         static const AkUniqueID RTPC_TIMER = 2286992438U;
     } // namespace GAME_PARAMETERS
 
@@ -171,7 +172,6 @@ namespace AK
     {
         static const AkUniqueID AMBIENT = 77978275U;
         static const AkUniqueID ATMOS = 3034623661U;
-        static const AkUniqueID DEATH = 779278001U;
         static const AkUniqueID INGAME = 984691642U;
         static const AkUniqueID M_MENU = 2338369940U;
         static const AkUniqueID M_PLAY = 1992326939U;
@@ -189,7 +189,7 @@ namespace AK
         static const AkUniqueID PLAYERS = 2188949101U;
         static const AkUniqueID REVERBS = 3545700988U;
         static const AkUniqueID SFX = 393239870U;
-        static const AkUniqueID SWORD = 2454616260U;
+        static const AkUniqueID TAIKOS = 3106025822U;
         static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
