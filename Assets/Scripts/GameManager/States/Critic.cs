@@ -78,10 +78,13 @@ public class Critic : AbstractGameState
             AkSoundEngine.PostEvent("SFX_Hit_Draw", gameManager.soundManager);
             AkSoundEngine.PostEvent("SFX_Hit_Draw_Taiko", gameManager.soundManager);
         }
-        // if new attack value is greater than the first
-        else if (actualTouchValue > gameManager.touchValue)
+        else 
         {
-            gameManager.touched = (gameManager.touched == gameManager.Controller1) ? gameManager.Controller2 : gameManager.Controller1;
+            // if new attack value is greater than the first, reverse touched
+            if (actualTouchValue > gameManager.touchValue)
+            {
+                gameManager.touched = (gameManager.touched == gameManager.Controller1) ? gameManager.Controller2 : gameManager.Controller1;
+            }
             Kill(gameManager.touched);
             PlayKillSound(gameManager.touched);
         }
