@@ -12,6 +12,8 @@ public class UIController : MonoBehaviour
     UIPosition _uiPosition;
     GameManager _gameMangager;
 
+    [SerializeField] CanvasGroup _globalCanvas;
+    [SerializeField] CanvasGroup _tutoCanvas;
     // Sounds
     [Header("Sounds")]
     public GameObject menuSoundManager;
@@ -24,6 +26,9 @@ public class UIController : MonoBehaviour
 
     [SerializeField] bool _isMain = true;
     float progress = 1;
+
+    [SerializeField] bool _isGlobal = true;
+    float globalProgress = 1;
 
     public UIPosition UiPosition { get => _uiPosition; set => _uiPosition = value; }
     public RectTransform GlobalPanel { get => _globalPanel; set => _globalPanel = value; }
@@ -51,11 +56,33 @@ public class UIController : MonoBehaviour
             if (progress <= 0) progress = 0;
             main.alpha = curve.Evaluate(progress);
         }
+        if (_isGlobal && globalProgress < 1)
+        {
+            globalProgress += (float)(DateTime.Now - time).TotalSeconds * speed;
+            if (globalProgress >= 1) globalProgress = 1;
+            _globalCanvas.alpha = curve.Evaluate(globalProgress);
+            _tutoCanvas.alpha = 1 - _globalCanvas.alpha;
+        }
+        if (!_isGlobal && globalProgress > 0)
+        {
+            globalProgress -= (float)(DateTime.Now - time).TotalSeconds * speed;
+            if (globalProgress <= 0) globalProgress = 0;
+            _globalCanvas.alpha = curve.Evaluate(globalProgress);
+            _tutoCanvas.alpha = 1 - _globalCanvas.alpha;
+        }
+
         time = DateTime.Now;
     }
     
 
-
+    public void Tutoriel(bool active = false)
+    {
+        _isGlobal = active;
+        _globalCanvas.interactable = _isGlobal;
+        _globalCanvas.blocksRaycasts = _isGlobal;
+        _tutoCanvas.interactable = !_isGlobal;
+        _tutoCanvas.blocksRaycasts = !_isGlobal;
+    }
     public void StartButton(bool isMain)
     {
         _isMain = isMain;
