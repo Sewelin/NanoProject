@@ -15,7 +15,6 @@ namespace AK
     {
         static const AkUniqueID ATM_ROUNDS = 711535685U;
         static const AkUniqueID FB_HORNS_TIME = 2338023994U;
-        static const AkUniqueID INGAME_MUSIC = 2613926250U;
         static const AkUniqueID LAUNCH_ROUND = 2121424417U;
         static const AkUniqueID MENU_ATMOS = 789497435U;
         static const AkUniqueID MENU_BACK = 3063554414U;
@@ -68,17 +67,6 @@ namespace AK
             } // namespace SWITCH
         } // namespace SWITCH_HORNS
 
-        namespace SWITCH_LASTTOEND
-        {
-            static const AkUniqueID GROUP = 3766357930U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID END = 529726532U;
-                static const AkUniqueID LAST = 489968869U;
-            } // namespace SWITCH
-        } // namespace SWITCH_LASTTOEND
-
         namespace SWITCH_PAUSE
         {
             static const AkUniqueID GROUP = 2902274630U;
@@ -128,17 +116,16 @@ namespace AK
             } // namespace SWITCH
         } // namespace SWITCH_SEGMENTS
 
-        namespace SWITCH_TRANSITIONS
+        namespace SWITCH_SEGTOEND
         {
-            static const AkUniqueID GROUP = 1625512016U;
+            static const AkUniqueID GROUP = 955508127U;
 
             namespace SWITCH
             {
-                static const AkUniqueID TRANSITION_01 = 2728638438U;
-                static const AkUniqueID TRANSITION_02 = 2728638437U;
-                static const AkUniqueID TRANSITION_03 = 2728638436U;
+                static const AkUniqueID END = 529726532U;
+                static const AkUniqueID SEG = 376462292U;
             } // namespace SWITCH
-        } // namespace SWITCH_TRANSITIONS
+        } // namespace SWITCH_SEGTOEND
 
     } // namespace SWITCHES
 
