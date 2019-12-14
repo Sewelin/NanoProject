@@ -20,22 +20,22 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 12
@@ -4458,6 +4458,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 560033618084523424, guid: 246644c2fd6b16c4591b967159507319,
+        type: 3}
+      propertyPath: menuSoundManager
+      value: 
+      objectReference: {fileID: 998482681}
     - target: {fileID: 560033618124760449, guid: 246644c2fd6b16c4591b967159507319,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -4503,11 +4508,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.049926758
       objectReference: {fileID: 0}
-    - target: {fileID: 560033618084523424, guid: 246644c2fd6b16c4591b967159507319,
-        type: 3}
-      propertyPath: menuSoundManager
-      value: 
-      objectReference: {fileID: 998482681}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 246644c2fd6b16c4591b967159507319, type: 3}
 --- !u!225 &948636272 stripped
@@ -8450,6 +8450,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
         type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 907789849}
@@ -8498,6 +8503,111 @@ PrefabInstance:
       propertyPath: bambou2.Array.data[0]
       value: 
       objectReference: {fileID: 4938635138167298337}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: verticalAttackParameters.timeSteps.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: verticalAttackParameters.timeSteps.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[1].time
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[1].inSlope
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[1].outSlope
+      value: 10.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[2].time
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[1].tangentMode
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[2].inSlope
+      value: 10.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[2].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[2].tangentMode
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[3].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: backDashParameters.curve.m_Curve.Array.data[3].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: replaceWalkingSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: cineWalkingSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: dashAttackParameters.speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4732815846588699636, guid: 7dc475b56d7c7d6458667b8bed708463,
         type: 3}
       propertyPath: m_LocalPosition.x
