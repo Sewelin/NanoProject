@@ -1,7 +1,6 @@
 using UnityEngine;
 public class BowState : AbstractControllerState
 {
-    private float _timer;
     private readonly float _duration;
     private static readonly int Bow = Animator.StringToHash("Bow");
 
@@ -16,9 +15,9 @@ public class BowState : AbstractControllerState
     public override void Update()
     {
         base.Update();
-        _timer += Time.deltaTime;
+        timer += Time.deltaTime;
         
-        if (_timer > _duration)
+        if (timer > _duration)
         {
             controller.SetState(new IdleState(gameManager, controller));
         }

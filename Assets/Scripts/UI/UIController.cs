@@ -12,6 +12,12 @@ public class UIController : MonoBehaviour
     UIPosition _uiPosition;
     GameManager _gameMangager;
 
+    // Sounds
+    [Header("Sounds")]
+    public GameObject menuSoundManager;
+    public Slider sliderMusic;
+    public Slider sliderSFX;
+
     [SerializeField] CanvasGroup main;
     [SerializeField] AnimationCurve curve;
     [SerializeField] float speed;
@@ -32,8 +38,7 @@ public class UIController : MonoBehaviour
 
     private void Update()
     {
-        
-        if (_isMain) Debug.Log(progress);
+       
         if(_isMain && progress < 1)
         {
             progress += (float)(DateTime.Now - time).TotalSeconds * speed;
@@ -53,10 +58,13 @@ public class UIController : MonoBehaviour
 
     public void StartButton(bool isMain)
     {
+        Debug.Log("Start");
         _isMain = isMain;
         main.interactable = _isMain;
         main.blocksRaycasts = _isMain;
         ActivateInputManager();
+
+        AkSoundEngine.PostEvent("Menu_Play", menuSoundManager);
 
     }
     public void ResumeButton(bool isMain)
@@ -74,18 +82,22 @@ public class UIController : MonoBehaviour
     public void OptionButton()
     {
         _uiPosition.Next(1);
+        AkSoundEngine.PostEvent("Menu_Select", menuSoundManager);
     }
     public void MainButton()
     {
         _uiPosition.Next(0);
+        AkSoundEngine.PostEvent("Menu_Back", menuSoundManager);
     }
     public void CreditButton()
     {
         _uiPosition.Next(-1);
+        AkSoundEngine.PostEvent("Menu_Select", menuSoundManager);
     }
     public void ExitButton()
     {
         Debug.Log("Exit");
+        AkSoundEngine.PostEvent("Menu_Quit", menuSoundManager);
         Application.Quit();
     }
     
@@ -94,6 +106,14 @@ public class UIController : MonoBehaviour
         _gameMangager.GetComponent<PlayerInputManager>().enabled = true;
     }
 
+    public void OnValueChangeMusic()
+    {
+        AkSoundEngine.SetRTPCValue("RTPC_MusicVolume", sliderMusic.value*100f);
+    }
 
+    public void OnValueChangeSFX()
+    {
+        AkSoundEngine.SetRTPCValue("RTPC_SFXVolume", sliderSFX.value * 100f);
+    }
 
 }

@@ -55,7 +55,6 @@ public class UIPosition : MonoBehaviour
         {
             _lastpos = _goto;
             _goto = next;
-            Debug.Log("move");
             _move = true;
             _progress = 0;
         }

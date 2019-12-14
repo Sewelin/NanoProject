@@ -8,6 +8,7 @@ public class EndRound : AbstractGameState
     public EndRound(GameManager gameManager) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate();
         _winner = gameManager.Controller1.Points > gameManager.Controller2.Points
             ? gameManager.Controller1
             : gameManager.Controller2;
@@ -17,12 +18,9 @@ public class EndRound : AbstractGameState
 
 
         if (_winner.characterInfo.characterAssigned) _winner.characterInfo.Character.AddComponent<Leave>();
-        ++_winner.roundWon;
+        ++_winner.RoundWon;
         
-        if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<Die>();
-
-        gameManager.leftWall.enabled = false;
-        gameManager.rightWall.enabled = false;
+        if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<FallDown>();
     }
 
     public override GameStateName Name()
@@ -35,7 +33,7 @@ public class EndRound : AbstractGameState
         base.Update();
         if (characterInPosition[0] && characterInPosition[1])
         {
-            if (_winner.roundWon == 3 || _looser.roundWon == 3)
+            if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
             {
                 EndGame();
             }

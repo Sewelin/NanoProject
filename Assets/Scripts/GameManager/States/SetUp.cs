@@ -8,6 +8,7 @@ public class SetUp : AbstractGameState
     public SetUp(GameManager gameManager) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate(false);
         inputManager = gameManager.GetComponent<PlayerInputManager>();
     }
 
@@ -21,14 +22,14 @@ public class SetUp : AbstractGameState
         base.Update();
         if(joinProgress < 1 && inputManager.enabled)
         {
-            
+            //gameManager.cinematic.Activate();
             joinProgress += Time.deltaTime * 5;
             if (joinProgress > 1) joinProgress = 1;
             gameManager.join.alpha = joinProgress;
         }
         if (gameManager.Controller1Assigned)
         {
-            gameManager.join.transform.GetChild(0).GetComponent<Text>().text = "Player 2, press A to join the battlefield";
+            gameManager.join.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Player 2, press A to join the battlefield";
         }
 
         if (gameManager.Controller1Assigned && gameManager.Controller2Assigned)

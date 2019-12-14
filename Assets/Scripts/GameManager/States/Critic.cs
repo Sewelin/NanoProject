@@ -5,6 +5,7 @@ public class Critic : AbstractGameState
     public Critic(GameManager gameManager, GameObject character) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate(false);
         gameManager.touchCooldown = gameManager.TOUCHCOOLDOWN;
         gameManager.touched = (gameManager.Controller1.characterInfo.Character == character) ? gameManager.Controller1 : gameManager.Controller2;
         gameManager.touchValue = ((gameManager.Controller1.characterInfo.Character == character ?
@@ -44,7 +45,21 @@ public class Critic : AbstractGameState
         if (gameManager.touchCooldown < 0)
         {
             Kill(gameManager.touched);
+            PlayKillSound(gameManager.touched);
             Exit();
+        }
+    }
+
+    private void PlayKillSound(AbstractController killed)
+    {
+        AkSoundEngine.PostEvent("SFX_Hit_Kill", gameManager.soundManager);
+        if (killed.PlayerNum == 1)
+        {
+            AkSoundEngine.PostEvent("PONE_Kill_Taiko", gameManager.soundManager);
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("PTWO_Kill_Taiko", gameManager.soundManager);
         }
     }
 
@@ -60,12 +75,15 @@ public class Critic : AbstractGameState
         if (actualTouchValue == gameManager.touchValue) { 
             Kill(gameManager.Controller1);
             Kill(gameManager.Controller2);
+            AkSoundEngine.PostEvent("SFX_Hit_Draw", gameManager.soundManager);
+            AkSoundEngine.PostEvent("SFX_Hit_Draw_Taiko", gameManager.soundManager);
         }
         // if new attack value is greater than the first
-        else
+        else if (actualTouchValue > gameManager.touchValue)
         {
             gameManager.touched = (gameManager.touched == gameManager.Controller1) ? gameManager.Controller2 : gameManager.Controller1;
             Kill(gameManager.touched);
+            PlayKillSound(gameManager.touched);
         }
 
         Exit();

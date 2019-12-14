@@ -44,10 +44,8 @@ public abstract class AbstractAttackState : AbstractControllerState
     }
 
     protected int Dir { get; private set; }
-    protected float timer = 0f;
-    protected StateParameters param;
     protected AnimState animState;
-    
+
     public AbstractAttackState(GameManager gameManager, AbstractController controller, StateParameters param, int dir) :
         base(gameManager, controller)
     {
@@ -59,6 +57,17 @@ public abstract class AbstractAttackState : AbstractControllerState
     {
         controller.characterInfo.Saber1.GetComponent<Collider>().enabled = false;
         controller.characterInfo.Saber2.GetComponent<Collider>().enabled = false;
+
+        if (timer < param.Duration)
+        {
+            if (Name() == ControllerStateName.DashAttack)
+            {
+                AkSoundEngine.PostEvent("Stop_Dash", gameManager.soundManager);
+            } else
+            {
+                AkSoundEngine.PostEvent("Stop_Vertical", gameManager.soundManager);
+            }
+        }
     }
     
     public override void Update()
@@ -140,7 +149,6 @@ public abstract class AbstractAttackState : AbstractControllerState
 
     public override void OnBow()
     {
-        Exit();
         NextState = ControllerStateName.Bow;
     }
 }

@@ -47,12 +47,16 @@ public class GameManager : MonoBehaviour
     public Transform posReposition2;
     
     [Header("Invisible Walls")]
-    public Collider leftWall;
-    public Collider rightWall;
+    public GameObject leftWall;
+    public GameObject rightWall;
 
     // Sounds
     [Header("Sounds")]
     public GameObject soundManager;
+    
+    // Lights
+    [Header("Lights")]
+    public Animator lightAnimator;
 
     // Timers and cooldowns
     [Header("Max timers")]
@@ -64,12 +68,15 @@ public class GameManager : MonoBehaviour
     public float BACKDASHCOOLDOWN = 0.5f;
     
     public float ROUNDTIMER = 60;
+
+    public float BUFFURINGTIMEPERCENT = 80f;
+    
     [Header("User Interfaces")]
     [SerializeField] public CanvasGroup start;
     [SerializeField] public CanvasGroup pause;
     [SerializeField] public CanvasGroup join;
+    [SerializeField] public CinematicMode cinematic;
     public float SPEEDFADE = 5;
-
 
     [Header("Do Not Touch")]
     [SerializeField] private float roundTimer;
@@ -108,13 +115,16 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        if (StateName == GameStateName.Pause)
+        if (StateName != GameStateName.SetUp)
         {
-            State.Exit();
-        }
-        else
-        {
-            SetState(new Pause(this, State));
+            if (StateName == GameStateName.Pause)
+            {
+                State.Exit();
+            }
+            else
+            {
+                SetState(new Pause(this, State));
+            }
         }
     }
 
@@ -150,6 +160,8 @@ public class GameManager : MonoBehaviour
     public void Touch(GameObject character)
     {
         State.Touch(character);
+        Camera.main.GetComponent<ZoomScene>().Activate();
+        cinematic.Activate();
     }
 
     public void CharacterInPosition(int numCharacter)
