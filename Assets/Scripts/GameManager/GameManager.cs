@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour
     // Sounds
     [Header("Sounds")]
     public GameObject soundManager;
+    
+    // Lights
+    [Header("Lights")]
+    public Animator lightAnimator;
 
     // Timers and cooldowns
     [Header("Max timers")]
