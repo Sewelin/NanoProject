@@ -23,7 +23,7 @@ public class RecursiveBurn : MonoBehaviour
     void Update()
     {
         if(_start && _progress < 1) { 
-            _progress += Time.deltaTime * 0.2f;
+            _progress += Time.deltaTime * 0.05f;
             if(_progress > 0.3f)
             {
 
