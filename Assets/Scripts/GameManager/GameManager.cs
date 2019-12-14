@@ -79,13 +79,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] public CanvasGroup join;
     [SerializeField] public CinematicMode cinematic;
     public float SPEEDFADE = 5;
-
-    [Header("Do Not Touch")]
-    [SerializeField] private float roundTimer;
+    
     [Header("Bambou")]
     public RecursiveBurn[] bambou1;
     public RecursiveBurn[] bambou2;
 
+    [HideInInspector] public Vibration vibration;
+    
+    [Header("Do Not Touch")]
+    [SerializeField] private float roundTimer;
 
     public float RoundTimer {
         get => roundTimer;
@@ -104,6 +106,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         SetState(new SetUp(this));
+        vibration = gameObject.AddComponent<Vibration>();
     }
 
     private void Start()

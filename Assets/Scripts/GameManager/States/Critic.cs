@@ -11,6 +11,8 @@ public class Critic : AbstractGameState
         gameManager.touchValue = ((gameManager.Controller1.characterInfo.Character == character ?
                            gameManager.Controller2 :
                            gameManager.Controller1).StateName == ControllerStateName.VerticalAttack) ? 2 : 1;
+        gameManager.vibration.Begin(gameManager.Controller1);
+        gameManager.vibration.Begin(gameManager.Controller2);
     }
 
     public override GameStateName Name()
