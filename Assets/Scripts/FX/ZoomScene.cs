@@ -41,7 +41,8 @@ public class ZoomScene : MonoBehaviour
             _zoom = false;
             _progress = 0;
         }
-        
+
+        AkSoundEngine.SetRTPCValue("RTPC_SlowMotion", curve.Evaluate(_progress));
         Time.timeScale = (1 - curve.Evaluate(_progress)) * TIMESPEED+ 1-TIMESPEED;
         transform.position = Vector3.Lerp(_originalPos, _zoomTo, curve.Evaluate(_progress));
     }
