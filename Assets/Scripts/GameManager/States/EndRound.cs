@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndRound : AbstractGameState
 {
@@ -60,6 +61,6 @@ public class EndRound : AbstractGameState
 
     private void EndGame()
     {
-        gameManager.Pause();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
