@@ -19,19 +19,23 @@ public class EndRound : AbstractGameState
         
         ++_winner.RoundWon;
 
-
-        if (_winner.characterInfo.characterAssigned)
+        if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
         {
-            if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
+            AkSoundEngine.PostEvent("FB_EndGame", gameManager.soundManager);
+            if (_winner.characterInfo.characterAssigned)
             {
                 _winner.characterInfo.Character.AddComponent<LeaveEnd>();
             }
-            else
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("FB_EndRound", gameManager.soundManager);
+            if (_winner.characterInfo.characterAssigned)
             {
                 _winner.characterInfo.Character.AddComponent<Leave>();
             }
         }
-        
+
         if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<FallDown>();
     }
 
