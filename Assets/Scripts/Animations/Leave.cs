@@ -15,7 +15,7 @@ public class Leave : AbstractAnimation
     {
         base.Awake();
         controller.EndDuel();
-        _speed = gameManager.walkingSpeed;
+        _speed = gameManager.cineWalkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posSpawner1 : gameManager.posSpawner2;
         _direction = Direction();
         gameObject.layer = 10;
