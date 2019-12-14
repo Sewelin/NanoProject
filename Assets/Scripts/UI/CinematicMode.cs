@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CinematicMode : MonoBehaviour
 {
+    DateTime time;
     private bool _active = false;
     Vector2 _origin;
     float _progress = 0;
@@ -30,18 +33,19 @@ public class CinematicMode : MonoBehaviour
     {
         if (_active && _progress < 1)
         {
-            _progress += Time.deltaTime * _speed;
+            _progress += (float)(DateTime.Now - time).TotalSeconds * _speed;
             if (_progress > 1) _progress = 1;
             
         }
         else if(!_active && _progress > 0)
         {
-            _progress -= Time.deltaTime * _speed;
+            _progress -= (float)(DateTime.Now - time).TotalSeconds * _speed;
             if (_progress < 0) _progress = 0;
         }
         canvas.alpha = _progress;
         _top.transform.position = new Vector2(_top.transform.position.x, _origin.x - _top.sizeDelta.y * _curve.Evaluate(_progress));
         _bottom.transform.position = new Vector2(_bottom.transform.position.x, _origin.y + _bottom.sizeDelta.y * _curve.Evaluate(_progress));
+        time = DateTime.Now;
     }
     public void Activate(bool active = true)
     {
