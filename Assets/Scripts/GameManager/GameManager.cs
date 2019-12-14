@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
     public float bowDuration;
-    public float walkingSpeed;
+    public float battleWalkingSpeed;
+    public float replaceWalkingSpeed;
+    public float cineWalkingSpeed;
     
     // Controllers
     private AbstractController _controller1;
