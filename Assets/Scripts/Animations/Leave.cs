@@ -7,6 +7,7 @@ public class Leave : AbstractAnimation
     private int _direction;
     private float _speed;
     private Transform _destination;
+    private bool _turned;
     private static readonly int WalkCineIn = Animator.StringToHash("WalkCineIn");
     private static readonly int WalkCineOut = Animator.StringToHash("WalkCineOut");
 
@@ -24,9 +25,13 @@ public class Leave : AbstractAnimation
     {
         if (inPosition || controller.StateName != ControllerStateName.Idle) return;
         base.Update();
-        
-        gameManager.TurnOver(transform);
-        controller.characterInfo.Animator.SetTrigger(WalkCineIn);
+
+        if (!_turned)
+        {
+            gameManager.TurnOver(transform);
+            controller.characterInfo.Animator.SetTrigger(WalkCineIn);
+            _turned = true;
+        }
         
         GetComponent<Rigidbody>().velocity = new Vector3(
             _direction * _speed,
