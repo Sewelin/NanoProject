@@ -63,7 +63,6 @@
 			<IncludedEvents>
 				<Event Id="711535685" Name="ATM_Rounds" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\ATM_Rounds" DurationType="Infinite"/>
 				<Event Id="2338023994" Name="FB_Horns_Time" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\FB_Horns_Time" DurationType="Infinite"/>
-				<Event Id="2613926250" Name="InGame_Music" ObjectPath="\Events\NanoProjet\Music\InGame_Music" DurationType="Infinite"/>
 				<Event Id="2121424417" Name="Launch_Round" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Launch_Round" DurationType="Infinite"/>
 				<Event Id="789497435" Name="Menu_Atmos" ObjectPath="\Events\NanoProjet\Atmos &amp; Music\Menu_Atmos" DurationType="Infinite"/>
 				<Event Id="3063554414" Name="Menu_Back" ObjectPath="\Events\NanoProjet\Menu\Menu_Back" DurationType="OneShot" DurationMin="2.275053" DurationMax="2.545815"/>
@@ -206,10 +205,6 @@
 					<ShortName>SFX_PlayerDeath_02.wav</ShortName>
 					<Path>SFX\SFX_PlayerDeath_02_A3951EFA.wem</Path>
 				</File>
-				<File Id="244771642" Language="SFX">
-					<ShortName>NanoProjet_InGame_DrumTransition1_Test.wav</ShortName>
-					<Path>SFX\NanoProjet_InGame_DrumTransition1_Test_9B96ECC7.wem</Path>
-				</File>
 				<File Id="250734594" Language="SFX">
 					<ShortName>Armor\SFX_Footsteps_Armor_07.wav</ShortName>
 					<Path>SFX\Armor\SFX_Footsteps_Armor_07_6296B0F9.wem</Path>
@@ -304,10 +299,6 @@
 					<ShortName>Copland_Hit.wav</ShortName>
 					<Path>SFX\Copland_Hit_9B96ECC7.wem</Path>
 				</File>
-				<File Id="443629866" Language="SFX">
-					<ShortName>NanoProjet_InGame_DrumTransition2_Test.wav</ShortName>
-					<Path>SFX\NanoProjet_InGame_DrumTransition2_Test_9B96ECC7.wem</Path>
-				</File>
 				<File Id="455740118" Language="SFX">
 					<ShortName>Taiko_Hit.wav</ShortName>
 					<Path>SFX\Taiko_Hit_9B96ECC7.wem</Path>
@@ -394,10 +385,6 @@
 				<File Id="597874808" Language="SFX">
 					<ShortName>SFX_Footsteps_Set01_Step_07.wav</ShortName>
 					<Path>SFX\SFX_Footsteps_Set01_Step_07_6296B0F9.wem</Path>
-				</File>
-				<File Id="601913131" Language="SFX">
-					<ShortName>NanoProjet_InGame_DrumTransition3_Test.wav</ShortName>
-					<Path>SFX\NanoProjet_InGame_DrumTransition3_Test_9B96ECC7.wem</Path>
 				</File>
 				<File Id="606660939" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
@@ -560,10 +547,6 @@
 					<ShortName>Armor\SFX_Footsteps_Armor_04.wav</ShortName>
 					<Path>SFX\Armor\SFX_Footsteps_Armor_04_6296B0F9.wem</Path>
 				</File>
-				<File Id="886422881" Language="SFX">
-					<ShortName>NanoProjet_InGame_DrumTransition4_Test.wav</ShortName>
-					<Path>SFX\NanoProjet_InGame_DrumTransition4_Test_9B96ECC7.wem</Path>
-				</File>
 				<File Id="897420397" Language="SFX">
 					<ShortName>SFX_Horn_Half.wav</ShortName>
 					<Path>SFX\SFX_Horn_Half_6296B0F9.wem</Path>
@@ -607,10 +590,6 @@
 				<File Id="987090694" Language="SFX">
 					<ShortName>MENU_Music_Test.wav</ShortName>
 					<Path>SFX\MENU_Music_Test_D7B7E8EF.wem</Path>
-				</File>
-				<File Id="998095802" Language="SFX">
-					<ShortName>NanoProjet_InGame_DrumTransition5_Test.wav</ShortName>
-					<Path>SFX\NanoProjet_InGame_DrumTransition5_Test_9B96ECC7.wem</Path>
 				</File>
 				<File Id="1001696853" Language="SFX">
 					<ShortName>SFX_Footsteps_Set03_Step_03.wav</ShortName>
