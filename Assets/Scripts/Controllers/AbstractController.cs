@@ -65,6 +65,8 @@ public abstract class AbstractController : MonoBehaviour
     [NonSerialized] public GameManager gameManager;
 
     public int PlayerNum { get; private set; }
+    
+    private static readonly int RoundNumber = Animator.StringToHash("RoundNumber");
 
     private int _points;
     public int Points {
@@ -80,7 +82,9 @@ public abstract class AbstractController : MonoBehaviour
         set
         {
             _roundWon = value;
-            AkSoundEngine.SetRTPCValue("RTPC_RoundCount", gameManager.Controller1.RoundWon + gameManager.Controller2.RoundWon);
+            AkSoundEngine.SetRTPCValue("RTPC_RoundCount", gameManager.Controller1.RoundWon + gameManager.Controller2.RoundWon + 1);
+            gameManager.lightAnimator.SetInteger(RoundNumber, gameManager.Controller1.RoundWon + gameManager.Controller2.RoundWon + 1);
+            
         }
     }
 

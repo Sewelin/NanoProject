@@ -257,7 +257,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     speed: 8
   bowDuration: 2.5
-  walkingSpeed: 1.7
+  battleWalkingSpeed: 1.7
   posSpawner1: {fileID: 4732815846257128836}
   posSpawner2: {fileID: 4732815846286733519}
   posStartFight1: {fileID: 4732815846588699636}
@@ -267,6 +267,7 @@ MonoBehaviour:
   leftWall: {fileID: 6648408730550777447}
   rightWall: {fileID: 6687561428847018269}
   soundManager: {fileID: 0}
+  lightAnimator: {fileID: 0}
   TOUCHCOOLDOWN: 0.05
   touchCooldown: 0
   touched: {fileID: 0}
@@ -277,6 +278,7 @@ MonoBehaviour:
   start: {fileID: 0}
   pause: {fileID: 0}
   join: {fileID: 0}
+  cinematic: {fileID: 0}
   SPEEDFADE: 5
   roundTimer: 0
   sss: 0

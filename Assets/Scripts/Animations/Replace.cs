@@ -13,7 +13,7 @@ public class Replace : AbstractAnimation
     {
         base.Awake();
         controller.EndDuel();
-        _speed = gameManager.walkingSpeed;
+        _speed = gameManager.replaceWalkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posReposition1 : gameManager.posReposition2;
         _direction = Direction();
         controller.replacing = true;
