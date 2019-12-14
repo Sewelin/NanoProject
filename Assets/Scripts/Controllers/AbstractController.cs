@@ -84,6 +84,7 @@ public abstract class AbstractController : MonoBehaviour
             _roundWon = value;
             AkSoundEngine.SetRTPCValue("RTPC_RoundCount", gameManager.Controller1.RoundWon + gameManager.Controller2.RoundWon + 1);
             gameManager.lightAnimator.SetInteger(RoundNumber, gameManager.Controller1.RoundWon + gameManager.Controller2.RoundWon + 1);
+            
         }
     }
 

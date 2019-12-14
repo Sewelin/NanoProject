@@ -12,7 +12,7 @@ public class Arrive : AbstractAnimation
     {
         base.Awake();
         controller.EndDuel();
-        _speed = gameManager.walkingSpeed;
+        _speed = gameManager.cineWalkingSpeed;
         _destination = controller.PlayerNum == 1 ? gameManager.posStartFight1 : gameManager.posStartFight2;
         _direction = Direction();
         controller.characterInfo.Animator.SetTrigger(WalkCineIn);
