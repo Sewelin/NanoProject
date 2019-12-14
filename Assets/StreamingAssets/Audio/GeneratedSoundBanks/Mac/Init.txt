@@ -36,7 +36,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	77978275	AMBIENT			\Default Work Unit\Master Audio Bus\InGame\ATMOS\AMBIENT	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\InGame\SFX	
-	779278001	DEATH			\Default Work Unit\Master Audio Bus\InGame\SFX\DEATH	
 	984691642	InGame			\Default Work Unit\Master Audio Bus\InGame	
 	1123360410	P_ONE			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_ONE	
 	1242230844	P_TWO			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_TWO	
@@ -47,9 +46,9 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	2188949101	PLAYERS			\Default Work Unit\Master Audio Bus\InGame\PLAYERS	
 	2275604156	P_ONE_FOL			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_ONE\P_ONE_FOL	
 	2338369940	M_MENU			\Default Work Unit\Master Audio Bus\InGame\MUSIC\M_MENU	
-	2454616260	SWORD			\Default Work Unit\Master Audio Bus\InGame\SFX\SWORD	
 	2607556080	MENU			\Default Work Unit\Master Audio Bus\UI\MENU	
 	3034623661	ATMOS			\Default Work Unit\Master Audio Bus\InGame\ATMOS	
+	3106025822	TAIKOS			\Default Work Unit\Master Audio Bus\InGame\TAIKOS	
 	3545700988	REVERBS			\Default Work Unit\Master Audio Bus\InGame\REVERBS	
 	3599308920	P_TWO_SFX			\Default Work Unit\Master Audio Bus\InGame\PLAYERS\P_TWO\P_TWO_SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

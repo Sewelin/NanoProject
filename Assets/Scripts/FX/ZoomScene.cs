@@ -27,23 +27,26 @@ public class ZoomScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        if (_zoom && _progress < 1)
-        {
-            _progress += Time.deltaTime * SPEED;
-            if (_progress > 1) _progress = 1;
+       if(_gameManager.StateName == GameStateName.Pause) Time.timeScale = 0;
+        else { 
+            if (_zoom && _progress < 1)
+            {
+                _progress += Time.deltaTime * SPEED;
+                if (_progress > 1) _progress = 1;
             
 
 
+            }
+            else if (_zoom)
+            {
+                _zoom = false;
+                _progress = 0;
+            }
+
+            AkSoundEngine.SetRTPCValue("RTPC_SlowMotion", curve.Evaluate(_progress));
+            Time.timeScale = (1 - curve.Evaluate(_progress)) * TIMESPEED+ 1-TIMESPEED;
+            transform.position = Vector3.Lerp(_originalPos, _zoomTo, curve.Evaluate(_progress));
         }
-        else if (_zoom)
-        {
-            _zoom = false;
-            _progress = 0;
-        }
-        
-        Time.timeScale = (1 - curve.Evaluate(_progress)) * TIMESPEED+ 1-TIMESPEED;
-        transform.position = Vector3.Lerp(_originalPos, _zoomTo, curve.Evaluate(_progress));
     }
     public void Activate()
     {
