@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
     public float bowDuration;
-    public float walkingSpeed;
+    public float battleWalkingSpeed;
+    public float replaceWalkingSpeed;
+    public float cineWalkingSpeed;
     
     // Controllers
     private AbstractController _controller1;
@@ -80,6 +82,11 @@ public class GameManager : MonoBehaviour
 
     [Header("Do Not Touch")]
     [SerializeField] private float roundTimer;
+    [Header("Bambou")]
+    public RecursiveBurn[] bambou1;
+    public RecursiveBurn[] bambou2;
+
+
     public float RoundTimer {
         get => roundTimer;
         set {
@@ -87,6 +94,8 @@ public class GameManager : MonoBehaviour
             roundTimer = value;
         }
     }
+    
+
 
     // States
     private AbstractGameState State { get; set; }
