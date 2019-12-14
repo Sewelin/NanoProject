@@ -14,6 +14,7 @@ public class CinematicMode : MonoBehaviour
     [SerializeField] RectTransform _top;
     [SerializeField] RectTransform _bottom;
     [SerializeField] AnimationCurve _curve;
+    [SerializeField] AnimationCurve _curveAlpha;
     CanvasGroup canvas;
 
     // Start is called before the first frame update
@@ -42,7 +43,7 @@ public class CinematicMode : MonoBehaviour
             _progress -= (float)(DateTime.Now - time).TotalSeconds * _speed;
             if (_progress < 0) _progress = 0;
         }
-        canvas.alpha = _progress;
+        canvas.alpha = _curveAlpha.Evaluate(_progress);
         _top.transform.position = new Vector2(_top.transform.position.x, _origin.x - _top.sizeDelta.y * _curve.Evaluate(_progress));
         _bottom.transform.position = new Vector2(_bottom.transform.position.x, _origin.y + _bottom.sizeDelta.y * _curve.Evaluate(_progress));
         time = DateTime.Now;
