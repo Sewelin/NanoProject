@@ -8498,6 +8498,16 @@ PrefabInstance:
       propertyPath: bambou2.Array.data[0]
       value: 
       objectReference: {fileID: 4938635138167298337}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: replaceWalkingSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732815845222031828, guid: 7dc475b56d7c7d6458667b8bed708463,
+        type: 3}
+      propertyPath: cineWalkingSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4732815846588699636, guid: 7dc475b56d7c7d6458667b8bed708463,
         type: 3}
       propertyPath: m_LocalPosition.x

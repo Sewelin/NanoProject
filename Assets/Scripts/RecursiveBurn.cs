@@ -7,7 +7,7 @@ public class RecursiveBurn : MonoBehaviour
     float _progress = 0;
     Material _shader;
     [SerializeField] RecursiveBurn _next;
-    public bool _start;
+    bool _start;
 
     private void Awake()
     {
