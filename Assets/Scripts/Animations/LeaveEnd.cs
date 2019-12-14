@@ -29,6 +29,7 @@ public class LeaveEnd : AbstractAnimation
 
         if (!_hasBowed)
         {
+            gameManager.cinematic.End();
             controller.SetState(new BowState(gameManager, controller));
             _hasBowed = true;
             return;
