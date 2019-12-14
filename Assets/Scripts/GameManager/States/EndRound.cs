@@ -15,10 +15,21 @@ public class EndRound : AbstractGameState
         _looser = gameManager.Controller1.Points > gameManager.Controller2.Points
             ? gameManager.Controller2
             : gameManager.Controller1;
-
-
-        if (_winner.characterInfo.characterAssigned) _winner.characterInfo.Character.AddComponent<Leave>();
+        
         ++_winner.RoundWon;
+
+
+        if (_winner.characterInfo.characterAssigned)
+        {
+            if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
+            {
+                _winner.characterInfo.Character.AddComponent<LeaveEnd>();
+            }
+            else
+            {
+                _winner.characterInfo.Character.AddComponent<Leave>();
+            }
+        }
         
         if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<FallDown>();
     }
@@ -49,8 +60,6 @@ public class EndRound : AbstractGameState
 
     private void EndGame()
     {
-        Debug.Log("End Game");
-
-        //Application.Quit();
+        gameManager.Pause();
     }
 }
