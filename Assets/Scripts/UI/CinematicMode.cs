@@ -55,8 +55,8 @@ public class CinematicMode : MonoBehaviour
 
         if (_end)
         {
-            _top.sizeDelta = new Vector2(0, Mathf.Lerp(_originSize, Screen.height * (endPercentTop) , _curve.Evaluate(_progress)));
-            _bottom.sizeDelta = new Vector2(0, Mathf.Lerp(_originSize, Screen.height * (endPercentBottom), _curve.Evaluate(_progress)));
+            _top.sizeDelta = new Vector2(0, Mathf.Lerp(_originSize, Screen.height * (endPercentTop) , _endCurve.Evaluate(_progress+2)));
+            _bottom.sizeDelta = new Vector2(0, Mathf.Lerp(_originSize, Screen.height * (endPercentBottom), _endCurve.Evaluate(_progress+2)));
             image.color = new Color(1, 1, 1, _endCurve.Evaluate(_progress));
         }
         _top.transform.position = new Vector2(_top.transform.position.x, _origin.x - _originSize * _curve.Evaluate(_progress));
@@ -66,5 +66,9 @@ public class CinematicMode : MonoBehaviour
     public void Activate(bool active = true)
     {
         _active = active;
+    }
+    public void End()
+    {
+        _end = true;
     }
 }
