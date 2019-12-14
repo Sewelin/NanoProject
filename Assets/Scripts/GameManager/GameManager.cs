@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
     public float bowDuration;
-    public float walkingSpeed;
+    public float battleWalkingSpeed;
+    public float replaceWalkingSpeed;
+    public float cineWalkingSpeed;
     
     // Controllers
     private AbstractController _controller1;
@@ -77,9 +79,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] public CanvasGroup join;
     [SerializeField] public CinematicMode cinematic;
     public float SPEEDFADE = 5;
+    
+    [Header("Bambou")]
+    public RecursiveBurn[] bambou1;
+    public RecursiveBurn[] bambou2;
 
+    [HideInInspector] public Vibration vibration;
+    
     [Header("Do Not Touch")]
     [SerializeField] private float roundTimer;
+
     public float RoundTimer {
         get => roundTimer;
         set {
@@ -87,6 +96,8 @@ public class GameManager : MonoBehaviour
             roundTimer = value;
         }
     }
+    
+
 
     // States
     private AbstractGameState State { get; set; }
@@ -95,6 +106,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         SetState(new SetUp(this));
+        vibration = gameObject.AddComponent<Vibration>();
     }
 
     private void Start()

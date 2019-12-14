@@ -15,7 +15,6 @@ namespace AK
     {
         static const AkUniqueID ATM_ROUNDS = 711535685U;
         static const AkUniqueID FB_HORNS_TIME = 2338023994U;
-        static const AkUniqueID INGAME_MUSIC = 2613926250U;
         static const AkUniqueID LAUNCH_ROUND = 2121424417U;
         static const AkUniqueID MENU_ATMOS = 789497435U;
         static const AkUniqueID MENU_BACK = 3063554414U;
@@ -68,17 +67,6 @@ namespace AK
             } // namespace SWITCH
         } // namespace SWITCH_HORNS
 
-        namespace SWITCH_LASTTOEND
-        {
-            static const AkUniqueID GROUP = 3766357930U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID END = 529726532U;
-                static const AkUniqueID LAST = 489968869U;
-            } // namespace SWITCH
-        } // namespace SWITCH_LASTTOEND
-
         namespace SWITCH_PAUSE
         {
             static const AkUniqueID GROUP = 2902274630U;
@@ -128,17 +116,16 @@ namespace AK
             } // namespace SWITCH
         } // namespace SWITCH_SEGMENTS
 
-        namespace SWITCH_TRANSITIONS
+        namespace SWITCH_SEGTOEND
         {
-            static const AkUniqueID GROUP = 1625512016U;
+            static const AkUniqueID GROUP = 955508127U;
 
             namespace SWITCH
             {
-                static const AkUniqueID TRANSITION_01 = 2728638438U;
-                static const AkUniqueID TRANSITION_02 = 2728638437U;
-                static const AkUniqueID TRANSITION_03 = 2728638436U;
+                static const AkUniqueID END = 529726532U;
+                static const AkUniqueID SEG = 376462292U;
             } // namespace SWITCH
-        } // namespace SWITCH_TRANSITIONS
+        } // namespace SWITCH_SEGTOEND
 
     } // namespace SWITCHES
 
@@ -151,6 +138,7 @@ namespace AK
         static const AkUniqueID RTPC_PTWO_ARMORSETS = 2322506118U;
         static const AkUniqueID RTPC_ROUNDCOUNT = 1364308078U;
         static const AkUniqueID RTPC_SFXVOLUME = 2644490154U;
+        static const AkUniqueID RTPC_SLOWMOTION = 2455146350U;
         static const AkUniqueID RTPC_TIMER = 2286992438U;
     } // namespace GAME_PARAMETERS
 
@@ -171,7 +159,6 @@ namespace AK
     {
         static const AkUniqueID AMBIENT = 77978275U;
         static const AkUniqueID ATMOS = 3034623661U;
-        static const AkUniqueID DEATH = 779278001U;
         static const AkUniqueID INGAME = 984691642U;
         static const AkUniqueID M_MENU = 2338369940U;
         static const AkUniqueID M_PLAY = 1992326939U;
@@ -189,7 +176,7 @@ namespace AK
         static const AkUniqueID PLAYERS = 2188949101U;
         static const AkUniqueID REVERBS = 3545700988U;
         static const AkUniqueID SFX = 393239870U;
-        static const AkUniqueID SWORD = 2454616260U;
+        static const AkUniqueID TAIKOS = 3106025822U;
         static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
