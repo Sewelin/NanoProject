@@ -18,14 +18,15 @@ public class Leave : AbstractAnimation
         _destination = controller.PlayerNum == 1 ? gameManager.posSpawner1 : gameManager.posSpawner2;
         _direction = Direction();
         gameObject.layer = 10;
-        gameManager.TurnOver(transform);
-        controller.characterInfo.Animator.SetTrigger(WalkCineIn);
     }
     
     protected override void Update()
     {
         if (inPosition || controller.StateName != ControllerStateName.Idle) return;
         base.Update();
+        
+        gameManager.TurnOver(transform);
+        controller.characterInfo.Animator.SetTrigger(WalkCineIn);
         
         GetComponent<Rigidbody>().velocity = new Vector3(
             _direction * _speed,
