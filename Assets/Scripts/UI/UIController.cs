@@ -58,7 +58,6 @@ public class UIController : MonoBehaviour
 
     public void StartButton(bool isMain)
     {
-        Debug.Log("Start");
         _isMain = isMain;
         main.interactable = _isMain;
         main.blocksRaycasts = _isMain;
