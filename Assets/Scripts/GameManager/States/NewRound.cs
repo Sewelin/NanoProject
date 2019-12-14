@@ -5,6 +5,7 @@ public class NewRound : AbstractGameState
     public NewRound(GameManager gameManager) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate();
         gameManager.Controller1.NewCharacter();
         gameManager.Controller2.NewCharacter();
         gameManager.RoundTimer = gameManager.ROUNDTIMER;
@@ -25,9 +26,6 @@ public class NewRound : AbstractGameState
             Object.Destroy(gameManager.Controller1.characterInfo.Character.GetComponent<Arrive>());
             Object.Destroy(gameManager.Controller2.characterInfo.Character.GetComponent<Arrive>());
 
-            gameManager.leftWall.enabled = true;
-            gameManager.rightWall.enabled = true;
-            
             gameManager.SetState(new Fight(gameManager));
         }
     }

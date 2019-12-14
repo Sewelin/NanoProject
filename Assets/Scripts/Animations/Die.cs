@@ -6,10 +6,11 @@ public class Die : AbstractAnimation
     private float timer = 0.2f;
     private ShaderCharacterEffect shader;
     private new Rigidbody rigidbody;
+    
     protected override void Awake()
     {
         base.Awake();
-
+        
         controller.EndDuel();
         gameObject.layer = 10;
         rigidbody = GetComponent<Rigidbody>();  
@@ -39,7 +40,7 @@ public class Die : AbstractAnimation
         rigidbody.velocity = Vector3.zero;
         if (!inPosition)
         {
-            gameManager.CharacterInPosition(controller.PlayerNum);
+            if (gameManager.StateName == GameStateName.EndRound) gameManager.CharacterInPosition(controller.PlayerNum);
             inPosition = true;
         }
     }

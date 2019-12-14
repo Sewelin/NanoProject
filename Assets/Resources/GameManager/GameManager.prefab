@@ -40,7 +40,7 @@ BoxCollider:
   m_GameObject: {fileID: 3541300413611102044}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 4, z: 4}
   m_Center: {x: 0, y: 2, z: 0}
@@ -131,18 +131,36 @@ MonoBehaviour:
   character2Model: {fileID: 6131131072245046151, guid: b3285ace6de84fc4abd9acf2b80f9072,
     type: 3}
   verticalAttackParameters:
-    timeSteps: {x: 0.5, y: 0.5, z: 1.833}
+    timeSteps: {x: 0.4, y: 0.6, z: 1.833}
     curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 11.332
+        outSlope: 11.332
         tangentMode: 34
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.088245675
+        value: 1
+        inSlope: 1.1919003
+        outSlope: Infinity
+        tangentMode: 97
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28
+        value: 0
+        inSlope: -1.2932497
+        outSlope: 0
+        tangentMode: 65
+        weightedMode: 0
+        inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
@@ -156,7 +174,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 0
+    speed: 1
   dashAttackParameters:
     timeSteps: {x: 0.667, y: 1, z: 1.833}
     curve:
@@ -210,9 +228,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 5
+    speed: 4
   backDashParameters:
-    timeSteps: {x: 0.5, y: 0, z: 0}
+    timeSteps: {x: 0.667, y: 0, z: 0}
     curve:
       serializedVersion: 2
       m_Curve:
@@ -221,25 +239,25 @@ MonoBehaviour:
         value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 34
+        tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0.33333334
+        outWeight: 0
       - serializedVersion: 3
-        time: 0.033167362
+        time: 0.43
         value: 0
-        inSlope: Infinity
-        outSlope: 13.297496
-        tangentMode: 7
+        inSlope: -0
+        outSlope: 50.00005
+        tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.15
+        time: 0.45
         value: 1
-        inSlope: 5.714286
-        outSlope: Infinity
-        tangentMode: 97
+        inSlope: 50.00005
+        outSlope: 0
+        tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
@@ -248,16 +266,18 @@ MonoBehaviour:
         value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 34
+        tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 5
+    speed: 8
   bowDuration: 2.5
-  walkingSpeed: 1.7
+  battleWalkingSpeed: 1.7
+  replaceWalkingSpeed: 2.5
+  cineWalkingSpeed: 2
   posSpawner1: {fileID: 4732815846257128836}
   posSpawner2: {fileID: 4732815846286733519}
   posStartFight1: {fileID: 4732815846588699636}
@@ -267,18 +287,22 @@ MonoBehaviour:
   leftWall: {fileID: 6648408730550777447}
   rightWall: {fileID: 6687561428847018269}
   soundManager: {fileID: 0}
-  TOUCHCOOLDOWN: 0.4
+  lightAnimator: {fileID: 0}
+  TOUCHCOOLDOWN: 0.05
   touchCooldown: 0
   touched: {fileID: 0}
   touchValue: 0
-  BACKDASHCOOLDOWN: 0.5
+  BACKDASHCOOLDOWN: 0.7
   ROUNDTIMER: 90
   BUFFURINGTIMEPERCENT: 80
   start: {fileID: 0}
   pause: {fileID: 0}
   join: {fileID: 0}
+  cinematic: {fileID: 0}
   SPEEDFADE: 5
   roundTimer: 0
+  bambou1: []
+  bambou2: []
   sss: 0
 --- !u!114 &4732815845222031830
 MonoBehaviour:
@@ -484,7 +508,7 @@ BoxCollider:
   m_GameObject: {fileID: 5963035316893438734}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 4, z: 4}
   m_Center: {x: 0, y: 2, z: 0}

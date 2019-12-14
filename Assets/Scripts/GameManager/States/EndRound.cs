@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndRound : AbstractGameState
 {
@@ -8,21 +9,34 @@ public class EndRound : AbstractGameState
     public EndRound(GameManager gameManager) :
         base(gameManager)
     {
+        gameManager.cinematic.Activate();
         _winner = gameManager.Controller1.Points > gameManager.Controller2.Points
             ? gameManager.Controller1
             : gameManager.Controller2;
         _looser = gameManager.Controller1.Points > gameManager.Controller2.Points
             ? gameManager.Controller2
             : gameManager.Controller1;
-
-
-        if (_winner.characterInfo.characterAssigned) _winner.characterInfo.Character.AddComponent<Leave>();
-        ++_winner.RoundWon;
         
-        if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<Die>();
+        ++_winner.RoundWon;
 
-        gameManager.leftWall.enabled = false;
-        gameManager.rightWall.enabled = false;
+        if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
+        {
+            AkSoundEngine.PostEvent("FB_EndGame", gameManager.soundManager);
+            if (_winner.characterInfo.characterAssigned)
+            {
+                _winner.characterInfo.Character.AddComponent<LeaveEnd>();
+            }
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("FB_EndRound", gameManager.soundManager);
+            if (_winner.characterInfo.characterAssigned)
+            {
+                _winner.characterInfo.Character.AddComponent<Leave>();
+            }
+        }
+
+        if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<FallDown>();
     }
 
     public override GameStateName Name()
@@ -35,7 +49,7 @@ public class EndRound : AbstractGameState
         base.Update();
         if (characterInPosition[0] && characterInPosition[1])
         {
-            if (_winner.RoundWon == 3 || _looser.RoundWon == 3)
+            if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
             {
                 EndGame();
             }
@@ -51,8 +65,6 @@ public class EndRound : AbstractGameState
 
     private void EndGame()
     {
-        Debug.Log("End Game");
-
-        //Application.Quit();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public StateParameters dashAttackParameters;
     public StateParameters backDashParameters;
     public float bowDuration;
-    public float walkingSpeed;
+    public float battleWalkingSpeed;
+    public float replaceWalkingSpeed;
+    public float cineWalkingSpeed;
     
     // Controllers
     private AbstractController _controller1;
@@ -47,12 +49,16 @@ public class GameManager : MonoBehaviour
     public Transform posReposition2;
     
     [Header("Invisible Walls")]
-    public Collider leftWall;
-    public Collider rightWall;
+    public GameObject leftWall;
+    public GameObject rightWall;
 
     // Sounds
     [Header("Sounds")]
     public GameObject soundManager;
+    
+    // Lights
+    [Header("Lights")]
+    public Animator lightAnimator;
 
     // Timers and cooldowns
     [Header("Max timers")]
@@ -71,10 +77,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] public CanvasGroup start;
     [SerializeField] public CanvasGroup pause;
     [SerializeField] public CanvasGroup join;
+    [SerializeField] public CinematicMode cinematic;
     public float SPEEDFADE = 5;
+    
+    [Header("Bambou")]
+    public RecursiveBurn[] bambou1;
+    public RecursiveBurn[] bambou2;
 
+    [HideInInspector] public Vibration vibration;
+    
     [Header("Do Not Touch")]
     [SerializeField] private float roundTimer;
+
     public float RoundTimer {
         get => roundTimer;
         set {
@@ -82,6 +96,8 @@ public class GameManager : MonoBehaviour
             roundTimer = value;
         }
     }
+    
+
 
     // States
     private AbstractGameState State { get; set; }
@@ -90,6 +106,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         SetState(new SetUp(this));
+        vibration = gameObject.AddComponent<Vibration>();
     }
 
     private void Start()
@@ -110,13 +127,16 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        if (StateName == GameStateName.Pause)
+        if (StateName != GameStateName.SetUp)
         {
-            State.Exit();
-        }
-        else
-        {
-            SetState(new Pause(this, State));
+            if (StateName == GameStateName.Pause)
+            {
+                State.Exit();
+            }
+            else
+            {
+                SetState(new Pause(this, State));
+            }
         }
     }
 
@@ -152,6 +172,8 @@ public class GameManager : MonoBehaviour
     public void Touch(GameObject character)
     {
         State.Touch(character);
+        Camera.main.GetComponent<ZoomScene>().Activate();
+        cinematic.Activate();
     }
 
     public void CharacterInPosition(int numCharacter)
