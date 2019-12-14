@@ -131,7 +131,7 @@ MonoBehaviour:
   character2Model: {fileID: 6131131072245046151, guid: b3285ace6de84fc4abd9acf2b80f9072,
     type: 3}
   verticalAttackParameters:
-    timeSteps: {x: 0.5, y: 0.5, z: 1.833}
+    timeSteps: {x: 0.4, y: 0.6, z: 1.833}
     curve:
       serializedVersion: 2
       m_Curve:
@@ -228,9 +228,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    speed: 5
+    speed: 4
   backDashParameters:
-    timeSteps: {x: 0.5, y: 0, z: 0}
+    timeSteps: {x: 0.667, y: 0, z: 0}
     curve:
       serializedVersion: 2
       m_Curve:
@@ -243,6 +243,24 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      - serializedVersion: 3
+        time: 0.43
+        value: 0
+        inSlope: -0
+        outSlope: 50.00005
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.45
+        value: 1
+        inSlope: 50.00005
+        outSlope: 0
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
         value: 1
@@ -258,6 +276,8 @@ MonoBehaviour:
     speed: 8
   bowDuration: 2.5
   battleWalkingSpeed: 1.7
+  replaceWalkingSpeed: 2.5
+  cineWalkingSpeed: 2
   posSpawner1: {fileID: 4732815846257128836}
   posSpawner2: {fileID: 4732815846286733519}
   posStartFight1: {fileID: 4732815846588699636}
@@ -281,6 +301,8 @@ MonoBehaviour:
   cinematic: {fileID: 0}
   SPEEDFADE: 5
   roundTimer: 0
+  bambou1: []
+  bambou2: []
   sss: 0
 --- !u!114 &4732815845222031830
 MonoBehaviour:
