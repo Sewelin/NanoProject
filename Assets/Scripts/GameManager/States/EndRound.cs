@@ -19,7 +19,7 @@ public class EndRound : AbstractGameState
         
         ++_winner.RoundWon;
 
-        if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
+        if (_winner.RoundWon == 2)
         {
             AkSoundEngine.PostEvent("FB_EndGame", gameManager.soundManager);
             if (_winner.characterInfo.characterAssigned)
@@ -47,24 +47,23 @@ public class EndRound : AbstractGameState
     public override void Update()
     {
         base.Update();
-        if (characterInPosition[0] && characterInPosition[1])
+        if (!characterInPosition[0] || !characterInPosition[1]) return;
+        
+        if (_winner.RoundWon == 2)
         {
-            if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
-            {
-                EndGame();
-            }
-            else
-            {
-                Object.Destroy(_winner.characterInfo.Character);
-                _winner.characterInfo.characterAssigned = false;
+            EndGame();
+        }
+        else
+        {
+            Object.Destroy(_winner.characterInfo.Character);
+            _winner.characterInfo.characterAssigned = false;
                 
-                gameManager.SetState(new NewRound(gameManager));
-            }
+            gameManager.SetState(new NewRound(gameManager));
         }
     }
 
     private void EndGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Vibration
     }
 }
