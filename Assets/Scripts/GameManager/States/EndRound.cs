@@ -64,6 +64,7 @@ public class EndRound : AbstractGameState
 
     private void EndGame()
     {
+        AkSoundEngine.PostEvent("Stop_All", gameManager.soundManager);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Vibration
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
-		<SourceFilesRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Work in Progress\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\</ProjectRoot>
+		<SourceFilesRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Boulot\NanoProjet\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Work in Progress\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -97,6 +97,7 @@
 				<Event Id="3849990799" Name="SFX_Sheathe" ObjectPath="\Events\NanoProjet\SFX\SFX_Sheathe" DurationType="OneShot" DurationMin="1.628600" DurationMax="1.705623"/>
 				<Event Id="1708937970" Name="SFX_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX\SFX_Vertical_Attack" DurationType="OneShot" DurationMin="2.387104" DurationMax="2.558434"/>
 				<Event Id="3592797123" Name="SFX_Vertical_Attack_Cut" ObjectPath="\Events\NanoProjet\SFX\SFX_Vertical_Attack_Cut" DurationType="OneShot" DurationMin="2.086269" DurationMax="2.246803"/>
+				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\NanoProjet\Stop_All" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1784816102" Name="Stop_Backward_Jump" ObjectPath="\Events\NanoProjet\SFX\Stop_Backward_Jump" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3296606572" Name="Stop_Dash" ObjectPath="\Events\NanoProjet\SFX\Stop_Dash" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2607937253" Name="Stop_Vertical_Attack" ObjectPath="\Events\NanoProjet\SFX\Stop_Vertical_Attack" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -283,7 +284,7 @@
 				</File>
 				<File Id="383230011" Language="SFX">
 					<ShortName>SFX_EndingRounds_Flute_v2.wav</ShortName>
-					<Path>SFX\SFX_EndingRounds_Flute_v2_D84A43B6.wem</Path>
+					<Path>SFX\SFX_EndingRounds_Flute_v2_E0367114.wem</Path>
 				</File>
 				<File Id="402947422" Language="SFX">
 					<ShortName>Footstep_Test.wav</ShortName>
