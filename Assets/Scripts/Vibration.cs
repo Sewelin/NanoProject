@@ -23,7 +23,15 @@ public class Vibration : MonoBehaviour
   private IEnumerator Stop(Gamepad gamepad)
   {
     yield return new WaitForSeconds(Duration);
-    gamepad.SetMotorSpeeds(0,0);
+    gamepad.SetMotorSpeeds(0f,0f);
+  }
+
+  public void StopAll()
+  {
+    foreach (var gamepad in Gamepad.all)
+    {
+      gamepad.SetMotorSpeeds(0f,0f);
+    }
   }
 
   private static Gamepad GetGamepadFromDevices(ReadOnlyArray<InputDevice> inputDevice)

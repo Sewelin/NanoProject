@@ -1,8 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
 	20042657	SFX_Backward_Jump			\NanoProjet\SFX\SFX_Backward_Jump	
+	72471561	FB_EndGame			\NanoProjet\Music\FB_EndGame	
 	105544633	Menu_Play			\NanoProjet\Menu\Menu_Play	
 	184927275	Player_Two_Forward			\NanoProjet\PlayerTwo\Player_Two_Forward	
 	375910062	Player_One_Bowing			\NanoProjet\PlayerOne\Player_One_Bowing	
+	452547817	Stop_All			\NanoProjet\Stop_All	
 	557861964	Menu_ChangeOption			\NanoProjet\Menu\Menu_ChangeOption	
 	590114267	SFX_Hit_Kill			\NanoProjet\SFX\SFX_Hit_Kill	
 	711535685	ATM_Rounds			\NanoProjet\Atmos & Music\ATM_Rounds	
@@ -23,6 +25,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2338023994	FB_Horns_Time			\NanoProjet\Atmos & Music\FB_Horns_Time	
 	2367140880	Player_Two_Bowing			\NanoProjet\PlayerTwo\Player_Two_Bowing	
 	2410652377	SFX_Hit_Draw			\NanoProjet\SFX\SFX_Hit_Draw	
+	2439457397	FB_EndRound			\NanoProjet\Music\FB_EndRound	
 	2507762279	Player_Two_Backward			\NanoProjet\PlayerTwo\Player_Two_Backward	
 	2587230380	Menu_UpDown			\NanoProjet\Menu\Menu_UpDown	
 	2607937253	Stop_Vertical_Attack			\NanoProjet\SFX\Stop_Vertical_Attack	
@@ -154,6 +157,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	363543531	Footstep_Test_02	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\Footstep_Test_1CD41E2E.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Set_2\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test_02		3152
 	369362974	SFX_Footsteps_Set02_Step_07	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Footsteps_Set02_Step_07_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\P_ONE\Player_One_Forward\Player_One_Footsteps_Sets\Player_One_Forward_Set_2\Footsteps\Foot_R\Player_Footsteps\SFX_Footsteps_Set02_Step_07		9260
 	379783674	NanoProjet_InGame_EndSegment_Drums_Test	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\NanoProjet_InGame_EndSegment_Drums_Test_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\InGame_Music\FirstToEnd\EndSegment\EndSegment\NanoProjet_InGame_EndSegment_Drums_Test		2704
+	383230011	SFX_EndingRounds_Flute_v2	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_EndingRounds_Flute_v2_E0367114.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\FEEDBACK\FB_EndGame\SFX_EndingRounds_Flute_v2		136363
 	402947422	Footstep_Test_01	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\Footstep_Test_644374B5.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\P_ONE\Player_One_Backward_Sets\Player_One_Backward_Set_2\Footsteps_Back\Foot_L\Player_Footsteps_Back_L\Footstep_Test_01		4467
 	413445957	Atmos_BattleFull	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\Atmos_BattleFull_C7B1F7F0.wem		\Actor-Mixer Hierarchy\NanoProjet\ATMOS\AMBIENT\ATM_InGame\Battle\Atmos_BattleFull		640292
 	420719788	SFX_Verticall_Attack_02	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Verticall_Attack_02_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\SFX\Vertical_Attack\SFX_VerticalAttack\SFX_Verticall_Attack_02		31191
@@ -169,6 +173,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	517641963	NanoProjet_InGame_DrumTransition_Test_02	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\NanoProjet_InGame_DrumTransition1_Test_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\FEEDBACK\FB_Music_Transition\FB_Music_Transition_Sets_01\NanoProjet_InGame_DrumTransition_Test_02		41207
 	521747012	Music_Transition_FirstToLast_01	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\Music_Transition_FirstToLast_01_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\InGame_Music\LastToEndSegment\LastSegment\LastSegment\Music_Transition_FirstToLast_01		76386
 	527546804	SFX_Verticall_Attack_03	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Verticall_Attack_03_7E67EFE9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\SFX\Vertical_Attack_Cut\SFX_VerticalAttack\SFX_Verticall_Attack_03		23665
+	537376062	SFX_EndingGame_Flute	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_EndingGame_Flute_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\FEEDBACK\FB_EndGame\SFX_EndingGame_Flute		140107
 	557382835	SFX_Hit_Draw_01	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Hit_Draw_01_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\SFX\Hit_Draw\SFX_Hit_Draw_01		27577
 	559860867	NanoProjet_InGame_EndSegment_Cords_Test	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\NanoProjet_InGame_EndSegment_Cords_Test_9B96ECC7.wem		\Interactive Music Hierarchy\Default Work Unit\InGame_Music\FirstToEnd\EndSegment\EndSegment\NanoProjet_InGame_EndSegment_Cords_Test		2754
 	562926893	SFX_Footsteps_Set01_Step_04	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Footsteps_Set01_Step_04_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\P_ONE\Player_One_Forward\Player_One_Footsteps_Sets\Player_One_Forward_Set_1\Footsteps\Foot_L\Player_Footsteps\SFX_Footsteps_Set01_Step_04		7304
@@ -222,6 +227,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	879273170	SFX_Footsteps_Armor_04	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\Armor\SFX_Footsteps_Armor_04_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\P_ONE\Player_One_Forward\Player_One_Forward_Prez\Player_One_Forward_Prez\SFX_Footsteps_Armor_04		9013
 	897420397	FB_Horn_Half	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Horn_Half_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\FEEDBACK\FB_Horns_Time\FB_Horn_Half		77485
 	915816819	Taiko_Hit	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\Taiko_Hit_CA630949.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\BACK\Taiko_Hit		15509
+	918848933	SFX_EndingRounds	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_EndingRounds_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\FEEDBACK\FB_EndRound\SFX_EndingRounds		98864
 	920326690	SFX_Bowing	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Bowing_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\P_ONE\Player_One_Bowing\SFX_Bowing		26803
 	928154635	Wind_Howl_03	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\Wind_Howl_51E926AA.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\MENU\SELECT\Wind_Howls\Wind_Howl_03		40463
 	949087257	SFX_Sheathe_03	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\Sheathe\SFX_Sheathe_03_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\SFX\Sheathe\Sheathe\SFX_Sheathe_03		18144
@@ -230,6 +236,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	964521431	SFX_Dash_Whoosh_Test	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Dash_Whoosh_Test_141C8E3C.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\OPTIONS\CHANGE_OPTION\SFX_Dash_Whoosh_Test		12057
 	965107769	SFX_Verticall_Attack_03	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Verticall_Attack_03_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\SFX\Vertical_Attack\SFX_VerticalAttack\SFX_Verticall_Attack_03		28503
 	971046605	SFX_PlayerDeath_02	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_PlayerDeath_02_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\SFX\Death\SFX_Death\SFX_PlayerDeath_02		34734
+	973438383	SFX_EndingGame_Drums	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_EndingGame_Drums_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\UI\FEEDBACK\FB_EndGame\SFX_EndingGame_Drums		96982
 	987090694	MENU_Music_Test	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\MENU_Music_Test_D7B7E8EF.wem		\Actor-Mixer Hierarchy\NanoProjet\MUSIC\MUSIC_MENU\Music\Shakuashi_Impro\MENU_Music_Test		966564
 	1001696853	SFX_Footsteps_Set03_Step_03	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Footsteps_Set03_Step_03_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\P_ONE\Player_One_Forward\Player_One_Footsteps_Sets\Player_One_Forward_Set_3\Footsteps\Foot_R\Player_Footsteps\SFX_Footsteps_Set03_Step_03		8002
 	1001710586	SFX_Hit_Draw_Taiko_01	D:\Boulot\NanoProjet_Sound\NanoProjet_Sound\.cache\Mac\SFX\SFX_Hit_Draw_Taiko_01_6296B0F9.wem		\Actor-Mixer Hierarchy\NanoProjet\SFX\SFX\SFX\Hit_Draw_Taiko\SFX_Hit_Draw_Taiko_01		46323

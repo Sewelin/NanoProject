@@ -19,19 +19,23 @@ public class EndRound : AbstractGameState
         
         ++_winner.RoundWon;
 
-
-        if (_winner.characterInfo.characterAssigned)
+        if (_winner.RoundWon == 2)
         {
-            if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
+            AkSoundEngine.PostEvent("FB_EndGame", gameManager.soundManager);
+            if (_winner.characterInfo.characterAssigned)
             {
                 _winner.characterInfo.Character.AddComponent<LeaveEnd>();
             }
-            else
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("FB_EndRound", gameManager.soundManager);
+            if (_winner.characterInfo.characterAssigned)
             {
                 _winner.characterInfo.Character.AddComponent<Leave>();
             }
         }
-        
+
         if (_looser.characterInfo.characterAssigned) _looser.characterInfo.Character.AddComponent<FallDown>();
     }
 
@@ -43,24 +47,24 @@ public class EndRound : AbstractGameState
     public override void Update()
     {
         base.Update();
-        if (characterInPosition[0] && characterInPosition[1])
+        if (!characterInPosition[0] || !characterInPosition[1]) return;
+        
+        if (_winner.RoundWon == 2)
         {
-            if (_winner.RoundWon == 2 || _looser.RoundWon == 2)
-            {
-                EndGame();
-            }
-            else
-            {
-                Object.Destroy(_winner.characterInfo.Character);
-                _winner.characterInfo.characterAssigned = false;
+            EndGame();
+        }
+        else
+        {
+            Object.Destroy(_winner.characterInfo.Character);
+            _winner.characterInfo.characterAssigned = false;
                 
-                gameManager.SetState(new NewRound(gameManager));
-            }
+            gameManager.SetState(new NewRound(gameManager));
         }
     }
 
     private void EndGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AkSoundEngine.PostEvent("Stop_All", gameManager.soundManager);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Vibration
     }
 }

@@ -82,6 +82,8 @@ public class UIController : MonoBehaviour
         _globalCanvas.blocksRaycasts = _isGlobal;
         _tutoCanvas.interactable = !_isGlobal;
         _tutoCanvas.blocksRaycasts = !_isGlobal;
+
+        AkSoundEngine.PostEvent("Menu_Select", menuSoundManager);
     }
     public void StartButton(bool isMain)
     {

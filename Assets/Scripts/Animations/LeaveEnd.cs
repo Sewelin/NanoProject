@@ -17,7 +17,7 @@ public class LeaveEnd : AbstractAnimation
         base.Awake();
         controller.EndDuel();
         _speed = gameManager.cineWalkingSpeed;
-        _destination = controller.PlayerNum == 1 ? gameManager.posSpawner1 : gameManager.posSpawner2;
+        _destination = controller.PlayerNum == 1 ? gameManager.posSpawner2 : gameManager.posSpawner1;
         _direction = Direction();
         gameObject.layer = 10;
     }
@@ -56,6 +56,6 @@ public class LeaveEnd : AbstractAnimation
 
     private int Direction()
     {
-        return (int) Mathf.Sign(transform.position.x - _destination.position.x);
+        return (int) Mathf.Sign(_destination.position.x - transform.position.x);
     }
 }

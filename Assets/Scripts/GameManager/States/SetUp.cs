@@ -40,6 +40,7 @@ public class SetUp : AbstractGameState
             gameManager.join.alpha = 0;
             AkSoundEngine.PostEvent("PTWO_Kill_Taiko", gameManager.soundManager);
             AkSoundEngine.PostEvent("Launch_Round", gameManager.soundManager);
+            Cursor.lockState = CursorLockMode.Locked;
             gameManager.SetState(new NewRound(gameManager));
         }
     }
