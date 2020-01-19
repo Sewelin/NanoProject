@@ -114,6 +114,7 @@ public class GameManager : MonoBehaviour
         RoundTimer = ROUNDTIMER;
         vibration.StopAll();
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public GameStateName sss; // TODO suppr
@@ -133,6 +134,7 @@ public class GameManager : MonoBehaviour
         
         if (StateName == GameStateName.Pause)
         {
+            Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             State.Exit();
         }
@@ -140,6 +142,7 @@ public class GameManager : MonoBehaviour
         {
             SetState(new Pause(this, State));
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
